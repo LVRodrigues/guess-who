@@ -6,5 +6,5 @@
 -- Versão do Banco de Dados
 --============================================================================== 
 
-INSERT INTO "versoes" ("versao", "maior", "menor", "construcao", "nome")
-VALUES  (uuid_nil(), 1, 0, 0, 'Banco de Dados');
+INSERT INTO versions (version, name, major, minor, build)
+VALUES (uuid_nil(), 'Banco de Dados', 1, 0, 0);
