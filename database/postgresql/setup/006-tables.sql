@@ -11,7 +11,7 @@ CREATE TABLE versions (
     date    datetime
 );
 
-COMMENT ON TABLE versions           IS 'Registro de atualizações do aplicativo.';
+COMMENT ON TABLE versions           IS 'Registros de atualizações do aplicativo.';
 COMMENT ON COLUMN versions.version  IS 'Identificador único do registro de versões.';
 COMMENT ON COLUMN versions.name     IS 'Nome do módulo atualizado.';
 COMMENT ON COLUMN versions.major    IS 'Maior número de identificação da versão.';
@@ -34,3 +34,29 @@ CREATE TABLE cards (
     name    description,
     image   image
 );
+
+COMMENT ON TABLE cards          IS 'Cartões de personagens.';
+COMMENT ON COLUMN cards.card    IS 'Identificador único do cartão do personagem';
+COMMENT ON COLUMN cards.name    IS 'Nome do personagem.';
+COMMENT ON COLUMN cards.image   IS 'Imagem do personagem.';
+
+ALTER TABLE cards ADD
+    CONSTRAINT pk_cards
+    PRIMARY KEY (card);
+
+COMMENT ON INDEX pk_cards IS 'Chave primária dos cartões de personagens.';
+
+CREATE TABLE questions (
+    question    id,
+    card        id,
+    text        TEXT    NOT NULL,
+    reply       TEXT    NOT NULL,
+    evidence    TEXT    NOT NULL
+);
+
+COMMENT ON TABLE questions              IS 'Pergundas sobre os personagens.';
+COMMENT ON COLUMN questions.question    IS 'Identificador único da pergunta sobre o personagem.';
+COMMENT ON COLUMN questions.card        IS 'Identificador do cartão do personagem.';
+COMMENT ON COLUMN questions.text        IS 'Texto para apresentar a pergunda sobre o personagem.';
+COMMENT ON COLUMN questions.reply       IS 'Texto para apresentar a resposta sobre o personagem.';
+COMMENT ON COLUMN questions.evidence    IS 'Texto de evidência para comprovar a resposta sobre o personagem.';
