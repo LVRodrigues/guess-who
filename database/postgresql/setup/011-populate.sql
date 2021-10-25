@@ -19,7 +19,6 @@ VALUES (uuid_nil(), 'Banco de Dados', 1, 0, 0);
 INSERT INTO cards (card, name) VALUES 
     ('A34C1757-3CDA-47B4-B3CB-F2AD09469E4C', 'Arão');
 INSERT INTO questions (card, question, text, evidence) VALUES
-    ('A34C1757-3CDA-47B4-B3CB-F2AD09469E4C', '6C9C00C1-881E-4A7E-9594-9DC82232DFAE', 'O nome de quem significa "Elevado, Iluminado"?', '1 Crônicas 6:3'),
     ('A34C1757-3CDA-47B4-B3CB-F2AD09469E4C', 'F3A9579C-4C93-4DB0-9C48-022CABEDFE6D', 'Quem foi o 1º sumo-sacerdote dos judeus e que foi chamado "O santo do Senhor"?', 'Êxodo 28:1;Salmos 106:16'),
     ('A34C1757-3CDA-47B4-B3CB-F2AD09469E4C', 'FA788285-E0FC-476D-84E5-ECD6DF5C5538', 'Quem foi mandado por Moisés a erguer seu bastão e trazer pragas sobre o Egito?', 'Êxodo 7:19'),
     ('A34C1757-3CDA-47B4-B3CB-F2AD09469E4C', '362DFDD9-74EC-42A6-BB18-65B2A44F0E17', 'Quem fez um bezerro de ouro fundido enquanto Moisés estava no monte Sinai?', 'Êxodo 32:4'),
@@ -48,7 +47,6 @@ INSERT INTO cards (card, name) VALUES
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', 'Abraão');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', '2B65D3CC-8D08-4907-BF89-546232F56FD7', 'Quem as escrituras chamam pelo título: "O amigo de Deus"?', 'Tiago 2:23'),
-    ('EE578622-F92B-4C25-BDBF-43253410CCAF', '8957A48F-3944-4FBB-9692-F1F9FD766A96', 'O nome de quem significa: “Pai de uma multidão"?', 'Gênesis 17:5'),
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', '8744DC77-E84E-40C2-91F1-587FE8286065', 'A quem Deus ordenou primeiramente a circuncisão?', 'Gênesis 17:10'),
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', '7D198EBD-FBED-424C-B727-81BB0FD1A2E4', 'Quem foi chamado primeiro de “o hebreu" e foi antepassado da nação dos judeus?', 'Gênesis 14:13, 12:2'),
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', 'B2115B7A-2294-4DAE-9132-448E3CD22164', 'Quem pleiteou com Deus para não destruir Sodoma se lá houvessem 10 pessoas justas?', 'Gênesis 18:32'),
@@ -61,7 +59,6 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 INSERT INTO cards (card, name) VALUES 
     ('A86CE532-3FE3-4007-821D-433ABA849117', 'Acabe');
 INSERT INTO questions (card, question, text, evidence) VALUES
-    ('A86CE532-3FE3-4007-821D-433ABA849117', '676CAFF9-AFAA-46EB-B2F6-8C27EAAB6B08', 'O nome de quem significa “Tio"?', '1 Reis 16:29'),
     ('A86CE532-3FE3-4007-821D-433ABA849117', '20F028A1-EAE6-4D66-818B-32A05DCA6F1B', 'Que rei casou com Jezabel; uma mulher iníqua e idólatra?', '1 Reis 16:31'),
     ('A86CE532-3FE3-4007-821D-433ABA849117', '2205C24A-0960-4131-A57B-6A0F5511B325', 'Que rei foi reprovado por Elias pela sua idolatria?', '1 Reis 18:18'),
     ('A86CE532-3FE3-4007-821D-433ABA849117', '72966C7F-EC43-42AD-A2B3-DD3E09093ADA', 'Qual dos reis de Israel construiu uma casa de marfim?', '1 Reis 22:39'),
@@ -75,7 +72,6 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 INSERT INTO cards (card, name) VALUES 
     ('8230CD8B-5D7E-4593-9E45-F45D0DCC9E10', 'Adão');
 INSERT INTO questions (card, question, text, evidence) VALUES
-    ('8230CD8B-5D7E-4593-9E45-F45D0DCC9E10', '346434CB-2943-4D65-B222-FA8A4ADB9B42', 'O nome de quem significa “Homem vermelho da terra”?', 'Gênesis 2:7'),
     ('8230CD8B-5D7E-4593-9E45-F45D0DCC9E10', '7D45EAAE-7EB2-4A26-8E01-58EFC56E909E', 'Quem o apóstolo Paulo disseque é a semelhança daquele que havia de vir?', 'Romando 5:14'),
     ('8230CD8B-5D7E-4593-9E45-F45D0DCC9E10', '15AEE6C1-2A8F-4CDC-B137-C9BE9B8A5555', 'Quem foi o primeiro a se vestir de peles de animais?', 'Gênesis 3:21'),
     ('8230CD8B-5D7E-4593-9E45-F45D0DCC9E10', '1B9DB66D-9BD5-4DC9-97A1-0084C5ED5B5F', 'Quem não foi enganado, mas vendo sua esposa ser enganada aderiu ao pecado dela?', '1 Timóteo 2:14'),
@@ -89,7 +85,6 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 INSERT INTO cards (card, name) VALUES 
     ('D256D52D-F27F-4E08-8684-53DDAAB5769C', 'Agar');
 INSERT INTO questions (card, question, text, evidence) VALUES
-    ('D256D52D-F27F-4E08-8684-53DDAAB5769C', '945B9AC3-3105-43CD-986B-9CD0DC322F8F', 'O nome de quem significa “Fugitiva, Errante”?', 'Gênesis 16:1'),
     ('D256D52D-F27F-4E08-8684-53DDAAB5769C', 'F8E0121B-741A-4525-A09A-4B4801B9A989', 'Quem foi a mãe de Ismael?', 'Gênesis 16:15'),
     ('D256D52D-F27F-4E08-8684-53DDAAB5769C', 'D7D83DA5-9D83-4E5B-8B5B-B2616E079739', 'Quem Abraão mandou embora com pão e uma garrafa de água?', 'Gênesis 21:16'),
     ('D256D52D-F27F-4E08-8684-53DDAAB5769C', '90AE2516-5093-4959-AF4C-6C35C302F543', 'Quem foi admoestada e consolada por um anjo numa fonte no deserto?', 'Gênesis 16:7'),
@@ -102,7 +97,6 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 INSERT INTO cards (card, name) VALUES 
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'Ananias');
 INSERT INTO questions (card, question, text, evidence) VALUES
-    ('E281AD89-CB19-4AB0-A20B-77947AB6F504', '24664E6A-8CE7-400F-9858-0C9133CCBEFA', 'O nome de quem significa “Jeová tem mostrado favor”?', 'Atos 5:1'),
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'C1476083-75E3-433B-AAC7-B85FDA2B3060', 'Quem procurou enganar os apóstolos com respeito ao preço que vendeu uma propriedade?', 'Atos 5:2'),
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'F4CA734F-928B-4051-9770-0FF536285BF0', 'A quem Pedro disse: “Por que te afoitou Satanás a trapacear o espírito santo”?', 'Atos 5:3'),
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', '266228D9-7031-4E00-B3AD-1F831FD40A2E', 'Quem caiu e morreu à frente de Pedro por mentir ao espírito santo?', 'Atos 5:5'),
@@ -116,7 +110,6 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 INSERT INTO cards (card, name) VALUES 
     ('4AE15177-25B1-49B9-8904-4D0C599B3855', 'Assuero');
 INSERT INTO questions (card, question, text, evidence) VALUES
-    ('4AE15177-25B1-49B9-8904-4D0C599B3855', 'E72A509D-161E-4A28-9DA8-AA3076B70CE0', 'O nome de quem significa “Comandante, Leão”?', 'Ester 1:2'),
     ('4AE15177-25B1-49B9-8904-4D0C599B3855', 'FF28608E-A1E0-4CEE-B403-04FD4BC93D0B', 'Quem expediu um decreto para a sujeição de todas as mulheres de seu império?', 'Ester 1:19-22'),
     ('4AE15177-25B1-49B9-8904-4D0C599B3855', '158A358F-8D3F-433A-9CE3-92969BDD6692', 'Que rei usou Mordecai como seu segundo na corte?', 'Ester 10:3'),
     ('4AE15177-25B1-49B9-8904-4D0C599B3855', 'A95003E9-5E85-4A0D-AE0A-989EC63E82F3', 'Quem ordenou que todos os judeus no império persa deveriam ser mortos?', 'Ester 3:13'),
@@ -135,3 +128,4 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', '032C6EA7-6E41-463D-B8BD-F236B2A557A8', 'Que mulher reinou em Judá por seis anos?', '2 Crônicas 22:12'), 
     ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', '1B1F1676-717D-486D-B26A-B120C9DA4B0B', 'Quem ao ver Josias ungido e coroado rei, rasgou suas vestes e gritou “Conspiração, conspiração”?', '2 Reis 11:14'),
     ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', 'BE238B01-EC0D-4934-AF66-B6BBF2D7C593', 'Com referência a quem o sacerdote Jeoiada disse aos centuriões: ”Levai-a para fora das fileiras, e quanto a qualquer que for atrás dela deve ser morto à espada”?', '2 Crônicas 23:14');
+    
