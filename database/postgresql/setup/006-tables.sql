@@ -50,7 +50,6 @@ CREATE TABLE questions (
     question    id,
     card        id,
     text        TEXT    NOT NULL,
-    reply       TEXT    NOT NULL,
     evidence    TEXT    NOT NULL
 );
 
@@ -58,5 +57,4 @@ COMMENT ON TABLE questions              IS 'Pergundas sobre os personagens.';
 COMMENT ON COLUMN questions.question    IS 'Identificador único da pergunta sobre o personagem.';
 COMMENT ON COLUMN questions.card        IS 'Identificador do cartão do personagem.';
 COMMENT ON COLUMN questions.text        IS 'Texto para apresentar a pergunda sobre o personagem.';
-COMMENT ON COLUMN questions.reply       IS 'Texto para apresentar a resposta sobre o personagem.';
 COMMENT ON COLUMN questions.evidence    IS 'Texto de evidência para comprovar a resposta sobre o personagem.';

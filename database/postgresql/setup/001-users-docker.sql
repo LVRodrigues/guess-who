@@ -10,9 +10,3 @@ CREATE USER "guess-user" WITH
 	ENCRYPTED PASSWORD 'guess-pass';
 COMMENT ON ROLE "guess-user"
 	IS 'Usuário de operação do Banco de Dados para o aplicativo Guess Who?';
-
---==============================================================================
--- Regras de acesso
---==============================================================================
-CREATE ROLE "guess-access";
-COMMENT ON ROLE "guess-access" IS 'Regras para os usuários de operação utilizarem o aplicativo Guess Who?.';
