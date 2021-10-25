@@ -187,10 +187,10 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 INSERT INTO cards (card, name) VALUES 
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'Caim');
 INSERT INTO questions (card, question, text, evidence) VALUES
-    ('2DE0BECE-3409-4756-AF95-40C19D931CA6', '5A0BE851-B81A-4AF0-8696-5A9A521639A9', 'Quem disse” Sou eu guardião do meu irmão”?', 'Gênesis 4:9'),
+    ('2DE0BECE-3409-4756-AF95-40C19D931CA6', '5A0BE851-B81A-4AF0-8696-5A9A521639A9', 'Quem disse" Sou eu guardião do meu irmão"?', 'Gênesis 4:9'),
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'F8222596-3543-4120-A4BC-7FA50E66A3CC', 'Quem é mencionado como o primeiro lavrador da terra?', 'Gênesis 4:2'),
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'BE173ADD-3F53-49E5-B551-9A67C4890089', 'A quem Deus disse: “Quando lavrares o solo não te dará de volta teu poder"?', 'Gênesis 4:12'),
-    ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'C2B21C8B-99B2-4366-B7A5-2E2FF4ABB87B', 'Quem disse: ”Minha punição pelo erro é grande demais para suportar”?', 'Gênesis 4:13'),
+    ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'C2B21C8B-99B2-4366-B7A5-2E2FF4ABB87B', 'Quem disse: "Minha punição pelo erro é grande demais para suportar"?', 'Gênesis 4:13'),
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', '615632EC-6733-4F5E-B62D-5944F358341A', 'Quem estabeleceu-se na terra da fuga e edificou uma cidade pela qual chamou pelo nome de seu filho, Enoque?', 'Gênesis 4:16,17'),
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'D6FB7D73-BF27-47A4-8B9D-1EBDBEDB408F', 'A quem Jeová deu um sinal de que não lhe golpearia quem o encontrasse?', 'Gênesis 4:15');
 
@@ -201,8 +201,21 @@ INSERT INTO cards (card, name) VALUES
     ('2F8340D2-19F1-426B-890A-EE114D953171', 'Calebe');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('2F8340D2-19F1-426B-890A-EE114D953171', '49DE045B-87F8-4BFF-8C55-A47BB918F005', 'Quem da tribo de Judá foi enviado por Moisés como espião à Canaã?', 'Números 13:6'),
-    ('2F8340D2-19F1-426B-890A-EE114D953171', '8F50277C-BB96-4D0C-9D5D-698613EF4C1C', 'Quem, mediante Moisés falou ao povo: ”Subamos logo, e forçosamente havemos de tomar posse dele, pois, certamente podemos prevalecer sobre ele”?', 'Números 13:30'),
+    ('2F8340D2-19F1-426B-890A-EE114D953171', '8F50277C-BB96-4D0C-9D5D-698613EF4C1C', 'Quem, mediante Moisés falou ao povo: "Subamos logo, e forçosamente havemos de tomar posse dele, pois, certamente podemos prevalecer sobre ele"?', 'Números 13:30'),
     ('2F8340D2-19F1-426B-890A-EE114D953171', '76A05943-12E0-45C4-B988-4D9B37A151A4', 'Quem de todos que deixaram o Egito, além de Josué, foi permitido entrar na terra de Canaã?', 'Números 14:30'),
-    ('2F8340D2-19F1-426B-890A-EE114D953171', '54A32764-3F2D-41D1-8630-7CDE77E2E407', 'Quem disse: ”Eis que tenho hoje oitenta e cinco anos de idade. Contudo, sou hoje tão forte como no dia em Moisés me enviou”?', 'Josué 14:30,31'),
+    ('2F8340D2-19F1-426B-890A-EE114D953171', '54A32764-3F2D-41D1-8630-7CDE77E2E407', 'Quem disse: "Eis que tenho hoje oitenta e cinco anos de idade. Contudo, sou hoje tão forte como no dia em Moisés me enviou"?', 'Josué 14:30,31'),
     ('2F8340D2-19F1-426B-890A-EE114D953171', 'ABC5E0BD-8D64-4025-AF17-9822DB040BF2', 'A quem Josué deu Hébron em herança conforme juramento de Moisés?', 'Josué 14:13'),
     ('2F8340D2-19F1-426B-890A-EE114D953171', 'C319DC0B-2068-4086-8F10-D7E4A960BFE2', 'A filha de quem pediu as fontes de água como sua herança?', 'Juízes 1:15');
+
+--------------------------------------------------------------------------------
+-- Cornélio
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', 'Cornélio');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', '3C093C4D-0080-4486-AC15-0BFA2E9AED66', 'A quem um anjo disse: "Tuas orações e dádivas de misericórdia têm ascendido como memória perante Deus"?', 'Atos 10:4'),
+    ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', '6E06AA11-E330-4ECF-9ED8-9EF0DDB8B97E', 'Quem mandou seus homens a Jope para buscar Pedro conforme o anjo lhe mandou?', 'Atos 10:5-8'),
+    ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', 'EB38F4E6-7237-4E41-BABF-9DDE112A0FFD', 'Quem foi o primeiro gentio a ser aceito na congregação cristã em 36 EC?', 'Atos 10:45-48'),
+    ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', 'B7D9F9BC-C1D7-43E2-BDDD-16ACE457C3ED', 'A quem Pedro disse: "Agora eu entendo claramente que Deus não é parcial..."?', 'Atos 10:34'),
+    ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', 'FC12CD30-BFBD-4257-B7D4-7509DB17AC78', 'A conversão de quem mostrou que Deus tinha tirado o muro de separação que havia entre judeus e gentios?', 'Atos 10:28'),
+    ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', '80DB941F-A9EF-4C9B-8088-9122F529102B', 'A quem Pedro disse:"Fique de pé! Eu também sou apenas um homem."?', 'Atos 10:26');
