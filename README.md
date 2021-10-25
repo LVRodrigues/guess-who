@@ -2,6 +2,8 @@
 
 Aplicativo de teste e conhecimento sobre personagens bíblicos.
 
+Não lembro-me quem me forneceu o arquivo original, mas fui presenteado certa vez com um documento contendo várias cartas com perguntas sobre personagens bíblicos. Estou utilizando este arquivo como base para o banco de dados.
+
 ## Ferramentas
 
 | Ferramenta | Versão  |
