@@ -219,3 +219,15 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', 'B7D9F9BC-C1D7-43E2-BDDD-16ACE457C3ED', 'A quem Pedro disse: "Agora eu entendo claramente que Deus não é parcial..."?', 'Atos 10:34'),
     ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', 'FC12CD30-BFBD-4257-B7D4-7509DB17AC78', 'A conversão de quem mostrou que Deus tinha tirado o muro de separação que havia entre judeus e gentios?', 'Atos 10:28'),
     ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', '80DB941F-A9EF-4C9B-8088-9122F529102B', 'A quem Pedro disse:"Fique de pé! Eu também sou apenas um homem."?', 'Atos 10:26');
+
+--------------------------------------------------------------------------------
+-- Daniel
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('47685A25-85FF-42B8-819B-8919944A50B4', 'Daniel');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('47685A25-85FF-42B8-819B-8919944A50B4', 'AC4B64A7-4FC5-4DC8-9572-78CF90388910', 'Que profeta interpretou as palavras escritas na parede durante a festa do rei Belsazar?', 'Daniel 5:13-31'),
+    ('47685A25-85FF-42B8-819B-8919944A50B4', '8FFD3021-9147-46D9-8FD7-0D4BFE8E9053', 'Qual profeta da casa de Davi foi lançado numa cova de leões?', 'Daniel 6:16'),
+    ('47685A25-85FF-42B8-819B-8919944A50B4', '205974F3-CD03-4F25-8A41-FA9F6344B436', 'Que profeta escreveu sobre as setenta semanas até a vinda do Messias?', 'Daniel 9:24'),
+    ('47685A25-85FF-42B8-819B-8919944A50B4', '356467EF-F0A4-4D3F-9248-A5DFD233C18C', 'Que profeta escreveu: "E os que têm discernimento brilharão tão claramente como os céus, e os que levam muitos à justiça como as estrelas..."?', 'Daniel 12:3'),
+    ('47685A25-85FF-42B8-819B-8919944A50B4', '55F35AC7-7345-4080-B866-DCE2FC82593B', 'Quem escreveu uma notável profecia sobre a sucessão de quatro grandes potências mundiais?', 'Daniel 7:1-28');
