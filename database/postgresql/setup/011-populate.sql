@@ -231,3 +231,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('47685A25-85FF-42B8-819B-8919944A50B4', '205974F3-CD03-4F25-8A41-FA9F6344B436', 'Que profeta escreveu sobre as setenta semanas até a vinda do Messias?', 'Daniel 9:24'),
     ('47685A25-85FF-42B8-819B-8919944A50B4', '356467EF-F0A4-4D3F-9248-A5DFD233C18C', 'Que profeta escreveu: "E os que têm discernimento brilharão tão claramente como os céus, e os que levam muitos à justiça como as estrelas..."?', 'Daniel 12:3'),
     ('47685A25-85FF-42B8-819B-8919944A50B4', '55F35AC7-7345-4080-B866-DCE2FC82593B', 'Quem escreveu uma notável profecia sobre a sucessão de quatro grandes potências mundiais?', 'Daniel 7:1-28');
+
+--------------------------------------------------------------------------------
+-- Davi
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', 'Davi');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', 'BABC0606-905F-4F73-BC9D-1EE3245BC1DF', 'De quem Deus diz que ele "Um homem que agrade ao seu coração"?', '1 Samuel 13:14'),
+    ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', 'EE15D278-DE9A-4724-B095-D8774436BAC7', 'Quem escreveu: "Jeová é o meu pastor e nada me faltará"?', 'Salmos 23:1'),
+    ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', '789ADD0F-9045-47F7-8CB5-BE04596933E2', 'Quem conquistou a cidade de Jerusalém, fez dela a sua capital e estendeu seu domínio desde o Egito até o Eufrates?', '2 Samuel 5:5,8:3'),
+    ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', '151CE0C4-B53C-4CA5-85C7-107EDB6415E7', 'Quem escreveu: "O insensato disse no seu coração: "Não há Jeová""?', 'Salmos 14:1'),
+    ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', '59FB80AD-09A6-4092-A0A7-10BCE2BA78A9', 'Quem foi o fundador da família real que continuou até a queda de Israel em 607 AEC?', 'Mateus 1:17'),
+    ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', 'AE1BA5F1-B4D8-408F-98E6-67A4C176F260', 'Quem escreveu: "Para que as pessoas saibam que tu cujo nome é Jeová, somente tu és o Altíssimo sobre toda a terra"?', 'Salmos 83:18');
