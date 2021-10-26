@@ -638,6 +638,19 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', '4745082A-4714-45DC-A1B9-BD6AC392ABE0', 'Quem foi o primeiro profeta israelita ou missionário que foi mandado à uma nação pagã?', 'Jonas 1:1,2');
 
 --------------------------------------------------------------------------------
+-- Jonatã
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('0AC08409-87A8-4817-84BE-18D796A57DF3', 'Jonatã');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('0AC08409-87A8-4817-84BE-18D796A57DF3', 'C82D5B05-23A7-4E36-898D-3779CD35655E', 'Quem deu a Davi sua túnica, sua espada, seu arco, e seu cinto?', '1 Samuel 18:4'),
+    ('0AC08409-87A8-4817-84BE-18D796A57DF3', '34C68BA9-AD6D-4543-BB95-8C0F7CAECAAB', 'Quem fez um juramento de amizade a Davi dizendo; "Mostre o próprio Jeová estar entre mim e ti, e entre a minha descendência e a tua descendência, por tempo indefinido"?', '1 Samuel 20:42'),
+    ('0AC08409-87A8-4817-84BE-18D796A57DF3', '4F8AD9B4-F39B-4FDE-BB60-A644290DB274', 'Quem disparou uma flecha para avisar Davi a fugir de Saul?', '1 Samuel 20:20'),
+    ('0AC08409-87A8-4817-84BE-18D796A57DF3', '181DB51D-9093-4478-B58C-3A583A4E4105', 'Quem disse a Davi: "Tu mesmo serás rei, e eu mesmo me tornarei o segundo depois de ti"?', '1 Samuel 23:17'),
+    ('0AC08409-87A8-4817-84BE-18D796A57DF3', 'F439959A-9919-4ACF-A9D0-1119C6E9C438', 'Quem junto com seu escudeiro matou vinte filisteus em Micmás e pôs o seu exército em fuga?', '2 Samuel 14:14'),
+    ('0AC08409-87A8-4817-84BE-18D796A57DF3', '8326CEEF-A1D3-437B-957C-35A92480E08A', 'Quem foi o filho de Saul que era amigo de Davi?', '1 Samuel 18:3');
+
+--------------------------------------------------------------------------------
 -- José
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
@@ -676,3 +689,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('F974E46F-3818-41B0-B30B-788C8CC58C3B', '61796A21-5DC8-456C-A5C1-5F2A16E05D97', 'A quem Hulda disse: "Uma vez que teu coração amoleceu de modo que te humilhaste por causa de Jeová...teus olhos não olharão para a calamidade que estou trazendo para este lugar"?', '2 Reis 22:19,20'),
     ('F974E46F-3818-41B0-B30B-788C8CC58C3B', '6D228925-2A08-46DD-AA4B-354054911D6F', 'Quem mandou consultar Hulda a profetiza sobre o livro da lei que tinha sido encontrado no templo?', '2 Reis 22:12-14'),
     ('F974E46F-3818-41B0-B30B-788C8CC58C3B', '8D912C95-592E-4781-892A-FE3EC94965DE', 'Quem percorreu todo seu domínio para destruir todos os lugares de adoração idólatra?', '2 Crônicas 34:3-7');
+
+--------------------------------------------------------------------------------
+-- Josué
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', 'Josué');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '30F99524-8D5A-4B25-86DC-6762D786B863', 'O nome de quem é dado ao sexto livro da Bíblia?', 'Josué 24:26'),
+    ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '74B01A48-F29C-49ED-8FD5-D7ABFB0A600B', 'Quem sucedeu a Moisés como líder de Israel e conduziu o povo à Canaã?', 'Deuteronômio 31:7'),
+    ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '6BA0C801-DDD6-4E85-B2E3-33B5EA3A7364', 'Quem ordenou ao sol e a lua para parar durante uma batalha contra cinco reis?', 'Josué 10:12'),
+    ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '80135743-DB5A-4E0C-B1BE-01FE90087563', 'Quem disse: "Se for mau aos vossos olhos servir à Jeová, escolhei Hoje para vós a quem servireis... quanto a mim e aos da minha casa, serviremos à Jeová"?', 'Josué 24:15'),
+    ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '31F5CF94-418F-4B40-9DE7-BD4BAD6BFFBD', 'Quem disse: "Gritai; porque Jeová vos entregou a cidade"?', 'Josué 6:16'),
+    ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '77FD3932-3CC1-412E-B7C3-1C17683AB655', 'Quem disse: "Sol, fica imóvel sobre Gibeão, E lua, sobre a baixada de Aijalom"?', 'Josué 10:13');
