@@ -466,3 +466,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('B8CFE5FD-4214-42C8-86D8-19C86446829D', '03B99689-4601-408D-A58F-36D49E40E215', 'Quem foi o primeiro perseguidor de Cristo?', 'Mateus 2:1-3'),
     ('B8CFE5FD-4214-42C8-86D8-19C86446829D', '23FF97A7-6470-4B99-A115-0A1EF20F7E74', 'Após a morte de quem Jos é e Maria voltaram ao Egito?', 'Mateus 2:19-21'),
     ('B8CFE5FD-4214-42C8-86D8-19C86446829D', 'E5C5CDCF-3BEF-45F3-B3DF-760FB306FC39', 'Quem construiu o último grande templo em Jerusalém?', 'História');
+
+--------------------------------------------------------------------------------
+-- Hirão
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', 'Hirão');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', '61266337-F4A5-4529-8AD1-7E3E2E944071', 'Que rei de Tiro fez um tratado de paz e colaborou com Davi e Salomão?', '1 Reis 5:1-12'),
+    ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', 'CEA4E08C-4307-446B-80B1-48A8836F83DD', 'Quem forneceu á Salomão madeiras de cedro e junípero para a construção do templo?', '1 Reis 5:10'),
+    ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', '74830AEA-BE5F-48FA-95DD-01DAFF4DEB59', 'Quem ganhava de Salomão anualmente vinte mil coros de trigo e vinte coros de azeite?', '1 Reis 5:11'),
+    ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', '0A77EBB8-9DC2-4D86-948A-D6BB5ADBC288', 'Quem mandou seus servos junto com os servos de Salomão para ajudar a buscar ouro em Ofir?', '1 Reis 9:27,28'),
+    ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', '092685A9-081A-4D39-8CF8-FE99BD5645E1', 'A quem Salomão deu vinte cidades na Galiléia?', '1 Reis 9:11'),
+    ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', 'F35C23C0-73A5-4D3C-811A-AD99A59273BF', 'Quem tinha sido sempre amigo de Davi e mandou seus servos a Salomão quando ouvira que este fora ungido rei em lugar de seu pai?', '1 Rei 5:1-5');
