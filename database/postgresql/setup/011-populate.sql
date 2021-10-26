@@ -650,3 +650,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', '2A52E046-E733-4CEB-B5B1-994436C5E774', 'Quem sepultou Jesus no seu próprio túmulo novo, assim cumprindo Isaias 53:9?', 'Mateus 27:59,60'),
     ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', 'C1BCCF6C-F927-43A5-8BDE-4BB895D68187', 'Quem era um ilustre membro do Sinédrio que também esperava o Reino de Deus sinceramente?', 'Marcos 15:43'),
     ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', '284F6254-4A12-4A22-9D22-1C78351055D9', 'Quem envolveu o corpo de Jesus no linho fino que comprara?', 'Marcos 15:46');
+
+--------------------------------------------------------------------------------
+-- Josias
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('F974E46F-3818-41B0-B30B-788C8CC58C3B', 'Josias');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('F974E46F-3818-41B0-B30B-788C8CC58C3B', 'F5657575-FD7E-48ED-AB19-D70FB964D0D1', 'Quem foi o último dos bons reis dos judeus?', '2 Crônicas 34:2'),
+    ('F974E46F-3818-41B0-B30B-788C8CC58C3B', '1316D85C-47A8-49B2-8F5E-663F59B0E2A3', 'Na morte de qual rei Jeremias compôs uma lamentação?', '2 Crônicas 35:25'),
+    ('F974E46F-3818-41B0-B30B-788C8CC58C3B', '97A2B311-12A8-447E-825E-520218F3B55B', 'Que rei foi morto perto do Eufrates pelos soldados do Faraó Neco?', '2 Crônicas 35:20-24'),
+    ('F974E46F-3818-41B0-B30B-788C8CC58C3B', '61796A21-5DC8-456C-A5C1-5F2A16E05D97', 'A quem Hulda disse: "Uma vez que teu coração amoleceu de modo que te humilhaste por causa de Jeová...teus olhos não olharão para a calamidade que estou trazendo para este lugar"?', '2 Reis 22:19,20'),
+    ('F974E46F-3818-41B0-B30B-788C8CC58C3B', '6D228925-2A08-46DD-AA4B-354054911D6F', 'Quem mandou consultar Hulda a profetiza sobre o livro da lei que tinha sido encontrado no templo?', '2 Reis 22:12-14'),
+    ('F974E46F-3818-41B0-B30B-788C8CC58C3B', '8D912C95-592E-4781-892A-FE3EC94965DE', 'Quem percorreu todo seu domínio para destruir todos os lugares de adoração idólatra?', '2 Crônicas 34:3-7');
