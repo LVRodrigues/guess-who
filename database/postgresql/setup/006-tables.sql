@@ -58,3 +58,18 @@ COMMENT ON COLUMN questions.question    IS 'Identificador único da pergunta sob
 COMMENT ON COLUMN questions.card        IS 'Identificador do cartão do personagem.';
 COMMENT ON COLUMN questions.text        IS 'Texto para apresentar a pergunda sobre o personagem.';
 COMMENT ON COLUMN questions.evidence    IS 'Texto de evidência para comprovar a resposta sobre o personagem.';
+
+ALTER TABLE questions ADD 
+    CONSTRAINT pk_questions
+    PRIMARY KEY (question);
+
+COMMENT ON INDEX pk_questions IS 'Chave primária das perguntas sobre os personagens.';
+
+ALTER TABLE questions ADD
+    CONSTRAINT fk_questions_card
+    FOREIGN KEY (card)
+    REFERENCES cards(card);
+
+CREATE INDEX ix_questions_card ON questions(card);
+
+COMMENT ON INDEX ix_questions_card IS 'Índice para agrupar as pergundas sobre os personagens pelos cartões de personagens.';

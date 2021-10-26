@@ -296,3 +296,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'B46F00B6-BED3-4F62-A3B5-D4631F5FC012', 'Quem levantou o filho da Sunamita dentre os mortos?', '2 Reis 4:34,35'),
     ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'D5E4DEEB-C072-4AF9-86CA-C2C193885530', 'Quem jogou sal nas águas de Jericó, tornando-as saudáveis?', '2 Reis 2:21'),
     ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'DA70B7A2-AA06-4BD4-BC40-F451AAD587E3', 'Quem sucedeu a Elias como o principal dos profetas de Jericó?', '2 Reis 2:5');
+
+--------------------------------------------------------------------------------
+-- Esaú
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'Esaú');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('CAE2470C-58B8-4B58-B178-72C53E767882', '06AB7A42-028C-42E9-B83F-06A258236373', 'Quem vendeu sua primogenitura para comer um cozido de lentilhas?', 'Gênesis 25:33,34'),
+    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'A5CD580E-47F0-44B5-9510-E2F8826C797A', 'Quem é o primeiro mencionado como sendo “Homem peludo”?', 'Genêsis 27:11'),
+    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'C0AD8FC9-A516-4120-9A16-D521E5190D1B', 'Quem disse: “Tens apenas uma benção, meu pai?  Abençoa-me também a mim, meu pai”?', 'Gênesis 27:38'),
+    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'B0AAEDCF-9B4F-4B69-A321-F49F249E020B', 'Devido à ira de quem Jacó fugiu para seu tio Labão?', 'Gênesis 28:5'),
+    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'B6A1B932-201F-48E0-AED8-77D57264F6AA', 'Os descendentes de quem foram Edomitas?', 'Gênesis 36:9'),
+    ('CAE2470C-58B8-4B58-B178-72C53E767882', '30A2F4FF-07E1-4360-920A-7234C34D286A', 'Quem foi o irmão gêmeo de Jacó?', 'Gênesis 25:26');
