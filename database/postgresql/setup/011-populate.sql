@@ -622,3 +622,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('62B88B70-6CAD-4599-B687-D6092E0BB95D', 'FBE880EE-6ACF-4BFA-B3EE-D04BC04E0F3E', 'Quem representou as duas tribos de Israel sendo o pai de Efraim e Manassés?', 'Gênesis 46:20'),
     ('62B88B70-6CAD-4599-B687-D6092E0BB95D', 'CC1C7E6E-D1F5-4F50-B7BF-89B6F01FDC93', 'Quem era escravo na casa de Potifar e foi lançado na prisão por ser virtuoso?', 'Gênesis 39:1-20'),
     ('62B88B70-6CAD-4599-B687-D6092E0BB95D', '8AAEF88D-F3D6-472F-BBF8-87986576BE58', 'Quem era irmão de Benjamim por parte de Raquel?', 'Gênesis 35:24');
+
+--------------------------------------------------------------------------------
+-- José, de Arimatéia
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', 'José, de Arimatéia');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', 'FD86AC67-A7F7-4112-9B59-4F839AB2D6AD', 'Qual membro do Sinédrio além de Nicodemos não concordou com a condenação de Jesus?', 'Lucas 23:51'),
+    ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', 'EE290F2D-537A-4CD0-BE7A-C9DA5BA7F61C', 'Quem foi até Pilatos e pediu o corpo de Jesus?', 'Mateus.27:58'),
+    ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', 'F747ED57-DAD7-42FD-BE24-1587AB0EE84E', 'Quem tirou o corpo de Jesus da estaca?', 'Marcos 15:46'),
+    ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', '6D51FA59-B3CD-474E-BBF2-353D8F815FDA', 'Quem ajudou Nicodemos a preparar o corpo de Jesus para o sepulcro?', 'João 19:38-42'),
+    ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', '2A52E046-E733-4CEB-B5B1-994436C5E774', 'Quem sepultou Jesus no seu próprio túmulo novo, assim cumprindo Isaias 53:9?', 'Mateus 27:59,60'),
+    ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', 'C1BCCF6C-F927-43A5-8BDE-4BB895D68187', 'Quem era um ilustre membro do Sinédrio que também esperava o Reino de Deus sinceramente?', 'Marcos 15:43'),
+    ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', '284F6254-4A12-4A22-9D22-1C78351055D9', 'Quem envolveu o corpo de Jesus no linho fino que comprara?', 'Marcos 15:46');
