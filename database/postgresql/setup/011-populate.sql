@@ -283,3 +283,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('F8548B28-6683-4D08-86B5-50AE368B553F', 'BF0C171E-6F30-443D-8E3C-CD88D3E440FB', 'Quem apareceu na visão do monte da Transfiguração de Cristo junto com Outro legislador?', 'Mateus 17:3'),
     ('F8548B28-6683-4D08-86B5-50AE368B553F', 'F2B9B1EA-F31D-425C-A266-8A306D15CCEA', 'Quem lançou sua capa sobre Eliseu para este ser seu sucessor?', '1 Reis 19:19'),
     ('F8548B28-6683-4D08-86B5-50AE368B553F', '93D89189-CAF5-465D-8129-0D2479BEBB13', 'Qual dos profetas ressuscitou o filho da viúva de Sarefá?', '1 Reis 17:17-23');
+
+--------------------------------------------------------------------------------
+-- Eliseu
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'Eliseu');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('4B4E0D7F-5CA0-423E-A016-90932602AF81', '2B065290-F1D7-4A36-B8E9-D0FBD793F35A', 'Sobre quem caiu o manto de Elias e uma porção dupla de seu espírito?', '2 Reis 2:9-13'),
+    ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'B2E10147-7AF4-48CF-B058-FAFD9FDBA17C', 'Quem foi encontrado lavrando com doze juntas de bois, quando chamado para ser profeta?', '1 Reis 19:19'),
+    ('4B4E0D7F-5CA0-423E-A016-90932602AF81', '330691A9-C540-4049-93F5-711CF9FFBCDA', 'Quem mandou Naamã banhar-se no Jordão para ser curado de sua lepra?', '2 Reis 5:10'),
+    ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'B46F00B6-BED3-4F62-A3B5-D4631F5FC012', 'Quem levantou o filho da Sunamita dentre os mortos?', '2 Reis 4:34,35'),
+    ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'D5E4DEEB-C072-4AF9-86CA-C2C193885530', 'Quem jogou sal nas águas de Jericó, tornando-as saudáveis?', '2 Reis 2:21'),
+    ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'DA70B7A2-AA06-4BD4-BC40-F451AAD587E3', 'Quem sucedeu a Elias como o principal dos profetas de Jericó?', '2 Reis 2:5');
