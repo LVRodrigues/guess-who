@@ -546,6 +546,19 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('5E43F7AC-8807-4606-86CB-1421577ABE00', 'C79F9E23-B4F3-4FCB-98C2-3ECB43E59F46', 'A filha de quem as mulheres de Israel iam de ano em ano decantar por quatro dias?', 'Juízes 11:40');
 
 --------------------------------------------------------------------------------
+-- Jeremias
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('CD641CE4-C0CF-4E93-97F8-F187B7085154', 'Jeremias');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('CD641CE4-C0CF-4E93-97F8-F187B7085154', 'B2B8264F-0517-46B0-9594-B3BB01FCF3E3', 'Quem escreveu o livro de Lamentações?', 'História'),
+    ('CD641CE4-C0CF-4E93-97F8-F187B7085154', '312F2767-06EE-43F1-981F-13188F0024D2', 'O livro de que profeta Daniel consultou quando estava no exílio para calcular os setenta anos de desolação de Jerusalém?', 'Daniel 9:2'),
+    ('CD641CE4-C0CF-4E93-97F8-F187B7085154', 'DBF74E46-7DE7-4A60-86E6-F74758C4E6A9', 'Um livro profético de quem o rei Jeoiaquim rasgou em pedaços e queimou?', 'Jeremias 36:23'),
+    ('CD641CE4-C0CF-4E93-97F8-F187B7085154', '143667D2-CCCD-4FFF-BA6A-64B91A323D5F', 'Quem profetizou para o rei Zedequias que ele seria levado cativo par Babilônia?', 'Jeremias 37:17'),
+    ('CD641CE4-C0CF-4E93-97F8-F187B7085154', 'DDFC2C70-4A69-4073-9913-CC01BFE19850', 'Quem foi descido com cordas numa profunda cisterna cheia de lama e que ficou sem água e alimento?', 'Jeremias 38:6-9'),
+    ('CD641CE4-C0CF-4E93-97F8-F187B7085154', '8475D590-998D-459F-9CB8-99F6CDBD0780', 'Quem escreveu: "Maldito o varão vigoroso que confia no homem terreno e que realmente faz da carne o seu braço e cujo coração se desvia do próprio Jeová"?', 'Jeremias 17:5');
+
+--------------------------------------------------------------------------------
 -- Jezabel
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
