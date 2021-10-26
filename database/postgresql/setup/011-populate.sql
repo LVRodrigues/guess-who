@@ -520,6 +520,19 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', 'D573543D-FCE0-4608-A673-3675463AA7F8', 'Em Gálatas 4:22 diz que Abraão teve dois filhos, um da escrava e um da livre. Quem era o filho da escrava?', 'Gênesis 16:1');
 
 --------------------------------------------------------------------------------
+-- Jacó
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', 'Jacó');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', 'A34BCA61-F83C-4EB7-9A54-F190C7FCD296', 'Que foi o pai dos doze patriarcas de onde saíram todos os israelitas?', 'Atos 7:8'),
+    ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', 'FE5037B0-AD84-4429-B94A-EAA3F966C957', 'Quem lutou com um anjo até o nascer do dia dizendo: "Não te deixo ir, a menos que me abençoe"?', 'Gênesis 32:26'),
+    ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', 'A2F588CA-2A02-4BF0-B9AF-F130F4D2EEB6', 'O nome de quem foi mudado para Israel?', 'Gênesis 35:10'),
+    ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', '68CF886B-E751-4256-86C9-4ED8FB9C01E7', 'Que homem idoso abençoou a Faraó na terra do Egito?', 'Gênesis 47:7'),
+    ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', '12C9BFBC-AF4C-4B40-8D8D-79FBEDB46F6E', 'No funeral de quem é mencionado pela primeira vez o uso de cavalos?', 'Gênesis 50:9'),
+    ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', 'E552DCD4-5BA5-428A-9D26-C7952617464A', 'Quem teve um sonho de uma escada que, da terra chegava até os céus e os anjos de Deus subiam e desciam por ela?', 'Gênesis 28:12');
+
+--------------------------------------------------------------------------------
 -- Jezabel
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
