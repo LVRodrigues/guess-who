@@ -361,3 +361,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', '60457895-6222-4338-BA8B-4A4AA132C39D', 'Quem disse “Eis que observo o céu aberto e o Filho do homem em pé à direita de Deus"?', 'Atos 7:56'),
     ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', 'F914092F-347C-4CFA-A556-7B79C89B80CD', 'Qual dos primitivos cristãos foi apedrejado até a morte pelos judeus?', 'Atos 7:59'),
     ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', 'D7D4CCE6-942C-4CF4-B9EB-C11FE96AE434', 'Quem disse como última oração: "Jeová, não lhes impute este pecado"?', 'Atos 7:60');
+
+--------------------------------------------------------------------------------
+-- Eva
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'Eva');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'E271EE5C-757F-4859-BC39-97D7D2AD15D0', 'Que mulher recebeu o nome de seu marido?', 'Gênesis 3:20'),
+    ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', '3719C62D-2302-43FC-BAFF-210F251154F8', 'Quem foi a primeira pessoa humana a receber uma sentença de punição?', 'Gênesis 3:13'),
+    ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'D50F1CD3-63BE-4A80-BE23-BCEAF11C629C', 'Quem foi a mãe de Sete, o antepassado da linhagem de patriarca?', 'Gênesis 4:25'),
+    ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'AD6C1ACA-AC7D-4673-B77E-587CF05A6963', 'A quem o apóstolo Paulo disse que a serpente enganou com sua astúcia?', '2 Coríntios 11:3'),
+    ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'F4158D50-5D86-473C-92B6-620CD3894A9F', 'Quem foi a primeira pessoa a ser enganada?', 'Gênesis 3:6'),
+    ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'E4F2941F-2643-4161-88C4-CE484B0E4862', 'A quem a serpente disse a primeira mentira: "Positivamente não morrereis"?', 'Gênesis 3:4');
