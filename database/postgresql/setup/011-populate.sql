@@ -611,6 +611,20 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', '553C6B5C-98C5-44B9-A051-F537D861029A', 'Quem disse: "Quem pode produzir alguém puro de alguém impuro? Ninguém pode!"?', 'Jó 14:4');
 
 --------------------------------------------------------------------------------
+-- João Batista
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', 'João Batista');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', '1CBA9094-D578-4BDE-857B-253FE66DCB46', 'Quem disse que não era digno de desatar as sandálias de Jesus?', 'Lucas 3:16'),
+    ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', '0844D469-36CA-4387-B0EF-B6634D0A1D0D', 'De quem Jesus disse que entre os nascidos de mulher ninguém fora maior, mas que o menor no Reino dos Céus era maior do que ele?', 'Mateus 11:11'),
+    ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', '019B075D-E7C5-4724-A388-3AA6633607BC', 'Quem disse: "Quem tem a noiva é o noivo, no entanto, o amigo do noivo, estando de pé e ouvindo-o tem muita alegria por causa da voz do noivo. Esta alegria minha, por isso, ficou completa"?', 'João 3:19'),
+    ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', 'CB82CC09-6816-4957-B68F-7F8F5D5594BB', 'Quem batizou Jesus no Jordão?', 'Marcos 1:9'),
+    ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', 'F99D4877-877E-4826-8735-29930F13ED12', 'Quem morreu decapitado na comemoração do aniversário de um rei mau?', 'Marcos 6:21-29'),
+    ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', '81A05E15-A039-40E2-B6D5-35B4A0932006', 'Quem pulou no ventre de sua mãe ao ser visitada por Maria?', 'Lucas 1:41'),
+    ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', '8CBAF26A-6C78-4AEF-A23E-958D2B029C62', 'Quem começou o ministério seis meses antes que Jesus para preparar-lhe o caminho?', 'Mateus 3:49');
+
+--------------------------------------------------------------------------------
 -- José
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
