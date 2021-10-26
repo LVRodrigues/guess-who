@@ -609,3 +609,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', '1C51C69E-3EE6-4644-8780-0EE53304BABB', 'Quem disse: "Nu saí do ventre de minha mãe, e nu voltarei para lá"?', 'Jó 1:21'),
     ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', '081E72D4-6AE4-41A7-A402-D43F9DE1374C', 'Quem, quando orava pelos seus amigos, foi recompensado por Deus com muitos bens e filhos?', 'Jó 42:10'),
     ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', '553C6B5C-98C5-44B9-A051-F537D861029A', 'Quem disse: "Quem pode produzir alguém puro de alguém impuro? Ninguém pode!"?', 'Jó 14:4');
+
+--------------------------------------------------------------------------------
+-- José
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('62B88B70-6CAD-4599-B687-D6092E0BB95D', 'José');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('62B88B70-6CAD-4599-B687-D6092E0BB95D', '0D42DA55-BB59-4652-8B1C-31F207588F58', 'Quem tinha uma túnica de várias cores e por seus sonhos aborreceu seus irmãos?', 'Gênesis 37:3-5'),
+    ('62B88B70-6CAD-4599-B687-D6092E0BB95D', '8349E200-7A0B-486F-A643-22DB115A53D3', 'Quem predisse sete anos de fome por interpretar o sonho de Faraó?', 'Gênesis 41:26-30'),
+    ('62B88B70-6CAD-4599-B687-D6092E0BB95D', '0F157D1F-6571-455F-85AB-FC05953FA08A', 'A que israelita o Faraó do Egito deu seu anel, fez vestir de linho fino e pôs um colar de ouro em seu pescoço?', 'Gênesis 41:41'),
+    ('62B88B70-6CAD-4599-B687-D6092E0BB95D', 'FBE880EE-6ACF-4BFA-B3EE-D04BC04E0F3E', 'Quem representou as duas tribos de Israel sendo o pai de Efraim e Manassés?', 'Gênesis 46:20'),
+    ('62B88B70-6CAD-4599-B687-D6092E0BB95D', 'CC1C7E6E-D1F5-4F50-B7BF-89B6F01FDC93', 'Quem era escravo na casa de Potifar e foi lançado na prisão por ser virtuoso?', 'Gênesis 39:1-20'),
+    ('62B88B70-6CAD-4599-B687-D6092E0BB95D', '8AAEF88D-F3D6-472F-BBF8-87986576BE58', 'Quem era irmão de Benjamim por parte de Raquel?', 'Gênesis 35:24');
