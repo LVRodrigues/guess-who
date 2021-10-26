@@ -494,6 +494,19 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '6A46B101-B872-4992-B0DA-EEBEBDDF51D5', 'Quem escreveu: "Eis que a própria donzela ficará realmente grávida e dará à luz um filho e ela há de chamá-lo pelo nome de Emanuel"?', 'Isaías 7:14');
 
 --------------------------------------------------------------------------------
+-- Isaque
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', 'Isaque');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', 'BAB1A770-6AB4-4165-99FE-5EE94194F395', 'Quem disse: "Eis aqui o fogo e a lenha, mas, onde está o ovídeo para a oferta queimada?"?', 'Gênesis 22:7'),
+    ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', 'B0603B15-B5EC-4475-ACC5-D34E34B675B5', 'Quem saíra à tarde para meditar no campo, quando viu sua futura esposa?', 'Gênesis 24:63'),
+    ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', '61DB97A6-F580-4E85-B327-0F91BF6E872D', 'Quem disse a um dos seus filhos: "Vê! O cheiro do meu filho é como o cheiro do campo que Jeová tem abençoado"?', 'Gênesis 27:27'),
+    ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', 'D2AA4FCD-B8A0-4681-BE41-7F65BF472D2F', 'Quem foi levado à uma montanha para ser oferecido em sacrifício pelo seu pai, mas, salvo pela aparição de um anjo?', 'Gênesis 22:3-13'),
+    ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', '6ACD1FC0-5F5D-4976-93C7-BEB97341108D', 'Para quem Abraão mandou o servo mais velho buscar uma esposa na cidade de Naor?', 'Gênesis 24:3,4'),
+    ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', '205F951B-83A8-4091-84D1-F719E47C42E6', 'A esposa de quem sentia os filhos lutarem no seu ventre?', 'Gênesis 25:22');
+
+--------------------------------------------------------------------------------
 -- Jezabel
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
