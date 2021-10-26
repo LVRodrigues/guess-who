@@ -374,3 +374,23 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'AD6C1ACA-AC7D-4673-B77E-587CF05A6963', 'A quem o apóstolo Paulo disse que a serpente enganou com sua astúcia?', '2 Coríntios 11:3'),
     ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'F4158D50-5D86-473C-92B6-620CD3894A9F', 'Quem foi a primeira pessoa a ser enganada?', 'Gênesis 3:6'),
     ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'E4F2941F-2643-4161-88C4-CE484B0E4862', 'A quem a serpente disse a primeira mentira: "Positivamente não morrereis"?', 'Gênesis 3:4');
+
+--------------------------------------------------------------------------------
+-- Ezequias
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', 'Ezequias');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', '1CF9C80E-D0D9-4884-BCE2-DF480673C95F', 'Quem restaurou Israel da idolatria após o reinado de Acaz?', '2 Reis 18:1-18'),
+    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', 'AF5219BA-1BD1-45C8-B1FF-45E4C70890AA', 'Quem arrancou o ouro das portas e ombreiras do templo de Jeová e deu ao rei da Assíria?', '2 Reis 18:16'),
+    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', '9742C5D7-845C-4AAC-BAE6-0DC8F6A57033', 'A quem Isaias disse: “Dá ordens aos da tua casa porque tu mesmo morrerás e não viverás”?', 'Isaias 38:1'),
+    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', 'CD80C498-CE22-4762-AE96-78A345C74462', 'Que rei teve a sua vida aumentada em quinze anos como resposta a uma oração?', 'Isaias 38:5'),
+    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', '5FBDB2C6-0512-45DF-A704-2CCE70534328', 'Que rei destruiu a serpente de bronze que Moisés fizera no deserto?', '2 Reis 18:4'),
+    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', '5EBFF163-3028-41A7-8654-0FBA228F67F8', 'Para quem a sombra retrocedeu dez degraus na escada?', '2 Reis 20:11');
+
+--------------------------------------------------------------------------------
+-- Ezequiel
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', 'Ezequiel');
+INSERT INTO questions (card, question, text, evidence) VALUES
