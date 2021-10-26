@@ -507,6 +507,19 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', '205F951B-83A8-4091-84D1-F719E47C42E6', 'A esposa de quem sentia os filhos lutarem no seu ventre?', 'Gênesis 25:22');
 
 --------------------------------------------------------------------------------
+-- Ismael
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', 'Ismael');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', '89ACD044-3194-42B8-B6A3-D7EA03C1C4D5', 'De quem foi dito: "Quanto à ele, tornar-se-á uma zebra de homem. Sua mão será contra todos e todos serão contra ele"?', 'Gênesis 16:12'),
+    ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', '137029FB-A75F-4D42-B69B-99F5EFDF2E19', 'Que filho de Abraão foi pai de 12 maiorais?', 'Gênesis 25:16'),
+    ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', 'E6CAD1C1-E269-49AD-A137-B12F0C7C0F72', 'Quem habitava no ermo e foi o primeiro arqueiro mencionado?', 'Gênesis 21:20'),
+    ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', 'A05C6F6C-7253-456B-89A9-BA1F3A037D57', 'Quem foi o filho mais velho de Abraão?', 'Gênesis 16:15'),
+    ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', '5E47B201-497C-49C6-8B6F-AF5D7D64FA8E', 'Para quem sua mãe arranjou-lhe uma esposa egípicia?', 'Gênesis 21:21'),
+    ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', 'D573543D-FCE0-4608-A673-3675463AA7F8', 'Em Gálatas 4:22 diz que Abraão teve dois filhos, um da escrava e um da livre. Quem era o filho da escrava?', 'Gênesis 16:1');
+
+--------------------------------------------------------------------------------
 -- Jezabel
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
