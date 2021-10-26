@@ -453,3 +453,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', '0522A258-E404-4415-94B4-22D52FB5780A', 'Que rei estendeu seu braço para perseguir a congregação cristã e mandou também prender Pedro?', 'Atos 12:1-3'),
     ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', 'FB1A33F8-5F0A-4F66-A570-E9105A2F797F', 'Quem reinava sobre os judeus quando sobreveio uma grande fome predita pelo espírito santo por meio de Ágabo?', 'Atos 11:28-12:1'),
     ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', 'B4564484-D94A-48D9-9F0D-0F8FDDBBF41F', 'Quando Barnabé e Paulo levaram um socorro aos irmãos que moravam na Judéia, devido a uma grande fome que veio ao mundo nos dias de Cláudio, quem era rei sobre os judeus?', 'Atos 11:29-12:1');
+
+--------------------------------------------------------------------------------
+-- Herodes, o Grande
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('B8CFE5FD-4214-42C8-86D8-19C86446829D', 'Herodes, o Grande');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('B8CFE5FD-4214-42C8-86D8-19C86446829D', 'EB331BB3-38E0-4248-81A1-25FE16EC777E', 'Quem era rei da Judéia quando Jesus nasceu?', 'Mateus 2:1'),
+    ('B8CFE5FD-4214-42C8-86D8-19C86446829D', '8E89C0EB-956B-4676-BFC9-262F1801F821', 'Quem chamou os astrólogos e indagou quando a estrela lhes apareceu?', 'Mateus 2:7'),
+    ('B8CFE5FD-4214-42C8-86D8-19C86446829D', '9CDA618C-C816-411F-BFF3-DAAE63DC85B0', 'Quem expediu um decreto para que todas as crianças de dois anos para baixo em Belém fossem mortas?', 'Mateus 2:26'),
+    ('B8CFE5FD-4214-42C8-86D8-19C86446829D', '03B99689-4601-408D-A58F-36D49E40E215', 'Quem foi o primeiro perseguidor de Cristo?', 'Mateus 2:1-3'),
+    ('B8CFE5FD-4214-42C8-86D8-19C86446829D', '23FF97A7-6470-4B99-A115-0A1EF20F7E74', 'Após a morte de quem Jos é e Maria voltaram ao Egito?', 'Mateus 2:19-21'),
+    ('B8CFE5FD-4214-42C8-86D8-19C86446829D', 'E5C5CDCF-3BEF-45F3-B3DF-760FB306FC39', 'Quem construiu o último grande templo em Jerusalém?', 'História');
