@@ -258,3 +258,28 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('79EB9CCE-172E-425B-9C78-C4A897184B13', '9A23AE80-6260-4ABF-9C74-F0E03552AD3F', 'A que mulher Baraque disse: “Se fores comigo, então certamente irei, mas se não fores comigo, não irei”?', 'Juízes 4:8'),
     ('79EB9CCE-172E-425B-9C78-C4A897184B13', '7E40F3BD-36F4-454A-884E-AB689A015B02', 'Que mulher mandou chamar Baraque e lembrou-lhe que Jeová entregaria nas mãos os inimigos?', 'Juízes 4:6,7');
 
+--------------------------------------------------------------------------------
+-- Eli
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('E8574C4E-41BB-45A4-81EA-F54159EAC465', 'Eli');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('E8574C4E-41BB-45A4-81EA-F54159EAC465', 'A9345CC7-FA2D-4AD3-A404-FA388AEE6D2E', 'Que sumo-sacerdote foi juíz de Israel por 40 anos?', '1 Samuel 4:18'),
+    ('E8574C4E-41BB-45A4-81EA-F54159EAC465', '26B7FDEF-9181-4962-BFD5-C173B1D99F23', 'Que sumo-sacerdote foi destacado pela sua piedade, mas, foi negligente com a disciplina de sua família?', '1 Samuel 3:13'),
+    ('E8574C4E-41BB-45A4-81EA-F54159EAC465', '9E86C68E-8E8B-4DAA-BB60-0A4ADEB82DE0', 'Que sumo-sacerdote da casa de Itamar teve dois filhos iníquos que foram mortos na batalha?', '1 Samuel 4:11'),
+    ('E8574C4E-41BB-45A4-81EA-F54159EAC465', '0C314A9A-EC81-4F82-9FEA-93458C46A89A', 'Quem morreu quando ouviu que a arca do pacto havia sido tomada pelos filisteus?', '1 Samuel 4:18'),
+    ('E8574C4E-41BB-45A4-81EA-F54159EAC465', '7F4A0E60-AD0D-4A74-922F-28BAB51BA076', 'Quem era o sumo-sacerdote de Israel quando Samuel foi oferecido para servir à Jeová quando ainda era menino?', '1 Samuel 2:11'),
+    ('E8574C4E-41BB-45A4-81EA-F54159EAC465', 'D71B5D8A-5AF9-4A06-BA9C-5D266D5943F4', 'Quem foi o pai de Ofni e Finéias?', '1 Samuel 4:17');
+
+--------------------------------------------------------------------------------
+-- Elias
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('F8548B28-6683-4D08-86B5-50AE368B553F', 'Elias');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('F8548B28-6683-4D08-86B5-50AE368B553F', 'D23C4E2F-C474-4982-9408-BF2DB6CC293B', 'Quem teve uma disputa com 450 sacerdotes de Baal no Monte Carmelo para provar quem era Deus, Jeová ou Baal?', '1 Reis 18:19'),
+    ('F8548B28-6683-4D08-86B5-50AE368B553F', '356F0C87-67BD-461C-AF80-705152A1757C', 'Quem viajou 40 dias e 40 noites sem comer até o Monte Horebe?', '1 Reis 19:8'),
+    ('F8548B28-6683-4D08-86B5-50AE368B553F', 'B0EF3C96-C9E7-4FCF-8CF3-A3E46D0E5BEF', 'Em resposta à oração de quem ficou muito tempo sem chover e depois em resposta a outro pedido, tornou a chover?', 'Tiago 5:17,18'),
+    ('F8548B28-6683-4D08-86B5-50AE368B553F', 'BF0C171E-6F30-443D-8E3C-CD88D3E440FB', 'Quem apareceu na visão do monte da Transfiguração de Cristo junto com Outro legislador?', 'Mateus 17:3'),
+    ('F8548B28-6683-4D08-86B5-50AE368B553F', 'F2B9B1EA-F31D-425C-A266-8A306D15CCEA', 'Quem lançou sua capa sobre Eliseu para este ser seu sucessor?', '1 Reis 19:19'),
+    ('F8548B28-6683-4D08-86B5-50AE368B553F', '93D89189-CAF5-465D-8129-0D2479BEBB13', 'Qual dos profetas ressuscitou o filho da viúva de Sarefá?', '1 Reis 17:17-23');
