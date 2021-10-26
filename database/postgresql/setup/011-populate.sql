@@ -596,3 +596,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '27F1E356-5E7F-4E84-A34A-D21E399BB171', 'Quem ameaçou a vida do profeta Elias de modo que ele fugiu para Berseba?', '1 Reis 19:3'),
     ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '1B83BDB3-4BA0-4F2C-8886-4CCA6FBD7900', 'Que mulher encontrou a morte sendo atirada de uma janela e atropelada por cavalos?', '2 Reis 9:33'),
     ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '939BDED1-3D67-4238-89A2-C441B8381517', 'De quem foi profetizado: "Os próprios cães a devorarão no lote de terreno de Jezreel"?', '1 Reis 21:23');
+
+--------------------------------------------------------------------------------
+-- Jó
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', 'Jó');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', '603DCE4F-56FD-4129-ACCE-B2CE64DA437D', 'Quem orou a Deus para ser escondido no Seol ou sepultura até que Deus se lembrasse dele?', 'Jó 14:13'),
+    ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', 'A45C8347-C6D8-4EE1-BFFB-3EC7E281BB9D', 'Quem disse: "Embora ele possa me matar, eu ainda esperarei"?', 'Jó 13:15'),
+    ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', '3D7D7C23-9CFF-4646-905F-31EA65690E69', 'Quem é exemplo da integridade e paciência nos tempos pré-cristãos e que foi citado por Tiago?', 'Tiago 5:11'),
+    ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', '1C51C69E-3EE6-4644-8780-0EE53304BABB', 'Quem disse: "Nu saí do ventre de minha mãe, e nu voltarei para lá"?', 'Jó 1:21'),
+    ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', '081E72D4-6AE4-41A7-A402-D43F9DE1374C', 'Quem, quando orava pelos seus amigos, foi recompensado por Deus com muitos bens e filhos?', 'Jó 42:10'),
+    ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', '553C6B5C-98C5-44B9-A051-F537D861029A', 'Quem disse: "Quem pode produzir alguém puro de alguém impuro? Ninguém pode!"?', 'Jó 14:4');
