@@ -48,7 +48,7 @@ INSERT INTO cards (card, name) VALUES
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', '2B65D3CC-8D08-4907-BF89-546232F56FD7', 'Quem as escrituras chamam pelo título: "O amigo de Deus"?', 'Tiago 2:23'),
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', '8744DC77-E84E-40C2-91F1-587FE8286065', 'A quem Deus ordenou primeiramente a circuncisão?', 'Gênesis 17:10'),
-    ('EE578622-F92B-4C25-BDBF-43253410CCAF', '7D198EBD-FBED-424C-B727-81BB0FD1A2E4', 'Quem foi chamado primeiro de “o hebreu" e foi antepassado da nação dos judeus?', 'Gênesis 14:13, 12:2'),
+    ('EE578622-F92B-4C25-BDBF-43253410CCAF', '7D198EBD-FBED-424C-B727-81BB0FD1A2E4', 'Quem foi chamado primeiro de "o hebreu" e foi antepassado da nação dos judeus?', 'Gênesis 14:13, 12:2'),
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', 'B2115B7A-2294-4DAE-9132-448E3CD22164', 'Quem pleiteou com Deus para não destruir Sodoma se lá houvessem 10 pessoas justas?', 'Gênesis 18:32'),
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', '4EF08F87-3323-4C4B-BD03-03CF4E04B343', 'Quem hospedou 3 anjos em sua tenda e recebeu a promessa que sua mulher lhe daria um filho?', 'Gênesis 18:1-11'),
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', 'EC3619A8-6D8E-4D8D-847C-49F31DED4053', 'Quem depois da morte de sua esposa casou-se com Quetura?', 'Gênesis 25:1');
@@ -98,7 +98,7 @@ INSERT INTO cards (card, name) VALUES
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'Ananias');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'C1476083-75E3-433B-AAC7-B85FDA2B3060', 'Quem procurou enganar os apóstolos com respeito ao preço que vendeu uma propriedade?', 'Atos 5:2'),
-    ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'F4CA734F-928B-4051-9770-0FF536285BF0', 'A quem Pedro disse: “Por que te afoitou Satanás a trapacear o espírito santo"?', 'Atos 5:3'),
+    ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'F4CA734F-928B-4051-9770-0FF536285BF0', 'A quem Pedro disse: "Por que te afoitou Satanás a trapacear o espírito santo"?', 'Atos 5:3'),
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', '266228D9-7031-4E00-B3AD-1F831FD40A2E', 'Quem caiu e morreu à frente de Pedro por mentir ao espírito santo?', 'Atos 5:5'),
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', '4156BE6F-8719-40F5-8EAC-951B68DE0A03', 'À esposa de quem Pedro disse: "Por que vocês dois concordaram em pôr à prova o espírito de Jeová?"', 'Atos 5:9'),
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'BCBD21F8-ED63-4240-8A67-F832074A721A', 'Quem junto com sua esposa Safira, vendeu uma propriedade nos dias dos apóstolos?', 'Atos 5:1'),
@@ -126,7 +126,7 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', '6CCE5824-7EF3-445B-8BCA-947F99327969', 'Que mulher matou toda a descendência real menos um e usurpou o trono?', '2 Reis 11:1'),
     ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', 'AED4DE22-904F-4CA3-BB8F-09EFD919A2BE', 'De quem foi escondido o menino rei Josias por seis anos numa câmara?', '2 Reis 11:2'),
     ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', '032C6EA7-6E41-463D-B8BD-F236B2A557A8', 'Que mulher reinou em Judá por seis anos?', '2 Crônicas 22:12'), 
-    ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', '1B1F1676-717D-486D-B26A-B120C9DA4B0B', 'Quem ao ver Josias ungido e coroado rei, rasgou suas vestes e gritou “Conspiração, conspiração"?', '2 Reis 11:14'),
+    ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', '1B1F1676-717D-486D-B26A-B120C9DA4B0B', 'Quem ao ver Josias ungido e coroado rei, rasgou suas vestes e gritou "Conspiração, conspiração"?', '2 Reis 11:14'),
     ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', 'BE238B01-EC0D-4934-AF66-B6BBF2D7C593', 'Com referência a quem o sacerdote Jeoiada disse aos centuriões: "Levai-a para fora das fileiras, e quanto a qualquer que for atrás dela deve ser morto à espada"?', '2 Crônicas 23:14');
 
 --------------------------------------------------------------------------------
@@ -176,7 +176,7 @@ INSERT INTO cards (card, name) VALUES
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('2516B706-E05B-45D3-ABB5-612746D8DE91', '09C52A1E-1D57-4600-BD17-097B310185B5', 'Quem era o sumo-sacerdote nos dias de Jesus aqui na terra?', 'Mateus 26:3'),
     ('2516B706-E05B-45D3-ABB5-612746D8DE91', '1F0954B0-6CA1-41E8-B52E-07AE8E1F1D5C', 'Qual sumo-sacerdote comissionou Paulo para ir a Damasco perseguir os cristãos?', 'Atos 9:1,2'),
-    ('2516B706-E05B-45D3-ABB5-612746D8DE91', '14DE22EB-DD03-4A2C-A0F5-F9FF5012909F', 'Quem perguntou solenemente a Cristo: “Pelo Deus vivente, eu te ponho sob juramento para nos dizeres se tu és o Cristo, o Filho de Deus!"', 'Mateus 26:63'),
+    ('2516B706-E05B-45D3-ABB5-612746D8DE91', '14DE22EB-DD03-4A2C-A0F5-F9FF5012909F', 'Quem perguntou solenemente a Cristo: "Pelo Deus vivente, eu te ponho sob juramento para nos dizeres se tu és o Cristo, o Filho de Deus!"', 'Mateus 26:63'),
     ('2516B706-E05B-45D3-ABB5-612746D8DE91', '15746FE5-D769-4E2E-85FC-61E08B2BBA3F', 'À quem Jesus disse: "De agora em diante vocês verão o Filho do Homem sentado à direita de poder e vindo nas nuvens do céu?"', 'Mateus 26:64'),
     ('2516B706-E05B-45D3-ABB5-612746D8DE91', 'AD739F05-F936-47C9-B113-8C82A6FEB2C8', 'Quem disse: "É para vosso bem que um só homem morra pela nação"?', 'João 11:50'),
     ('2516B706-E05B-45D3-ABB5-612746D8DE91', '6D705DAD-25F5-4135-AC7E-3B58B94A297C', 'Quem era genro de Anás?', 'João 18:13');
@@ -189,7 +189,7 @@ INSERT INTO cards (card, name) VALUES
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', '5A0BE851-B81A-4AF0-8696-5A9A521639A9', 'Quem disse" Sou eu guardião do meu irmão"?', 'Gênesis 4:9'),
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'F8222596-3543-4120-A4BC-7FA50E66A3CC', 'Quem é mencionado como o primeiro lavrador da terra?', 'Gênesis 4:2'),
-    ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'BE173ADD-3F53-49E5-B551-9A67C4890089', 'A quem Deus disse: “Quando lavrares o solo não te dará de volta teu poder"?', 'Gênesis 4:12'),
+    ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'BE173ADD-3F53-49E5-B551-9A67C4890089', 'A quem Deus disse: "Quando lavrares o solo não te dará de volta teu poder"?', 'Gênesis 4:12'),
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'C2B21C8B-99B2-4366-B7A5-2E2FF4ABB87B', 'Quem disse: "Minha punição pelo erro é grande demais para suportar"?', 'Gênesis 4:13'),
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', '615632EC-6733-4F5E-B62D-5944F358341A', 'Quem estabeleceu-se na terra da fuga e edificou uma cidade pela qual chamou pelo nome de seu filho, Enoque?', 'Gênesis 4:16,17'),
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'D6FB7D73-BF27-47A4-8B9D-1EBDBEDB408F', 'A quem Jeová deu um sinal de que não lhe golpearia quem o encontrasse?', 'Gênesis 4:15');
@@ -253,9 +253,9 @@ INSERT INTO cards (card, name) VALUES
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('79EB9CCE-172E-425B-9C78-C4A897184B13', 'C1DBF23D-74CA-487D-A91A-04FFB7D8B9EB', 'Que mulher foi um dos juízes de Israel?', 'Juízes 4:4'),
     ('79EB9CCE-172E-425B-9C78-C4A897184B13', '8218F3AF-6860-497E-A84F-AF9AFD5425D5', 'Quem assentava-se para julgar embaixo de uma tamargueira?', 'Juízes 4:5'),
-    ('79EB9CCE-172E-425B-9C78-C4A897184B13', 'FBCFCF89-6B24-41B4-AAF5-E8D66A78FCEE', 'Que profetiza foi chamada de “A Mãe de Israel"?', 'Juízes 5:7'),
+    ('79EB9CCE-172E-425B-9C78-C4A897184B13', 'FBCFCF89-6B24-41B4-AAF5-E8D66A78FCEE', 'Que profetiza foi chamada de "A Mãe de Israel"?', 'Juízes 5:7'),
     ('79EB9CCE-172E-425B-9C78-C4A897184B13', '48603C3C-6F33-4043-A25F-785827DFFFEB', 'Que profetiza compôs e cantou uma canção para comemorar uma vitória no monte Tabor?', 'Juízes 4:4-31'),
-    ('79EB9CCE-172E-425B-9C78-C4A897184B13', '9A23AE80-6260-4ABF-9C74-F0E03552AD3F', 'A que mulher Baraque disse: “Se fores comigo, então certamente irei, mas se não fores comigo, não irei"?', 'Juízes 4:8'),
+    ('79EB9CCE-172E-425B-9C78-C4A897184B13', '9A23AE80-6260-4ABF-9C74-F0E03552AD3F', 'A que mulher Baraque disse: "Se fores comigo, então certamente irei, mas se não fores comigo, não irei"?', 'Juízes 4:8'),
     ('79EB9CCE-172E-425B-9C78-C4A897184B13', '7E40F3BD-36F4-454A-884E-AB689A015B02', 'Que mulher mandou chamar Baraque e lembrou-lhe que Jeová entregaria nas mãos os inimigos?', 'Juízes 4:6,7');
 
 --------------------------------------------------------------------------------
@@ -305,7 +305,7 @@ INSERT INTO cards (card, name) VALUES
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', '3ABCB285-7130-46AC-9F73-07335F5EA6F9', 'Quem foi pai de Metusalém e bisavô de Noé?', 'Gênesis 5:21'),
     ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', 'ABFA7333-2986-4111-BC2A-F868177C5166', 'De quem as Escrituras dizem: "Prosseguiu andando com o verdadeiro Deus trezentos anos"?', 'Gênesis 5:22'),
-    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', '38B77BAF-13D7-4FCF-B793-AD36D171304C', 'Quem proferiu esta profecia; “Eis que Jeová veio com as suas santas miríades"?', 'Judas 14'),
+    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', '38B77BAF-13D7-4FCF-B793-AD36D171304C', 'Quem proferiu esta profecia; "Eis que Jeová veio com as suas santas miríades"?', 'Judas 14'),
     ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', 'D9023EF5-9E45-4CEF-9017-F123B00A3D77', 'De quem está escrito: "...continuou andando com o verdadeiro Deus. Depois, ele não foi mais visto, porque Deus o tomou."?', 'Gênesis 5:24'),
     ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', '491C2842-6B74-4027-A956-300D8BFBE56D', 'Quem, disse o apóstolo Paulo, foi transferido para não ver a morte"?', 'Hebreus 11:5'),
     ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', '392AD507-9B81-4DE2-A980-FBF156315F89', 'Quem foi o primeiro homem a profetizar o futuro julgamento Divino?', 'Judas 14');
@@ -317,8 +317,8 @@ INSERT INTO cards (card, name) VALUES
     ('CAE2470C-58B8-4B58-B178-72C53E767882', 'Esaú');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('CAE2470C-58B8-4B58-B178-72C53E767882', '06AB7A42-028C-42E9-B83F-06A258236373', 'Quem vendeu sua primogenitura para comer um cozido de lentilhas?', 'Gênesis 25:33,34'),
-    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'A5CD580E-47F0-44B5-9510-E2F8826C797A', 'Quem é o primeiro mencionado como sendo “Homem peludo"?', 'Genêsis 27:11'),
-    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'C0AD8FC9-A516-4120-9A16-D521E5190D1B', 'Quem disse: “Tens apenas uma benção, meu pai?  Abençoa-me também a mim, meu pai"?', 'Gênesis 27:38'),
+    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'A5CD580E-47F0-44B5-9510-E2F8826C797A', 'Quem é o primeiro mencionado como sendo "Homem peludo"?', 'Genêsis 27:11'),
+    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'C0AD8FC9-A516-4120-9A16-D521E5190D1B', 'Quem disse: "Tens apenas uma benção, meu pai?  Abençoa-me também a mim, meu pai"?', 'Gênesis 27:38'),
     ('CAE2470C-58B8-4B58-B178-72C53E767882', 'B0AAEDCF-9B4F-4B69-A321-F49F249E020B', 'Devido à ira de quem Jacó fugiu para seu tio Labão?', 'Gênesis 28:5'),
     ('CAE2470C-58B8-4B58-B178-72C53E767882', 'B6A1B932-201F-48E0-AED8-77D57264F6AA', 'Os descendentes de quem foram Edomitas?', 'Gênesis 36:9'),
     ('CAE2470C-58B8-4B58-B178-72C53E767882', '30A2F4FF-07E1-4360-920A-7234C34D286A', 'Quem foi o irmão gêmeo de Jacó?', 'Gênesis 25:26');
@@ -344,8 +344,8 @@ INSERT INTO cards (card, name) VALUES
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '46A32738-ECC4-4B7D-96FA-51DF9E3D3569', 'Quem também se chamava Hadassa?', 'Ester 2:7'),
     ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', 'DB108647-5317-4EE8-9DD1-CFA76B6973DD', 'Quem foi escolhida pelo Rei Assuero para ser rainha no lugar de Vasti?', 'Ester 2:17'),
-    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '9B9635F5-89C9-4979-BD7F-6C484E348FC6', 'Quem disse: “Entrarei até o rei, o que não é segundo a lei, e se eu tiver de perecer, perecerei"?', 'Ester 4:16'),
-    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '79EC72D1-A0A3-40BA-BA13-CE0AC5303BB6', 'A quem o Rei Assuero disse: “Até a metade do reinado, a ti seja dado"?', 'Ester 5:3'),
+    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '9B9635F5-89C9-4979-BD7F-6C484E348FC6', 'Quem disse: "Entrarei até o rei, o que não é segundo a lei, e se eu tiver de perecer, perecerei"?', 'Ester 4:16'),
+    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '79EC72D1-A0A3-40BA-BA13-CE0AC5303BB6', 'A quem o Rei Assuero disse: "Até a metade do reinado, a ti seja dado"?', 'Ester 5:3'),
     ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', 'B834B3BF-91D0-4C71-A533-C60B06E5433D', 'Que rainha salvou a vida de todos os judeus do império Persa?', 'Ester 7:3'),
     ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '5DF5FA89-758F-4BE5-B155-44354E9A3C25', 'Que rainha da Pérsia instituiu a festa de Purim?', 'Ester 9:32');
 
@@ -358,7 +358,7 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', '089BE225-2575-46CF-8630-270D30D7E265', 'Quem foi o primeiro mártir cristão?', 'Atos 7:59,60'),
     ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', '43CD43CE-082F-4FFB-AA11-64A8303CF0F2', 'Quem repreendeu abertamente o sinédrio pelo assassínio de Jesus?', 'Atos 7:52'),
     ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', '690B498F-AAE4-4073-A3B0-D16C8AD74F69', 'A face de quem resplandeceu como um anjo ao pregar a palavra de Deus?', 'Atos 6:15'),
-    ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', '60457895-6222-4338-BA8B-4A4AA132C39D', 'Quem disse “Eis que observo o céu aberto e o Filho do homem em pé à direita de Deus"?', 'Atos 7:56'),
+    ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', '60457895-6222-4338-BA8B-4A4AA132C39D', 'Quem disse "Eis que observo o céu aberto e o Filho do homem em pé à direita de Deus"?', 'Atos 7:56'),
     ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', 'F914092F-347C-4CFA-A556-7B79C89B80CD', 'Qual dos primitivos cristãos foi apedrejado até a morte pelos judeus?', 'Atos 7:59'),
     ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', 'D7D4CCE6-942C-4CF4-B9EB-C11FE96AE434', 'Quem disse como última oração: "Jeová, não lhes impute este pecado"?', 'Atos 7:60');
 
@@ -383,7 +383,7 @@ INSERT INTO cards (card, name) VALUES
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', '1CF9C80E-D0D9-4884-BCE2-DF480673C95F', 'Quem restaurou Israel da idolatria após o reinado de Acaz?', '2 Reis 18:1-18'),
     ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', 'AF5219BA-1BD1-45C8-B1FF-45E4C70890AA', 'Quem arrancou o ouro das portas e ombreiras do templo de Jeová e deu ao rei da Assíria?', '2 Reis 18:16'),
-    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', '9742C5D7-845C-4AAC-BAE6-0DC8F6A57033', 'A quem Isaias disse: “Dá ordens aos da tua casa porque tu mesmo morrerás e não viverás”?', 'Isaias 38:1'),
+    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', '9742C5D7-845C-4AAC-BAE6-0DC8F6A57033', 'A quem Isaias disse: "Dá ordens aos da tua casa porque tu mesmo morrerás e não viverás"?', 'Isaias 38:1'),
     ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', 'CD80C498-CE22-4762-AE96-78A345C74462', 'Que rei teve a sua vida aumentada em quinze anos como resposta a uma oração?', 'Isaias 38:5'),
     ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', '5FBDB2C6-0512-45DF-A704-2CCE70534328', 'Que rei destruiu a serpente de bronze que Moisés fizera no deserto?', '2 Reis 18:4'),
     ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', '5EBFF163-3028-41A7-8654-0FBA228F67F8', 'Para quem a sombra retrocedeu dez degraus na escada?', '2 Reis 20:11');
@@ -394,3 +394,9 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 INSERT INTO cards (card, name) VALUES 
     ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', 'Ezequiel');
 INSERT INTO questions (card, question, text, evidence) VALUES
+    ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', '0171D1B7-3C1C-4F9A-A64A-72F2E317069E', 'Quem escreveu: "A alma que pecar, essa morrerá"?', 'Ezequiel 18:4'),
+    ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', '424501A1-2741-4C87-9FBB-384F527AF504', 'A que profeta antes de Cristo consta ter comido um rolo, e que na boca era doce como mel?', 'Ezequiel 3:3'),
+    ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', 'D2630526-FC84-47B0-8AF1-1E18FDABB0F2', 'Quem escreveu: "Uma ruína, uma ruína, uma ruína a farei. Também, quanto a esta, certamente não será a mesma, até que venha aquele que tem o direito legal e é a ele que terei de dá-lo"?', 'Ezequiel 21:27'),
+    ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', '1E96CD31-5722-4503-B590-B4A9A10DBA97', 'Quem escreveu: "Vieste a estar no Éden, jardim de Deus... tu és o querubim ungido que cobre"?', 'Ezequiel 28:13,14'),
+    ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', 'FEF99151-D107-4A84-8FC5-09FE5BE39BF2', 'Que profeta teve a visão de um vale de ossos secos?', 'Ezequiel 37:1,2'),
+    ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', 'A97C7F6A-42FB-43C9-A5C4-4F5BB0F1FA38', 'Que profetas e sacerdote estava no meio dos exilados levado junto com o rei Jeoiaquim?', 'Ezequiel 1:1,3 ');
