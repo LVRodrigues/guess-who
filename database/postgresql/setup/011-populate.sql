@@ -323,7 +323,6 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('CAE2470C-58B8-4B58-B178-72C53E767882', 'B6A1B932-201F-48E0-AED8-77D57264F6AA', 'Os descendentes de quem foram Edomitas?', 'Gênesis 36:9'),
     ('CAE2470C-58B8-4B58-B178-72C53E767882', '30A2F4FF-07E1-4360-920A-7234C34D286A', 'Quem foi o irmão gêmeo de Jacó?', 'Gênesis 25:26');
 
-
 --------------------------------------------------------------------------------
 -- Esdras
 --------------------------------------------------------------------------------
@@ -336,3 +335,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('5C34CB48-85B9-4E1D-905F-10E87413EA98', '9FDC267F-230E-4970-A11F-C8EF0BD89BB8', 'Quem, de um estrado de madeira leu a lei de Moisés para todo o povo que havia voltado de Babilônia?', 'Neemias 8:4,5'),
     ('5C34CB48-85B9-4E1D-905F-10E87413EA98', 'D2407EEB-C7DF-4F1E-BCB9-D3D720128847', 'Quem foi mandado por Artaxerxes para restaurar a adoração dos judeus?', 'Esdras 7:12'),
     ('5C34CB48-85B9-4E1D-905F-10E87413EA98', 'CECBADF3-CD34-40F3-AC5F-9B68A7B2AD68', 'Quem colecionou os livros das Escrituras Hebraicas, após o cativeiro?', 'História');
+
+--------------------------------------------------------------------------------
+-- Ester
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', 'Ester');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '46A32738-ECC4-4B7D-96FA-51DF9E3D3569', 'Quem também se chamava Hadassa?', 'Ester 2:7'),
+    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', 'DB108647-5317-4EE8-9DD1-CFA76B6973DD', 'Quem foi escolhida pelo Rei Assuero para ser rainha no lugar de Vasti?', 'Ester 2:17'),
+    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '9B9635F5-89C9-4979-BD7F-6C484E348FC6', 'Quem disse: “Entrarei até o rei, o que não é segundo a lei, e se eu tiver de perecer, perecerei”?', 'Ester 4:16'),
+    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '79EC72D1-A0A3-40BA-BA13-CE0AC5303BB6', 'A quem o Rei Assuero disse: “Até a metade do reinado, a ti seja dado”?', 'Ester 5:3'),
+    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', 'B834B3BF-91D0-4C71-A533-C60B06E5433D', 'Que rainha salvou a vida de todos os judeus do império Persa?', 'Ester 7:3'),
+    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '5DF5FA89-758F-4BE5-B155-44354E9A3C25', 'Que rainha da Pérsia instituiu a festa de Purim?', 'Ester 9:32');
