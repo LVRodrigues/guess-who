@@ -702,3 +702,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '80135743-DB5A-4E0C-B1BE-01FE90087563', 'Quem disse: "Se for mau aos vossos olhos servir à Jeová, escolhei Hoje para vós a quem servireis... quanto a mim e aos da minha casa, serviremos à Jeová"?', 'Josué 24:15'),
     ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '31F5CF94-418F-4B40-9DE7-BD4BAD6BFFBD', 'Quem disse: "Gritai; porque Jeová vos entregou a cidade"?', 'Josué 6:16'),
     ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '77FD3932-3CC1-412E-B7C3-1C17683AB655', 'Quem disse: "Sol, fica imóvel sobre Gibeão, E lua, sobre a baixada de Aijalom"?', 'Josué 10:13');
+
+--------------------------------------------------------------------------------
+-- Judá
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('5B97C45A-C201-4164-9692-802300B7F19E', 'Judá');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('5B97C45A-C201-4164-9692-802300B7F19E', 'B2DEFCAE-03EA-4773-B23D-DE916FEE7B8C', 'Quem foi o quarto filho de Jacó e Léia?', 'Gênesis 29:35'),
+    ('5B97C45A-C201-4164-9692-802300B7F19E', 'F67A1B11-A983-4839-9197-B0D7D08912C8', 'Quem persuadiu seus irmãos para não matarem José, mas venderem-no aos Ismaelitas?', 'Gênesis 37:27'),
+    ('5B97C45A-C201-4164-9692-802300B7F19E', '52A3F624-7CF3-4F4A-99EE-2224328A6652', 'Quem foi o orador para seus irmãos quando eles desceram ao Egito para comprar mantimentos?', 'Gênesis 44:16-18'),
+    ('5B97C45A-C201-4164-9692-802300B7F19E', '2B95604D-4238-473D-981D-933AF1F52A4C', 'A qual dos seus filhos Jacó disse: "Teus irmãos te elogiarão"?', 'Gênesis 49:8'),
+    ('5B97C45A-C201-4164-9692-802300B7F19E', '1ACD3B6E-3640-4D22-A58F-54E7365B26F6', 'De quem Jacó predisse: "O cetro não se afastará dele... até que venha Siló"?', 'Gênesis 49:10'),
+    ('5B97C45A-C201-4164-9692-802300B7F19E', 'E264DAB8-ED7B-45DF-A361-28E4A96D5D57', 'De qual das doze tribos de Israel descendiam José e Maria, pais de Jesus?', 'Mateus 1:2, Lucas 3:33');
