@@ -324,3 +324,15 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('CAE2470C-58B8-4B58-B178-72C53E767882', '30A2F4FF-07E1-4360-920A-7234C34D286A', 'Quem foi o irmão gêmeo de Jacó?', 'Gênesis 25:26');
 
 
+--------------------------------------------------------------------------------
+-- Esdras
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('5C34CB48-85B9-4E1D-905F-10E87413EA98', 'Esdras');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('5C34CB48-85B9-4E1D-905F-10E87413EA98', '356045E1-52B5-4064-B244-DA60A18A539B', 'Quem era o escriba versado na lei de Deus nos dias de Artaxerxes, rei da Pérsia?', 'Esdras 7:6'),
+    ('5C34CB48-85B9-4E1D-905F-10E87413EA98', '54C122C7-5838-4359-A85A-0ADC9D8F1954', 'Quem escreveu o livro de Crônicas?', 'História'),
+    ('5C34CB48-85B9-4E1D-905F-10E87413EA98', '973337E5-48FF-48F2-A040-C065795B7A12', 'Quem requereu dos israelitas que largassem suas esposas pagãs?', 'Esdras 10:10,11'),
+    ('5C34CB48-85B9-4E1D-905F-10E87413EA98', '9FDC267F-230E-4970-A11F-C8EF0BD89BB8', 'Quem, de um estrado de madeira leu a lei de Moisés para todo o povo que havia voltado de Babilônia?', 'Neemias 8:4,5'),
+    ('5C34CB48-85B9-4E1D-905F-10E87413EA98', 'D2407EEB-C7DF-4F1E-BCB9-D3D720128847', 'Quem foi mandado por Artaxerxes para restaurar a adoração dos judeus?', 'Esdras 7:12'),
+    ('5C34CB48-85B9-4E1D-905F-10E87413EA98', 'CECBADF3-CD34-40F3-AC5F-9B68A7B2AD68', 'Quem colecionou os livros das Escrituras Hebraicas, após o cativeiro?', 'História');
