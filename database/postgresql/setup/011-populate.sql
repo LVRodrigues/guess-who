@@ -492,3 +492,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '2796DE2C-98FF-46DF-8441-58797EBD3379', 'Quem escreveu sobre Jesus: "Esvaziou a sua alma até a morte"?', 'Isaías 53:12'),
     ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '7C3277B9-3249-4F49-98FA-F0F5BE19F704', 'Quem escreveu: "O espírito do Soberano Senhor Jeová está sobre mim, visto que me ungiu para anunciar boas novas...", que Jesus citou em Lucas 4:18?', 'Isaías 61:1'),
     ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '6A46B101-B872-4992-B0DA-EEBEBDDF51D5', 'Quem escreveu: "Eis que a própria donzela ficará realmente grávida e dará à luz um filho e ela há de chamá-lo pelo nome de Emanuel"?', 'Isaías 7:14');
+
+--------------------------------------------------------------------------------
+-- Jezabel
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', 'Jezabel');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '91AD5A89-D5FD-478C-8A6A-AF40C27F2D71', 'Que princesa de Sídon tornou-se rainha de Israel?', '1 Reis 16:31?'),
+    ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '85B6F889-BB3A-41F1-9B02-D2F6A1BE9FA2', 'Que mulher introduziu em Samaria a adoração de Baal?', '1 Reis 16:31'),
+    ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '33702F29-D8E3-48ED-983E-2F4B2BBFE7CC', 'Quem manteve comendo em sua mesa 450 profetas de Baal e 400 profetas do poste sagrado?', '1 Reis 18:19'),
+    ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '27F1E356-5E7F-4E84-A34A-D21E399BB171', 'Quem ameaçou a vida do profeta Elias de modo que ele fugiu para Berseba?', '1 Reis 19:3'),
+    ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '1B83BDB3-4BA0-4F2C-8886-4CCA6FBD7900', 'Que mulher encontrou a morte sendo atirada de uma janela e atropelada por cavalos?', '2 Reis 9:33'),
+    ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '939BDED1-3D67-4238-89A2-C441B8381517', 'De quem foi profetizado: "Os próprios cães a devorarão no lote de terreno de Jezreel"?', '1 Reis 21:23');
