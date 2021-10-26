@@ -572,6 +572,19 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('C01021CC-015D-49EA-ADB3-7774B9B9E166', '34D0ADD4-8C8B-4294-802E-3C30090E6F67', 'Que rei mandou a mulher disfarçada a um profeta para indagar a respeito de seu filho doente?', '1 Reis 14:2');
 
 --------------------------------------------------------------------------------
+-- Jeú
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', 'Jeú');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', 'AB0040B9-898B-4AFE-8576-391987A16B40', 'Quem Deus designou para governar Israel e golpear a casa de Acabe pelos seus pecados?', '2 Reis 9:6,7'),
+    ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', 'BE3D259F-52C8-489E-8561-E2521FB23079', 'Que rei de Israel ficou famoso por guiar seu carro furiosamente?', '2 Reis 9:20'),
+    ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', 'A731D9F2-C8AB-497A-B30E-86077E62A194', 'Quem atirou uma flecha e matou Jeorão, rei de Israel?', '2 Reis 9:24'),
+    ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', '6310D887-69FB-4ED2-854C-347C0A51B358', 'A quem Jezabel disse: "“Será que Zinri, que matou o seu próprio senhor, se saiu bem?”?', '2 Reis 9:31'),
+    ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', '3F5C2C07-B9D6-4430-9B3B-E760AD728C58', 'Quem disse aos servos na janela: ”Deixai-a cair”, referindo-se à Jezabel?', '2 Reis 9:33'),
+    ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', 'D873CE9E-F725-425A-A638-DD49B7C2CB18', 'Quem reuniu todos os profetas de Baal como para um sacrifício e depois os matou?', '2 Reis 10:19-25');
+
+--------------------------------------------------------------------------------
 -- Jezabel
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
