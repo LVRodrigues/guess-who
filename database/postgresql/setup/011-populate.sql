@@ -400,3 +400,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', '1E96CD31-5722-4503-B590-B4A9A10DBA97', 'Quem escreveu: "Vieste a estar no Éden, jardim de Deus... tu és o querubim ungido que cobre"?', 'Ezequiel 28:13,14'),
     ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', 'FEF99151-D107-4A84-8FC5-09FE5BE39BF2', 'Que profeta teve a visão de um vale de ossos secos?', 'Ezequiel 37:1,2'),
     ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', 'A97C7F6A-42FB-43C9-A5C4-4F5BB0F1FA38', 'Que profetas e sacerdote estava no meio dos exilados levado junto com o rei Jeoiaquim?', 'Ezequiel 1:1,3 ');
+
+--------------------------------------------------------------------------------
+-- Filipe, o Apóstolo
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('914F49B5-A2CE-48B7-8FFE-93650A21595B', 'Filipe, o Apóstolo');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('914F49B5-A2CE-48B7-8FFE-93650A21595B', '876EAF20-678B-4434-85E8-074667B4DE23', 'Quem disse: "Achamos aquele de quem escreveram Moisés na Lei, e os profetas, Jesus de Nazaré"?', 'João 1:45'),
+    ('914F49B5-A2CE-48B7-8FFE-93650A21595B', 'C45F69AF-4BBA-4912-8ECA-732E95B0340A', 'Ao ver a multidão, a quem Jesus disse: "Onde vamos comprar pães para estes comerem"?', 'João 6:5'),
+    ('914F49B5-A2CE-48B7-8FFE-93650A21595B', '0AE2A1E7-6DE5-4158-A9C5-9FCC041E9A65', 'A quem certos gregos disseram: "Senhor, queremos ver Jesus"?', 'João 12:21'),
+    ('914F49B5-A2CE-48B7-8FFE-93650A21595B', '725127B8-C3D0-42D5-A093-D5A7E3060337', 'Quem disse a Jesus: "Senhor, mostra-nos o pai"?', 'João 14:8'),
+    ('914F49B5-A2CE-48B7-8FFE-93650A21595B', '9FD2DCC4-A028-454B-9411-7709FBA9AB3C', 'A quem Jesus disse: "Tenho estado tanto tempo convosco e ainda não vieste a conhecer-me"?', 'João 14:9');
+    
