@@ -412,4 +412,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('914F49B5-A2CE-48B7-8FFE-93650A21595B', '0AE2A1E7-6DE5-4158-A9C5-9FCC041E9A65', 'A quem certos gregos disseram: "Senhor, queremos ver Jesus"?', 'João 12:21'),
     ('914F49B5-A2CE-48B7-8FFE-93650A21595B', '725127B8-C3D0-42D5-A093-D5A7E3060337', 'Quem disse a Jesus: "Senhor, mostra-nos o pai"?', 'João 14:8'),
     ('914F49B5-A2CE-48B7-8FFE-93650A21595B', '9FD2DCC4-A028-454B-9411-7709FBA9AB3C', 'A quem Jesus disse: "Tenho estado tanto tempo convosco e ainda não vieste a conhecer-me"?', 'João 14:9');
-    
+
+--------------------------------------------------------------------------------
+-- Filipe, o Evangelista
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('5990B6A8-1A38-467C-8667-72010F6D7A6B', 'Filipe, o Evangelista');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('5990B6A8-1A38-467C-8667-72010F6D7A6B', 'AAD2032A-B2F3-4A19-9DCD-1EA2E50C6D70', 'Quem tinha sete filhas virgens que profetizavam?', 'Atos 21:9'),
+    ('5990B6A8-1A38-467C-8667-72010F6D7A6B', '00B8B66F-3367-4134-BFE3-A3741957A9A5', 'Quem foi conduzido pelo espírito de Jeová e achou-se em Asdode?', 'Atos 8:39,40'),
+    ('5990B6A8-1A38-467C-8667-72010F6D7A6B', '23C315B7-601A-4729-B60E-481FE5BD6CED', 'Quem perguntou ao eunuco que lia Isaías: "Sabes realmente o que estas lendo"?', 'Atos 8:30'),
+    ('5990B6A8-1A38-467C-8667-72010F6D7A6B', '7AA426BE-C4E3-4083-A375-B500B2EE03C6', 'Quem foi convidado por um etíope a subir em seu carro e ensinar-lhe as Escrituras?', 'Atos 8:31'),
+    ('5990B6A8-1A38-467C-8667-72010F6D7A6B', '50E1A016-5512-49FC-B4F8-B95EFFF8643B', 'Quem batizou um oficial da Etiópia após um estudo bíblico durante uma viajem de Jerusalém a Gaza?', 'Atos 8:38'),
+    ('5990B6A8-1A38-467C-8667-72010F6D7A6B', '0CF5A5CB-4BC7-42AA-A6C9-9F99AFD6695C', 'A quem foi dito: "Eis aqui um corpo de água, o que me impede de ser batizado?"?', 'Atos 8:36'),
+    ('5990B6A8-1A38-467C-8667-72010F6D7A6B', '6698151F-6065-4416-AA7C-E1AAFCFE0633', 'Quem pregando em Samaria fez com que em virtude disso houvesse grande alegria naquela cidade?', 'Atos 8:4-8');
