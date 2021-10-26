@@ -426,3 +426,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('5990B6A8-1A38-467C-8667-72010F6D7A6B', '50E1A016-5512-49FC-B4F8-B95EFFF8643B', 'Quem batizou um oficial da Etiópia após um estudo bíblico durante uma viajem de Jerusalém a Gaza?', 'Atos 8:38'),
     ('5990B6A8-1A38-467C-8667-72010F6D7A6B', '0CF5A5CB-4BC7-42AA-A6C9-9F99AFD6695C', 'A quem foi dito: "Eis aqui um corpo de água, o que me impede de ser batizado?"?', 'Atos 8:36'),
     ('5990B6A8-1A38-467C-8667-72010F6D7A6B', '6698151F-6065-4416-AA7C-E1AAFCFE0633', 'Quem pregando em Samaria fez com que em virtude disso houvesse grande alegria naquela cidade?', 'Atos 8:4-8');
+
+--------------------------------------------------------------------------------
+-- Gideão
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', 'Gideão');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', '7D56CD51-2D6B-4013-87A6-EB2795155381', 'Quem disse: "Eis que o meu milhar é o mínimo em Manassés e eu sou o menor na casa de meu pai"?', 'Juízes 6:15'),
+    ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', '1E8694A0-77D4-4CC1-91DB-A33D181D8DEC', 'Quem pediu a Deus uma evidência de sua escolha por meio do teste do velo de lã e o orvalho?', 'Juízes 6:37'),
+    ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', '817C7F79-0C52-44BA-88B8-6C47FE2B62E6', 'Quem tomou apenas 300 homens de um exército de 30.000 e com eles derrotou os midianitas?', 'Juízes 7:7'),
+    ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', '27F6F350-DB4C-4B23-AAD4-15498FD60D4A', 'Quem armou seus guerreiros com trombetas e tochas?', 'Juízes 7:16'),
+    ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', 'CA62E163-BF9D-40B4-B805-1CE3AB69F31D', 'Quem recusou tornar-se rei em Israel dizendo: "Jeová é quem dominará sobre vós"?', 'Juízes 8:23'),
+    ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', 'EBF9FDFD-FD68-4D62-864A-B0C638FD965E', 'Que juiz venceu os midianitas e que também era chamado Jerubaal?', 'Juízes 7:1');
