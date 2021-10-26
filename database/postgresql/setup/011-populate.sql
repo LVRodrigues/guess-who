@@ -533,6 +533,19 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', 'E552DCD4-5BA5-428A-9D26-C7952617464A', 'Quem teve um sonho de uma escada que, da terra chegava até os céus e os anjos de Deus subiam e desciam por ela?', 'Gênesis 28:12');
 
 --------------------------------------------------------------------------------
+-- Jefté
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('5E43F7AC-8807-4606-86CB-1421577ABE00', 'Jefté');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('5E43F7AC-8807-4606-86CB-1421577ABE00', 'A227F262-A4BD-4AB4-A2E5-FE1FD4856A62', 'Que filho de Gileade foi expulso da casa de seu pai?', 'Juízes 11:2'),
+    ('5E43F7AC-8807-4606-86CB-1421577ABE00', 'C38A14C5-0630-440A-8AF0-15DFF535FA33', 'Quem foi feito juiz sobre Israel com a condição de derrotar os amonitas?', 'Juízes 11:9,10'),
+    ('5E43F7AC-8807-4606-86CB-1421577ABE00', 'D07F6EB6-78A2-4E0E-926F-26D21E07DF8C', 'Quem venceu os amonitas e tomou vinte das suas cidades?', 'Juízes 11:33'),
+    ('5E43F7AC-8807-4606-86CB-1421577ABE00', '091BC036-607D-4B33-81BA-BEA2BD43F44B', 'Quem dos juízes fez um voto temerário e que sua filha o apoiou apesar de custar-lhe muito?', 'Juízes 11:30,31,34'),
+    ('5E43F7AC-8807-4606-86CB-1421577ABE00', '8C75A31F-3B0C-4B9C-AB3F-0245B478F15A', 'Quem disse: "Ai minha filha!" quando ela veio encontrá-lo após uma grande vitória?', 'Juízes 11:35'),
+    ('5E43F7AC-8807-4606-86CB-1421577ABE00', 'C79F9E23-B4F3-4FCB-98C2-3ECB43E59F46', 'A filha de quem as mulheres de Israel iam de ano em ano decantar por quatro dias?', 'Juízes 11:40');
+
+--------------------------------------------------------------------------------
 -- Jezabel
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
