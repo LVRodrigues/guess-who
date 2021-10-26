@@ -625,6 +625,19 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', '8CBAF26A-6C78-4AEF-A23E-958D2B029C62', 'Quem começou o ministério seis meses antes que Jesus para preparar-lhe o caminho?', 'Mateus 3:49');
 
 --------------------------------------------------------------------------------
+-- Jonas
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', 'Jonas');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', '1BAB7D6D-D984-4A7B-87BF-B1DA03A30A47', 'Quem ao ser mandado para Nínive e clamar contra ela fugiu para Társis?', 'Jonas 1:3'),
+    ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', '44AA1739-1C10-48A4-A83D-EEB3FF4AEE1F', 'A quem foi dito: "Que é que há contigo, dorminhoco? Levanta-te, clama ao teu Deus"?', 'Jonas 1:6'),
+    ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', '106809C8-11DD-4FDC-AC6C-141E039C326C', 'Quem foi atirado fora de um navio e engolido por um grande peixe?', 'Jonas 1:15-17'),
+    ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', '8C7CE99A-CB6C-4674-87F4-CF8A3A331F1A', 'Pela pregação de quem uma cidade inteira arrependeu-se em serapilheira e cinzas?', 'Jonas 3:5,6'),
+    ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', 'FF02E2FD-826E-4F6C-A35B-115476FE23FB', 'Quem zangou-se com Deus porque Ele não destruiu Nínive?', 'Jonas 4:1'),
+    ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', '4745082A-4714-45DC-A1B9-BD6AC392ABE0', 'Quem foi o primeiro profeta israelita ou missionário que foi mandado à uma nação pagã?', 'Jonas 1:1,2');
+
+--------------------------------------------------------------------------------
 -- José
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
