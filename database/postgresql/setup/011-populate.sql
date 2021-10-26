@@ -298,6 +298,19 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'DA70B7A2-AA06-4BD4-BC40-F451AAD587E3', 'Quem sucedeu a Elias como o principal dos profetas de Jericó?', '2 Reis 2:5');
 
 --------------------------------------------------------------------------------
+-- Enoque
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', 'Enoque');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', '3ABCB285-7130-46AC-9F73-07335F5EA6F9', 'Quem foi pai de Metusalém e bisavô de Noé?', 'Gênesis 5:21'),
+    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', 'ABFA7333-2986-4111-BC2A-F868177C5166', 'De quem as Escrituras dizem: ”Prosseguiu andando com o verdadeiro Deus trezentos anos”?', 'Gênesis 5:22'),
+    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', '38B77BAF-13D7-4FCF-B793-AD36D171304C', 'Quem proferiu esta profecia; “Eis que Jeová veio com as suas santas miríades”?', 'Judas 14'),
+    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', 'D9023EF5-9E45-4CEF-9017-F123B00A3D77', 'De quem está escrito: "...continuou andando com o verdadeiro Deus. Depois, ele não foi mais visto, porque Deus o tomou.”?', 'Gênesis 5:24'),
+    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', '491C2842-6B74-4027-A956-300D8BFBE56D', 'Quem, disse o apóstolo Paulo, foi transferido para não ver a morte”?', 'Hebreus 11:5'),
+    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', '392AD507-9B81-4DE2-A980-FBF156315F89', 'Quem foi o primeiro homem a profetizar o futuro julgamento Divino?', 'Judas 14');
+
+--------------------------------------------------------------------------------
 -- Esaú
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
@@ -309,3 +322,5 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('CAE2470C-58B8-4B58-B178-72C53E767882', 'B0AAEDCF-9B4F-4B69-A321-F49F249E020B', 'Devido à ira de quem Jacó fugiu para seu tio Labão?', 'Gênesis 28:5'),
     ('CAE2470C-58B8-4B58-B178-72C53E767882', 'B6A1B932-201F-48E0-AED8-77D57264F6AA', 'Os descendentes de quem foram Edomitas?', 'Gênesis 36:9'),
     ('CAE2470C-58B8-4B58-B178-72C53E767882', '30A2F4FF-07E1-4360-920A-7234C34D286A', 'Quem foi o irmão gêmeo de Jacó?', 'Gênesis 25:26');
+
+
