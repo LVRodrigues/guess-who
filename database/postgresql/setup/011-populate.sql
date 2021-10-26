@@ -479,3 +479,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', '0A77EBB8-9DC2-4D86-948A-D6BB5ADBC288', 'Quem mandou seus servos junto com os servos de Salomão para ajudar a buscar ouro em Ofir?', '1 Reis 9:27,28'),
     ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', '092685A9-081A-4D39-8CF8-FE99BD5645E1', 'A quem Salomão deu vinte cidades na Galiléia?', '1 Reis 9:11'),
     ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', 'F35C23C0-73A5-4D3C-811A-AD99A59273BF', 'Quem tinha sido sempre amigo de Davi e mandou seus servos a Salomão quando ouvira que este fora ungido rei em lugar de seu pai?', '1 Rei 5:1-5');
+
+--------------------------------------------------------------------------------
+-- Isaías
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', 'Isaías');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '92BD9AFE-0979-4718-9EA3-2FC8C373C6C3', 'Quem escreveu: "Vois sois as minhas testemunhas, diz Jeová, sim meu servo a quem escolhi"?', 'Isaías 43:10'),
+    ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '8C3E4CAF-3BA1-408B-9C1A-C67D7B1104FB', 'Qual foi o primeiro dos grandes profetas ou dos profetas maiores?', 'Pentateuco'),
+    ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', 'BDD790DC-8DC4-4651-9C26-1DDB6415AB4D', 'Quem escreveu: "E terão de forjar das suas espadas relhas de arado, e das suas lanças podadeiras... Não levantará espada nação contra nação..."?', 'Isaías 2:4'),
+    ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '2796DE2C-98FF-46DF-8441-58797EBD3379', 'Quem escreveu sobre Jesus: "Esvaziou a sua alma até a morte"?', 'Isaías 53:12'),
+    ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '7C3277B9-3249-4F49-98FA-F0F5BE19F704', 'Quem escreveu: "O espírito do Soberano Senhor Jeová está sobre mim, visto que me ungiu para anunciar boas novas...", que Jesus citou em Lucas 4:18?', 'Isaías 61:1'),
+    ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '6A46B101-B872-4992-B0DA-EEBEBDDF51D5', 'Quem escreveu: "Eis que a própria donzela ficará realmente grávida e dará à luz um filho e ela há de chamá-lo pelo nome de Emanuel"?', 'Isaías 7:14');
