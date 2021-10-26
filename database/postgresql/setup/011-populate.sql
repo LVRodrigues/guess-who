@@ -559,6 +559,19 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('CD641CE4-C0CF-4E93-97F8-F187B7085154', '8475D590-998D-459F-9CB8-99F6CDBD0780', 'Quem escreveu: "Maldito o varão vigoroso que confia no homem terreno e que realmente faz da carne o seu braço e cujo coração se desvia do próprio Jeová"?', 'Jeremias 17:5');
 
 --------------------------------------------------------------------------------
+-- Jeroboão
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('C01021CC-015D-49EA-ADB3-7774B9B9E166', 'Jeroboão');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('C01021CC-015D-49EA-ADB3-7774B9B9E166', 'CFE7A3A3-1F21-4B1F-9124-C7F4A97D9BD7', 'Quem foi o primeiro rei que pôs em revolta dez tribos de Israel?', '1 Reis 11:31'),
+    ('C01021CC-015D-49EA-ADB3-7774B9B9E166', 'E97A5F5F-4AB3-4516-81D1-7917477291FA', 'Quem foi obrigado a fugir para o Egito por conspirar contra o rei Salomão?', '1 Reis 11:40'),
+    ('C01021CC-015D-49EA-ADB3-7774B9B9E166', 'C44B46AD-AA03-41DF-87ED-2EB8C41F07B1', 'Para quem o profeta Aijá deu dez pedaços do manto rasgado em doze pedaços?', '1 Reis 11:29-31'),
+    ('C01021CC-015D-49EA-ADB3-7774B9B9E166', 'EEFD381E-8DC5-423C-91D5-49F75A508FB5', 'Quem fez dois bezerros de ouro: um em Betel e outro em Dã para o povo subir a Jerusalém?', '1 Reis 12:28,29'),
+    ('C01021CC-015D-49EA-ADB3-7774B9B9E166', '24F0C1EB-DD96-4FF3-8CCB-CA875C29D1CC', 'Quem teve a mão seca por estendê-la contra um profeta de Deus?', '1 Reis 13:4'),
+    ('C01021CC-015D-49EA-ADB3-7774B9B9E166', '34D0ADD4-8C8B-4294-802E-3C30090E6F67', 'Que rei mandou a mulher disfarçada a um profeta para indagar a respeito de seu filho doente?', '1 Reis 14:2');
+
+--------------------------------------------------------------------------------
 -- Jezabel
 --------------------------------------------------------------------------------
 INSERT INTO cards (card, name) VALUES 
