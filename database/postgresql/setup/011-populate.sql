@@ -439,3 +439,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', '27F6F350-DB4C-4B23-AAD4-15498FD60D4A', 'Quem armou seus guerreiros com trombetas e tochas?', 'Juízes 7:16'),
     ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', 'CA62E163-BF9D-40B4-B805-1CE3AB69F31D', 'Quem recusou tornar-se rei em Israel dizendo: "Jeová é quem dominará sobre vós"?', 'Juízes 8:23'),
     ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', 'EBF9FDFD-FD68-4D62-864A-B0C638FD965E', 'Que juiz venceu os midianitas e que também era chamado Jerubaal?', 'Juízes 7:1');
+
+--------------------------------------------------------------------------------
+-- Herodes Agripa I
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', 'Herodes Agripa I');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', '33C2C7D4-19C1-4F86-9B6D-955EE2B992CE', 'Quem mandou matar a espada Tiago, irmão de João?', 'Atos 12:1,2'),
+    ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', '8D0F2DC7-7487-49DF-B619-54F4AEA9A85D', 'Quem mandou matar os guardas da prisão onde Pedro estava encarcerado e escapou por meio de um anjo?', 'Atos 12:9'),
+    ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', 'D672BAF2-EAD1-41B0-98C3-DA8E92CC0D25', 'Que rei morreu comido por vermes por um anjo de Deus o ferir?', 'Atos 12:23'),
+    ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', '43B6AA14-3A12-40B4-8A54-CF5A75E113EB', 'Após o discurso de quem o povo clamou: "A voz de um Deus e não de homem"?', 'Atos 12:22'),
+    ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', '0522A258-E404-4415-94B4-22D52FB5780A', 'Que rei estendeu seu braço para perseguir a congregação cristã e mandou também prender Pedro?', 'Atos 12:1-3'),
+    ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', 'FB1A33F8-5F0A-4F66-A570-E9105A2F797F', 'Quem reinava sobre os judeus quando sobreveio uma grande fome predita pelo espírito santo por meio de Ágabo?', 'Atos 11:28-12:1'),
+    ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', 'B4564484-D94A-48D9-9F0D-0F8FDDBBF41F', 'Quando Barnabé e Paulo levaram um socorro aos irmãos que moravam na Judéia, devido a uma grande fome que veio ao mundo nos dias de Cláudio, quem era rei sobre os judeus?', 'Atos 11:29-12:1');
