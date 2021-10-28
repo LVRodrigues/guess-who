@@ -715,3 +715,18 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('5B97C45A-C201-4164-9692-802300B7F19E', '2B95604D-4238-473D-981D-933AF1F52A4C', 'A qual dos seus filhos Jacó disse: "Teus irmãos te elogiarão"?', 'Gênesis 49:8'),
     ('5B97C45A-C201-4164-9692-802300B7F19E', '1ACD3B6E-3640-4D22-A58F-54E7365B26F6', 'De quem Jacó predisse: "O cetro não se afastará dele... até que venha Siló"?', 'Gênesis 49:10'),
     ('5B97C45A-C201-4164-9692-802300B7F19E', 'E264DAB8-ED7B-45DF-A361-28E4A96D5D57', 'De qual das doze tribos de Israel descendiam José e Maria, pais de Jesus?', 'Mateus 1:2, Lucas 3:33');
+
+--------------------------------------------------------------------------------
+-- Judas Iscariotes
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', 'Judas Iscariotes');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', 'A2690403-4B41-4569-9982-1E59D32EF1C4', 'No lugar de quem foi escolhido Matias pelos apóstolos?', 'Atos 1:26'),
+    ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', 'F3F1CAF1-B5FE-4441-BB82-AE0DA76E3E6E', 'No lugar de quem Jesus colocou Paulo?', 'Gálatas 1:1'),
+    ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', '22A66BDD-1B35-4386-A823-F3EE3CBB388C', 'Quem chegou para beijar Jesus em Getsêmani?', 'Lucas 22:47'),
+    ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', '50725B93-1C6E-4866-B954-99776F909D62', 'Quem era o tesoureiro dos doze apóstolos de Jesus?', 'João 13:29'),
+    ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', 'F3F8BFD6-E1B2-4C2F-9DA5-D68EBE34C4E6', 'Quem atirou 30 moedas de prata no santuário do templo e depois foi matar-se?', 'Mateus 27:5'),
+    ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', '9ED4F88F-4D78-4509-82A8-899DAAFDEC86', 'Qual dos doze apóstolos na última noite participou da Páscoa, mas não participou da Celebração do Novo Pacto?', 'João 13:26-30'),
+    ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', '0A886886-8FFF-4FE5-9ECC-4644B02EF8AB', 'Referindo-se a quem o apóstolo Pedro disse: "Fique desolada a sua pousada e não haja nela morador"?', 'Atos 1:20');
+    
