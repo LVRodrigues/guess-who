@@ -1122,3 +1122,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', '66249CE8-1F82-4346-9B6A-C624E2E96993', 'Quem disse: "Eis que obedecer é melhor de que um sacrifício"?', '1 Samuel 15:22'),
     ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', 'AA2F61D1-5D12-4DAF-B730-D55FD47B6249', 'Quem matou Agague, rei dos amalequitas em virtude da negligência de Saul?', '1 Samuel 15:33'),
     ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', '99FF8DD6-16CB-4262-8FEF-6DA3F8237F36', 'Quem foi o filho de Elcana que servia ainda menino à Jeová com um éfode de linho?', '1 Samuel 2:18-20');
+
+--------------------------------------------------------------------------------
+-- Sansão
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', 'Sansão');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', '7A46E9A0-D241-45EB-8EA5-1216060FC563', 'Quem matou mil filisteus com uma queixada de jumento?', 'Juízes 15:15'),
+    ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', '74BD13A9-F180-4FD8-BB2A-93A578665417', 'Quem mandou trezentas raposas com tochas acesas na cauda entre os campos de cereais dos filisteus?', 'Juízes 15:4,5'),
+    ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', '073E9C69-C5C1-478B-9DD6-B1D5AF444CF9', 'Quem propôs este enigma: "Daquele que come saiu algo para comer, E do forte saiu algo doce."?', 'Juízes 14:14'),
+    ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', 'C5AD6ACE-F0C0-40BE-BA65-C18E2E77A090', 'Que juiz de Israel foi traído por Dalila?', 'Juízes 16:18'),
+    ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', '9B5F3287-8966-47F7-958A-66A2E24B49F2', 'Quem derrubou o templo de Dagom, o deus dos filisteus e matou uma grande multidão de pessoas?', 'Juízes 16:30'),
+    ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', '045D91B6-14D3-4844-89C9-D734E00188B6', 'Quem teve os olhos furados, foi preso e tornou-se moedor na casa dos presos?', 'Juízes 16:21');
