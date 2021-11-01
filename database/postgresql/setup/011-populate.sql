@@ -1186,3 +1186,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', '54DAE192-5335-4F2A-8140-EBFE9635A746', 'Qual era o único dos doze apóstolos, além de Judas, cuja morte a Bíblia descreve?', 'Atos 12:1,2'),
     ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', '43D9F92A-34B0-4A4A-A35D-5667429E4967', 'Quem participou da cena da transfiguração junto com Pedro e João?', 'Mateus 17'),
     ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', '25D07D47-5B5E-46D0-8904-6F4DA3CF1824', 'Quem Jesus chamou junto com seu irmão quando consertava as redes em companhia de seu pai?', 'Mateus 4:21');
+
+--------------------------------------------------------------------------------
+-- Timóteo
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('CD55C2EA-5012-4368-9E6D-290FD6A81609', 'Timóteo');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('CD55C2EA-5012-4368-9E6D-290FD6A81609', 'F42C08BA-56C3-43F3-BF3F-18AB06F2A0E3', 'Quem era o filho de Eunice e neto de Lóide?', '2 Timóteo 1:5'),
+    ('CD55C2EA-5012-4368-9E6D-290FD6A81609', 'BF4358AE-234C-4DA9-B03C-CA4CB8275CEC', 'De quem foi escrito que desde a infância tinha conhecido os Escritos Sagrados, assim, conhecendo as Escrituras?', '2 Timóteo 3:15'),
+    ('CD55C2EA-5012-4368-9E6D-290FD6A81609', '2FF5CA80-2059-4787-AAB9-EEB0C596BEE9', 'A quem foram escritas estas palavras: "Toda a Escritura é inspirada por Deus, e proveitosa para ensinar, para repreender, para endireitas as coisas"?', '2 Timóteo 3:16'),
+    ('CD55C2EA-5012-4368-9E6D-290FD6A81609', '41929C25-BF7F-44B7-831E-7877065DC0AC', 'A quem foi escrito: "O escravo do Senhor não precisa lutar, porém, precisa ser meigo para com todos, qualificado para ensinar, restringindo-se sob o mal"?', '2 Timóteo 2:24'),
+    ('CD55C2EA-5012-4368-9E6D-290FD6A81609', '102D79F2-EB8F-4954-8825-B82D74650050', 'A quem Paulo escreveu duas cartas, chamando-o de Filho genuíno de Fé?', '1 Timóteo 1:2'),
+    ('CD55C2EA-5012-4368-9E6D-290FD6A81609', 'D82FCED3-470B-4A5D-8513-FBD6E6B5AB05', 'A quem Paulo recomendou beber um pouco de vinho por causa do seu estômago, e freqüentes casos de doença?', '1 Timóteo 5:23');
