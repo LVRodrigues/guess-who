@@ -1070,3 +1070,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('81781697-C186-4BBA-B267-617749471A69', '63DA6223-958F-43FF-9653-CFFD2CFFCE3E', 'A quem o servo de Abraão, na terra de Naor pediu de beber junto a um poço?', 'Gênesis 24:45'),
     ('81781697-C186-4BBA-B267-617749471A69', '761B9E62-C6BC-4731-A864-83FA92C3975D', 'Quem disse à Eliezer: "Bebe, e darei de beber também aos teus camelos"?', 'Gênesis 24:46'),
     ('81781697-C186-4BBA-B267-617749471A69', 'D1A601C7-926F-4293-A514-93D405B98101', 'A quem Isaque levou até a tenda de sua mãe após ter saído para meditar no campo?', 'Gênesis 24:67');
+
+--------------------------------------------------------------------------------
+-- Roboão
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('3091E044-548D-49B8-9292-16A9E99D3010', 'Roboão');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('3091E044-548D-49B8-9292-16A9E99D3010', 'A698E495-A7D1-44EB-A5A1-487932630A4E', 'Qual dos filhos de Salomão o sucedeu como rei?', '1 Reis 11:43'),
+    ('3091E044-548D-49B8-9292-16A9E99D3010', '2943C683-6816-4DF9-A6A8-777C220D005E', 'Que rei abandonou o conselho dos anciãos que serviam na corte de seu pai?', '1 Reis 12:8'),
+    ('3091E044-548D-49B8-9292-16A9E99D3010', '075D90F1-C188-4410-AF51-A66F4D5FE5C0', 'Quem disse: "Meu pai, da sua parte, castigou-os com chicotes, mas eu, da minha parte, vos castigarei com azorragues"?', '1 Reis 12:11'),
+    ('3091E044-548D-49B8-9292-16A9E99D3010', 'D7301FFA-6463-451D-837D-861B3A7E5D0C', 'Nos dias de que rei de Judá os sacerdotes levitas deixaram suas cidades e vieram a Jerusalém?', '2 Crônicas 11:14'),
+    ('3091E044-548D-49B8-9292-16A9E99D3010', '535F025F-32F7-47D4-BB0F-28295BE6652B', 'No reinado de que rei de Judá, Sisaque, Faraó do Egito, subiu e saqueou Jerusalém e o templo?', '2 Crônicas 12:9'),
+    ('3091E044-548D-49B8-9292-16A9E99D3010', 'D7CBEBC4-4021-42AD-A094-9A316681E34C', 'Quem reconstruiu a cidade de Belém?', '2 Crônicas 11:6');
