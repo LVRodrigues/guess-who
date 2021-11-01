@@ -1173,4 +1173,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', 'A410EED3-300D-4487-9946-C6413AEA744F', 'O nome de quem é usado para referir-se às línguas faladas pelos hebreus e outros?', 'História'),
     ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', '4DA3251A-6513-42CA-A56F-45EE6C491649', 'Quem, presume-se, foi Melquisedeque, mas não se pode afirmar?', 'Gênesis 14:18'),
     ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', '0CC2CE5E-576A-420A-A63B-3FE9B43E5BB9', 'De quem foi dito que Canaã lhe seria servo e Jafé habitaria nas suas tendas?', 'Gênesis 9:26,27');
-    
+
+--------------------------------------------------------------------------------
+-- Tiago
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', 'Tiago');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', '84709DE1-7BC2-4B1C-89E1-C0D1A23D5A8D', 'Quem era irmão de João e filho de Zebedeu?', 'Mateus 4:21'),
+    ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', 'BE48D0D2-EE53-4E49-B809-FCB0356D696D', 'Quem, junto com seu irmão, recebeu o nome de Boanerges, Filho do trovão?', 'Marcos 3:17'),
+    ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', '3DF4B81B-B243-4A3C-B8EA-24BE59EAB391', 'Qual dos discípulos Herodes Agripa mandou matar à espada?', 'Atos 12:1,2'),
+    ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', '54DAE192-5335-4F2A-8140-EBFE9635A746', 'Qual era o único dos doze apóstolos, além de Judas, cuja morte a Bíblia descreve?', 'Atos 12:1,2'),
+    ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', '43D9F92A-34B0-4A4A-A35D-5667429E4967', 'Quem participou da cena da transfiguração junto com Pedro e João?', 'Mateus 17'),
+    ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', '25D07D47-5B5E-46D0-8904-6F4DA3CF1824', 'Quem Jesus chamou junto com seu irmão quando consertava as redes em companhia de seu pai?', 'Mateus 4:21');
