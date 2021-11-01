@@ -900,3 +900,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', 'B830C4CD-944B-4E57-B541-CE4B98AE201C', 'Quem disse: "A Rocha — perfeito é tudo o que ele faz, pois todos os seus caminhos são justos"?', 'Deuteronômio 32:4'),
     ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', 'E622F05B-6D27-4A80-965C-4ADC86A6CF87', 'A quem Deus disse: "Não podes ver a minha face, pois homem algum pode ver-me e continuar vivo"?', 'Êxodo 33:20'),
     ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', '0CCEB53F-EFC6-4391-8CD5-A3A9A7FB13E2', 'Quem escreveu: "Que o homem não vive somente de pão, mas que o homem vive de toda expressão da boca de Jeová"?', 'Deuteronômio 8:3');
+
+--------------------------------------------------------------------------------
+-- Mulher Samaritana
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('8916518C-CEFF-49AC-9484-11C05D551F14', 'Mulher Samaritana');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('8916518C-CEFF-49AC-9484-11C05D551F14', 'A0052B79-C863-4225-A83C-C7C480719975', 'Quem veio tirar água de um poço quando Jesus estava descansando?', 'João 4:7'),
+    ('8916518C-CEFF-49AC-9484-11C05D551F14', '0AFE999B-1639-4CBF-BD33-68393336E65D', 'Que mulher se mostrou surpresa por Jesus falar com ela?', 'João 4:9'),
+    ('8916518C-CEFF-49AC-9484-11C05D551F14', '201D7D0C-F599-4734-B8C8-D35FA70DCB4C', 'A quem Jesus disse: "Quem beber da água que eu lhe der, nunca mais ficará com sede"?', 'João 4:14'),
+    ('8916518C-CEFF-49AC-9484-11C05D551F14', 'A77784D9-9996-4409-8E01-423E1C659965', 'A quem Jesus disse: "Deus é espírito, e os que o adoram têm de adorar com espírito e verdade"?', 'João 4:24'),
+    ('8916518C-CEFF-49AC-9484-11C05D551F14', '8F0805A1-D353-4DDA-895E-9EF49AD0E6D2', 'Quem disse: "Vinde, vede um homem que disse todas as coisas que eu fiz. Será que este é o Cristo?"?', 'João 4:29'),
+    ('8916518C-CEFF-49AC-9484-11C05D551F14', 'ED4C4D56-AE15-4C8C-B51E-6DF38F45027B', 'Quem conversou com Jesus enquanto seus discípulos tinham ido à Sicar comprar alimento?', 'João 4:1-27'),
+    ('8916518C-CEFF-49AC-9484-11C05D551F14', '252CBC11-F82E-4EBB-8E1C-4080853295F6', 'Quem disse à Jesus: "Senhor, percebo que és um profeta"?', 'João 4:19');
