@@ -755,3 +755,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', 'C04CED43-8D59-4C13-A507-6F42389D9495', 'Quem junto com seu irmão Simeão empenhou-se em vingar o mal feito à sua irmã Diná?', 'Gênesis 34:25'),
     ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', '63DF9125-D691-499B-AADA-1501685F28A7', 'Conforme o nome de quem, um dos livros do Pentateuco foi denominado?', 'Levítico'),
     ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', '123E5312-204B-486F-8A6F-1EB18F8A4A7C', 'Sobre quem Paulo diz que pagou dízimo à Melquisedeque por intermédio de Abraão?', 'Hebreus 7:9,10');
+
+--------------------------------------------------------------------------------
+-- Ló
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('FB8DD6D8-9999-4B50-91BF-B5854478343A', 'Ló');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('FB8DD6D8-9999-4B50-91BF-B5854478343A', '8D8CA1FC-ADEF-4394-9378-1396318559EE', 'Quem foi advertido para fugir de Sodoma com sua família?', 'Gênesis 19:12'),
+    ('FB8DD6D8-9999-4B50-91BF-B5854478343A', 'A96B5832-79B3-4D16-A74A-AA2B6ECE57FD', 'Quem foi filho de Harã e sobrinho de Abraão?', 'Gênesis 11:27'),
+    ('FB8DD6D8-9999-4B50-91BF-B5854478343A', '825F19A0-80BB-49FB-8959-6475339DE755', 'A quem Abraão disse: "Não continue qualquer altercação entre os meus pastores e os teus pastores, pois nós homens somos irmãos"?', 'Gênesis 13:8'),
+    ('FB8DD6D8-9999-4B50-91BF-B5854478343A', 'A35ABE06-9F4F-4431-B0D4-5A3F9F1A18E9', 'Em resposta a oração de que homem justo foi salva a cidade de Zoar?', 'Gênesis 19:21'),
+    ('FB8DD6D8-9999-4B50-91BF-B5854478343A', 'CAA43B6D-8981-45E5-B6D9-1CF15BE3C766', 'Quem foi o antepassado dos Moabitas e dos Amonitas?', 'Gênesis 37:38'),
+    ('FB8DD6D8-9999-4B50-91BF-B5854478343A', '21CB028C-1520-4BC0-9DA8-43F41BDE3D18', 'Quem foi levado cativo e depois libertado por Abraão?', 'Gênesis 14:16');
