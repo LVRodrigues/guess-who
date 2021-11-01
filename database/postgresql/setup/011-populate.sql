@@ -940,3 +940,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('928191E3-F69C-43CE-8356-64F283108E7F', 'C6307B22-12AB-4BFA-93BF-5735AD0C5FD5', 'Que profeta foi tão estimado por Davi que ele deu seu nome a um de seus filhos?', '2 Samuel 5:14'),
     ('928191E3-F69C-43CE-8356-64F283108E7F', '74550CB0-7033-464A-B663-036CE0D62C71', 'Quem repreendeu Davi com a ilustração da cordeirinha para convencê-lo de seu pecado?', '2 Samuel 12:1-14'),
     ('928191E3-F69C-43CE-8356-64F283108E7F', '668F809E-5213-4A56-8A96-DA4305B0D5CE', 'Que profeta escreveu a última biografia de Davi e também uma de Salomão?', '1 Crônicas 29:29; 2 Crônicas 1');
+
+--------------------------------------------------------------------------------
+-- Natanael
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', 'Natanael');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', '725C3052-64AE-4449-8AE3-E409A38A2BC5', 'Qual dos doze apóstolos era de Caná da Galileia?', 'João 21:2'),
+    ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', 'C5DD5385-FEA6-45D4-B0A2-5A971412AD79', 'De quem Jesus disse: "Eis um israelita de verdade, em quem não há fraude"?', 'João 1:47'),
+    ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', '4C9E2563-3DE1-4108-8662-31564F421A4E', 'Qual dos doze apóstolos também se chamava Bartolomeu?', 'Mateus 10:2-5'),
+    ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', '0765EB7A-F50B-4E4B-ADA6-C5FCD4718723', 'Quem disse à Filipe: "Pode sair algo bom de Nazaré"?', 'João 1:46'),
+    ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', 'A8792716-C2E2-4652-BD9E-C4C407842201', 'A quem Jesus disse: "Antes de Filipe te chamar, enquanto estavas debaixo da figueira, eu ti vi"?', 'João 1:48'),
+    ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', 'D3EF0CDE-5484-496E-9949-BF1067F22CCA', 'Quem disse à Jesus: "Rabi, tu és o filho de Deus, tu és o Rei de Israel"?', 'João 1:49');
