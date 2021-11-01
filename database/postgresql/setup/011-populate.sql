@@ -1044,3 +1044,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', 'F5576C00-2AF2-4923-96DF-9A21C897AD38', 'Quem mandou por na estaca Jesus os dizeres: "Jesus, o Nazareno, Rei dos judeus"?', 'João 19:19'),
     ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', '4067AD2C-6E4F-4F27-B697-EE0D6552B4DB', 'A quem Jesus disse: "Meu reino não faz parte deste mundo. Se meu reino fizesse parte deste mundo, meus assistentes teriam lutado par que eu não fosse entregue nas mãos dos judeus"?', 'João 28:36'),
     ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', '1F421F9C-3221-4E04-B891-A9FA44291C3E', 'A quem os principais sacerdotes responderam: "Não temos rei, senão César"?', 'João 19:15');
+
+--------------------------------------------------------------------------------
+-- Raquel
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', 'Raquel');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', 'F4A243AB-124F-482C-A6FF-DD80955076C1', 'Qual era o nome da filha mais moça de Labão?', 'Gênesis 29:16'),
+    ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', '375F03BC-946E-44D7-8856-8A9921992E18', 'Quem é a primeira pastora mencionada nas Escrituras?', 'Gênesis 29:6,16'),
+    ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', '243F0EC7-DA6E-4B3D-A14D-B39455798CCD', 'Quem é poeticamente representada como chorando por seus filhos mortos em Belém?', 'Mateus 2:18'),
+    ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', 'EA5ED4EE-0A1D-40A7-BBD2-37D6859C0F7F', 'Quem foi a esposa amada de Jacó, por quem ele trabalhou quatorze anos?', 'Gênesis 29:18'),
+    ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', '57C7E374-08D5-486D-A8CB-D54FB7080B24', 'Quem foi a mãe de José e Benjamim?', 'Gênesis 35:24'),
+    ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', '616AEF6C-E9C6-4C3F-84B1-5C4857D9839E', 'Quem escondeu os terafins de seu pai na sela de um camelo e sentou sobre ela, para seu pai não os encontrar?', 'Gênesis 31:34');
