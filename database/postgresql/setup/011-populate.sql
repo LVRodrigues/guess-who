@@ -914,3 +914,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('8916518C-CEFF-49AC-9484-11C05D551F14', '8F0805A1-D353-4DDA-895E-9EF49AD0E6D2', 'Quem disse: "Vinde, vede um homem que disse todas as coisas que eu fiz. Será que este é o Cristo?"?', 'João 4:29'),
     ('8916518C-CEFF-49AC-9484-11C05D551F14', 'ED4C4D56-AE15-4C8C-B51E-6DF38F45027B', 'Quem conversou com Jesus enquanto seus discípulos tinham ido à Sicar comprar alimento?', 'João 4:1-27'),
     ('8916518C-CEFF-49AC-9484-11C05D551F14', '252CBC11-F82E-4EBB-8E1C-4080853295F6', 'Quem disse à Jesus: "Senhor, percebo que és um profeta"?', 'João 4:19');
+
+--------------------------------------------------------------------------------
+-- Nabucodonosor
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('37D6D696-444F-4A4C-8248-84942EDC5576', 'Nabucodonosor');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('37D6D696-444F-4A4C-8248-84942EDC5576', '06BE6473-7402-4783-BA14-6F3C66892FD0', 'Que rei destruiu Jerusalém, e queimou o templo e o palácio, matou o último rei da linhagem de Davi?', '2 Reis 25:8,9'),
+    ('37D6D696-444F-4A4C-8248-84942EDC5576', 'A2B3B1C7-0CFE-474C-AAE6-9521711F103E', 'Quem levou os vasos sagrados de Jerusalém para Babilônia?', '2 Reis 25:13-16'),
+    ('37D6D696-444F-4A4C-8248-84942EDC5576', '272810C9-F218-4553-9E13-BD1EA8F5A214', 'Quem mandou lançar três hebreus numa fornalha de fogo por não adorarem a imagem que ele construiu?', 'Daniel 3:21'),
+    ('37D6D696-444F-4A4C-8248-84942EDC5576', '897E08C8-83A7-423D-91CE-5B890818F598', 'Qual rei foi tirado dos homens para comer capim como uma besta do campo?', 'Daniel 4:23'),
+    ('37D6D696-444F-4A4C-8248-84942EDC5576', 'E2B10D1D-9791-4AFE-A369-7E10F96FCB21', 'Que rei foi humilhado até reconhecer que Jeová Deus, o Deus de Daniel é o Deus verdadeiro?', 'Daniel 4:34'),
+    ('37D6D696-444F-4A4C-8248-84942EDC5576', '51061F02-D2FB-4686-9B41-F3F34FC3F3AE', 'À quem foi dito: "Tua morada será com os animais do campo. A ti darão vegetação para comer, como a touros, e sete tempos é que passarão"?', 'Daniel 4:321');
