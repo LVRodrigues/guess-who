@@ -966,3 +966,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('34F56B07-B449-467E-A0A9-C8342511178E', 'C2A3F2F7-F95F-48F2-B5CD-FC19E316CA74', 'Quem governou Jerusalém por doze anos sem ganhar salário e dum modo bem custoso?', 'Neemias 5:14-18'),
     ('34F56B07-B449-467E-A0A9-C8342511178E', 'FDFDFB52-F1DA-47F3-AE2F-44361E84AEE4', 'Quem ordenou que os portões de Jerusalém permanecessem fechados no sábado?', 'Neemias 13:19'),
     ('34F56B07-B449-467E-A0A9-C8342511178E', '06FC1CB4-C4C3-4D65-9D5F-031D5C16F238', 'Quem foi o último governador dos judeus mencionado nas Escrituras Hebraicas?', 'Neemias');
+
+--------------------------------------------------------------------------------
+-- Nicodemos
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', 'Nicodemos');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', '43234258-A48F-463E-A9F4-A666C539BF97', 'Quem dentre os fariseus foi visitar Jesus à noite?', 'João 3:2'),
+    ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', 'ECA687EE-844D-4DC1-BE05-07C1A45C0EB6', 'A Quem Jesus disse: "A menos que alguém nasça de água e espírito, não pode entrar no Reino de Deus"?', 'João 3:5'),
+    ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', '4E4CD8B6-21B5-4912-83D5-90CFA678203E', 'A quem Jesus disse: "Nenhum homem subiu ao céu, senão aquele que desceu do céu, o Filho do Homem"?', 'João 3:13'),
+    ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', '38FCE3ED-91AE-4DB3-A454-0A2852310892', 'Quem disse a Jesus: "Rabi, sabemos que o senhor veio como instrutor da parte de Deus, pois ninguém pode realizar esses sinais que o senhor realiza a menos que Deus esteja com ele."?', 'João 3:2'),
+    ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', '7175CA26-DF68-4286-9D96-AF2E670C961E', 'Quem falou a respeito de Jesus: "Será que a nossa lei julga um homem sem que primeiro o tenha ouvido?"?', 'João 7:51'),
+    ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', '9709EC50-4C9C-449B-9EC1-80696EDDBEAA', 'Quem deu cerca de trinta e três quilos de mirra e aloés para o sepultamento de Jesus?', 'João 19:39');
