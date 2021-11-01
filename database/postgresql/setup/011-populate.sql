@@ -781,3 +781,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', '5FFF0D0A-A02C-483D-8DD2-6D0677A0039F', 'Quem escreveu seus livros à Teófilo?', 'Lucas 1:3; Atos 1:1'),
     ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', 'A89CB48B-3AFE-4009-819C-905979070922', 'Quem escreveu o 3º livro dos evangelhos e o livro de Atos dos Apóstolos?', 'Lucas 1:3, Atos 1:1'),
     ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', '6081773D-4F3F-4978-8975-A42CB50E3E1B', 'Qual dos evangelistas foi junto com Paulo em sua primeira visita à Roma?', '2 Timóteo 4:11');
+
+--------------------------------------------------------------------------------
+-- Marcos
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('2432656D-758F-4E9B-BA70-379AE427579E', 'Marcos');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('2432656D-758F-4E9B-BA70-379AE427579E', '334FD278-F2A1-4487-A1A9-BF7E20092AA0', 'Quem era filho daquela Maria em cuja casa muitas pessoas oravam a favor de Pedro?', 'Atos 12:12'),
+    ('2432656D-758F-4E9B-BA70-379AE427579E', 'FB7663CB-ED35-4CC5-888E-E9E103AE925C', 'Quem o apóstolo Pedro chama de "Meu filho" no evangelho?', '1 Pedro 5:13'),
+    ('2432656D-758F-4E9B-BA70-379AE427579E', 'EBAF0C54-3D26-4008-A619-B12FDC16569B', 'Quem foi o motivo de forte discussão entre Paulo e Barnabé?', 'Atos 15:37-39'),
+    ('2432656D-758F-4E9B-BA70-379AE427579E', 'ADB47B2B-11C3-42AF-9CD1-00F4E9B5F6BD', 'De quem Paulo escreveu à Timóteo: "Traze-o contigo, porque ele me é útil para ministrar"?', '2 Timóteo 4:11'),
+    ('2432656D-758F-4E9B-BA70-379AE427579E', 'F377EDF7-92E5-4A3E-AE5A-D98F2CF4C06B', 'Quem é o escritor do segundo evangelho de Jesus Cristo?', 'Marcos'),
+    ('2432656D-758F-4E9B-BA70-379AE427579E', 'BB74918E-5899-4685-9EA1-D558DDF6E0F7', 'Com quem Barnabé viajou para Chipre depois de separar-se de Paulo?', 'Atos 15:39');
+    
