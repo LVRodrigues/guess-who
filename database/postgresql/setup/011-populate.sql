@@ -1160,4 +1160,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('D357D385-482E-4306-8457-4EF4D2187883', 'A29833BE-9678-4AF2-A94F-974877B55146', 'Quem em desespero foi consultar uma médium espírita caindo assim no desagrado completo de Jeová?', '1 Samuel 28:7,8'),
     ('D357D385-482E-4306-8457-4EF4D2187883', '0FC198F2-383A-423E-A9B9-59B12ADE5F00', 'Quem foi morto com seus filhos em batalha no monte Gilboa?', '1 Samuel 31:6'),
     ('D357D385-482E-4306-8457-4EF4D2187883', 'BC3652D7-8D65-4A66-9D76-F13F129B8457', 'Quem foi o pai de Mefibosete?', '2 Samuel 19:24');
+
+--------------------------------------------------------------------------------
+-- Sem
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', 'Sem');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', '14D53788-56C5-454A-A017-757A39DE5F2F', 'Quem foi o mais famoso dos filhos de Noé?', 'Gênesis 5:28,32'),
+    ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', '32A69B05-6502-4CF6-AEB8-931E63D6E476', 'Quem é mencionado como tendo 98 anos de idade por ocasião do diluvio?', 'Gênesis 11:10'),
+    ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', '346A27C4-F425-41AE-9C7B-5A276B978E2D', 'Qual dos filhos de Noé preservou a adoração verdadeira após a morte de Noé?', 'Gênesis 11'),
+    ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', 'A410EED3-300D-4487-9946-C6413AEA744F', 'O nome de quem é usado para referir-se às línguas faladas pelos hebreus e outros?', 'História'),
+    ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', '4DA3251A-6513-42CA-A56F-45EE6C491649', 'Quem, presume-se, foi Melquisedeque, mas não se pode afirmar?', 'Gênesis 14:18'),
+    ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', '0CC2CE5E-576A-420A-A63B-3FE9B43E5BB9', 'De quem foi dito que Canaã lhe seria servo e Jafé habitaria nas suas tendas?', 'Gênesis 9:26,27');
     
