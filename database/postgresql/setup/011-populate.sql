@@ -1109,3 +1109,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', '6D870866-9563-40BC-91E2-A2EFB7A0F730', 'Quem escreveu os livros de Provérbios, Eclesiastes, Cântico e um dos Salmos?', 'Provérbios 1:1; Eclesiastes 1:1; Cântico de Salomão 1:1; Salmo 7'),
     ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', '7FC1B673-173A-4DF7-92BA-FF945CA8C035', 'Quem escreveu: "Pois os vivos sabem que morrerão, mas os mortos não sabem absolutamente nada..."?', 'Eclesiastes 9:5'),
     ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', 'EE38F591-76ED-4184-8223-967DB996BECA', 'Quem escreveu: "Uma geração vai, outra geração vem, mas a terra permanece por tempo indefinido"?', 'Eclesiastes 1:4');
+
+--------------------------------------------------------------------------------
+-- Samuel
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', 'Samuel');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', '37E3A59F-8B45-4D7A-8C3A-ED3F69FC4C5D', 'Que criança foi entregue por sua mãe Ana para servir na casa de Jeová?', '1 Samuel 1:24'),
+    ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', 'A2A5E1C0-966C-48F3-9D6E-8CFA65E3FD55', 'Quem foi o último dos juizes de Israel?', 'Atos 13:20'),
+    ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', '12286EB3-3BF7-4A0C-B0F3-399B194345FD', 'Quem ungiu a Saul e Davi como reis?', '1 Samuel 10:1; 16:13'),
+    ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', '66249CE8-1F82-4346-9B6A-C624E2E96993', 'Quem disse: "Eis que obedecer é melhor de que um sacrifício"?', '1 Samuel 15:22'),
+    ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', 'AA2F61D1-5D12-4DAF-B730-D55FD47B6249', 'Quem matou Agague, rei dos amalequitas em virtude da negligência de Saul?', '1 Samuel 15:33'),
+    ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', '99FF8DD6-16CB-4262-8FEF-6DA3F8237F36', 'Quem foi o filho de Elcana que servia ainda menino à Jeová com um éfode de linho?', '1 Samuel 2:18-20');
