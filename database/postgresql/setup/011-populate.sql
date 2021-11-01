@@ -848,3 +848,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('07A69E9E-801D-4746-BCCD-323AB815045F', '7F0D7A12-8BCD-43DC-B4DE-01101460ABD7', 'Quem disse a Jesus: "Tenho crido que tu és o Cristo, o filho de Deus"?', 'João 11:27'),
     ('07A69E9E-801D-4746-BCCD-323AB815045F', '5A7BED79-16A7-484F-B43E-95B41F81B2AC', 'Que mulher de Betânia hospedou Jesus em sua casa?', 'Lucas 10:38'),
     ('07A69E9E-801D-4746-BCCD-323AB815045F', 'E5E3F9A0-47A3-42CF-AA99-8A9DE38EC2F7', 'Quem disse a Jesus: "Senhor, se tivesses estado aqui, meu irmão não teria morrido"?', 'João 11:21');
+
+--------------------------------------------------------------------------------
+-- Mateus
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', 'Mateus');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', '6E20C7E3-C64A-412A-A672-B90D815BAE10', 'À quem chamou Jesus dizendo: "Seja meu seguidor"?', 'Mateus 9:9'),
+    ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', '14C2E9B3-896B-4DC0-A975-748AFE086C3B', 'Qual dos apóstolos era também chamado Levi?', 'Marcos 2:14'),
+    ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', '68B802D5-B026-43AA-AD95-98C6582941BA', 'Qual dos apóstolos fez um grande banquete para Jesus?', 'Lucas 5:29'),
+    ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', 'D2293A93-B6C8-4E6D-879E-5DD0FAC2C737', 'Qual dos evangelistas relata a genealogia de Jesus partindo de Abraão?', 'Mateus 1:1'),
+    ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', '3B5D2900-854D-414A-B194-E94CC1DF6353', 'Qual dos evangelhos contém o relato dos astrólogos (reis magos)?', 'Mateus 2'),
+    ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', '1A6EC00E-298E-4F07-A6B9-5C48ACCEFDDE', 'Quem primeiro escreveu o evangelho sobre Jesus Cristo e que também é o primeiro livro das Escrituras gregas?', 'Mateus');
