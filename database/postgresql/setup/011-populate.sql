@@ -953,3 +953,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', '0765EB7A-F50B-4E4B-ADA6-C5FCD4718723', 'Quem disse à Filipe: "Pode sair algo bom de Nazaré"?', 'João 1:46'),
     ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', 'A8792716-C2E2-4652-BD9E-C4C407842201', 'A quem Jesus disse: "Antes de Filipe te chamar, enquanto estavas debaixo da figueira, eu ti vi"?', 'João 1:48'),
     ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', 'D3EF0CDE-5484-496E-9949-BF1067F22CCA', 'Quem disse à Jesus: "Rabi, tu és o filho de Deus, tu és o Rei de Israel"?', 'João 1:49');
+
+--------------------------------------------------------------------------------
+-- Neemias
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('34F56B07-B449-467E-A0A9-C8342511178E', 'Neemias');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('34F56B07-B449-467E-A0A9-C8342511178E', '0B748633-37D7-46F1-B724-6251B6EB6110', 'Que judeu era copeiro do Rei Artaxerxes da Pérsia?', 'Neemias 1:11'),
+    ('34F56B07-B449-467E-A0A9-C8342511178E', 'C0D0539F-AA85-4272-98DE-082DB7F0E472', 'Quem, como Moisés, deixou o luxo de uma corte para ir ter os israelitas oprimidos?', 'Neemias 2:5'),
+    ('34F56B07-B449-467E-A0A9-C8342511178E', '72396558-E1A3-425D-B49B-74430AAE1B7D', 'Quem reconstruiu os muros de Jerusalém após o cativeiro?', 'Neemias 4:6'),
+    ('34F56B07-B449-467E-A0A9-C8342511178E', 'C2A3F2F7-F95F-48F2-B5CD-FC19E316CA74', 'Quem governou Jerusalém por doze anos sem ganhar salário e dum modo bem custoso?', 'Neemias 5:14-18'),
+    ('34F56B07-B449-467E-A0A9-C8342511178E', 'FDFDFB52-F1DA-47F3-AE2F-44361E84AEE4', 'Quem ordenou que os portões de Jerusalém permanecessem fechados no sábado?', 'Neemias 13:19'),
+    ('34F56B07-B449-467E-A0A9-C8342511178E', '06FC1CB4-C4C3-4D65-9D5F-031D5C16F238', 'Quem foi o último governador dos judeus mencionado nas Escrituras Hebraicas?', 'Neemias');
