@@ -822,3 +822,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('20287D37-C066-477B-8977-A94DDF8DA6F1', '81041F2C-F4CB-4FF6-B293-9072F857C018', 'A quem Jesus disse: "Pára de agarrar-te a mim. Porque ainda não ascendi para junto do pai"?', 'João 20:17'),
     ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'E0161413-AF39-48BA-A8AB-5371BEBAA8F7', 'Quem correu a dizer que tinha visto o Senhor ressuscitado, para os discípulos?', 'João 20:18'),
     ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'A147546B-B1E5-4656-849A-57D8D155F240', 'De quem Jesus expulsou sete demônios?', 'Lucas 8:2');
+
+--------------------------------------------------------------------------------
+-- Maria, mãe de Jesus
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('90581C8A-872B-4829-A1CC-A43C8547B14B', 'Maria, mãe de Jesus');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('90581C8A-872B-4829-A1CC-A43C8547B14B', '99A39F0A-DAF8-4292-B658-30FC31096F24', 'Quem falou: "E meu espírito não pode deixar de estar cheio de alegria por Deus meu Salvador pois Ele tem olhado para a situação humilde de sua escrava"?', 'Lucas 1:47,48'),
+    ('90581C8A-872B-4829-A1CC-A43C8547B14B', '24E73327-6E68-4192-B661-7483E33CDDCF', 'Quem fugiu para o Egito por causa do Rei Herodes?', 'Mateus 2:13-15'),
+    ('90581C8A-872B-4829-A1CC-A43C8547B14B', '1A68DC41-8973-4634-95D8-D136C8C11CB0', 'A quem Simeão disse: "Eis que este é posto para a queda e para o novo levantamento de muitos em Israel"?', 'Lucas 2:34'),
+    ('90581C8A-872B-4829-A1CC-A43C8547B14B', 'FA31B993-8F34-4CA8-93B4-2BA4FDF54F64', 'Quem Jesus deixou aos cuidados de seu discípulo amado João, ao morrer na estaca?', 'João 19:25-27'),
+    ('90581C8A-872B-4829-A1CC-A43C8547B14B', 'ECD9C618-2895-41D8-AFCB-B3944F273FE7', 'A quem Jesus disse: "Que tenho eu que ver contigo, mulher? Minha hora não chegou ainda"?', 'João 2:4'),
+    ('90581C8A-872B-4829-A1CC-A43C8547B14B', '4C8C7434-9828-4310-B492-513B86BA558F', 'Quem era a mãe de Tiago, José, Simão e Judas?', 'Mateus 13:55');
+    
