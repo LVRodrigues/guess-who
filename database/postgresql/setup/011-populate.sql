@@ -1005,3 +1005,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', 'CB41CCB9-E321-4C8A-BA8E-D6658E3CE1FF', 'A quem Deus revelou que o arco-íris seria um pacto ou sinal Divino?', 'Gênesis 9:13'),
     ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', '4A934414-4FCA-438A-B980-4F61F4336620', 'Quem disse estas palavras profética: "Bendito seja Jeová, Deus de Sem, E torne-se Canaã escravo dele"?', 'Gênesis 9:26'),
     ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', '13EB1BCD-04C5-48B8-9A09-CDC9D8511A6E', 'Quem pela sua fé e obras condenou um mundo antigo?', 'Hebreus 11:7');
+
+--------------------------------------------------------------------------------
+-- Paulo
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('881A69A9-A418-4CE5-8408-BA54A078141D', 'Paulo');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('881A69A9-A418-4CE5-8408-BA54A078141D', '5C23B442-62EE-443D-AD12-04E74020E3B4', 'Quem pregou num sermão para os filósofos gregos em Atenas?', 'Atos 17:16-34'),
+    ('881A69A9-A418-4CE5-8408-BA54A078141D', '72C5A6D1-CAA5-4A39-AFE7-6783FB6E5837', 'A quem o Rei Agripa disse: "em pouco tempo me persuadirias a tronar-me cristão"?', 'Atos 26:28'),
+    ('881A69A9-A418-4CE5-8408-BA54A078141D', 'E07515C8-3430-43A6-9A36-BC6FE2FA9BCF', 'Quem escreveu: "E não é de admirar, pois, o próprio Satanás persiste em transformar-se em anjo de luz"?', '2 Coríntios 11:14'),
+    ('881A69A9-A418-4CE5-8408-BA54A078141D', '58B60667-07D1-47B8-985B-B92BC8E92E0A', 'Quem escreveu o maior número de livros das Escrituras Gregas?', 'História'),
+    ('881A69A9-A418-4CE5-8408-BA54A078141D', '460008D8-F862-418C-89F2-CB37252AE389', 'Quem escapou de seus perseguidores dentro de um cesto nos muros de Damasco?', 'Atos 9:23-25'),
+    ('881A69A9-A418-4CE5-8408-BA54A078141D', 'B5B09AAD-8794-4613-B1DC-95384E1B8FDE', 'Quem foi o chamado de "Apóstolo para as nações"?', '2 Timóteo 1:11');
