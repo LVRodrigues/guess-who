@@ -1199,3 +1199,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('CD55C2EA-5012-4368-9E6D-290FD6A81609', '41929C25-BF7F-44B7-831E-7877065DC0AC', 'A quem foi escrito: "O escravo do Senhor não precisa lutar, porém, precisa ser meigo para com todos, qualificado para ensinar, restringindo-se sob o mal"?', '2 Timóteo 2:24'),
     ('CD55C2EA-5012-4368-9E6D-290FD6A81609', '102D79F2-EB8F-4954-8825-B82D74650050', 'A quem Paulo escreveu duas cartas, chamando-o de Filho genuíno de Fé?', '1 Timóteo 1:2'),
     ('CD55C2EA-5012-4368-9E6D-290FD6A81609', 'D82FCED3-470B-4A5D-8513-FBD6E6B5AB05', 'A quem Paulo recomendou beber um pouco de vinho por causa do seu estômago, e freqüentes casos de doença?', '1 Timóteo 5:23');
+
+--------------------------------------------------------------------------------
+-- Tomé
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', 'Tomé');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', 'A4964C62-3CC6-4DE4-B373-247B3B51DFAA', 'Quem era também chamado Dídimo?', 'João 11:16'),
+    ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', '2EBEE695-AE8D-488E-90E0-A1094C3CD8D8', 'Qual dos discípulos estava ausente quando Jesus ressuscitado apareceu-lhes numa sala fechada?', 'João 20:24'),
+    ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', 'E0CB4158-6650-444A-98D8-BE1D25AC58D8', 'A quem Jesus disse: "Põe o teu dedo aqui, e vê as minhas mãos..."?', 'João 20:27'),
+    ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', 'A2AD5A0E-7ECB-40DE-9AE7-BED9FF500599', 'A quem Jesus disse: "Eu sou o caminho, a verdade, a vida"?', 'João 14:6'),
+    ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', 'BAD93C6F-9CFB-4B06-89C6-8A574138278F', 'Quem disse a Jesus: "Senhor, não sabemos para onde vais. Como sabemos o caminho?"?', 'João 14:5'),
+    ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', '93E96E80-8E0C-48B2-969C-934C3D53DCD7', 'Quem disse, duvidando da ressurreição de Jesus: "A menos que eu veja nas suas mãos o sinal dos pregos e ponha o meu dedo no sinal dos pregos... não acreditarei"?', 'João 20:25');
