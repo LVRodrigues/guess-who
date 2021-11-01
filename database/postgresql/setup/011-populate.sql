@@ -808,3 +808,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', '3268D617-7ABC-4E9B-B45E-361337FC9730', 'De quem Jesus disse: "Onde quer que se pregarem estas boas novas em todo o mundo, o que esta mulher fez também será contado em lembrança dela"?', 'Mateus 26:13'),
     ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', 'E8226A5C-1819-41B2-B568-1601AC9D8ED6', 'Quem é descrita como sentando aos pés de Jesus para ouvir-lhe as palavras?', 'Lucas 10:39'),
     ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', 'B1B85437-09F6-44BE-9EB6-8DD6CAD3421E', 'Que mulher é descrita como estando aos pés de Cristo por três vezes?', 'Lucas 10:39; João 11:32, 12:3');
+
+--------------------------------------------------------------------------------
+-- Maria Madalena
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'Maria Madalena');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'DB02F82F-61A0-4B3A-913E-BA46A60BBEDD', 'Para quem os anjos perguntaram no sepulcro; "Mulher, por que estás chorando?"?', 'João 20:13'),
+    ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'AF83E6E6-2984-4043-984B-9F493AA58B86', 'Quem disse: "Retiraram o meu Senhor, e não sei onde o deitaram"?', 'João 20:13'),
+    ('20287D37-C066-477B-8977-A94DDF8DA6F1', '640BEDC9-3D54-44B4-A6D4-808A4BFC9FA7', 'Quem foi que viu Jesus ressuscitado em primeiro lugar?', 'Marcos 16:9'),
+    ('20287D37-C066-477B-8977-A94DDF8DA6F1', '8AC3C5E1-119D-4587-8BA8-FBA53C03E905', 'Par quem Jesus predisse sua breve ascensão logo após ressuscitar?', 'João 20:17'),
+    ('20287D37-C066-477B-8977-A94DDF8DA6F1', '81041F2C-F4CB-4FF6-B293-9072F857C018', 'A quem Jesus disse: "Pára de agarrar-te a mim. Porque ainda não ascendi para junto do pai"?', 'João 20:17'),
+    ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'E0161413-AF39-48BA-A8AB-5371BEBAA8F7', 'Quem correu a dizer que tinha visto o Senhor ressuscitado, para os discípulos?', 'João 20:18'),
+    ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'A147546B-B1E5-4656-849A-57D8D155F240', 'De quem Jesus expulsou sete demônios?', 'Lucas 8:2');
