@@ -1031,3 +1031,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('147AFA61-BF77-4D42-A2CA-80075925BEAC', '0F289FBF-7006-40FE-9E47-AAFF7D44BA66', 'Quem escreveu que Jesus morreu como humano, mas foi vivificado como espírito?', '1 Pedro 1:20,21'),
     ('147AFA61-BF77-4D42-A2CA-80075925BEAC', '1FE69066-A4A1-4134-B197-58F136F193B3', 'Quem escreveu que a Bíblia Sagrada não é de particular interpretação, mas os homens falaram da parte de Deus conforme eram movidos pelo espírito santo?', '2 Pedro 1:20,21'),
     ('147AFA61-BF77-4D42-A2CA-80075925BEAC', '4028F431-3E1F-421C-AF92-02A44820B1B0', 'Quem escreveu que um dia para Jeová é como mil anos e mil anos como um dia?', '2 Pedro 3:8');
+
+--------------------------------------------------------------------------------
+-- Pilatos
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', 'Pilatos');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', '9BDA54D7-3A2F-4C5D-8C2C-6FE87396B534', 'Quem misturou o sangue de alguns galileus com os sacrifícios que os mesmos realizavam?', 'Lucas 13:1'),
+    ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', 'A736DF92-7613-41FE-A144-37E0E308C9DC', 'Quem perguntou a Jesus: "Você é o Rei dos judeus?"?', 'Mateus 27:11'),
+    ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', '7C824EA9-ECAE-4761-8C35-65D5E424863C', 'A mulher de quem disse: "Não tenha nada a ver com esse homem justo, pois hoje eu sofri muito, num sonho, por causa dele."', 'Mateus 27:19'),
+    ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', 'F5576C00-2AF2-4923-96DF-9A21C897AD38', 'Quem mandou por na estaca Jesus os dizeres: "Jesus, o Nazareno, Rei dos judeus"?', 'João 19:19'),
+    ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', '4067AD2C-6E4F-4F27-B697-EE0D6552B4DB', 'A quem Jesus disse: "Meu reino não faz parte deste mundo. Se meu reino fizesse parte deste mundo, meus assistentes teriam lutado par que eu não fosse entregue nas mãos dos judeus"?', 'João 28:36'),
+    ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', '1F421F9C-3221-4E04-B891-A9FA44291C3E', 'A quem os principais sacerdotes responderam: "Não temos rei, senão César"?', 'João 19:15');
