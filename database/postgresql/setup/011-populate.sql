@@ -874,3 +874,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', 'FFF188A8-1AB1-4E43-B290-88964C852611', 'Que sacerdote de Jeová os judeus presumem ter sido Sem?', 'História'),
     ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', '13B3A869-4A4B-4CBE-92BD-3AA121796B6D', 'A quem todos os levitas pagaram dízimo quando estavam nos lombos de Abraão?', 'Hebreus 7:10'),
     ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', '76C9E618-F4E7-466E-8A66-A2CB17F8A352', 'Quem é mencionado por Davi no Salmo 110 como modelo profético do sacerdócio de Cristo?', 'Salmo 110:4');
+
+--------------------------------------------------------------------------------
+-- Miriã
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('BA27A3CA-48CA-48D6-8892-781B981D77AD', 'Miriã');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('BA27A3CA-48CA-48D6-8892-781B981D77AD', 'F5930DA5-4771-42AC-9A75-8BBC7E2B2817', 'Quem dançou e cantou: "Cantai a Jeová, pois Ele ficou grandemente enaltecido. Lançou no mar o cavalo e seu cavaleiro"?', 'Êxodo 15:20,21'),
+    ('BA27A3CA-48CA-48D6-8892-781B981D77AD', 'EC1DAF32-7DEB-499D-A074-D8927071116C', 'Quem foi ferida de lepra por rebelar-se contra Moisés?', 'Números 12:1-12'),
+    ('BA27A3CA-48CA-48D6-8892-781B981D77AD', '5CE6B91F-8158-4215-B9F6-90FCCD05FBD7', 'Como chamava-se a irmã de Moisés que era profetiza?', 'Números 26:59'),
+    ('BA27A3CA-48CA-48D6-8892-781B981D77AD', '16E69801-F670-4630-B9E0-437661AC3346', 'Como se chamava a filha de Joquebede?', 'Números 26:59'),
+    ('BA27A3CA-48CA-48D6-8892-781B981D77AD', '89C9D29E-EE02-4ED3-8107-DCE2EF7B9030', 'Quem estava entre os juncos á beira do rio Nilo vigiando seu irmãozinho que havia sido colocado numa arca de papiro sobre as águas?', 'Êxodo 2:4'),
+    ('BA27A3CA-48CA-48D6-8892-781B981D77AD', 'DDCD62B8-78B4-4B7B-A77A-3ECFF4704E2F', 'Quem disse à filha de Faraó: "A senhora quer que eu chame uma ama hebreia para que ela amamente o menino para a senhora?"?', 'Êxodo 2:7');
