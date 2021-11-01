@@ -1018,3 +1018,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('881A69A9-A418-4CE5-8408-BA54A078141D', '58B60667-07D1-47B8-985B-B92BC8E92E0A', 'Quem escreveu o maior número de livros das Escrituras Gregas?', 'História'),
     ('881A69A9-A418-4CE5-8408-BA54A078141D', '460008D8-F862-418C-89F2-CB37252AE389', 'Quem escapou de seus perseguidores dentro de um cesto nos muros de Damasco?', 'Atos 9:23-25'),
     ('881A69A9-A418-4CE5-8408-BA54A078141D', 'B5B09AAD-8794-4613-B1DC-95384E1B8FDE', 'Quem foi o chamado de "Apóstolo para as nações"?', '2 Timóteo 1:11');
+
+--------------------------------------------------------------------------------
+-- Pedro
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('147AFA61-BF77-4D42-A2CA-80075925BEAC', 'Pedro');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('147AFA61-BF77-4D42-A2CA-80075925BEAC', 'D4CB54D0-4D26-481A-AAEA-15ABE22F8B8F', 'Qual dos apóstolos fez o discurso no dia de Pentecostes com o derramamento do espírito santo sobre os apóstolos e discípulos?', 'Atos 2'),
+    ('147AFA61-BF77-4D42-A2CA-80075925BEAC', '304CAE83-D4F1-4FD2-A27D-35342299A360', 'A quem Jesus perguntou: "... você me ama mais do que a estes?"', 'João 21:15'),
+    ('147AFA61-BF77-4D42-A2CA-80075925BEAC', '9344892A-C2BA-462A-97E6-A39EFB33FE3A', 'Quem escreveu: "Mas, há novos céus e uma nova terra que aguardamos segundo a sua promessa, e nestes há de morar a justiça"?', '2 Pedro 3:13'),
+    ('147AFA61-BF77-4D42-A2CA-80075925BEAC', '0F289FBF-7006-40FE-9E47-AAFF7D44BA66', 'Quem escreveu que Jesus morreu como humano, mas foi vivificado como espírito?', '1 Pedro 1:20,21'),
+    ('147AFA61-BF77-4D42-A2CA-80075925BEAC', '1FE69066-A4A1-4134-B197-58F136F193B3', 'Quem escreveu que a Bíblia Sagrada não é de particular interpretação, mas os homens falaram da parte de Deus conforme eram movidos pelo espírito santo?', '2 Pedro 1:20,21'),
+    ('147AFA61-BF77-4D42-A2CA-80075925BEAC', '4028F431-3E1F-421C-AF92-02A44820B1B0', 'Quem escreveu que um dia para Jeová é como mil anos e mil anos como um dia?', '2 Pedro 3:8');
