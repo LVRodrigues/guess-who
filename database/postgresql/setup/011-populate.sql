@@ -927,3 +927,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('37D6D696-444F-4A4C-8248-84942EDC5576', '897E08C8-83A7-423D-91CE-5B890818F598', 'Qual rei foi tirado dos homens para comer capim como uma besta do campo?', 'Daniel 4:23'),
     ('37D6D696-444F-4A4C-8248-84942EDC5576', 'E2B10D1D-9791-4AFE-A369-7E10F96FCB21', 'Que rei foi humilhado até reconhecer que Jeová Deus, o Deus de Daniel é o Deus verdadeiro?', 'Daniel 4:34'),
     ('37D6D696-444F-4A4C-8248-84942EDC5576', '51061F02-D2FB-4686-9B41-F3F34FC3F3AE', 'À quem foi dito: "Tua morada será com os animais do campo. A ti darão vegetação para comer, como a touros, e sete tempos é que passarão"?', 'Daniel 4:321');
+
+--------------------------------------------------------------------------------
+-- Natã
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('928191E3-F69C-43CE-8356-64F283108E7F', 'Natã');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('928191E3-F69C-43CE-8356-64F283108E7F', 'AFFB84E4-A9F5-417D-911E-06D072592CDB', 'Quem Jeová usou para dizer a Davi que sua casa e seu trono seriam firmemente estabelecidos por tempo indefinido?', '2 Samuel 17:13'),
+    ('928191E3-F69C-43CE-8356-64F283108E7F', '2945EDFF-D9CC-4DB7-998F-C26207EA28E7', 'Que profeta assegurou a sucessão de Salomão ao trono?', '1 Reis 1:11'),
+    ('928191E3-F69C-43CE-8356-64F283108E7F', '2F172973-4C15-4B61-BB13-1EC4D2A7D6B5', 'A quem Davi disse: "Vê, eu moro agora numa casa de cedro, enquanto a arca do verdadeiro Deus está morando no meio de panos de tenda"?', '2 Samuel 7:2'),
+    ('928191E3-F69C-43CE-8356-64F283108E7F', 'C6307B22-12AB-4BFA-93BF-5735AD0C5FD5', 'Que profeta foi tão estimado por Davi que ele deu seu nome a um de seus filhos?', '2 Samuel 5:14'),
+    ('928191E3-F69C-43CE-8356-64F283108E7F', '74550CB0-7033-464A-B663-036CE0D62C71', 'Quem repreendeu Davi com a ilustração da cordeirinha para convencê-lo de seu pecado?', '2 Samuel 12:1-14'),
+    ('928191E3-F69C-43CE-8356-64F283108E7F', '668F809E-5213-4A56-8A96-DA4305B0D5CE', 'Que profeta escreveu a última biografia de Davi e também uma de Salomão?', '1 Crônicas 29:29; 2 Crônicas 1');
