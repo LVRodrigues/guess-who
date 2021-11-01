@@ -794,4 +794,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('2432656D-758F-4E9B-BA70-379AE427579E', 'ADB47B2B-11C3-42AF-9CD1-00F4E9B5F6BD', 'De quem Paulo escreveu à Timóteo: "Traze-o contigo, porque ele me é útil para ministrar"?', '2 Timóteo 4:11'),
     ('2432656D-758F-4E9B-BA70-379AE427579E', 'F377EDF7-92E5-4A3E-AE5A-D98F2CF4C06B', 'Quem é o escritor do segundo evangelho de Jesus Cristo?', 'Marcos'),
     ('2432656D-758F-4E9B-BA70-379AE427579E', 'BB74918E-5899-4685-9EA1-D558DDF6E0F7', 'Com quem Barnabé viajou para Chipre depois de separar-se de Paulo?', 'Atos 15:39');
-    
+
+--------------------------------------------------------------------------------
+-- Maria, de Betânia
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', 'Maria, de Betânia');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', 'DD71067F-8104-46E6-8154-94AA58364156', 'Quem era irmã de Marta e Lázaro?', 'João 11:1'),
+    ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', '1421B2DE-A9D0-4C2C-B963-6F37A81F92EF', 'Quem deu mais atenção ao ensino de Jesus do que às preocupações materiais para hospedá-lo?', 'Lucas 10:40-42'),
+    ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', '34B1766E-78F6-4567-9E9C-ED87282DD16F', 'Quem untou os pés de Jesus com nardo genuíno e depois enxugou com seus cabelos?', 'João 12:3'),
+    ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', 'AB549A10-C12A-46CD-9327-6464A78BEEB6', 'De quem Jesus falou: "Ela escolheu a boa porção, e esta não lhe será tirada"?', 'Lucas 10:42'),
+    ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', '3268D617-7ABC-4E9B-B45E-361337FC9730', 'De quem Jesus disse: "Onde quer que se pregarem estas boas novas em todo o mundo, o que esta mulher fez também será contado em lembrança dela"?', 'Mateus 26:13'),
+    ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', 'E8226A5C-1819-41B2-B568-1601AC9D8ED6', 'Quem é descrita como sentando aos pés de Jesus para ouvir-lhe as palavras?', 'Lucas 10:39'),
+    ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', 'B1B85437-09F6-44BE-9EB6-8DD6CAD3421E', 'Que mulher é descrita como estando aos pés de Cristo por três vezes?', 'Lucas 10:39; João 11:32, 12:3');
