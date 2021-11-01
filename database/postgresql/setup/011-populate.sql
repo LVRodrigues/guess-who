@@ -861,3 +861,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', 'D2293A93-B6C8-4E6D-879E-5DD0FAC2C737', 'Qual dos evangelistas relata a genealogia de Jesus partindo de Abraão?', 'Mateus 1:1'),
     ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', '3B5D2900-854D-414A-B194-E94CC1DF6353', 'Qual dos evangelhos contém o relato dos astrólogos (reis magos)?', 'Mateus 2'),
     ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', '1A6EC00E-298E-4F07-A6B9-5C48ACCEFDDE', 'Quem primeiro escreveu o evangelho sobre Jesus Cristo e que também é o primeiro livro das Escrituras gregas?', 'Mateus');
+
+--------------------------------------------------------------------------------
+-- Melquisedeque
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', 'Melquisedeque');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', 'C16534CE-F951-4059-BA0B-303817A38A87', 'Quem foi o rei de Salém e o primeiro sacerdote mencionado nas Escrituras?', 'Gênesis 14:18'),
+    ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', '23DBA99B-CFD0-4D75-B719-2661E0BAD963', 'Quando Abraão voltava da guerra contra os reis, foi abençoado por quem?', 'Gênesis 14:18'),
+    ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', '51354923-8888-4724-87B9-F856DE2D22ED', 'Que sacerdote deu pão e vinho a Abraão?', 'Gênesis 14:18'),
+    ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', 'FFF188A8-1AB1-4E43-B290-88964C852611', 'Que sacerdote de Jeová os judeus presumem ter sido Sem?', 'História'),
+    ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', '13B3A869-4A4B-4CBE-92BD-3AA121796B6D', 'A quem todos os levitas pagaram dízimo quando estavam nos lombos de Abraão?', 'Hebreus 7:10'),
+    ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', '76C9E618-F4E7-466E-8A66-A2CB17F8A352', 'Quem é mencionado por Davi no Salmo 110 como modelo profético do sacerdócio de Cristo?', 'Salmo 110:4');
