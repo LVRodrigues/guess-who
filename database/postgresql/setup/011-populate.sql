@@ -1135,3 +1135,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', 'C5AD6ACE-F0C0-40BE-BA65-C18E2E77A090', 'Que juiz de Israel foi traído por Dalila?', 'Juízes 16:18'),
     ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', '9B5F3287-8966-47F7-958A-66A2E24B49F2', 'Quem derrubou o templo de Dagom, o deus dos filisteus e matou uma grande multidão de pessoas?', 'Juízes 16:30'),
     ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', '045D91B6-14D3-4844-89C9-D734E00188B6', 'Quem teve os olhos furados, foi preso e tornou-se moedor na casa dos presos?', 'Juízes 16:21');
+
+--------------------------------------------------------------------------------
+-- Sara
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', 'Sara');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', '5AA85660-4415-4AF8-AB1C-945C7C01D205', 'Quem falou: "Expulsa essa escrava e o filho dela, pois o filho desta escrava não vai ser herdeiro com o meu filho"?', 'Gênesis 21:10'),
+    ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', 'B60ABA6C-4A7E-43C5-89C1-515622747B32', 'Para sepultura de quem menciona-se a primeira compra de terra?', 'Gênesis 23:1-20'),
+    ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', '80031A6C-8CCE-4518-B7EC-A08A8DAD6B7E', 'Que mulher preparou uma refeição para três anjos?', 'Gênesis 18:6'),
+    ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', '086D6590-0D3B-4DA6-BE31-92209A7C55D0', 'Quem é a única mulher nas Escrituras Hebraicas, cuja idade está registrada?', 'Gênesis 23:1'),
+    ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', 'E90C5179-0767-417D-9FA3-977204E8940B', 'Quem era tia de Ló e sogra de Rebeca?', 'Gênesis 14:12, 24:67');
+    
