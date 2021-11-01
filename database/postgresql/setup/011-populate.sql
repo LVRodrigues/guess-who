@@ -992,4 +992,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('E60D9797-731B-4BEF-9F64-38AA19E866BA', 'F0255658-9CC5-45D1-AF26-4CAD6E96BAC3', 'Quem saiu de Babilônia e fundou a cidade de Nínive?', 'Gênesis 10:11'),
     ('E60D9797-731B-4BEF-9F64-38AA19E866BA', '0C3FE998-770A-499B-9303-602C73DB21CD', 'Quem reinou sobre quatro cidades na terra de Sinear?', 'Gênesis 10:10'),
     ('E60D9797-731B-4BEF-9F64-38AA19E866BA', 'D59D70E1-F09E-423D-9046-2E3D3A08BBEF', 'Quem morreu amaldiçoado por Deus e não deixou descendência?', 'Gên. 10');
-    
+
+--------------------------------------------------------------------------------
+-- Noé
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', 'Noé');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', '535C15C3-75B4-4846-9AA9-3AB59E245F79', 'Quem primeiro usou pombas como mensageiras?', 'Gênesis 8:8'),
+    ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', '1DBE4277-4A22-4856-B5A7-F95B5162A550', 'À família de quem foi permitido usar carne pela primeira vez como alimento?', 'Gênesis 9:3'),
+    ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', '2BC74354-E74F-47D3-8099-441084C3BAB4', 'Quem foi o primeiro humano que se embriagou?', 'Gênesis 9:20'),
+    ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', 'CB41CCB9-E321-4C8A-BA8E-D6658E3CE1FF', 'A quem Deus revelou que o arco-íris seria um pacto ou sinal Divino?', 'Gênesis 9:13'),
+    ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', '4A934414-4FCA-438A-B980-4F61F4336620', 'Quem disse estas palavras profética: "Bendito seja Jeová, Deus de Sem, E torne-se Canaã escravo dele"?', 'Gênesis 9:26'),
+    ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', '13EB1BCD-04C5-48B8-9A09-CDC9D8511A6E', 'Quem pela sua fé e obras condenou um mundo antigo?', 'Hebreus 11:7');
