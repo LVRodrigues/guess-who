@@ -887,3 +887,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('BA27A3CA-48CA-48D6-8892-781B981D77AD', '16E69801-F670-4630-B9E0-437661AC3346', 'Como se chamava a filha de Joquebede?', 'Números 26:59'),
     ('BA27A3CA-48CA-48D6-8892-781B981D77AD', '89C9D29E-EE02-4ED3-8107-DCE2EF7B9030', 'Quem estava entre os juncos á beira do rio Nilo vigiando seu irmãozinho que havia sido colocado numa arca de papiro sobre as águas?', 'Êxodo 2:4'),
     ('BA27A3CA-48CA-48D6-8892-781B981D77AD', 'DDCD62B8-78B4-4B7B-A77A-3ECFF4704E2F', 'Quem disse à filha de Faraó: "A senhora quer que eu chame uma ama hebreia para que ela amamente o menino para a senhora?"?', 'Êxodo 2:7');
+
+--------------------------------------------------------------------------------
+-- Moisés
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', 'Moisés');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', 'A43B376B-D4D4-4E37-8387-2A4FD57ECFC7', 'Quem escolheu ser maltratado com o povo de Deus do que Ter o usufruto temporário do pecado?', 'Hebreus 11:25'),
+    ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', '1C3B0E99-76CE-47C5-A340-B530DB389F85', 'Quem ficou no Monte Sinai por 40 dias e 40 noites para receber a lei de Deus?', 'Êxodo 34:28'),
+    ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', '087F7D63-E43E-4983-B31B-259BEA83CFD9', 'Quem foi chamado de "O mais manso de todos os homens na superfície do solo"?', 'Númmeros 11:23'), 
+    ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', 'B830C4CD-944B-4E57-B541-CE4B98AE201C', 'Quem disse: "A Rocha — perfeito é tudo o que ele faz, pois todos os seus caminhos são justos"?', 'Deuteronômio 32:4'),
+    ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', 'E622F05B-6D27-4A80-965C-4ADC86A6CF87', 'A quem Deus disse: "Não podes ver a minha face, pois homem algum pode ver-me e continuar vivo"?', 'Êxodo 33:20'),
+    ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', '0CCEB53F-EFC6-4391-8CD5-A3A9A7FB13E2', 'Quem escreveu: "Que o homem não vive somente de pão, mas que o homem vive de toda expressão da boca de Jeová"?', 'Deuteronômio 8:3');
