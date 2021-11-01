@@ -768,3 +768,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('FB8DD6D8-9999-4B50-91BF-B5854478343A', 'A35ABE06-9F4F-4431-B0D4-5A3F9F1A18E9', 'Em resposta a oração de que homem justo foi salva a cidade de Zoar?', 'Gênesis 19:21'),
     ('FB8DD6D8-9999-4B50-91BF-B5854478343A', 'CAA43B6D-8981-45E5-B6D9-1CF15BE3C766', 'Quem foi o antepassado dos Moabitas e dos Amonitas?', 'Gênesis 37:38'),
     ('FB8DD6D8-9999-4B50-91BF-B5854478343A', '21CB028C-1520-4BC0-9DA8-43F41BDE3D18', 'Quem foi levado cativo e depois libertado por Abraão?', 'Gênesis 14:16');
+
+--------------------------------------------------------------------------------
+-- Lucas
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', 'Lucas');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', 'ADE4BC7E-52B7-43B1-850B-E3110FD4AD55', 'Quem era chamado de "O Médico amado"?', 'Colossenses 4:14'),
+    ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', '3ED4C335-308F-4A9A-951D-977D4D0560BE', 'Qual dos evangelistas dá um relato mais detalhado da infância de Jesus?', 'Lucas 2'),
+    ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', 'C08E78AF-B2AC-45A4-8FE1-7E09693E42BD', 'Quem registrou as parábolas do "Filho Pródigo" do "Bom Samaritano" e do "rico e Lázaro"?', 'Lucas 10, 15, 16'),
+    ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', '5FFF0D0A-A02C-483D-8DD2-6D0677A0039F', 'Quem escreveu seus livros à Teófilo?', 'Lucas 1:3; Atos 1:1'),
+    ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', 'A89CB48B-3AFE-4009-819C-905979070922', 'Quem escreveu o 3º livro dos evangelhos e o livro de Atos dos Apóstolos?', 'Lucas 1:3, Atos 1:1'),
+    ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', '6081773D-4F3F-4978-8975-A42CB50E3E1B', 'Qual dos evangelistas foi junto com Paulo em sua primeira visita à Roma?', '2 Timóteo 4:11');
