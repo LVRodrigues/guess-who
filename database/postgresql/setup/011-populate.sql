@@ -1057,3 +1057,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', 'EA5ED4EE-0A1D-40A7-BBD2-37D6859C0F7F', 'Quem foi a esposa amada de Jacó, por quem ele trabalhou quatorze anos?', 'Gênesis 29:18'),
     ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', '57C7E374-08D5-486D-A8CB-D54FB7080B24', 'Quem foi a mãe de José e Benjamim?', 'Gênesis 35:24'),
     ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', '616AEF6C-E9C6-4C3F-84B1-5C4857D9839E', 'Quem escondeu os terafins de seu pai na sela de um camelo e sentou sobre ela, para seu pai não os encontrar?', 'Gênesis 31:34');
+
+--------------------------------------------------------------------------------
+-- Rebeca
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('81781697-C186-4BBA-B267-617749471A69', 'Rebeca');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('81781697-C186-4BBA-B267-617749471A69', '2BBB5D7E-6847-4BF0-8F62-14F9BE3EC61F', 'Que noiva é mencionada como ganhando argolas e pulseiras de ouro do servo idoso de Abraão junto a um poço de água?', 'Gênesis 24:22'),
+    ('81781697-C186-4BBA-B267-617749471A69', 'A4F960B7-8EE9-4E83-ABDA-BDA5C5413B44', 'A quem foi revelado que ela seria mãe de duas nações distintas?', 'Gênesis 25:23'),
+    ('81781697-C186-4BBA-B267-617749471A69', '4A716E87-E260-42F2-9970-C8698EF2D175', 'Quem ajudou Jacó a obter a benção da primogenitura de seu pai?', 'Gênesis 27:6-17'),
+    ('81781697-C186-4BBA-B267-617749471A69', '63DA6223-958F-43FF-9653-CFFD2CFFCE3E', 'A quem o servo de Abraão, na terra de Naor pediu de beber junto a um poço?', 'Gênesis 24:45'),
+    ('81781697-C186-4BBA-B267-617749471A69', '761B9E62-C6BC-4731-A864-83FA92C3975D', 'Quem disse à Eliezer: "Bebe, e darei de beber também aos teus camelos"?', 'Gênesis 24:46'),
+    ('81781697-C186-4BBA-B267-617749471A69', 'D1A601C7-926F-4293-A514-93D405B98101', 'A quem Isaque levou até a tenda de sua mãe após ter saído para meditar no campo?', 'Gênesis 24:67');
