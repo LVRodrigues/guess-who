@@ -742,3 +742,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', '2D1BEF36-FDAC-4451-8175-53F6A44ADF7E', 'Quem cantou para suas esposas: "Matei um homem porque ele me feriu, sim, um jovem, porque me golpeou."?', 'Gênesis 4:23'),
     ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', 'DF694257-CECD-4445-BB3A-1F090A15B259', 'Quem foi o pai de Jubal – o pai de todos os que tocam flauta?', 'Gênesis 4:21'),
     ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', '0DC5B2E1-B8BC-4498-AF9F-BC960DFFE8EA', 'Quem foi o pai de Tubalcaim forjador de toda sorte de ferramenta de cobre e de ferro?', 'Gênesis 4:22');
+    
+--------------------------------------------------------------------------------
+-- Levi
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', 'Levi');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', 'C779E7FE-2A67-4E51-8810-4836B5D54113', 'Os descendentes de quem foram separados para servirem no tabernáculo e não ganharam parte alguma na terra de Canaã, mas recebiam a décima parte?', 'Números 18:20,21'),
+    ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', '67B55790-EA50-4027-971A-EF27560DC2F6', 'À tribo de quem Moisés não deu herança, mas apenas 48 cidades, incluindo seis cidades de refúgio?', 'Números 35:2-6'),
+    ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', 'F3EE1AC5-7991-4B24-9115-373C5FBC3808', 'Qual dos filhos de Jacó foi o antepassado de Moisés e Arão?', 'Êxodo 4:14'),
+    ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', 'C04CED43-8D59-4C13-A507-6F42389D9495', 'Quem junto com seu irmão Simeão empenhou-se em vingar o mal feito à sua irmã Diná?', 'Gênesis 34:25'),
+    ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', '63DF9125-D691-499B-AADA-1501685F28A7', 'Conforme o nome de quem, um dos livros do Pentateuco foi denominado?', 'Levítico'),
+    ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', '123E5312-204B-486F-8A6F-1EB18F8A4A7C', 'Sobre quem Paulo diz que pagou dízimo à Melquisedeque por intermédio de Abraão?', 'Hebreus 7:9,10');
