@@ -1083,3 +1083,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('3091E044-548D-49B8-9292-16A9E99D3010', 'D7301FFA-6463-451D-837D-861B3A7E5D0C', 'Nos dias de que rei de Judá os sacerdotes levitas deixaram suas cidades e vieram a Jerusalém?', '2 Crônicas 11:14'),
     ('3091E044-548D-49B8-9292-16A9E99D3010', '535F025F-32F7-47D4-BB0F-28295BE6652B', 'No reinado de que rei de Judá, Sisaque, Faraó do Egito, subiu e saqueou Jerusalém e o templo?', '2 Crônicas 12:9'),
     ('3091E044-548D-49B8-9292-16A9E99D3010', 'D7CBEBC4-4021-42AD-A094-9A316681E34C', 'Quem reconstruiu a cidade de Belém?', '2 Crônicas 11:6');
+
+--------------------------------------------------------------------------------
+-- Rute
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', 'Rute');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', '049743B8-84FA-4B64-BC39-6A8292ED92BB', 'Quem foi a viúva de um judeu chamado Malom?', 'Rute 1:4,5'),
+    ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', 'FE8DB7CF-F9F4-4FDC-99A0-66BD0B2CE4C0', 'Quem disse assim: "Aonde quer que fores, irei eu, e onde quer que pernoitares, pernoitarei eu. Teu povo será o meu povo, e teu Deus, o meu Deus"?', 'Rute 1:16'),
+    ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', 'D53B81D0-BA5B-4372-BFEE-CB3BA390738E', 'Quem tornou-se a esposa de Boaz, de Belém?', 'Rute 4:13'),
+    ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', 'B45DED73-C4E2-4CEF-B09F-A5588B8EE613', 'Que mulher deixou uma terra de idolatria e tornou-se mãe de uma linhagem de reis judeus?', 'Rute 4:17'),
+    ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', '198EEB3A-A0DB-41D0-819A-DC2924871901', 'De que mulher moabita Cristo descendeu segundo a carne?', 'Rute 4:13-17'),
+    ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', '2DFF5E52-3323-417A-BF3F-873E92AF01CF', 'Quem foi a boa nora de Noemi?', 'Rute1:4');
