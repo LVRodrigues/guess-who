@@ -1096,3 +1096,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', 'B45DED73-C4E2-4CEF-B09F-A5588B8EE613', 'Que mulher deixou uma terra de idolatria e tornou-se mãe de uma linhagem de reis judeus?', 'Rute 4:17'),
     ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', '198EEB3A-A0DB-41D0-819A-DC2924871901', 'De que mulher moabita Cristo descendeu segundo a carne?', 'Rute 4:13-17'),
     ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', '2DFF5E52-3323-417A-BF3F-873E92AF01CF', 'Quem foi a boa nora de Noemi?', 'Rute1:4');
+
+--------------------------------------------------------------------------------
+-- Salomão
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', 'Salomão');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', '4EEC9761-619E-45EA-8C58-17CDF2EFC97B', 'Que rei escolheu a sabedoria em lugar de vida longa e riquezas?', '2 Crônicas 1:10'),
+    ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', '45E44A82-B90B-495F-8544-09630236AB02', 'Quem sucedeu a Davi como rei e construiu o templo em Jerusalém?', '1 Reis 1:29, 6:14'),
+    ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', 'A7B5DC89-DE34-4A96-A519-1B9C4F3042DE', 'Quem teve a corte mais magnífica de todos os reis em Israel e seu reinado distinguiu-se pela paz?', '1 Reis 10:23-25'),
+    ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', '6D870866-9563-40BC-91E2-A2EFB7A0F730', 'Quem escreveu os livros de Provérbios, Eclesiastes, Cântico e um dos Salmos?', 'Provérbios 1:1; Eclesiastes 1:1; Cântico de Salomão 1:1; Salmo 7'),
+    ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', '7FC1B673-173A-4DF7-92BA-FF945CA8C035', 'Quem escreveu: "Pois os vivos sabem que morrerão, mas os mortos não sabem absolutamente nada..."?', 'Eclesiastes 9:5'),
+    ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', 'EE38F591-76ED-4184-8223-967DB996BECA', 'Quem escreveu: "Uma geração vai, outra geração vem, mas a terra permanece por tempo indefinido"?', 'Eclesiastes 1:4');
