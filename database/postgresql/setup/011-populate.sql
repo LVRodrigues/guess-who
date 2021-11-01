@@ -979,3 +979,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', '38FCE3ED-91AE-4DB3-A454-0A2852310892', 'Quem disse a Jesus: "Rabi, sabemos que o senhor veio como instrutor da parte de Deus, pois ninguém pode realizar esses sinais que o senhor realiza a menos que Deus esteja com ele."?', 'João 3:2'),
     ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', '7175CA26-DF68-4286-9D96-AF2E670C961E', 'Quem falou a respeito de Jesus: "Será que a nossa lei julga um homem sem que primeiro o tenha ouvido?"?', 'João 7:51'),
     ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', '9709EC50-4C9C-449B-9EC1-80696EDDBEAA', 'Quem deu cerca de trinta e três quilos de mirra e aloés para o sepultamento de Jesus?', 'João 19:39');
+
+--------------------------------------------------------------------------------
+-- Ninrode
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('E60D9797-731B-4BEF-9F64-38AA19E866BA', 'Ninrode');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('E60D9797-731B-4BEF-9F64-38AA19E866BA', '50B7729E-EEE4-43B7-B4B0-AC8854282A81', 'Quem é descrito como poderoso caçador em oposição à Jeová?', 'Gênesis 10:9'),
+    ('E60D9797-731B-4BEF-9F64-38AA19E866BA', '0000BAC1-2EEB-42F3-A1D3-504FB8057385', 'Que neto de Caim se tornou destacado após o dilúvio?', 'Gênesis 10:8'),
+    ('E60D9797-731B-4BEF-9F64-38AA19E866BA', 'AD2FF75C-557C-45BF-ACB7-D16BEAB86E42', 'Quem fundou a cidade de Babilônia?', 'Gênesis 10:10'),
+    ('E60D9797-731B-4BEF-9F64-38AA19E866BA', 'F0255658-9CC5-45D1-AF26-4CAD6E96BAC3', 'Quem saiu de Babilônia e fundou a cidade de Nínive?', 'Gênesis 10:11'),
+    ('E60D9797-731B-4BEF-9F64-38AA19E866BA', '0C3FE998-770A-499B-9303-602C73DB21CD', 'Quem reinou sobre quatro cidades na terra de Sinear?', 'Gênesis 10:10'),
+    ('E60D9797-731B-4BEF-9F64-38AA19E866BA', 'D59D70E1-F09E-423D-9046-2E3D3A08BBEF', 'Quem morreu amaldiçoado por Deus e não deixou descendência?', 'Gên. 10');
+    
