@@ -1147,4 +1147,17 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', '80031A6C-8CCE-4518-B7EC-A08A8DAD6B7E', 'Que mulher preparou uma refeição para três anjos?', 'Gênesis 18:6'),
     ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', '086D6590-0D3B-4DA6-BE31-92209A7C55D0', 'Quem é a única mulher nas Escrituras Hebraicas, cuja idade está registrada?', 'Gênesis 23:1'),
     ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', 'E90C5179-0767-417D-9FA3-977204E8940B', 'Quem era tia de Ló e sogra de Rebeca?', 'Gênesis 14:12, 24:67');
+
+--------------------------------------------------------------------------------
+-- Saul
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('D357D385-482E-4306-8457-4EF4D2187883', 'Saul');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('D357D385-482E-4306-8457-4EF4D2187883', '965A26A4-6B0A-49AC-A2FF-0AF35E46B252', 'Quem foi o primeiro rei de israel?', '1 Samuel 9:2; 10:24'),
+    ('D357D385-482E-4306-8457-4EF4D2187883', 'B2ACA1B6-A371-4E25-84B4-9092FA302F49', 'Quem desejava matar Davi que lhe tocava harpa?', '1 Samuel 19:10'),
+    ('D357D385-482E-4306-8457-4EF4D2187883', '68A2686C-7D39-4D88-8782-0A25BB61D8DB', 'A quem Samuel disse: "Pois a rebeldia é igual ao pecado da adivinhação, e avançar presunçosamente é igual ao uso de poder mágico"?', '1 Samuel 15:23'),
+    ('D357D385-482E-4306-8457-4EF4D2187883', 'A29833BE-9678-4AF2-A94F-974877B55146', 'Quem em desespero foi consultar uma médium espírita caindo assim no desagrado completo de Jeová?', '1 Samuel 28:7,8'),
+    ('D357D385-482E-4306-8457-4EF4D2187883', '0FC198F2-383A-423E-A9B9-59B12ADE5F00', 'Quem foi morto com seus filhos em batalha no monte Gilboa?', '1 Samuel 31:6'),
+    ('D357D385-482E-4306-8457-4EF4D2187883', 'BC3652D7-8D65-4A66-9D76-F13F129B8457', 'Quem foi o pai de Mefibosete?', '2 Samuel 19:24');
     
