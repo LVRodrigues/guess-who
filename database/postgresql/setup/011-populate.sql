@@ -730,3 +730,15 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', '9ED4F88F-4D78-4509-82A8-899DAAFDEC86', 'Qual dos doze apóstolos na última noite participou da Páscoa, mas não participou da Celebração do Novo Pacto?', 'João 13:26-30'),
     ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', '0A886886-8FFF-4FE5-9ECC-4644B02EF8AB', 'Referindo-se a quem o apóstolo Pedro disse: "Fique desolada a sua pousada e não haja nela morador"?', 'Atos 1:20');
     
+--------------------------------------------------------------------------------
+-- Lameque
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', 'Lameque');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', '2E8C2CB8-4B34-451E-A04A-6047E7C9DD91', 'Quem é o primeiro polígamo mencionado na Bíblia?', 'Gênesis 4:19'),
+    ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', '6591D3F9-93A1-49A6-9558-CCDC1F853E89', 'As esposas de quem chamam-se Ada e Zilá?', 'Gênesis 4:19'),
+    ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', '0E46A960-37A1-4823-A9FA-D49A105E77D3', 'Quem é a Segunda pessoa mencionada na Bíblia como homicida?', 'Gênesis 4:23'),
+    ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', '2D1BEF36-FDAC-4451-8175-53F6A44ADF7E', 'Quem cantou para suas esposas: "Matei um homem porque ele me feriu, sim, um jovem, porque me golpeou."?', 'Gênesis 4:23'),
+    ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', 'DF694257-CECD-4445-BB3A-1F090A15B259', 'Quem foi o pai de Jubal – o pai de todos os que tocam flauta?', 'Gênesis 4:21'),
+    ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', '0DC5B2E1-B8BC-4498-AF9F-BC960DFFE8EA', 'Quem foi o pai de Tubalcaim forjador de toda sorte de ferramenta de cobre e de ferro?', 'Gênesis 4:22');
