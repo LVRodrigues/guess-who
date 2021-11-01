@@ -835,4 +835,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('90581C8A-872B-4829-A1CC-A43C8547B14B', 'FA31B993-8F34-4CA8-93B4-2BA4FDF54F64', 'Quem Jesus deixou aos cuidados de seu discípulo amado João, ao morrer na estaca?', 'João 19:25-27'),
     ('90581C8A-872B-4829-A1CC-A43C8547B14B', 'ECD9C618-2895-41D8-AFCB-B3944F273FE7', 'A quem Jesus disse: "Que tenho eu que ver contigo, mulher? Minha hora não chegou ainda"?', 'João 2:4'),
     ('90581C8A-872B-4829-A1CC-A43C8547B14B', '4C8C7434-9828-4310-B492-513B86BA558F', 'Quem era a mãe de Tiago, José, Simão e Judas?', 'Mateus 13:55');
-    
+
+--------------------------------------------------------------------------------
+-- Marta
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('07A69E9E-801D-4746-BCCD-323AB815045F', 'Marta');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('07A69E9E-801D-4746-BCCD-323AB815045F', 'A87136FF-04DC-4DD0-9337-590DABF08CB8', 'Quem preocupa-se muito com o serviço da casa e com servir alimentos e negligenciou o principal, que era ouvir as palavras de Jesus?', 'Lucas 10:40-42'),
+    ('07A69E9E-801D-4746-BCCD-323AB815045F', '8538396B-660F-4E74-8409-F76724EF2106', 'A quem Jesus disse: "Estás ansiosa e perturbada com muitas coisas Poucas coisas, porém são necessárias, ou apenas uma"?', 'Lucas 10:41,42'),
+    ('07A69E9E-801D-4746-BCCD-323AB815045F', 'EE730827-8599-432D-A039-AB990108B873', 'A quem Jesus disse: "Eu sou a ressurreição e a vida. Quem exercer fé em mim, ainda que morra, viverá outra vez"?', 'João 11:25'),
+    ('07A69E9E-801D-4746-BCCD-323AB815045F', '7F0D7A12-8BCD-43DC-B4DE-01101460ABD7', 'Quem disse a Jesus: "Tenho crido que tu és o Cristo, o filho de Deus"?', 'João 11:27'),
+    ('07A69E9E-801D-4746-BCCD-323AB815045F', '5A7BED79-16A7-484F-B43E-95B41F81B2AC', 'Que mulher de Betânia hospedou Jesus em sua casa?', 'Lucas 10:38'),
+    ('07A69E9E-801D-4746-BCCD-323AB815045F', 'E5E3F9A0-47A3-42CF-AA99-8A9DE38EC2F7', 'Quem disse a Jesus: "Senhor, se tivesses estado aqui, meu irmão não teria morrido"?', 'João 11:21');
