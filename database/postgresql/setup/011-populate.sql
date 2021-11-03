@@ -1212,3 +1212,29 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', 'A2AD5A0E-7ECB-40DE-9AE7-BED9FF500599', 'A quem Jesus disse: "Eu sou o caminho, a verdade, a vida"?', 'João 14:6'),
     ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', 'BAD93C6F-9CFB-4B06-89C6-8A574138278F', 'Quem disse a Jesus: "Senhor, não sabemos para onde vais. Como sabemos o caminho?"?', 'João 14:5'),
     ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', '93E96E80-8E0C-48B2-969C-934C3D53DCD7', 'Quem disse, duvidando da ressurreição de Jesus: "A menos que eu veja nas suas mãos o sinal dos pregos e ponha o meu dedo no sinal dos pregos... não acreditarei"?', 'João 20:25');
+
+--------------------------------------------------------------------------------
+-- Zacarias
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('FCFB2AD7-794E-4E1C-A900-02958189404F', 'Zacarias');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('FCFB2AD7-794E-4E1C-A900-02958189404F', '52761178-A919-46A9-B8CA-360A38A12656', 'A quem foi dito: "Eu sou Gabriel, que está a postos logo diante de Deus"?', 'Lucas 1:19'),
+    ('FCFB2AD7-794E-4E1C-A900-02958189404F', '76BF49E9-5643-422E-9FCC-81EA85EC58AE', 'Quem ficou mudo até o nascimento de seu filho por não crer nas palavras do anjo Gabriel?', 'Lucas 1:20'),
+    ('FCFB2AD7-794E-4E1C-A900-02958189404F', 'E3F120AD-CB0C-42D6-861F-813101ECB443', 'Quem foi o pai de João Batista?', 'Lucas 1:59,60'),
+    ('FCFB2AD7-794E-4E1C-A900-02958189404F', '0328C71A-748F-465E-9FE8-01039438F0E5', 'A quem o anjo Gabriel predisse o nascimento, nome e missão do precursor de Cristo?', 'Lucas 1:11-17'),
+    ('FCFB2AD7-794E-4E1C-A900-02958189404F', '7AEBCF86-7D8C-4E63-AF41-93F8028C9D2E', 'Quem, por não poder falar escreveu o nome de seu filho numa tabuinha?', 'Lucas 1:63'),
+    ('FCFB2AD7-794E-4E1C-A900-02958189404F', '2FA98B56-0194-4304-B469-EC2E0CC5B4E4', 'A quem foi dito que seu filho faria uma obra no mesmo espírito e poder de Elias?', 'Lucas 1:17');
+
+--------------------------------------------------------------------------------
+-- Zaqueu
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', 'Zaqueu');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', '4388383E-6CE1-4C15-938A-1BCE21F7CF3E', 'Quem era baixinho, e, querendo ver Jesus subiu numa árvore?', 'Lucas 19:4'),
+    ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', 'D68FCE92-A03F-4EE4-B7E7-EFD509354889', 'A quem Jesus disse: "Apressa-te e desce, pois hoje tenho de ficar na tua casa"?', 'Lucas 19:5'),
+    ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', '4D26D7F4-4BE6-4708-B1DD-00A96BF1942B', 'Quem disse a Jesus: "Eis que a metade dos meus bens dou aos pobres, e o que extorqui de qualquer um por meio de acusação falsa, eu restituo quatro vezes mais"?', 'Lucas 19:8'),
+    ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', '3D42D758-F957-4FCC-A23E-1279731200F4', 'Qual cobrador de impostos rico que foi chamado por Jesus em Jericó?', 'Lucas 19:1-10'),
+    ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', '4DAABFBE-5BE7-4CD7-992D-EFD4A9AFFF0E', 'A quem Jesus disse: "Neste dia, entrou a salvação nesta casa, porque ele também é filho de Abraão"?', 'Lucas 19:9'),
+    ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', '8228F325-5355-429E-B823-D27FDFC57BCE', 'A quem Jesus disse: "Pois o Filho do Homem veio buscar e salvar o que estava perdido"?', 'Lucas 19:10');
