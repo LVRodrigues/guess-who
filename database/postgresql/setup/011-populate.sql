@@ -1238,3 +1238,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', '3D42D758-F957-4FCC-A23E-1279731200F4', 'Qual cobrador de impostos rico que foi chamado por Jesus em Jericó?', 'Lucas 19:1-10'),
     ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', '4DAABFBE-5BE7-4CD7-992D-EFD4A9AFFF0E', 'A quem Jesus disse: "Neste dia, entrou a salvação nesta casa, porque ele também é filho de Abraão"?', 'Lucas 19:9'),
     ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', '8228F325-5355-429E-B823-D27FDFC57BCE', 'A quem Jesus disse: "Pois o Filho do Homem veio buscar e salvar o que estava perdido"?', 'Lucas 19:10');
+
+--------------------------------------------------------------------------------
+-- Zedequias
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', 'Zedequias');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', '9719FC74-F484-4E2F-A526-6D6C2A890F7A', 'Quem foi o último rei da linhagem de Davi em Jerusalém?', '2 Reis 24:17'),
+    ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', '5E67CE3E-7C30-40EE-8AC9-8B78017EC470', 'Que rei dos judeus teve seus olhos cegados?', '2 Reis 25:7'),
+    ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', 'F3919D76-914F-4414-9F8C-99557F5ED898', 'Que rei de Judá teve seus filhos mortos na sua presença pelo rei de Babilônia?', '2 Reis 25:7'),
+    ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', '50711F3E-F0E6-49AC-9B8F-91231A2AC31C', 'Quem fugiu à noite quando Jerusalém foi capturada, mas, foi preso próximo a Jericó?', 'Jeremias 52:8'),
+    ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', '3BB31043-4034-4C99-96E0-CB4EA963D654', 'Que rei mandou tirar Jeremias da cisterna de lama?', 'Jeremias 38:10'),
+    ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', '2102A5F1-96E6-4C3F-A9EA-8A9E74F8A73D', 'Qual foi o nome que o rei de Babilônia deu a Matanias?', '2 Reis 24:17');
