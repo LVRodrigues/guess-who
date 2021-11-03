@@ -4,6 +4,8 @@
 CREATE ROLE "guess-access";
 COMMENT ON ROLE "guess-access" IS 'Regras para os usuários de operação utilizarem o aplicativo Guess Who?.';
 
+GRANT "guess-access" TO "guess-user";
+
 --==============================================================================
 -- Tabelas
 --==============================================================================
