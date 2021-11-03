@@ -1264,3 +1264,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '0D26952B-3BBC-4386-95F2-4F071B1CFCE7', 'Quem, após praticar uma circuncisão, disse: "É porque és para mim um noivo de sangue"?', 'Êxodo4:25'),
     ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '76C7CB12-2A18-4041-98F0-3B2E955EE5EA', 'Quem Jetro levou a Moisés junto com Gérsom e Eliézer, seus filhos, onde tinha acampado no ermo?', 'Êxodo 18:5'),
     ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '6315744A-B420-4030-86F8-9E5378FCCAF4', 'Quem foi a mãe de Gérsom e Eliézer?', 'Êxodo 18:2-4');
+
+--------------------------------------------------------------------------------
+-- Zorobabel
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('533B7770-9511-4706-BF0E-1E1A48288F69', 'Zorobabel');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('533B7770-9511-4706-BF0E-1E1A48288F69', 'CBB75F4C-EB6D-427F-BF76-0C3532F9B7D3', 'Quem era também chamados de Sesbazar e foi feito governador de Judá pelo rei Ciro?', 'Esdras 5:14'),
+    ('533B7770-9511-4706-BF0E-1E1A48288F69', 'F7B031BA-7708-4778-9620-322A9C3B5819', 'Quem foi líder dos primeiros judeus que retornaram do cativeiro em Babilônia?', 'Esdras 2:2'),
+    ('533B7770-9511-4706-BF0E-1E1A48288F69', '9B9A67F1-24E7-4830-8DF2-26B444E0304B', 'Que governador de Jerusalém era da linhagem de Davi?', '1 Crônicas 3:1-19'),
+    ('533B7770-9511-4706-BF0E-1E1A48288F69', '8BB1F0AD-6DEB-4EBB-96EB-6F22AD0CDFD0', 'Que príncipe real colocou o alicerce do segundo templo?', 'Zacarias 4:9'),
+    ('533B7770-9511-4706-BF0E-1E1A48288F69', 'EB5396C3-03A7-488B-8652-17B42A589462', 'A quem Ciro entregou os vasos sagrados para serem levados de volta a Jerusalém?', 'Esdras 5:14'),
+    ('533B7770-9511-4706-BF0E-1E1A48288F69', '9EB2628E-144A-42E2-A544-1F3434F5B313', 'A quem foi dito: "Não por força militar, nem por poder, mas por meu espírito, disse Jeová dos exércitos"?', 'Zacarias 4:6');
