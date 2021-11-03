@@ -1251,3 +1251,16 @@ INSERT INTO questions (card, question, text, evidence) VALUES
     ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', '50711F3E-F0E6-49AC-9B8F-91231A2AC31C', 'Quem fugiu à noite quando Jerusalém foi capturada, mas, foi preso próximo a Jericó?', 'Jeremias 52:8'),
     ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', '3BB31043-4034-4C99-96E0-CB4EA963D654', 'Que rei mandou tirar Jeremias da cisterna de lama?', 'Jeremias 38:10'),
     ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', '2102A5F1-96E6-4C3F-A9EA-8A9E74F8A73D', 'Qual foi o nome que o rei de Babilônia deu a Matanias?', '2 Reis 24:17');
+
+--------------------------------------------------------------------------------
+-- Zípora
+--------------------------------------------------------------------------------
+INSERT INTO cards (card, name) VALUES 
+    ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', 'Zípora');
+INSERT INTO questions (card, question, text, evidence) VALUES
+    ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '8D4C5E25-F084-4778-B1CD-41ECE07B98B5', 'Quem era a esposa de Moisés?', 'Êxodo 2:21'),
+    ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '54E19B03-7369-4300-8305-386D1C4567BE', 'Como chamava-se a filha de Reuel, sacerdote de Midiã, que se casou com um levita?', 'Êxodo 2:18-21'),
+    ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '12EACF60-7676-46C3-9C12-18D774D0D968', 'Quem circuncidou o filho de Moisés numa pousada?', 'Êxodo 4:24,25'),
+    ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '0D26952B-3BBC-4386-95F2-4F071B1CFCE7', 'Quem, após praticar uma circuncisão, disse: "É porque és para mim um noivo de sangue"?', 'Êxodo4:25'),
+    ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '76C7CB12-2A18-4041-98F0-3B2E955EE5EA', 'Quem Jetro levou a Moisés junto com Gérsom e Eliézer, seus filhos, onde tinha acampado no ermo?', 'Êxodo 18:5'),
+    ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '6315744A-B420-4030-86F8-9E5378FCCAF4', 'Quem foi a mãe de Gérsom e Eliézer?', 'Êxodo 18:2-4');
