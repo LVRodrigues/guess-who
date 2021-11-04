@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "docs"
+		},
+		{
+			"path": "admin/server",
+			"name": "admin-server"
+		},
+		{
+			"path": "admin/client",
+			"name": "admin-client"
+		},
+		{
+			"path": "auth"
+		},
+		{
+			"path": "database"
+		},
+		{
+			"path": "database/postgresql",
+			"name": "database-postgresql"
+		},
+		{
+			"path": "game/server",
+			"name": "game-server"
+		},
+		{
+			"path": "game/client",
+			"name": "game-client"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
