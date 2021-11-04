@@ -10,19 +10,19 @@ O arquivo **Dockerfile** configura um banco de dados para uso no sistema **Guess
 Para criar a imagem Docker para o projeto, execute:
 
 ```bash
-docker build -f Dockerfile -t guess-who/postgres .
+docker build -f Dockerfile -t guess-who/database .
 ```
 
 Para executar a imagem com uma base de dados volátil:
 
 ```bash
-docker run --rm -p 5432:5432/tcp guess-who/postgres
+docker run --rm -p 5432:5432/tcp guess-who/database
 ```
 
 Para executar a imagem com uma base de dados persistente:
 
 ```bash
-docker run --name guess-who-database -p 5432:5432 guess-who/posgres
+docker run --name guess-who-database -p 5432:5432 guess-who/database
 docker start guess-who-database
 docker stop guess-who-database
 ```
