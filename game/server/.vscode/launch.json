@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Appliction<game-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.com.spiderbot.guess.gameserver.Appliction",
+            "projectName": "game-server",
+            "args": ""
+        }
+    ]
+}
