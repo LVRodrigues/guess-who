@@ -175,6 +175,34 @@ paths:
   #         description: Modelo não localizado.
 components:
   schemas:
+    Card:
+      description: Cartão sobre um personagem bíblico.
+      type: object
+      properties:
+        id: 
+          type: string
+          format: uuid
+          description: Identificador único do cartão de personagem bíblico.
+        name:
+          type: string
+          description: Nome do personagem.
+        image:
+          type: string
+          description: Endereço da imagem sobre o personagem bíblico.
+    Question:
+      description: Pergunta de conhecimento sobre personagem bíblico.
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: Identificador único da pergunta sobre um personagem bíblico.
+        text:
+          type: string
+          description: Texto da pergunta sobre um personagem bíblico.
+        evidence:
+          type: string
+          description: Evidência da resposta sobre o personagem bíblico correspondente.
     Error:
       description: Informações sobre erros ocorridos.
       type: object
@@ -203,15 +231,13 @@ components:
         total:
           description: Quantidade total de páginas para a consulta executada.
           type: integer
-        # items:
-        #   description: Registros da página corrente.
-        #   type: array
-        #   items:
-        #     oneOf:
-        #       - $ref: '#/components/schemas/Model'
-        #       - $ref: '#/components/schemas/ModelField'
-        #       - $ref: '#/components/schemas/Parameter'
-        #       - $ref: '#/components/schemas/ParameterCategory'            
+        items:
+          description: Registros da página corrente.
+          type: array
+          items:
+            oneOf:
+              - $ref: '#/components/schemas/Card'
+              - $ref: '#/components/schemas/Question'
   examples:
     InvalidFields:
       value:
