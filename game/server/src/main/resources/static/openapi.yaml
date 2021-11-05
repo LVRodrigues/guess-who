@@ -1,579 +1,178 @@
 openapi: 3.0.3
 info:
-  title: ECO Menu
+  title: Guess Who?
   version: '@project.version@'
-  description: Documentação dos serviços REST do sistema de Cardápios Online.
+  description: Documentação dos serviços REST do sistema de teste sobre conhecimento de personagens bíblicos.
   contact:
-    email: webmaster@spiderbot.com.br
+    email: lvrodriguesline-guess-who@yahoo.com
     name: Webmaster
-    url: 'http://www.spiderbot.com.br'
+    url: 'https://www.linkedin.com/in/luciano-rodrigues/'
 servers:
-  - url: 'http://eco-menu-server:5000/api'
+  - url: 'http://localhost:5000/api'
     variables: {}
-    description: Desenvolvimento com Docker.
+    description: Desenvolvimento.
 tags:
   - name: Informações
     description: Informações para consulta.
   - name: Configurações
     description: Configurações do Sistema.
-  - name: Vendedores
-    description: Prestadores de Serviços.
-  - name: Estabelecimentos
-    description: Consumidores dos Serviços.
 paths:
-  /current-user:
-    summary: Usuário corrente.
-    description: Informações básicas sobre o usuário que está autenticado.
-    get:
-      summary: Recuperar as informações do usuário corrente.
-      operationId: getCurrentUser
-      tags:
-        - Informações
-      responses:
-        '200':
-          description: Usuário corrente.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-  /models:
-    summary: Modelos de Cardápios Online.
-    description: Modelos de Cardápios Online para ajudar na configuração dos Estabelecimentos.
-    get:
-      summary: Listar os Modelos de Cardápios.
-      description: Listar todos os Modelos de Cardápios Online.
-      operationId: getModels
-      tags:
-        - Configurações
-      parameters: 
-        - $ref: '#/components/parameters/page'
-        - $ref: '#/components/parameters/size'
-        - $ref: '#/components/parameters/sort'
-        - $ref: '#/components/parameters/fields'
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Paging'
-              example: 
-                index: 1
-                size: 20
-                total: 3
-                items: 
-                  - id: 1
-                    name: Modelo 01
-                    record: null
-                    active: true
-                  - id: 2
-                    name: Modelo 02
-                    record: null
-                    active: true
-        '400':
-          $ref: '#/components/responses/badRequest'
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Acesso proibido.      
-    post:
-      summary: Adicionar um Modelo.
-      description: Adiciona um novo Modelo de Cardápio Online.
-      operationId: createModel
-      tags:
-        - Configurações
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Model'
-            example: 
-              name: Novo Modelo
-              active: true
-      responses:
-        '201':
-          description: Novo modelo criado.
-          headers:
-            Location:
-              description: Link do novo registro criado.
-              schema:
-                type: string
-                format: url
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Model'
-              example: 
-                id: '62e61565-315e-4754-8410-432d6437ddd8'
-                name: 'Novo Modelo'
-                record: '2021-04-05T22:28:56.782Z'
-                active: true
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Acesso proibido.
-  /models/{uuid}:
-    get:
-      summary: Recuperar um Modelo.
-      description: Recuperar as informações de um modelo de Cardápio específico.
-      operationId: getModel
-      tags: 
-        - Configurações
-      parameters:
-        - $ref: '#/components/parameters/uuid'
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Model'
-              example: 
-                id: '62e61565-315e-4754-8410-432d6437ddd8'
-                name: 'Novo Modelo'
-                record: '2021-04-05T22:28:56.782Z'
-                active: true
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Acesso proibido.
-        '404':
-          description: Parâmetro não localizado.      
-    put:
-      summary: Alterar um Modelo.
-      description: Alterar as informações de um Modelo de Cardápio Online.
-      operationId: updateModel
-      tags: 
-        - Configurações
-      parameters: 
-        - $ref: '#/components/parameters/uuid'
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Model'
-            example:
-              name: Modelo alterado
-              active: false
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Model'
-              example: 
-                id: '62e61565-315e-4754-8410-432d6437ddd8'
-                name: 'Novo Modelo'
-                record: '2021-04-05T22:28:56.782Z'
-                active: true             
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Sem permissão.
-        '404': 
-          description: Parâmetro não localizado.       
-    delete:
-      summary: Remover um Modelo.
-      description: Remover as informações de um Modelo de Cardápio Online.
-      operationId: removeModel
-      tags: 
-        - Configurações
-      parameters: 
-        - $ref: '#/components/parameters/uuid'
-      responses:
-        '204':
-          description: Sucesso.
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Sem permissão.
-        '404':     
-          description: Modelo não localizado.
-  /models/fields:
-    summary: Campos dos Modelos de Cardápios Online.
-    description: Campos dos Modelos de Cardápios Online para configuração.
-    get:
-      summary: Listar os Campos dos Modelos de Cardápios.
-      description: Listar todos os Capos dos Modelos de Cardápios Online.
-      operationId: getModelFields
-      tags:
-        - Configurações
-      parameters: 
-        - $ref: '#/components/parameters/page'
-        - $ref: '#/components/parameters/size'
-        - $ref: '#/components/parameters/sort'
-        - $ref: '#/components/parameters/fields'
-        - name: model
-          in: query
-          description: Identificador do Modelo para filtrar os campos
-          required: true
-          schema:
-            type: integer          
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Paging'
-              example: 
-                index: 1
-                size: 20
-                total: 3
-                items: 
-                  - id: '5005fdda-bca5-4465-a269-311a361169ff'
-                    model: '62e61565-315e-4754-8410-432d6437ddd8'
-                    name: Campo 01
-                    description: Descrição do Campo 01
-                    type: TEXT
-                    valor: ZmllbGQwMQo=
-                    active: true
-                  - id: '5005fdda-bca5-4465-a269-311a361169ff'
-                    model: '62e61565-315e-4754-8410-432d6437ddd8'
-                    name: Campo 02
-                    description: Descrição do Campo 02
-                    type: TEXT
-                    valor: THVjaWFubyBWaWVpcmEgUm9kcmlndWVzCg==
-                    active: true
-        '400':
-          $ref: '#/components/responses/badRequest'
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Acesso proibido.            
-    post:
-      summary: Adicionar um Campo para um Modelo.
-      description: Adiciona um novo Campo para um Modelo de Cardápio Online.
-      operationId: createModelField
-      tags:
-        - Configurações
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ModelField'
-            example: 
-              model: '62e61565-315e-4754-8410-432d6437ddd8'
-              name: Novo Campo
-              description: Descrição do Novo Campo
-              type: TEXT
-              valor: bmV3IHZhbHVlCg==
-              active: true
-      responses:
-        '201':
-          description: Novo Campo para o Modelo criado.
-          headers:
-            Location:
-              description: Link do novo registro criado.
-              schema:
-                type: string
-                format: url
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ModelField'
-              example: 
-                id: '69986cff-9565-423f-9752-f45e4f69fd29'
-                model: '62e61565-315e-4754-8410-432d6437ddd8'
-                name: Novo Campo
-                description: Descrição do Novo Campo
-                type: TEXT
-                valor: bmV3IHZhbHVlCg==
-                active: true
-        '400':
-          $ref: '#/components/responses/parentNotFound'                
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Acesso proibido.
-  /models/fields/{uuid}:
-    get:
-      summary: Recuperar um Campo do Modelo.
-      description: Recupera uma Campo de Modelo específico.
-      operationId: getModelField
-      tags:
-        - Configurações
-      parameters:
-        - $ref: '#/components/parameters/uuid'
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ModelField'
-              example: 
-                id: '5005fdda-bca5-4465-a269-311a361169ff'
-                model: '62e61565-315e-4754-8410-432d6437ddd8'
-                name: Campo 01
-                description: Descrição do Campo 01
-                type: TEXT
-                valor: ZmllbGQwMQo=
-                active: true
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Acesso proibido.
-        '404':
-          description: Parâmetro não localizado.
-    put:
-      summary: Atualizar Campo do Modelo.
-      description: Atualizar as informações de um Campo do Modelo de Cardápio Online.
-      operationId: updateModelField
-      tags:
-        - Configurações
-      parameters: 
-        - $ref: '#/components/parameters/uuid'
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ModelField'
-            example:
-              model: '62e61565-315e-4754-8410-432d6437ddd8'
-              name: Campo 01
-              description: Descrição Alterada
-              type: TEXT
-              valor: ZmllbGQwMQo=
-              active: true                
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ModelField'
-              example: 
-                id: '5005fdda-bca5-4465-a269-311a361169ff'              
-                model: '62e61565-315e-4754-8410-432d6437ddd8'
-                name: Campo 01
-                description: Descrição Alterada
-                type: TEXT
-                valor: ZmllbGQwMQo=
-                active: true              
-        '400':
-          $ref: '#/components/responses/parentNotFound'
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Sem permissão.
-        '404': 
-          description: Parâmetro não localizado.   
-    delete:
-      summary: Remover um Campo do Modelo.
-      description: Remover as informações de um Campo do Modelo de Cardápio Online.
-      operationId: removeModelField
-      tags: 
-        - Configurações
-      parameters: 
-        - $ref: '#/components/parameters/uuid'
-      responses:
-        '204':
-          description: Sucesso.
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Sem permissão.
-        '404':     
-          description: Modelo não localizado.
-  /parameters:
-    summary: Configurações do Sistema.
-    description: Informações que regem o comportamento do Sistema.
-    get:
-      summary: Listar os Parâmetros de Sistema.
-      description: Listar todos os parâmetros de configurações do Sistema.
-      operationId: getParameters
-      tags:
-        - Configurações
-      parameters: 
-        - $ref: '#/components/parameters/page'
-        - $ref: '#/components/parameters/size'
-        - $ref: '#/components/parameters/sort'
-        - $ref: '#/components/parameters/fields'
-        - name: category
-          in: query
-          description: Identificador da categoria para filtrar os parâmetros
-          required: false
-          schema:
-            type: integer
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Paging'
-              example: 
-                index: 1
-                size: 20
-                total: 3
-                items: 
-                  - id: 1
-                    category: 1
-                    name: Parâmetro 1
-                    description: Descrição do Parâmetro 1
-                    type: TEXT
-                    value: U3BpZGVyIEJPVA==
-                    readonly: true
-                  - id: 2
-                    category: 1
-                    name: Parâmetro 2
-                    description: Descrição do Parâmetro 2
-                    type: INTEGER
-                    value: AAAD8g==
-                    readonly: true
-        '400':
-          $ref: '#/components/responses/badRequest'
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Acesso proibido.
-  /parameters/{id}:
-    get:
-      summary: Recuperar um Parâmetro.
-      description: Recupera uma Parâmetro de Sistema.
-      operationId: getParameter
-      tags:
-        - Configurações
-      parameters:
-        - $ref: '#/components/parameters/id'
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Parameter'
-              example: 
-                id: 1
-                category: 1
-                type: TEXT
-                name: COMPANY
-                description: Descrição para o nome da Companhia.
-                value: U3BpZGVyIEJPVA==
-                readonly: false
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Acesso proibido.
-        '404':
-          description: Parâmetro não localizado.
-    put:
-      summary: Atualizar um parâmetro.
-      description: Atualizar as informações de um Parâmetro de Sistema.
-      operationId: updateParameter
-      tags:
-        - Configurações
-      parameters: 
-        - $ref: '#/components/parameters/id'
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Parameter'
-            example:
-              category: 99
-              name: desenv_text
-              description: Parâmetro alterado
-              type: TEXT
-              value: U3BpZGVyIEJPVA==
-              readonly: false                  
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Parameter'
-              example: 
-                id: 999
-                category: 99
-                name: desenv_text
-                description: Parâmetro alterado
-                type: TEXT
-                value: U3BpZGVyIEJPVA==
-                readonly: false               
-        '400':
-          $ref: '#/components/responses/parentNotFound'
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Sem permissão.
-        '404': 
-          description: Parâmetro não localizado.          
-  /parameters/categories:
-    summary: Agrupamento dos Parâmetros.
-    description: Grupo de informações de configuração definidas por afinidade.
-    get:
-      summary: Listar as Categorias de Parâmetros
-      description: Recupera a lista de Categorias e seus Parâmetros de Sistema.
-      operationId: getCategories
-      tags:
-        - Configurações
-      parameters: 
-        - $ref: '#/components/parameters/page'
-        - $ref: '#/components/parameters/size'
-        - $ref: '#/components/parameters/sort'
-        - $ref: '#/components/parameters/fields'
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Paging'
-              example: 
-                index: 1
-                size: 20
-                total: 3
-                items: 
-                  - id: 1
-                    name: Categoria 1
-                    description: Descrição da Categoria 1
-                  - id: 2
-                    name: Categoria 2
-                    description: Descrição da Categoria 2
-        '400':
-          $ref: '#/components/responses/badRequest'
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Acesso proibido.
-  /parameters/categories/{id}:
-    get:
-      summary: Recuperar uma Categoria de Parâmetros.
-      description: Recupera uma Categoria e seus Parâmetros de Sistema.
-      operationId: getCategory
-      tags:
-        - Configurações
-      parameters:
-        - $ref: '#/components/parameters/id'
-      responses:
-        '200':
-          description: Sucesso.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ParameterCategory'
-              example:
-                id: 1
-                name: Categoria 01
-                description: Descrição para a Categoria 01.
-        '401':
-          description: Não autorizado.
-        '403':
-          description: Acesso proibido.
-        '404':
-          description: Categoria não localizada.
+  # /models:
+  #   summary: Modelos de Cardápios Online.
+  #   description: Modelos de Cardápios Online para ajudar na configuração dos Estabelecimentos.
+  #   get:
+  #     summary: Listar os Modelos de Cardápios.
+  #     description: Listar todos os Modelos de Cardápios Online.
+  #     operationId: getModels
+  #     tags:
+  #       - Configurações
+  #     parameters: 
+  #       - $ref: '#/components/parameters/page'
+  #       - $ref: '#/components/parameters/size'
+  #       - $ref: '#/components/parameters/sort'
+  #       - $ref: '#/components/parameters/fields'
+  #     responses:
+  #       '200':
+  #         description: Sucesso.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: array
+  #               items:
+  #                 $ref: '#/components/schemas/Paging'
+  #             example: 
+  #               index: 1
+  #               size: 20
+  #               total: 3
+  #               items: 
+  #                 - id: 1
+  #                   name: Modelo 01
+  #                   record: null
+  #                   active: true
+  #                 - id: 2
+  #                   name: Modelo 02
+  #                   record: null
+  #                   active: true
+  #       '400':
+  #         $ref: '#/components/responses/badRequest'
+  #       '401':
+  #         description: Não autorizado.
+  #       '403':
+  #         description: Acesso proibido.      
+  #   post:
+  #     summary: Adicionar um Modelo.
+  #     description: Adiciona um novo Modelo de Cardápio Online.
+  #     operationId: createModel
+  #     tags:
+  #       - Configurações
+  #     requestBody:
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/Model'
+  #           example: 
+  #             name: Novo Modelo
+  #             active: true
+  #     responses:
+  #       '201':
+  #         description: Novo modelo criado.
+  #         headers:
+  #           Location:
+  #             description: Link do novo registro criado.
+  #             schema:
+  #               type: string
+  #               format: url
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Model'
+  #             example: 
+  #               id: '62e61565-315e-4754-8410-432d6437ddd8'
+  #               name: 'Novo Modelo'
+  #               record: '2021-04-05T22:28:56.782Z'
+  #               active: true
+  #       '401':
+  #         description: Não autorizado.
+  #       '403':
+  #         description: Acesso proibido.
+  # /models/{uuid}:
+  #   get:
+  #     summary: Recuperar um Modelo.
+  #     description: Recuperar as informações de um modelo de Cardápio específico.
+  #     operationId: getModel
+  #     tags: 
+  #       - Configurações
+  #     parameters:
+  #       - $ref: '#/components/parameters/uuid'
+  #     responses:
+  #       '200':
+  #         description: Sucesso.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Model'
+  #             example: 
+  #               id: '62e61565-315e-4754-8410-432d6437ddd8'
+  #               name: 'Novo Modelo'
+  #               record: '2021-04-05T22:28:56.782Z'
+  #               active: true
+  #       '401':
+  #         description: Não autorizado.
+  #       '403':
+  #         description: Acesso proibido.
+  #       '404':
+  #         description: Parâmetro não localizado.      
+  #   put:
+  #     summary: Alterar um Modelo.
+  #     description: Alterar as informações de um Modelo de Cardápio Online.
+  #     operationId: updateModel
+  #     tags: 
+  #       - Configurações
+  #     parameters: 
+  #       - $ref: '#/components/parameters/uuid'
+  #     requestBody:
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/Model'
+  #           example:
+  #             name: Modelo alterado
+  #             active: false
+  #     responses:
+  #       '200':
+  #         description: Sucesso.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Model'
+  #             example: 
+  #               id: '62e61565-315e-4754-8410-432d6437ddd8'
+  #               name: 'Novo Modelo'
+  #               record: '2021-04-05T22:28:56.782Z'
+  #               active: true             
+  #       '401':
+  #         description: Não autorizado.
+  #       '403':
+  #         description: Sem permissão.
+  #       '404': 
+  #         description: Parâmetro não localizado.       
+  #   delete:
+  #     summary: Remover um Modelo.
+  #     description: Remover as informações de um Modelo de Cardápio Online.
+  #     operationId: removeModel
+  #     tags: 
+  #       - Configurações
+  #     parameters: 
+  #       - $ref: '#/components/parameters/uuid'
+  #     responses:
+  #       '204':
+  #         description: Sucesso.
+  #       '401':
+  #         description: Não autorizado.
+  #       '403':
+  #         description: Sem permissão.
+  #       '404':     
+  #         description: Modelo não localizado.
 components:
   schemas:
     Error:
@@ -591,146 +190,6 @@ components:
           type: array
           items:
             type: string
-    Establishment:
-      description: Estabelecimento que contratou o serviço.
-      type: object
-      properties:
-        id:
-          description: Identificador único do Estabelecimento.
-          type: string
-          format: uuid
-        seller:
-          description: Vendedor responsável por gerenciar os serviços oferecidos ao Estabelecimento.
-          type: string
-          format: uuid
-        name:
-          description: Nome do Estabelecimento.
-          type: string
-        login:
-          description: Nome para identificação de acesso do Estabelecimento.
-          type: string
-        email:
-          description: Endereço eletrônico para comunicação com o Estabelecimento.
-          type: string
-          format: email
-        record:
-          description: Momento de criação do Estabelecimento.
-          type: string
-          format: date-time
-        active:
-          description: Informa se o Estabelecimento está ativo.
-          type: boolean
-    EstablishmentAccount:
-      description: Registro de lançamentos de créditos e débitos para os serviços prestados ao Estabelecimento, seguindo uma visão financeira. O crédito é em favor do Estabelecimento.
-      type: object
-      properties:
-        id:
-          description: Identificador único do registro de conta-corrente.
-          type: string
-          format: uuid
-        establishment:
-          description: Estabelecimento proprietário da conta-corrente.
-          type: string
-          format: uuid
-        record:
-          description: Momento de registro da conta-corrente.
-          type: string
-          format: date-time
-        balance:
-          description: Valor calculado dos lançamentos, disponível como crédito em favor do Etabelecimento.
-          type: number
-          format: double
-    EstablishmentAccountStatement:
-      description: Registros de créditos e débitos em favor do Estabelecimento.
-      type: object
-      properties:
-        id:
-          description: Identificador único do lançamento financeiro.
-          type: string
-          format: uuid
-        account:
-          description: Conta-Corrente proprietária dos lançamentos.
-          type: string
-          format: uuid
-        type:
-          $ref: '#/components/schemas/StatementType'
-        value:
-          description: Valor do lançamento em favor do Estabelecimento. Valor positivo é crédito e valor negativo é débito.
-          type: number
-          format: double
-        record:
-          description: Momento de registro do lançamento financeiro.
-          type: string
-          format: date-time
-    EstablishmentPhone:
-      description: Telefones de contatos com os estabelecimentos.
-      type: object
-      properties:
-        id: 
-          description: Identificador único do Telefone para contato.
-          type: string
-          format: uuid
-        establishment:
-          description: Estabelecimento proprietário dos telefones para contato.
-          type: string
-          format: uuid
-        number:
-          description: Número do telefone, armazenado sem máscara.
-          type: string
-        name:
-          description: Nome do contato.
-          type: string
-        record:
-          description: Momento do registro do Telefone.
-          type: string
-          format: date-time
-        active:
-          description: Informa se o número de telefone está ativo.
-          type: boolean
-    Model:
-      description: Modelos de Cardápios Online para uso pelos estabelecimentos.
-      type: object
-      properties:
-        id:
-          description: Identificador único do Modelo.
-          type: string
-          format: uuid
-        name:
-          description: Nome do Modelo.
-          type: string
-        record:
-          description: Momento criação do registro.
-          type: string
-          format: date-time
-        active:
-          description: Informa se o Modelo está ativo.
-          type: boolean
-    ModelField:
-      description: Campos de informações para compor o Cardápio.
-      type: object
-      properties:
-        id:
-          description: Identificador único do Campo informativo.
-          type: string
-          format: uuid
-        model:
-          description: Modelo proprietário dos campos.
-          type: string
-          format: uuid
-        name:
-          description: Nome do campo.
-          type: string
-        description:
-          description: Descrição informativa sobre o campo.
-          type: string
-        type:
-          $ref: '#/components/schemas/ValueType'
-        value:
-          description: Valor padrão para o campo quando o Estabelecimento não informar um valor desejado.
-          type: string
-        active: 
-          description: Informa se o Campo está ativo.
-          type: boolean
     Paging:
       description: Controle de Paginação para as consultas dos recursos.
       type: object
@@ -744,189 +203,15 @@ components:
         total:
           description: Quantidade total de páginas para a consulta executada.
           type: integer
-        items:
-          description: Registros da página corrente.
-          type: array
-          items:
-            oneOf:
-              - $ref: '#/components/schemas/Model'
-              - $ref: '#/components/schemas/ModelField'
-              - $ref: '#/components/schemas/Parameter'
-              - $ref: '#/components/schemas/ParameterCategory'            
-    Parameter:
-      description: Parâmetro de Configuração do Sistema.
-      type: object
-      properties:
-        id:
-          description: Identificador único do Parâmetro.
-          type: integer
-        category:
-          description: Identificador da Categoria de agrupamento do Parâmetro
-          type: integer
-        name:
-          description: Nome do Parâmetro.
-          type: string
-        description:
-          description: Descrição sobre o Parâmetro.
-          type: string
-        type:
-          $ref: '#/components/schemas/ValueType'          
-        value:
-          description: Valor do Parâmetro.
-          type: string
-        readonly:
-          description: Informa se o Parâmetro não pode ser alterado na interface administativa.
-          type: boolean
-    ParameterCategory:
-      description: Categoria para agrupamento dos Parâmetros.
-      type: object
-      properties:
-        id: 
-          description: Identificador único da Categoria de Parâmetros.
-          type: integer
-        name:
-          description: Nome da Categoria de Parâmetros.
-          type: string
-        descriptions:
-          description: Descrição sobre a Categoria de Parâmetros.
-          type: string
-    Seller:
-      description: Vendedor que contratou o serviço.
-      type: object
-      properties:
-        id:
-          description: Identificador único do Vendedor.
-          type: string
-          format: uuid
-        name:
-          description: Nome do Vendedor.
-          type: string
-        login:
-          description: Nome para identificação de acesso do Vendedor.
-          type: string
-        email:
-          description: Endereço eletrônico para comunicação com o Vendedor.
-          type: string
-          format: email
-        record:
-          description: Momento de criação do Vendedor.
-          type: string
-          format: date-time
-        active:
-          description: Informa se o Vendedor está ativo.
-          type: boolean
-    SellerAccount:
-      description: Registro de lançamentos de créditos e débitos de comissões por serviços prestados, seguindo uma visão financeira. O crédito é em favor do Vendedor.
-      type: object
-      properties:
-        id:
-          description: Identificador único do registro de conta-corrente.
-          type: string
-          format: uuid
-        seller:
-          description: Vendedor proprietário da conta-corrente.
-          type: string
-          format: uuid
-        record:
-          description: Momento de registro da conta-corrente.
-          type: string
-          format: date-time
-        balance:
-          description: Valor calculado dos lançamentos, disponível como crédito em favor do Vendedor.
-          type: number
-          format: double
-    SellerAccountStatement:
-      description: Registros de créditos e débitos em favor do Vendedor.
-      type: object
-      properties:
-        id:
-          description: Identificador único do lançamento financeiro.
-          type: string
-          format: uuid
-        account:
-          description: Conta-Corrente proprietária dos lançamentos.
-          type: string
-          format: uuid
-        type:
-          $ref: '#/components/schemas/StatementType'
-        value:
-          description: Valor do lançamento em favor do Vendedor. Valor positivo é crédito e valor negativo é débito.
-          type: number
-          format: double
-        record:
-          description: Momento de registro do lançamento financeiro.
-          type: string
-          format: date-time
-    StatementType:
-      description: Tipos de lançamentos financeiros.
-      type: string
-      enum: 
-        - PAYMENT
-        - CHARGE
-        - COMMISSION          
-    SellerPhone:
-      description: Telefones de contatos com os vendedores.
-      type: object
-      properties:
-        id: 
-          description: Identificador único do Telefone para contato.
-          type: string
-          format: uuid
-        seller:
-          description: Vendedor proprietário dos telefones para contato.
-          type: string
-          format: uuid
-        number:
-          description: Número do telefone, armazenado sem máscara.
-          type: string
-        name:
-          description: Nome do contato.
-          type: string
-        record:
-          description: Momento do registro do Telefone.
-          type: string
-          format: date-time
-        active:
-          description: Informa se o número de telefone está ativo.
-          type: boolean
-    User:
-      description: Informações sobre o usuário.
-      type: object
-      properties:
-        id: 
-          description: Identificador universal único do usuário.
-          type: string
-          format: uuid
-        name:
-          description: Nome completo do usuário.
-          type: string
-        login: 
-          description: Nome de identificação do usuário para autenticação.
-          type: string
-        email:
-          description: Endereço eletrônico para comunicação com o usuário.
-          type: string
-          format: email
-        record:
-          description: Momento criação do registro.
-          type: string
-          format: date-time
-        active:
-          description: Informa se o usuário está ativo para operar o sistema.
-          type: boolean
-    ValueType:
-      description: Tipos de Parâmetros de Sistema.
-      type: string
-      enum: 
-        - TEXT
-        - INTEGER
-        - DECIMAL
-        - MONEY
-        - DATE
-        - TIME
-        - DATETIME
-        - BOOLEAN
-        - IMAGE
+        # items:
+        #   description: Registros da página corrente.
+        #   type: array
+        #   items:
+        #     oneOf:
+        #       - $ref: '#/components/schemas/Model'
+        #       - $ref: '#/components/schemas/ModelField'
+        #       - $ref: '#/components/schemas/Parameter'
+        #       - $ref: '#/components/schemas/ParameterCategory'            
   examples:
     InvalidFields:
       value:
@@ -1018,13 +303,13 @@ components:
             Invalid Page:
               $ref: '#/components/examples/InvalidPage'
   securitySchemes:
-    ecoAuth:
+    auth:
       type: oauth2
       description: Autenticação e Autorização de acesso.
       flows:
         password:
-          tokenUrl: 'http://eco-menu-auth:10000/auth/realms/eco-menu/protocol/openid-connect/token'
+          tokenUrl: 'http://localhost:10000/auth/realms/guess-who/protocol/openid-connect/token'
           scopes: {}              
 security: 
-  - ecoAuth: []
+  - auth: []
   
