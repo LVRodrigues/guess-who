@@ -1,0 +1,32 @@
+version: "3.6"
+services:
+  database: 
+    build: ./database/postgresql
+    ports:
+      - 5432:5432
+    networks:
+      guess-network:
+        aliases:
+          - guess-database
+  auth:
+    build: ./auth
+    ports: 
+      - 10000:8080
+      - 10443:8443
+    networks:
+      guess-network:
+        aliases:
+          - guess-auth
+  game-server:
+    build: ./game/server
+    ports:
+      - 5000:5000
+    depends_on:
+      - guess-database
+      - guess-auth
+    networks:
+      guess-network:
+        aliases:
+          - guess-game-server
+networks:
+  guess-network:
