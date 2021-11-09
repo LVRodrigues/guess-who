@@ -1,6 +1,5 @@
 /**
-* Classes de configuração e inicialização do aplicativo.
-
+* Classes de configuração e inicialização do apli
 * @author $AuthorName$ &lt;$AuthorEmail$&gt;
 * @since $AuthorDate$
 * @author $CommitterName$ &lt;$CommitterEmail$&gt;
