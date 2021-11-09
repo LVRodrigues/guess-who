@@ -1,5 +1,5 @@
 /**
-* Classes de configuração e inicialização do apli
+* Classes de configuração e inicialização do aplitivo.
 * @author $AuthorName$ &lt;$AuthorEmail$&gt;
 * @since $AuthorDate$
 * @author $CommitterName$ &lt;$CommitterEmail$&gt;
