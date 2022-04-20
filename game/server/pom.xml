@@ -3,10 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.6</version>
-		<relativePath /> 
+		<groupId>io.github.lvrodrigues</groupId>
+		<artifactId>bom</artifactId>
+		<version>17.0.2</version>
 	</parent>
 
 	<groupId>br.com.spiderbot.guess</groupId>
@@ -15,31 +14,17 @@
 	<name>game-server</name>
 	<description>Servidor do teste de conhecimento sobre personagens bíblicos.</description>
 
-	<organization>
-		<name>Spider BOT</name>
-		<url>http://www.spiderbot.com.br</url>
-	</organization>
-
-	<developers>
-		<developer>
-			<id>luciano</id>
-			<name>Luciano Vieira Rodrigues</name>
-			<email>luciano@spiderbot.com.br</email>
-			<url>https://www.linkedin.com/in/luciano-rodrigues</url>
-			<organization>Spider BOT</organization>
-			<organizationUrl>http://www.spiderbot.com.br</organizationUrl>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>America/Sao_Paulo</timezone>
-		</developer>
-	</developers>
-
-	<properties>
-		<java.version>17</java.version>
-		<maven.build.timestamp.format>dd/MM/yyyy HH:mm</maven.build.timestamp.format>
-	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-parent</artifactId>
+				<version>2.5.6</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<dependencies>
 		<dependency>
@@ -95,6 +80,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.5.6</version>
 			</plugin>
 		</plugins>
 	</build>

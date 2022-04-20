@@ -8,13 +8,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
 * Inicialização do servidor REST.
-* <p>
-* Apresenta também a página de documentação no endereço inicial.
 *
-* @author <a href="mailto:lvrodrigues@spiderbot.com.br">Luciano Vieira Rodrigues</a>
-* @since 05/11/2021
-* @author $$Author$$
-* @version $$Revision$$ - $$Date$$
+* <p>Apresenta também a página de documentação no endereço inicial.
+*
+* @since 16/11/2021
+* @author $Author$
+* @author $Committer$
+* @branch $Branch$
 */
 @SpringBootApplication
 @Controller

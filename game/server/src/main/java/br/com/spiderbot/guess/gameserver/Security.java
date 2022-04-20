@@ -8,10 +8,10 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 /**
 * Configurações de segurança do aplicativo.
 *
-* @author <a href="mailto:lvrodrigues@spiderbot.com.br">Luciano Vieira Rodrigues</a>
-* @since 05/11/2021
-* @author $$Author$$
-* @version $$Revision$$ - $$Date$$
+* @since 16/11/2021
+* @author $Author$
+* @author $Committer$
+* @branch $Branch$
 */
 @EnableWebSecurity
 public class Security extends WebSecurityConfigurerAdapter {

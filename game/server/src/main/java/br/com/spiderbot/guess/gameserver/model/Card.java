@@ -16,10 +16,10 @@ import javax.persistence.Table;
 /**
 * Cartão de informações sobre um personagem bíblico.
 
-* @author <a href="mailto:lvrodrigues@spiderbot.com.br">Luciano Vieira Rodrigues</a>
 * @since 16/11/2021
-* @author $$Author$$
-* @version $$Revision$$ - $$Date$$
+* @author $Author$
+* @author $Committer$
+* @branch $Branch$
 */
 @Entity
 @Table(name = "cards")
@@ -128,7 +128,6 @@ public class Card implements Serializable {
     /* (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
      */
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj)

@@ -13,10 +13,10 @@ import javax.persistence.Table;
 /**
 * Pergunta sobre um personagem bíblico.
 
-* @author <a href="mailto:lvrodrigues@spiderbot.com.br">Luciano Vieira Rodrigues</a>
 * @since 16/11/2021
-* @author $$Author$$
-* @version $$Revision$$ - $$Date$$
+* @author $Author$
+* @author $Committer$
+* @branch $Branch$
 */
 @Entity
 @Table(name = "questions")

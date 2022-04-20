@@ -7,10 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 /**
 * Acesso aos métodos de persistência para {@link Question}.
 *
-* @author <a href="mailto:lvrodrigues@spiderbot.com.br">Luciano Vieira Rodrigues</a>
 * @since 16/11/2021
-* @author $$Author$$
-* @version $$Revision$$ - $$Date$$
+* @author $Author$
+* @author $Committer$
+* @branch $Branch$
 */
 public interface QuestionRepository extends JpaRepository<Question, UUID> {
     
