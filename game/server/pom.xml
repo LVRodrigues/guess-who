@@ -13,13 +13,24 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>game-server</name>
 	<description>Servidor do teste de conhecimento sobre personagens bíblicos.</description>
+	<url>https://lvrodrigues.github.io/repository/${project.artifactId}-${project.version}/${project.artifactId}</url>
+
+	<properties>
+		<scm.url>scm:git:https://github.com/LVRodrigues/guess-who.git</scm.url>
+		<spring-boot.version>2.6.6</spring-boot.version>
+		<!-- Limiares JaCoCo. Aumente gradualmente à medida que você adiciona testes. -->
+		<jacoco.unit-tests.limit.instruction-ratio>0%</jacoco.unit-tests.limit.instruction-ratio>
+		<jacoco.unit-tests.limit.branch-ratio>0%</jacoco.unit-tests.limit.branch-ratio>
+		<jacoco.unit-tests.limit.class-complexity>20</jacoco.unit-tests.limit.class-complexity>
+		<jacoco.unit-tests.limit.method-complexity>7</jacoco.unit-tests.limit.method-complexity>
+	</properties>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-parent</artifactId>
-				<version>2.5.6</version>
+				<version>${spring-boot.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -80,7 +91,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>2.5.6</version>
+				<version>${spring-boot.version}</version>
 			</plugin>
 		</plugins>
 	</build>
