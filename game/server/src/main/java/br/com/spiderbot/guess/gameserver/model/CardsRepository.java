@@ -12,6 +12,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 * @author $Committer$
 * @branch $Branch$
 */
-public interface CardRepository extends JpaRepository<Card, UUID> {
+public interface CardsRepository extends JpaRepository<Card, UUID> {
     
 }
