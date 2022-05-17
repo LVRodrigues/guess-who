@@ -186,6 +186,9 @@ components:
         name:
           type: string
           description: Nome do personagem.
+        phoneme:
+          type: string
+          description: Expressão fonética para identificar o nome do personagem.
         image:
           type: string
           description: Endereço da imagem sobre o personagem bíblico.

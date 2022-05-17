@@ -18,10 +18,11 @@
 	<properties>
 		<scm.url>scm:git:https://github.com/LVRodrigues/guess-who.git</scm.url>
 		<spring-boot.version>2.6.6</spring-boot.version>
+		<jfonemabr.version>1.0.0</jfonemabr.version>
 		<!-- Limiares JaCoCo. Aumente gradualmente à medida que você adiciona testes. -->
 		<jacoco.unit-tests.limit.instruction-ratio>0%</jacoco.unit-tests.limit.instruction-ratio>
 		<jacoco.unit-tests.limit.branch-ratio>0%</jacoco.unit-tests.limit.branch-ratio>
-		<jacoco.unit-tests.limit.class-complexity>20</jacoco.unit-tests.limit.class-complexity>
+		<jacoco.unit-tests.limit.class-complexity>50</jacoco.unit-tests.limit.class-complexity>
 		<jacoco.unit-tests.limit.method-complexity>7</jacoco.unit-tests.limit.method-complexity>
 	</properties>
 
@@ -60,6 +61,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.github.lvrodrigues</groupId>
+			<artifactId>jfonemabr</artifactId>
+			<version>${jfonemabr.version}</version>
 		</dependency>
 				
 		<dependency>

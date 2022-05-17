@@ -30,3 +30,6 @@ docs/~$ralho_Biblico.doc
 
 # Diretório de trabalho do Maven
 target
+
+# Configurações do Visual Studio Code
+.vscode

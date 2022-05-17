@@ -39,6 +39,12 @@ public class Card implements Serializable {
     private String name;
 
     /**
+     * Expressão fonética para identificar o nome do personagem.
+     */
+    @Column
+    private String phoneme;
+
+    /**
      * Imagem do cartão.
      */
     @Lob
@@ -84,6 +90,20 @@ public class Card implements Serializable {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * @return {@link #phoneme}
+     */
+    public String getPhoneme() {
+        return phoneme;
+    }
+
+    /**
+     * @param phoneme {@link #phoneme}
+     */
+    public void setPhoneme(String phoneme) {
+        this.phoneme = phoneme;
     }
 
     /**

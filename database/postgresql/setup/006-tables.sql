@@ -32,12 +32,14 @@ COMMENT ON INDEX uq_versions IS 'Índice único para registar uma versão, compo
 CREATE TABLE cards (
     card    id,
     name    description,
+    phoneme description,
     image   image
 );
 
 COMMENT ON TABLE cards          IS 'Cartões de personagens.';
-COMMENT ON COLUMN cards.card    IS 'Identificador único do cartão do personagem';
+COMMENT ON COLUMN cards.card    IS 'Identificador único do cartão do personagem.';
 COMMENT ON COLUMN cards.name    IS 'Nome do personagem.';
+COMMENT ON COLUMN cards.phoneme IS 'Expressão fonética para identificar o nome do personagem.';
 COMMENT ON COLUMN cards.image   IS 'Imagem do personagem.';
 
 ALTER TABLE cards ADD
