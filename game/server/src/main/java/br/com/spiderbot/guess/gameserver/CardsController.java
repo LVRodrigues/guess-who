@@ -1,5 +1,6 @@
 package br.com.spiderbot.guess.gameserver;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.spiderbot.guess.gameserver.model.Card;
 import br.com.spiderbot.guess.gameserver.model.CardsRepository;
+import io.github.lvrodrigues.fonema.Fonema;
 
 
 

@@ -13,6 +13,8 @@ import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
 * Cartão de informações sobre um personagem bíblico.
 
@@ -56,6 +58,7 @@ public class Card implements Serializable {
      * Perguntas sobre o personagem bíblico.
      */
     @OneToMany(mappedBy = "card", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("card")
     private List<Question> questions;
 
     /**

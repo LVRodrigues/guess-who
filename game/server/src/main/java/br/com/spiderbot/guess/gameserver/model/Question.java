@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
 * Pergunta sobre um personagem bíblico.
 
@@ -34,6 +36,7 @@ public class Question implements Serializable {
      */
     @ManyToOne
     @JoinColumn(name = "card")
+    @JsonIgnoreProperties("questions")
     private Card card;
 
     /**

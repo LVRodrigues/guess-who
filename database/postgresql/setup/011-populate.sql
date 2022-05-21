@@ -16,8 +16,8 @@ VALUES (uuid_nil(), 'Banco de Dados', 1, 0, 0);
 --------------------------------------------------------------------------------
 -- Abel
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('B7E0C17C-A6E4-4C19-ADE1-7072DC783444', 'Abel');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('B7E0C17C-A6E4-4C19-ADE1-7072DC783444', 'Abel', 'B');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('B7E0C17C-A6E4-4C19-ADE1-7072DC783444', 'FE6F6474-FE96-43B7-A7A5-A511846E033C', 'Quem foi o primeiro pastor?', 'Gênesis 4:2'),
     ('B7E0C17C-A6E4-4C19-ADE1-7072DC783444', '8CD324C0-E851-4BBB-ADF3-B9507A4343C8', 'Quem pela fé ofereceu um melhor sacrifício que seu irmão?', 'Hebreus 11:4'),
@@ -30,8 +30,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Abraão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('EE578622-F92B-4C25-BDBF-43253410CCAF', 'Abraão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('EE578622-F92B-4C25-BDBF-43253410CCAF', 'Abraão', 'B');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', '2B65D3CC-8D08-4907-BF89-546232F56FD7', 'Quem as escrituras chamam pelo título: "O amigo de Deus"?', 'Tiago 2:23'),
     ('EE578622-F92B-4C25-BDBF-43253410CCAF', '8744DC77-E84E-40C2-91F1-587FE8286065', 'A quem Deus ordenou primeiramente a circuncisão?', 'Gênesis 17:10'),
@@ -43,8 +43,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Acabe
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('A86CE532-3FE3-4007-821D-433ABA849117', 'Acabe');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('A86CE532-3FE3-4007-821D-433ABA849117', 'Acabe', 'KB');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('A86CE532-3FE3-4007-821D-433ABA849117', '20F028A1-EAE6-4D66-818B-32A05DCA6F1B', 'Que rei casou com Jezabel; uma mulher iníqua e idólatra?', '1 Reis 16:31'),
     ('A86CE532-3FE3-4007-821D-433ABA849117', '2205C24A-0960-4131-A57B-6A0F5511B325', 'Que rei foi reprovado por Elias pela sua idolatria?', '1 Reis 18:18'),
@@ -56,8 +56,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Adão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('8230CD8B-5D7E-4593-9E45-F45D0DCC9E10', 'Adão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('8230CD8B-5D7E-4593-9E45-F45D0DCC9E10', 'Adão', 'D');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('8230CD8B-5D7E-4593-9E45-F45D0DCC9E10', '7D45EAAE-7EB2-4A26-8E01-58EFC56E909E', 'Quem o apóstolo Paulo disseque é a semelhança daquele que havia de vir?', 'Romando 5:14'),
     ('8230CD8B-5D7E-4593-9E45-F45D0DCC9E10', '15AEE6C1-2A8F-4CDC-B137-C9BE9B8A5555', 'Quem foi o primeiro a se vestir de peles de animais?', 'Gênesis 3:21'),
@@ -69,8 +69,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Agar
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('D256D52D-F27F-4E08-8684-53DDAAB5769C', 'Agar');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('D256D52D-F27F-4E08-8684-53DDAAB5769C', 'Agar', 'G');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('D256D52D-F27F-4E08-8684-53DDAAB5769C', 'F8E0121B-741A-4525-A09A-4B4801B9A989', 'Quem foi a mãe de Ismael?', 'Gênesis 16:15'),
     ('D256D52D-F27F-4E08-8684-53DDAAB5769C', 'D7D83DA5-9D83-4E5B-8B5B-B2616E079739', 'Quem Abraão mandou embora com pão e uma garrafa de água?', 'Gênesis 21:16'),
@@ -81,8 +81,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Ananias
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'Ananias');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'Ananias', 'M');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'C1476083-75E3-433B-AAC7-B85FDA2B3060', 'Quem procurou enganar os apóstolos com respeito ao preço que vendeu uma propriedade?', 'Atos 5:2'),
     ('E281AD89-CB19-4AB0-A20B-77947AB6F504', 'F4CA734F-928B-4051-9770-0FF536285BF0', 'A quem Pedro disse: "Por que te afoitou Satanás a trapacear o espírito santo"?', 'Atos 5:3'),
@@ -94,8 +94,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Arão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('A34C1757-3CDA-47B4-B3CB-F2AD09469E4C', 'Arão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('A34C1757-3CDA-47B4-B3CB-F2AD09469E4C', 'Arão', 'S');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('A34C1757-3CDA-47B4-B3CB-F2AD09469E4C', 'F3A9579C-4C93-4DB0-9C48-022CABEDFE6D', 'Quem foi o 1º sumo-sacerdote dos judeus e que foi chamado "O santo do Senhor"?', 'Êxodo 28:1;Salmos 106:16'),
     ('A34C1757-3CDA-47B4-B3CB-F2AD09469E4C', 'FA788285-E0FC-476D-84E5-ECD6DF5C5538', 'Quem foi mandado por Moisés a erguer seu bastão e trazer pragas sobre o Egito?', 'Êxodo 7:19'),
@@ -107,8 +107,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Assuero
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('4AE15177-25B1-49B9-8904-4D0C599B3855', 'Assuero');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('4AE15177-25B1-49B9-8904-4D0C599B3855', 'Assuero', 'SR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('4AE15177-25B1-49B9-8904-4D0C599B3855', 'FF28608E-A1E0-4CEE-B403-04FD4BC93D0B', 'Quem expediu um decreto para a sujeição de todas as mulheres de seu império?', 'Ester 1:19-22'),
     ('4AE15177-25B1-49B9-8904-4D0C599B3855', '158A358F-8D3F-433A-9CE3-92969BDD6692', 'Que rei usou Mordecai como seu segundo na corte?', 'Ester 10:3'),
@@ -120,8 +120,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Atalia
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', 'Atalia');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', 'Atalia', 'TR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', '6CCE5824-7EF3-445B-8BCA-947F99327969', 'Que mulher matou toda a descendência real menos um e usurpou o trono?', '2 Reis 11:1'),
     ('E60CCC90-B5E9-42DB-9766-43E7EFDC2DC0', 'AED4DE22-904F-4CA3-BB8F-09EFD919A2BE', 'De quem foi escondido o menino rei Josias por seis anos numa câmara?', '2 Reis 11:2'),
@@ -132,8 +132,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Balaão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('02C36AAB-9FAB-4FFA-AE08-8E101DE2871E', 'Balaão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('02C36AAB-9FAB-4FFA-AE08-8E101DE2871E', 'Balaão', 'BR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('02C36AAB-9FAB-4FFA-AE08-8E101DE2871E', '4258226A-4A44-495D-99B2-A77D14C39405', 'Que profeta gentio viveu na cidade de Petor entre as montanhas do oriente?', 'Números 22:5'),
     ('02C36AAB-9FAB-4FFA-AE08-8E101DE2871E', 'B3B5E9B4-FC03-4113-8700-4AD5E3B23017', 'Para quem uma jumenta falou palavras de sabedoria?', 'Números 22:28'),
@@ -145,8 +145,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Barnabé
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('7DCE9754-726A-4656-8162-D33179F29CB5', 'Barnabé');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('7DCE9754-726A-4656-8162-D33179F29CB5', 'Barnabé', 'BSMB');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('7DCE9754-726A-4656-8162-D33179F29CB5', 'EB45763C-5189-4158-B484-A8E40DB36222', 'Que levita de Chipre vendeu um campo e deu o dinheiro aos apóstolos?', 'Atos 4:37'),
     ('7DCE9754-726A-4656-8162-D33179F29CB5', 'A22C1B2D-8632-400F-B760-0158C3F5BF7A', 'Quem levou Paulo aos apóstolos e contou como ele vira o Senhor a caminho de Damasco?', 'Atos 9:27'),
@@ -158,8 +158,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Belsazar
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('DE8C573E-FEC0-4B7E-B918-9280588ADF07', 'Belsazar');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('DE8C573E-FEC0-4B7E-B918-9280588ADF07', 'Belsazar', 'BS');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('DE8C573E-FEC0-4B7E-B918-9280588ADF07', 'F16352E9-B336-4ADF-984E-1147A039C0A4', 'Quem foi o último rei de Babilônia?', 'Daniel 5:30'),
     ('DE8C573E-FEC0-4B7E-B918-9280588ADF07', '24E54016-5D17-4F00-B26B-B5E4BED3C10D', 'Quem mandou trazer os vasos de ouro e prata que tinham sido de Jerusalém para uma festa pagã?', 'Daniel 5:2'),
@@ -171,8 +171,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Caifás
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('2516B706-E05B-45D3-ABB5-612746D8DE91', 'Caifás');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('2516B706-E05B-45D3-ABB5-612746D8DE91', 'Caifás', 'KF');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('2516B706-E05B-45D3-ABB5-612746D8DE91', '09C52A1E-1D57-4600-BD17-097B310185B5', 'Quem era o sumo-sacerdote nos dias de Jesus aqui na terra?', 'Mateus 26:3'),
     ('2516B706-E05B-45D3-ABB5-612746D8DE91', '1F0954B0-6CA1-41E8-B52E-07AE8E1F1D5C', 'Qual sumo-sacerdote comissionou Paulo para ir a Damasco perseguir os cristãos?', 'Atos 9:1,2'),
@@ -184,8 +184,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Caim
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'Caim');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'Caim', 'K');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', '5A0BE851-B81A-4AF0-8696-5A9A521639A9', 'Quem disse" Sou eu guardião do meu irmão"?', 'Gênesis 4:9'),
     ('2DE0BECE-3409-4756-AF95-40C19D931CA6', 'F8222596-3543-4120-A4BC-7FA50E66A3CC', 'Quem é mencionado como o primeiro lavrador da terra?', 'Gênesis 4:2'),
@@ -197,8 +197,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Calebe
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('2F8340D2-19F1-426B-890A-EE114D953171', 'Calebe');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('2F8340D2-19F1-426B-890A-EE114D953171', 'Calebe', 'KRB');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('2F8340D2-19F1-426B-890A-EE114D953171', '49DE045B-87F8-4BFF-8C55-A47BB918F005', 'Quem da tribo de Judá foi enviado por Moisés como espião à Canaã?', 'Números 13:6'),
     ('2F8340D2-19F1-426B-890A-EE114D953171', '8F50277C-BB96-4D0C-9D5D-698613EF4C1C', 'Quem, mediante Moisés falou ao povo: "Subamos logo, e forçosamente havemos de tomar posse dele, pois, certamente podemos prevalecer sobre ele"?', 'Números 13:30'),
@@ -210,8 +210,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Cornélio
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', 'Cornélio');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', 'Cornélio', 'KSMR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', '3C093C4D-0080-4486-AC15-0BFA2E9AED66', 'A quem um anjo disse: "Tuas orações e dádivas de misericórdia têm ascendido como memória perante Deus"?', 'Atos 10:4'),
     ('5CE0C3E1-3BB2-4B88-BE83-5A7C2CF9DCFA', '6E06AA11-E330-4ECF-9ED8-9EF0DDB8B97E', 'Quem mandou seus homens a Jope para buscar Pedro conforme o anjo lhe mandou?', 'Atos 10:5-8'),
@@ -223,8 +223,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Daniel
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('47685A25-85FF-42B8-819B-8919944A50B4', 'Daniel');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('47685A25-85FF-42B8-819B-8919944A50B4', 'Daniel', 'DM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('47685A25-85FF-42B8-819B-8919944A50B4', 'AC4B64A7-4FC5-4DC8-9572-78CF90388910', 'Que profeta interpretou as palavras escritas na parede durante a festa do rei Belsazar?', 'Daniel 5:13-31'),
     ('47685A25-85FF-42B8-819B-8919944A50B4', '8FFD3021-9147-46D9-8FD7-0D4BFE8E9053', 'Qual profeta da casa de Davi foi lançado numa cova de leões?', 'Daniel 6:16'),
@@ -235,8 +235,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Davi
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', 'Davi');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', 'Davi', 'DV');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', 'BABC0606-905F-4F73-BC9D-1EE3245BC1DF', 'De quem Deus diz que ele "Um homem que agrade ao seu coração"?', '1 Samuel 13:14'),
     ('FB2AEF3D-B37D-4B8A-9849-CA9EA6DC98CC', 'EE15D278-DE9A-4724-B095-D8774436BAC7', 'Quem escreveu: "Jeová é o meu pastor e nada me faltará"?', 'Salmos 23:1'),
@@ -248,8 +248,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Débora
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('79EB9CCE-172E-425B-9C78-C4A897184B13', 'Débora');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('79EB9CCE-172E-425B-9C78-C4A897184B13', 'Débora', 'DBR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('79EB9CCE-172E-425B-9C78-C4A897184B13', 'C1DBF23D-74CA-487D-A91A-04FFB7D8B9EB', 'Que mulher foi um dos juízes de Israel?', 'Juízes 4:4'),
     ('79EB9CCE-172E-425B-9C78-C4A897184B13', '8218F3AF-6860-497E-A84F-AF9AFD5425D5', 'Quem assentava-se para julgar embaixo de uma tamargueira?', 'Juízes 4:5'),
@@ -261,8 +261,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Eli
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('E8574C4E-41BB-45A4-81EA-F54159EAC465', 'Eli');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('E8574C4E-41BB-45A4-81EA-F54159EAC465', 'Eli', 'R');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('E8574C4E-41BB-45A4-81EA-F54159EAC465', 'A9345CC7-FA2D-4AD3-A404-FA388AEE6D2E', 'Que sumo-sacerdote foi juíz de Israel por 40 anos?', '1 Samuel 4:18'),
     ('E8574C4E-41BB-45A4-81EA-F54159EAC465', '26B7FDEF-9181-4962-BFD5-C173B1D99F23', 'Que sumo-sacerdote foi destacado pela sua piedade, mas, foi negligente com a disciplina de sua família?', '1 Samuel 3:13'),
@@ -274,8 +274,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Elias
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('F8548B28-6683-4D08-86B5-50AE368B553F', 'Elias');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('F8548B28-6683-4D08-86B5-50AE368B553F', 'Elias', 'R');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('F8548B28-6683-4D08-86B5-50AE368B553F', 'D23C4E2F-C474-4982-9408-BF2DB6CC293B', 'Quem teve uma disputa com 450 sacerdotes de Baal no Monte Carmelo para provar quem era Deus, Jeová ou Baal?', '1 Reis 18:19'),
     ('F8548B28-6683-4D08-86B5-50AE368B553F', '356F0C87-67BD-461C-AF80-705152A1757C', 'Quem viajou 40 dias e 40 noites sem comer até o Monte Horebe?', '1 Reis 19:8'),
@@ -287,8 +287,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Eliseu
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'Eliseu');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'Eliseu', 'RS');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('4B4E0D7F-5CA0-423E-A016-90932602AF81', '2B065290-F1D7-4A36-B8E9-D0FBD793F35A', 'Sobre quem caiu o manto de Elias e uma porção dupla de seu espírito?', '2 Reis 2:9-13'),
     ('4B4E0D7F-5CA0-423E-A016-90932602AF81', 'B2E10147-7AF4-48CF-B058-FAFD9FDBA17C', 'Quem foi encontrado lavrando com doze juntas de bois, quando chamado para ser profeta?', '1 Reis 19:19'),
@@ -300,8 +300,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Enoque
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', 'Enoque');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', 'Enoque', 'MK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', '3ABCB285-7130-46AC-9F73-07335F5EA6F9', 'Quem foi pai de Metusalém e bisavô de Noé?', 'Gênesis 5:21'),
     ('1BB5ACA2-BF93-4AFA-B7E5-6795CA4BCF9B', 'ABFA7333-2986-4111-BC2A-F868177C5166', 'De quem as Escrituras dizem: "Prosseguiu andando com o verdadeiro Deus trezentos anos"?', 'Gênesis 5:22'),
@@ -313,8 +313,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Esaú
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'Esaú');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('CAE2470C-58B8-4B58-B178-72C53E767882', 'Esaú', 'S');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('CAE2470C-58B8-4B58-B178-72C53E767882', '06AB7A42-028C-42E9-B83F-06A258236373', 'Quem vendeu sua primogenitura para comer um cozido de lentilhas?', 'Gênesis 25:33,34'),
     ('CAE2470C-58B8-4B58-B178-72C53E767882', 'A5CD580E-47F0-44B5-9510-E2F8826C797A', 'Quem é o primeiro mencionado como sendo "Homem peludo"?', 'Genêsis 27:11'),
@@ -326,8 +326,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Esdras
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('5C34CB48-85B9-4E1D-905F-10E87413EA98', 'Esdras');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('5C34CB48-85B9-4E1D-905F-10E87413EA98', 'Esdras', 'SDR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('5C34CB48-85B9-4E1D-905F-10E87413EA98', '356045E1-52B5-4064-B244-DA60A18A539B', 'Quem era o escriba versado na lei de Deus nos dias de Artaxerxes, rei da Pérsia?', 'Esdras 7:6'),
     ('5C34CB48-85B9-4E1D-905F-10E87413EA98', '54C122C7-5838-4359-A85A-0ADC9D8F1954', 'Quem escreveu o livro de Crônicas?', 'História'),
@@ -339,8 +339,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Ester
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', 'Ester');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', 'Ester', 'T');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', '46A32738-ECC4-4B7D-96FA-51DF9E3D3569', 'Quem também se chamava Hadassa?', 'Ester 2:7'),
     ('B73E4794-F582-4750-A0F2-0CAD7A8EB5B5', 'DB108647-5317-4EE8-9DD1-CFA76B6973DD', 'Quem foi escolhida pelo Rei Assuero para ser rainha no lugar de Vasti?', 'Ester 2:17'),
@@ -352,8 +352,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Estevão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', 'Estevão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', 'Estevão', 'TV');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', '089BE225-2575-46CF-8630-270D30D7E265', 'Quem foi o primeiro mártir cristão?', 'Atos 7:59,60'),
     ('3B06C43E-25F8-429F-B1DD-8A85CDDCC7E3', '43CD43CE-082F-4FFB-AA11-64A8303CF0F2', 'Quem repreendeu abertamente o sinédrio pelo assassínio de Jesus?', 'Atos 7:52'),
@@ -365,8 +365,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Eva
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'Eva');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'Eva', 'V');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', 'E271EE5C-757F-4859-BC39-97D7D2AD15D0', 'Que mulher recebeu o nome de seu marido?', 'Gênesis 3:20'),
     ('6D601ED2-EB0B-475F-BABB-6C5E72BEEAE8', '3719C62D-2302-43FC-BAFF-210F251154F8', 'Quem foi a primeira pessoa humana a receber uma sentença de punição?', 'Gênesis 3:13'),
@@ -378,8 +378,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Ezequias
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', 'Ezequias');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', 'Ezequias', 'SK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', '1CF9C80E-D0D9-4884-BCE2-DF480673C95F', 'Quem restaurou Israel da idolatria após o reinado de Acaz?', '2 Reis 18:1-18'),
     ('281CCBC9-FDFF-40A1-A446-C1B5D3299720', 'AF5219BA-1BD1-45C8-B1FF-45E4C70890AA', 'Quem arrancou o ouro das portas e ombreiras do templo de Jeová e deu ao rei da Assíria?', '2 Reis 18:16'),
@@ -391,8 +391,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Ezequiel
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', 'Ezequiel');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', 'Ezequiel', 'SK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', '0171D1B7-3C1C-4F9A-A64A-72F2E317069E', 'Quem escreveu: "A alma que pecar, essa morrerá"?', 'Ezequiel 18:4'),
     ('AA4F44FA-79BC-4BEE-BFFB-960887EBDEAD', '424501A1-2741-4C87-9FBB-384F527AF504', 'A que profeta antes de Cristo consta ter comido um rolo, e que na boca era doce como mel?', 'Ezequiel 3:3'),
@@ -404,8 +404,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Filipe, o Apóstolo
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('914F49B5-A2CE-48B7-8FFE-93650A21595B', 'Filipe, o Apóstolo');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('914F49B5-A2CE-48B7-8FFE-93650A21595B', 'Filipe, o Apóstolo', 'FRP PTR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('914F49B5-A2CE-48B7-8FFE-93650A21595B', '876EAF20-678B-4434-85E8-074667B4DE23', 'Quem disse: "Achamos aquele de quem escreveram Moisés na Lei, e os profetas, Jesus de Nazaré"?', 'João 1:45'),
     ('914F49B5-A2CE-48B7-8FFE-93650A21595B', 'C45F69AF-4BBA-4912-8ECA-732E95B0340A', 'Ao ver a multidão, a quem Jesus disse: "Onde vamos comprar pães para estes comerem"?', 'João 6:5'),
@@ -416,8 +416,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Filipe, o Evangelista
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('5990B6A8-1A38-467C-8667-72010F6D7A6B', 'Filipe, o Evangelista');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('5990B6A8-1A38-467C-8667-72010F6D7A6B', 'Filipe, o Evangelista', 'FRP VJRT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('5990B6A8-1A38-467C-8667-72010F6D7A6B', 'AAD2032A-B2F3-4A19-9DCD-1EA2E50C6D70', 'Quem tinha sete filhas virgens que profetizavam?', 'Atos 21:9'),
     ('5990B6A8-1A38-467C-8667-72010F6D7A6B', '00B8B66F-3367-4134-BFE3-A3741957A9A5', 'Quem foi conduzido pelo espírito de Jeová e achou-se em Asdode?', 'Atos 8:39,40'),
@@ -430,8 +430,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Gideão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', 'Gideão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', 'Gideão', 'JD');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', '7D56CD51-2D6B-4013-87A6-EB2795155381', 'Quem disse: "Eis que o meu milhar é o mínimo em Manassés e eu sou o menor na casa de meu pai"?', 'Juízes 6:15'),
     ('757F95EB-D5C0-4E5B-BD4B-EEA1AFA236B9', '1E8694A0-77D4-4CC1-91DB-A33D181D8DEC', 'Quem pediu a Deus uma evidência de sua escolha por meio do teste do velo de lã e o orvalho?', 'Juízes 6:37'),
@@ -443,8 +443,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Herodes Agripa I
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', 'Herodes Agripa I');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', 'Herodes Agripa I', 'RD JP ');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', '33C2C7D4-19C1-4F86-9B6D-955EE2B992CE', 'Quem mandou matar a espada Tiago, irmão de João?', 'Atos 12:1,2'),
     ('73B0F57A-20A6-4D5C-B5AC-F76B2FB54A04', '8D0F2DC7-7487-49DF-B619-54F4AEA9A85D', 'Quem mandou matar os guardas da prisão onde Pedro estava encarcerado e escapou por meio de um anjo?', 'Atos 12:9'),
@@ -457,8 +457,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Herodes, o Grande
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('B8CFE5FD-4214-42C8-86D8-19C86446829D', 'Herodes, o Grande');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('B8CFE5FD-4214-42C8-86D8-19C86446829D', 'Herodes, o Grande', 'RD GM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('B8CFE5FD-4214-42C8-86D8-19C86446829D', 'EB331BB3-38E0-4248-81A1-25FE16EC777E', 'Quem era rei da Judéia quando Jesus nasceu?', 'Mateus 2:1'),
     ('B8CFE5FD-4214-42C8-86D8-19C86446829D', '8E89C0EB-956B-4676-BFC9-262F1801F821', 'Quem chamou os astrólogos e indagou quando a estrela lhes apareceu?', 'Mateus 2:7'),
@@ -470,8 +470,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Hirão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', 'Hirão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', 'Hirão', 'S');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', '61266337-F4A5-4529-8AD1-7E3E2E944071', 'Que rei de Tiro fez um tratado de paz e colaborou com Davi e Salomão?', '1 Reis 5:1-12'),
     ('3C8FA904-9E00-48E7-A9B3-49D1F9F6238F', 'CEA4E08C-4307-446B-80B1-48A8836F83DD', 'Quem forneceu á Salomão madeiras de cedro e junípero para a construção do templo?', '1 Reis 5:10'),
@@ -483,8 +483,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Isaías
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', 'Isaías');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', 'Isaías', 'S');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '92BD9AFE-0979-4718-9EA3-2FC8C373C6C3', 'Quem escreveu: "Vois sois as minhas testemunhas, diz Jeová, sim meu servo a quem escolhi"?', 'Isaías 43:10'),
     ('60EE004B-C81F-4D06-AD22-542A1B1C87D2', '8C3E4CAF-3BA1-408B-9C1A-C67D7B1104FB', 'Qual foi o primeiro dos grandes profetas ou dos profetas maiores?', 'Pentateuco'),
@@ -496,8 +496,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Isaque
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', 'Isaque');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', 'Isaque', 'SK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', 'BAB1A770-6AB4-4165-99FE-5EE94194F395', 'Quem disse: "Eis aqui o fogo e a lenha, mas, onde está o ovídeo para a oferta queimada?"?', 'Gênesis 22:7'),
     ('B5606FFD-1F8C-4BFF-952F-BAF3189389ED', 'B0603B15-B5EC-4475-ACC5-D34E34B675B5', 'Quem saíra à tarde para meditar no campo, quando viu sua futura esposa?', 'Gênesis 24:63'),
@@ -509,8 +509,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Ismael
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', 'Ismael');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', 'Ismael', 'SM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', '89ACD044-3194-42B8-B6A3-D7EA03C1C4D5', 'De quem foi dito: "Quanto à ele, tornar-se-á uma zebra de homem. Sua mão será contra todos e todos serão contra ele"?', 'Gênesis 16:12'),
     ('228907F8-C7D2-43C3-AC4F-76AD8BD93B08', '137029FB-A75F-4D42-B69B-99F5EFDF2E19', 'Que filho de Abraão foi pai de 12 maiorais?', 'Gênesis 25:16'),
@@ -522,8 +522,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Jacó
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', 'Jacó');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', 'Jacó', 'JK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', 'A34BCA61-F83C-4EB7-9A54-F190C7FCD296', 'Que foi o pai dos doze patriarcas de onde saíram todos os israelitas?', 'Atos 7:8'),
     ('5D960D57-7B49-4E90-BE6A-ACAA3D7315F3', 'FE5037B0-AD84-4429-B94A-EAA3F966C957', 'Quem lutou com um anjo até o nascer do dia dizendo: "Não te deixo ir, a menos que me abençoe"?', 'Gênesis 32:26'),
@@ -535,8 +535,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Jefté
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('5E43F7AC-8807-4606-86CB-1421577ABE00', 'Jefté');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('5E43F7AC-8807-4606-86CB-1421577ABE00', 'Jefté', 'JFT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('5E43F7AC-8807-4606-86CB-1421577ABE00', 'A227F262-A4BD-4AB4-A2E5-FE1FD4856A62', 'Que filho de Gileade foi expulso da casa de seu pai?', 'Juízes 11:2'),
     ('5E43F7AC-8807-4606-86CB-1421577ABE00', 'C38A14C5-0630-440A-8AF0-15DFF535FA33', 'Quem foi feito juiz sobre Israel com a condição de derrotar os amonitas?', 'Juízes 11:9,10'),
@@ -548,8 +548,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Jeremias
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('CD641CE4-C0CF-4E93-97F8-F187B7085154', 'Jeremias');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('CD641CE4-C0CF-4E93-97F8-F187B7085154', 'Jeremias', 'JRM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('CD641CE4-C0CF-4E93-97F8-F187B7085154', 'B2B8264F-0517-46B0-9594-B3BB01FCF3E3', 'Quem escreveu o livro de Lamentações?', 'História'),
     ('CD641CE4-C0CF-4E93-97F8-F187B7085154', '312F2767-06EE-43F1-981F-13188F0024D2', 'O livro de que profeta Daniel consultou quando estava no exílio para calcular os setenta anos de desolação de Jerusalém?', 'Daniel 9:2'),
@@ -561,8 +561,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Jeroboão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('C01021CC-015D-49EA-ADB3-7774B9B9E166', 'Jeroboão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('C01021CC-015D-49EA-ADB3-7774B9B9E166', 'Jeroboão', 'JRB');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('C01021CC-015D-49EA-ADB3-7774B9B9E166', 'CFE7A3A3-1F21-4B1F-9124-C7F4A97D9BD7', 'Quem foi o primeiro rei que pôs em revolta dez tribos de Israel?', '1 Reis 11:31'),
     ('C01021CC-015D-49EA-ADB3-7774B9B9E166', 'E97A5F5F-4AB3-4516-81D1-7917477291FA', 'Quem foi obrigado a fugir para o Egito por conspirar contra o rei Salomão?', '1 Reis 11:40'),
@@ -574,8 +574,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Jeú
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', 'Jeú');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', 'Jeú', 'J');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', 'AB0040B9-898B-4AFE-8576-391987A16B40', 'Quem Deus designou para governar Israel e golpear a casa de Acabe pelos seus pecados?', '2 Reis 9:6,7'),
     ('30AAF2C6-43F3-4EA2-B520-BA1A8DA8929D', 'BE3D259F-52C8-489E-8561-E2521FB23079', 'Que rei de Israel ficou famoso por guiar seu carro furiosamente?', '2 Reis 9:20'),
@@ -587,8 +587,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Jezabel
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', 'Jezabel');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', 'Jezabel', 'JSB');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '91AD5A89-D5FD-478C-8A6A-AF40C27F2D71', 'Que princesa de Sídon tornou-se rainha de Israel?', '1 Reis 16:31?'),
     ('1E2E74C7-4F7D-449B-AA3D-BEE57A4939A6', '85B6F889-BB3A-41F1-9B02-D2F6A1BE9FA2', 'Que mulher introduziu em Samaria a adoração de Baal?', '1 Reis 16:31'),
@@ -600,8 +600,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Jó
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', 'Jó');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', 'Jó', 'J');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', '603DCE4F-56FD-4129-ACCE-B2CE64DA437D', 'Quem orou a Deus para ser escondido no Seol ou sepultura até que Deus se lembrasse dele?', 'Jó 14:13'),
     ('7E1045E2-C360-4B59-B5C0-08D5D5F13469', 'A45C8347-C6D8-4EE1-BFFB-3EC7E281BB9D', 'Quem disse: "Embora ele possa me matar, eu ainda esperarei"?', 'Jó 13:15'),
@@ -613,8 +613,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- João Batista
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', 'João Batista');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', 'João Batista', 'J BT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', '1CBA9094-D578-4BDE-857B-253FE66DCB46', 'Quem disse que não era digno de desatar as sandálias de Jesus?', 'Lucas 3:16'),
     ('149DFC8D-D03E-491D-AFF1-2C94B93C5524', '0844D469-36CA-4387-B0EF-B6634D0A1D0D', 'De quem Jesus disse que entre os nascidos de mulher ninguém fora maior, mas que o menor no Reino dos Céus era maior do que ele?', 'Mateus 11:11'),
@@ -627,8 +627,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Jonas
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', 'Jonas');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', 'Jonas', 'JM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', '1BAB7D6D-D984-4A7B-87BF-B1DA03A30A47', 'Quem ao ser mandado para Nínive e clamar contra ela fugiu para Társis?', 'Jonas 1:3'),
     ('7E88D673-8166-44CB-A7CC-E40BA5EAEEF3', '44AA1739-1C10-48A4-A83D-EEB3FF4AEE1F', 'A quem foi dito: "Que é que há contigo, dorminhoco? Levanta-te, clama ao teu Deus"?', 'Jonas 1:6'),
@@ -640,8 +640,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Jonatã
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('0AC08409-87A8-4817-84BE-18D796A57DF3', 'Jonatã');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('0AC08409-87A8-4817-84BE-18D796A57DF3', 'Jonatã', 'JMT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('0AC08409-87A8-4817-84BE-18D796A57DF3', 'C82D5B05-23A7-4E36-898D-3779CD35655E', 'Quem deu a Davi sua túnica, sua espada, seu arco, e seu cinto?', '1 Samuel 18:4'),
     ('0AC08409-87A8-4817-84BE-18D796A57DF3', '34C68BA9-AD6D-4543-BB95-8C0F7CAECAAB', 'Quem fez um juramento de amizade a Davi dizendo; "Mostre o próprio Jeová estar entre mim e ti, e entre a minha descendência e a tua descendência, por tempo indefinido"?', '1 Samuel 20:42'),
@@ -653,8 +653,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- José
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('62B88B70-6CAD-4599-B687-D6092E0BB95D', 'José');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('62B88B70-6CAD-4599-B687-D6092E0BB95D', 'José', 'JS');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('62B88B70-6CAD-4599-B687-D6092E0BB95D', '0D42DA55-BB59-4652-8B1C-31F207588F58', 'Quem tinha uma túnica de várias cores e por seus sonhos aborreceu seus irmãos?', 'Gênesis 37:3-5'),
     ('62B88B70-6CAD-4599-B687-D6092E0BB95D', '8349E200-7A0B-486F-A643-22DB115A53D3', 'Quem predisse sete anos de fome por interpretar o sonho de Faraó?', 'Gênesis 41:26-30'),
@@ -666,8 +666,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- José, de Arimatéia
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', 'José, de Arimatéia');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', 'José, de Arimatéia', 'JS D RMT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', 'FD86AC67-A7F7-4112-9B59-4F839AB2D6AD', 'Qual membro do Sinédrio além de Nicodemos não concordou com a condenação de Jesus?', 'Lucas 23:51'),
     ('ECAE06CC-2416-4DD2-9161-881520CB7AF2', 'EE290F2D-537A-4CD0-BE7A-C9DA5BA7F61C', 'Quem foi até Pilatos e pediu o corpo de Jesus?', 'Mateus.27:58'),
@@ -680,8 +680,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Josias
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('F974E46F-3818-41B0-B30B-788C8CC58C3B', 'Josias');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('F974E46F-3818-41B0-B30B-788C8CC58C3B', 'Josias', 'JS');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('F974E46F-3818-41B0-B30B-788C8CC58C3B', 'F5657575-FD7E-48ED-AB19-D70FB964D0D1', 'Quem foi o último dos bons reis dos judeus?', '2 Crônicas 34:2'),
     ('F974E46F-3818-41B0-B30B-788C8CC58C3B', '1316D85C-47A8-49B2-8F5E-663F59B0E2A3', 'Na morte de qual rei Jeremias compôs uma lamentação?', '2 Crônicas 35:25'),
@@ -693,8 +693,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Josué
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', 'Josué');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', 'Josué', 'JS');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '30F99524-8D5A-4B25-86DC-6762D786B863', 'O nome de quem é dado ao sexto livro da Bíblia?', 'Josué 24:26'),
     ('3D0F0ADE-30BC-468B-9DC7-AE27D92CC44C', '74B01A48-F29C-49ED-8FD5-D7ABFB0A600B', 'Quem sucedeu a Moisés como líder de Israel e conduziu o povo à Canaã?', 'Deuteronômio 31:7'),
@@ -706,8 +706,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Judá
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('5B97C45A-C201-4164-9692-802300B7F19E', 'Judá');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('5B97C45A-C201-4164-9692-802300B7F19E', 'Judá', 'JD');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('5B97C45A-C201-4164-9692-802300B7F19E', 'B2DEFCAE-03EA-4773-B23D-DE916FEE7B8C', 'Quem foi o quarto filho de Jacó e Léia?', 'Gênesis 29:35'),
     ('5B97C45A-C201-4164-9692-802300B7F19E', 'F67A1B11-A983-4839-9197-B0D7D08912C8', 'Quem persuadiu seus irmãos para não matarem José, mas venderem-no aos Ismaelitas?', 'Gênesis 37:27'),
@@ -719,8 +719,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Judas Iscariotes
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', 'Judas Iscariotes');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', 'Judas Iscariotes', 'JD SKRT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', 'A2690403-4B41-4569-9982-1E59D32EF1C4', 'No lugar de quem foi escolhido Matias pelos apóstolos?', 'Atos 1:26'),
     ('5D814C7E-D6AF-421F-8BF2-90AB4485B087', 'F3F1CAF1-B5FE-4441-BB82-AE0DA76E3E6E', 'No lugar de quem Jesus colocou Paulo?', 'Gálatas 1:1'),
@@ -733,8 +733,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Lameque
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', 'Lameque');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', 'Lameque', 'RMK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', '2E8C2CB8-4B34-451E-A04A-6047E7C9DD91', 'Quem é o primeiro polígamo mencionado na Bíblia?', 'Gênesis 4:19'),
     ('F3F740AB-821F-4CCE-AAC0-1C11E9806AF2', '6591D3F9-93A1-49A6-9558-CCDC1F853E89', 'As esposas de quem chamam-se Ada e Zilá?', 'Gênesis 4:19'),
@@ -746,8 +746,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Levi
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', 'Levi');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', 'Levi', 'RV');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', 'C779E7FE-2A67-4E51-8810-4836B5D54113', 'Os descendentes de quem foram separados para servirem no tabernáculo e não ganharam parte alguma na terra de Canaã, mas recebiam a décima parte?', 'Números 18:20,21'),
     ('6D85B9AA-BCE5-4DA2-9BA5-D6EF1FA01C1E', '67B55790-EA50-4027-971A-EF27560DC2F6', 'À tribo de quem Moisés não deu herança, mas apenas 48 cidades, incluindo seis cidades de refúgio?', 'Números 35:2-6'),
@@ -759,8 +759,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Ló
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('FB8DD6D8-9999-4B50-91BF-B5854478343A', 'Ló');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('FB8DD6D8-9999-4B50-91BF-B5854478343A', 'Ló', 'R');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('FB8DD6D8-9999-4B50-91BF-B5854478343A', '8D8CA1FC-ADEF-4394-9378-1396318559EE', 'Quem foi advertido para fugir de Sodoma com sua família?', 'Gênesis 19:12'),
     ('FB8DD6D8-9999-4B50-91BF-B5854478343A', 'A96B5832-79B3-4D16-A74A-AA2B6ECE57FD', 'Quem foi filho de Harã e sobrinho de Abraão?', 'Gênesis 11:27'),
@@ -772,8 +772,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Lucas
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', 'Lucas');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', 'Lucas', 'RK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', 'ADE4BC7E-52B7-43B1-850B-E3110FD4AD55', 'Quem era chamado de "O Médico amado"?', 'Colossenses 4:14'),
     ('2A0D5ABC-AA69-429E-A774-F4863CA34B05', '3ED4C335-308F-4A9A-951D-977D4D0560BE', 'Qual dos evangelistas dá um relato mais detalhado da infância de Jesus?', 'Lucas 2'),
@@ -785,8 +785,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Marcos
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('2432656D-758F-4E9B-BA70-379AE427579E', 'Marcos');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('2432656D-758F-4E9B-BA70-379AE427579E', 'Marcos', 'MRK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('2432656D-758F-4E9B-BA70-379AE427579E', '334FD278-F2A1-4487-A1A9-BF7E20092AA0', 'Quem era filho daquela Maria em cuja casa muitas pessoas oravam a favor de Pedro?', 'Atos 12:12'),
     ('2432656D-758F-4E9B-BA70-379AE427579E', 'FB7663CB-ED35-4CC5-888E-E9E103AE925C', 'Quem o apóstolo Pedro chama de "Meu filho" no evangelho?', '1 Pedro 5:13'),
@@ -798,8 +798,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Maria, de Betânia
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', 'Maria, de Betânia');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', 'Maria, de Betânia', 'MR D BTM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', 'DD71067F-8104-46E6-8154-94AA58364156', 'Quem era irmã de Marta e Lázaro?', 'João 11:1'),
     ('0FA31A4A-353E-40EC-9AB6-89F97F21FC9F', '1421B2DE-A9D0-4C2C-B963-6F37A81F92EF', 'Quem deu mais atenção ao ensino de Jesus do que às preocupações materiais para hospedá-lo?', 'Lucas 10:40-42'),
@@ -812,8 +812,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Maria Madalena
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'Maria Madalena');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'Maria Madalena', 'MR MDRM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'DB02F82F-61A0-4B3A-913E-BA46A60BBEDD', 'Para quem os anjos perguntaram no sepulcro; "Mulher, por que estás chorando?"?', 'João 20:13'),
     ('20287D37-C066-477B-8977-A94DDF8DA6F1', 'AF83E6E6-2984-4043-984B-9F493AA58B86', 'Quem disse: "Retiraram o meu Senhor, e não sei onde o deitaram"?', 'João 20:13'),
@@ -826,8 +826,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Maria, mãe de Jesus
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('90581C8A-872B-4829-A1CC-A43C8547B14B', 'Maria, mãe de Jesus');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('90581C8A-872B-4829-A1CC-A43C8547B14B', 'Maria, mãe de Jesus', 'MR M D JS');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('90581C8A-872B-4829-A1CC-A43C8547B14B', '99A39F0A-DAF8-4292-B658-30FC31096F24', 'Quem falou: "E meu espírito não pode deixar de estar cheio de alegria por Deus meu Salvador pois Ele tem olhado para a situação humilde de sua escrava"?', 'Lucas 1:47,48'),
     ('90581C8A-872B-4829-A1CC-A43C8547B14B', '24E73327-6E68-4192-B661-7483E33CDDCF', 'Quem fugiu para o Egito por causa do Rei Herodes?', 'Mateus 2:13-15'),
@@ -839,8 +839,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Marta
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('07A69E9E-801D-4746-BCCD-323AB815045F', 'Marta');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('07A69E9E-801D-4746-BCCD-323AB815045F', 'Marta', 'MT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('07A69E9E-801D-4746-BCCD-323AB815045F', 'A87136FF-04DC-4DD0-9337-590DABF08CB8', 'Quem preocupa-se muito com o serviço da casa e com servir alimentos e negligenciou o principal, que era ouvir as palavras de Jesus?', 'Lucas 10:40-42'),
     ('07A69E9E-801D-4746-BCCD-323AB815045F', '8538396B-660F-4E74-8409-F76724EF2106', 'A quem Jesus disse: "Estás ansiosa e perturbada com muitas coisas Poucas coisas, porém são necessárias, ou apenas uma"?', 'Lucas 10:41,42'),
@@ -852,8 +852,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Mateus
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', 'Mateus');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', 'Mateus', 'MT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', '6E20C7E3-C64A-412A-A672-B90D815BAE10', 'À quem chamou Jesus dizendo: "Seja meu seguidor"?', 'Mateus 9:9'),
     ('3B969C8E-4665-4EB1-B8C8-0D9F4BDBE50B', '14C2E9B3-896B-4DC0-A975-748AFE086C3B', 'Qual dos apóstolos era também chamado Levi?', 'Marcos 2:14'),
@@ -865,8 +865,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Melquisedeque
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', 'Melquisedeque');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', 'Melquisedeque', 'MRKSDK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', 'C16534CE-F951-4059-BA0B-303817A38A87', 'Quem foi o rei de Salém e o primeiro sacerdote mencionado nas Escrituras?', 'Gênesis 14:18'),
     ('1F9B0B37-5AB9-4BF8-988A-9580136A14E0', '23DBA99B-CFD0-4D75-B719-2661E0BAD963', 'Quando Abraão voltava da guerra contra os reis, foi abençoado por quem?', 'Gênesis 14:18'),
@@ -878,8 +878,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Miriã
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('BA27A3CA-48CA-48D6-8892-781B981D77AD', 'Miriã');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('BA27A3CA-48CA-48D6-8892-781B981D77AD', 'Miriã', 'MR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('BA27A3CA-48CA-48D6-8892-781B981D77AD', 'F5930DA5-4771-42AC-9A75-8BBC7E2B2817', 'Quem dançou e cantou: "Cantai a Jeová, pois Ele ficou grandemente enaltecido. Lançou no mar o cavalo e seu cavaleiro"?', 'Êxodo 15:20,21'),
     ('BA27A3CA-48CA-48D6-8892-781B981D77AD', 'EC1DAF32-7DEB-499D-A074-D8927071116C', 'Quem foi ferida de lepra por rebelar-se contra Moisés?', 'Números 12:1-12'),
@@ -891,8 +891,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Moisés
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', 'Moisés');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', 'Moisés', 'MS');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', 'A43B376B-D4D4-4E37-8387-2A4FD57ECFC7', 'Quem escolheu ser maltratado com o povo de Deus do que Ter o usufruto temporário do pecado?', 'Hebreus 11:25'),
     ('71A5F3C4-2CDA-4850-9322-5D113C1C9435', '1C3B0E99-76CE-47C5-A340-B530DB389F85', 'Quem ficou no Monte Sinai por 40 dias e 40 noites para receber a lei de Deus?', 'Êxodo 34:28'),
@@ -904,8 +904,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Mulher Samaritana
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('8916518C-CEFF-49AC-9484-11C05D551F14', 'Mulher Samaritana');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('8916518C-CEFF-49AC-9484-11C05D551F14', 'Mulher Samaritana', 'MR SMRTM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('8916518C-CEFF-49AC-9484-11C05D551F14', 'A0052B79-C863-4225-A83C-C7C480719975', 'Quem veio tirar água de um poço quando Jesus estava descansando?', 'João 4:7'),
     ('8916518C-CEFF-49AC-9484-11C05D551F14', '0AFE999B-1639-4CBF-BD33-68393336E65D', 'Que mulher se mostrou surpresa por Jesus falar com ela?', 'João 4:9'),
@@ -918,8 +918,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Nabucodonosor
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('37D6D696-444F-4A4C-8248-84942EDC5576', 'Nabucodonosor');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('37D6D696-444F-4A4C-8248-84942EDC5576', 'Nabucodonosor', 'MBKDMS');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('37D6D696-444F-4A4C-8248-84942EDC5576', '06BE6473-7402-4783-BA14-6F3C66892FD0', 'Que rei destruiu Jerusalém, e queimou o templo e o palácio, matou o último rei da linhagem de Davi?', '2 Reis 25:8,9'),
     ('37D6D696-444F-4A4C-8248-84942EDC5576', 'A2B3B1C7-0CFE-474C-AAE6-9521711F103E', 'Quem levou os vasos sagrados de Jerusalém para Babilônia?', '2 Reis 25:13-16'),
@@ -931,8 +931,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Natã
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('928191E3-F69C-43CE-8356-64F283108E7F', 'Natã');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('928191E3-F69C-43CE-8356-64F283108E7F', 'Natã', 'MT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('928191E3-F69C-43CE-8356-64F283108E7F', 'AFFB84E4-A9F5-417D-911E-06D072592CDB', 'Quem Jeová usou para dizer a Davi que sua casa e seu trono seriam firmemente estabelecidos por tempo indefinido?', '2 Samuel 17:13'),
     ('928191E3-F69C-43CE-8356-64F283108E7F', '2945EDFF-D9CC-4DB7-998F-C26207EA28E7', 'Que profeta assegurou a sucessão de Salomão ao trono?', '1 Reis 1:11'),
@@ -944,8 +944,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Natanael
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', 'Natanael');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', 'Natanael', 'MTM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', '725C3052-64AE-4449-8AE3-E409A38A2BC5', 'Qual dos doze apóstolos era de Caná da Galileia?', 'João 21:2'),
     ('AA0A1CDC-F31B-46A2-86AE-430EDDFEEE05', 'C5DD5385-FEA6-45D4-B0A2-5A971412AD79', 'De quem Jesus disse: "Eis um israelita de verdade, em quem não há fraude"?', 'João 1:47'),
@@ -957,8 +957,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Neemias
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('34F56B07-B449-467E-A0A9-C8342511178E', 'Neemias');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('34F56B07-B449-467E-A0A9-C8342511178E', 'Neemias', 'M');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('34F56B07-B449-467E-A0A9-C8342511178E', '0B748633-37D7-46F1-B724-6251B6EB6110', 'Que judeu era copeiro do Rei Artaxerxes da Pérsia?', 'Neemias 1:11'),
     ('34F56B07-B449-467E-A0A9-C8342511178E', 'C0D0539F-AA85-4272-98DE-082DB7F0E472', 'Quem, como Moisés, deixou o luxo de uma corte para ir ter os israelitas oprimidos?', 'Neemias 2:5'),
@@ -970,8 +970,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Nicodemos
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', 'Nicodemos');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', 'Nicodemos', 'MKDM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', '43234258-A48F-463E-A9F4-A666C539BF97', 'Quem dentre os fariseus foi visitar Jesus à noite?', 'João 3:2'),
     ('8711A881-6530-4FF5-BBB0-8BD8B0FD511A', 'ECA687EE-844D-4DC1-BE05-07C1A45C0EB6', 'A Quem Jesus disse: "A menos que alguém nasça de água e espírito, não pode entrar no Reino de Deus"?', 'João 3:5'),
@@ -983,8 +983,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Ninrode
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('E60D9797-731B-4BEF-9F64-38AA19E866BA', 'Ninrode');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('E60D9797-731B-4BEF-9F64-38AA19E866BA', 'Ninrode', 'MRD');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('E60D9797-731B-4BEF-9F64-38AA19E866BA', '50B7729E-EEE4-43B7-B4B0-AC8854282A81', 'Quem é descrito como poderoso caçador em oposição à Jeová?', 'Gênesis 10:9'),
     ('E60D9797-731B-4BEF-9F64-38AA19E866BA', '0000BAC1-2EEB-42F3-A1D3-504FB8057385', 'Que neto de Caim se tornou destacado após o dilúvio?', 'Gênesis 10:8'),
@@ -996,8 +996,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Noé
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', 'Noé');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', 'Noé', 'M');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', '535C15C3-75B4-4846-9AA9-3AB59E245F79', 'Quem primeiro usou pombas como mensageiras?', 'Gênesis 8:8'),
     ('EFC236AB-20AD-42B0-A2C6-CA28EE7708CD', '1DBE4277-4A22-4856-B5A7-F95B5162A550', 'À família de quem foi permitido usar carne pela primeira vez como alimento?', 'Gênesis 9:3'),
@@ -1009,8 +1009,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Paulo
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('881A69A9-A418-4CE5-8408-BA54A078141D', 'Paulo');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('881A69A9-A418-4CE5-8408-BA54A078141D', 'Paulo', 'PR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('881A69A9-A418-4CE5-8408-BA54A078141D', '5C23B442-62EE-443D-AD12-04E74020E3B4', 'Quem pregou num sermão para os filósofos gregos em Atenas?', 'Atos 17:16-34'),
     ('881A69A9-A418-4CE5-8408-BA54A078141D', '72C5A6D1-CAA5-4A39-AFE7-6783FB6E5837', 'A quem o Rei Agripa disse: "em pouco tempo me persuadirias a tronar-me cristão"?', 'Atos 26:28'),
@@ -1022,8 +1022,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Pedro
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('147AFA61-BF77-4D42-A2CA-80075925BEAC', 'Pedro');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('147AFA61-BF77-4D42-A2CA-80075925BEAC', 'Pedro', 'PDR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('147AFA61-BF77-4D42-A2CA-80075925BEAC', 'D4CB54D0-4D26-481A-AAEA-15ABE22F8B8F', 'Qual dos apóstolos fez o discurso no dia de Pentecostes com o derramamento do espírito santo sobre os apóstolos e discípulos?', 'Atos 2'),
     ('147AFA61-BF77-4D42-A2CA-80075925BEAC', '304CAE83-D4F1-4FD2-A27D-35342299A360', 'A quem Jesus perguntou: "... você me ama mais do que a estes?"', 'João 21:15'),
@@ -1035,8 +1035,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Pilatos
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', 'Pilatos');
+INSERT INTO cards (card, name, phoneme) VALUES  
+    ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', 'Pilatos', 'PRT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', '9BDA54D7-3A2F-4C5D-8C2C-6FE87396B534', 'Quem misturou o sangue de alguns galileus com os sacrifícios que os mesmos realizavam?', 'Lucas 13:1'),
     ('CC57170D-C72E-4A3C-BE32-EB27BD1805D9', 'A736DF92-7613-41FE-A144-37E0E308C9DC', 'Quem perguntou a Jesus: "Você é o Rei dos judeus?"?', 'Mateus 27:11'),
@@ -1048,8 +1048,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Raquel
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', 'Raquel');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', 'Raquel', 'RK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', 'F4A243AB-124F-482C-A6FF-DD80955076C1', 'Qual era o nome da filha mais moça de Labão?', 'Gênesis 29:16'),
     ('886AE76A-9A3B-44F7-A0C3-565E34CC8560', '375F03BC-946E-44D7-8856-8A9921992E18', 'Quem é a primeira pastora mencionada nas Escrituras?', 'Gênesis 29:6,16'),
@@ -1061,8 +1061,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Rebeca
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('81781697-C186-4BBA-B267-617749471A69', 'Rebeca');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('81781697-C186-4BBA-B267-617749471A69', 'Rebeca', 'RBK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('81781697-C186-4BBA-B267-617749471A69', '2BBB5D7E-6847-4BF0-8F62-14F9BE3EC61F', 'Que noiva é mencionada como ganhando argolas e pulseiras de ouro do servo idoso de Abraão junto a um poço de água?', 'Gênesis 24:22'),
     ('81781697-C186-4BBA-B267-617749471A69', 'A4F960B7-8EE9-4E83-ABDA-BDA5C5413B44', 'A quem foi revelado que ela seria mãe de duas nações distintas?', 'Gênesis 25:23'),
@@ -1074,8 +1074,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Roboão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('3091E044-548D-49B8-9292-16A9E99D3010', 'Roboão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('3091E044-548D-49B8-9292-16A9E99D3010', 'Roboão', 'RB');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('3091E044-548D-49B8-9292-16A9E99D3010', 'A698E495-A7D1-44EB-A5A1-487932630A4E', 'Qual dos filhos de Salomão o sucedeu como rei?', '1 Reis 11:43'),
     ('3091E044-548D-49B8-9292-16A9E99D3010', '2943C683-6816-4DF9-A6A8-777C220D005E', 'Que rei abandonou o conselho dos anciãos que serviam na corte de seu pai?', '1 Reis 12:8'),
@@ -1087,8 +1087,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Rute
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', 'Rute');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', 'Rute', 'RT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', '049743B8-84FA-4B64-BC39-6A8292ED92BB', 'Quem foi a viúva de um judeu chamado Malom?', 'Rute 1:4,5'),
     ('5BBA4AD0-54C4-4D67-8F0E-F716B627E4A4', 'FE8DB7CF-F9F4-4FDC-99A0-66BD0B2CE4C0', 'Quem disse assim: "Aonde quer que fores, irei eu, e onde quer que pernoitares, pernoitarei eu. Teu povo será o meu povo, e teu Deus, o meu Deus"?', 'Rute 1:16'),
@@ -1100,8 +1100,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Salomão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', 'Salomão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', 'Salomão', 'SM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', '4EEC9761-619E-45EA-8C58-17CDF2EFC97B', 'Que rei escolheu a sabedoria em lugar de vida longa e riquezas?', '2 Crônicas 1:10'),
     ('11DB1A6B-AF42-4272-BEA9-14B054DF2175', '45E44A82-B90B-495F-8544-09630236AB02', 'Quem sucedeu a Davi como rei e construiu o templo em Jerusalém?', '1 Reis 1:29, 6:14'),
@@ -1113,8 +1113,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Samuel
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', 'Samuel');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', 'Samuel', 'SM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', '37E3A59F-8B45-4D7A-8C3A-ED3F69FC4C5D', 'Que criança foi entregue por sua mãe Ana para servir na casa de Jeová?', '1 Samuel 1:24'),
     ('65FC70D2-AF01-4C73-9EDA-1F679AB47344', 'A2A5E1C0-966C-48F3-9D6E-8CFA65E3FD55', 'Quem foi o último dos juizes de Israel?', 'Atos 13:20'),
@@ -1126,8 +1126,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Sansão
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', 'Sansão');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', 'Sansão', 'SMS');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', '7A46E9A0-D241-45EB-8EA5-1216060FC563', 'Quem matou mil filisteus com uma queixada de jumento?', 'Juízes 15:15'),
     ('9A6D0346-CCD1-443C-9C46-983AA3C55DD8', '74BD13A9-F180-4FD8-BB2A-93A578665417', 'Quem mandou trezentas raposas com tochas acesas na cauda entre os campos de cereais dos filisteus?', 'Juízes 15:4,5'),
@@ -1139,8 +1139,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Sara
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', 'Sara');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', 'Sara', 'SR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', '5AA85660-4415-4AF8-AB1C-945C7C01D205', 'Quem falou: "Expulsa essa escrava e o filho dela, pois o filho desta escrava não vai ser herdeiro com o meu filho"?', 'Gênesis 21:10'),
     ('E100DF4A-A0E5-4702-903E-00BFE8B7F6EB', 'B60ABA6C-4A7E-43C5-89C1-515622747B32', 'Para sepultura de quem menciona-se a primeira compra de terra?', 'Gênesis 23:1-20'),
@@ -1151,8 +1151,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Saul
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('D357D385-482E-4306-8457-4EF4D2187883', 'Saul');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('D357D385-482E-4306-8457-4EF4D2187883', 'Saul', 'S');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('D357D385-482E-4306-8457-4EF4D2187883', '965A26A4-6B0A-49AC-A2FF-0AF35E46B252', 'Quem foi o primeiro rei de israel?', '1 Samuel 9:2; 10:24'),
     ('D357D385-482E-4306-8457-4EF4D2187883', 'B2ACA1B6-A371-4E25-84B4-9092FA302F49', 'Quem desejava matar Davi que lhe tocava harpa?', '1 Samuel 19:10'),
@@ -1164,8 +1164,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Sem
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', 'Sem');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', 'Sem', 'S');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', '14D53788-56C5-454A-A017-757A39DE5F2F', 'Quem foi o mais famoso dos filhos de Noé?', 'Gênesis 5:28,32'),
     ('D2AD2FC8-E0FE-4358-842C-9F81AEED21B2', '32A69B05-6502-4CF6-AEB8-931E63D6E476', 'Quem é mencionado como tendo 98 anos de idade por ocasião do diluvio?', 'Gênesis 11:10'),
@@ -1177,8 +1177,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Tiago
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', 'Tiago');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', 'Tiago', 'TG');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', '84709DE1-7BC2-4B1C-89E1-C0D1A23D5A8D', 'Quem era irmão de João e filho de Zebedeu?', 'Mateus 4:21'),
     ('D8412ABB-A339-4C93-8309-9F1AD8AF0943', 'BE48D0D2-EE53-4E49-B809-FCB0356D696D', 'Quem, junto com seu irmão, recebeu o nome de Boanerges, Filho do trovão?', 'Marcos 3:17'),
@@ -1190,8 +1190,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Timóteo
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('CD55C2EA-5012-4368-9E6D-290FD6A81609', 'Timóteo');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('CD55C2EA-5012-4368-9E6D-290FD6A81609', 'Timóteo', 'TMT');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('CD55C2EA-5012-4368-9E6D-290FD6A81609', 'F42C08BA-56C3-43F3-BF3F-18AB06F2A0E3', 'Quem era o filho de Eunice e neto de Lóide?', '2 Timóteo 1:5'),
     ('CD55C2EA-5012-4368-9E6D-290FD6A81609', 'BF4358AE-234C-4DA9-B03C-CA4CB8275CEC', 'De quem foi escrito que desde a infância tinha conhecido os Escritos Sagrados, assim, conhecendo as Escrituras?', '2 Timóteo 3:15'),
@@ -1203,8 +1203,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Tomé
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', 'Tomé');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', 'Tomé', 'TM');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', 'A4964C62-3CC6-4DE4-B373-247B3B51DFAA', 'Quem era também chamado Dídimo?', 'João 11:16'),
     ('F11C37FA-5AB3-4FAA-8126-F46378DCEF72', '2EBEE695-AE8D-488E-90E0-A1094C3CD8D8', 'Qual dos discípulos estava ausente quando Jesus ressuscitado apareceu-lhes numa sala fechada?', 'João 20:24'),
@@ -1216,8 +1216,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Zacarias
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('FCFB2AD7-794E-4E1C-A900-02958189404F', 'Zacarias');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('FCFB2AD7-794E-4E1C-A900-02958189404F', 'Zacarias', 'SKR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('FCFB2AD7-794E-4E1C-A900-02958189404F', '52761178-A919-46A9-B8CA-360A38A12656', 'A quem foi dito: "Eu sou Gabriel, que está a postos logo diante de Deus"?', 'Lucas 1:19'),
     ('FCFB2AD7-794E-4E1C-A900-02958189404F', '76BF49E9-5643-422E-9FCC-81EA85EC58AE', 'Quem ficou mudo até o nascimento de seu filho por não crer nas palavras do anjo Gabriel?', 'Lucas 1:20'),
@@ -1229,8 +1229,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Zaqueu
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', 'Zaqueu');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', 'Zaqueu', 'SK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', '4388383E-6CE1-4C15-938A-1BCE21F7CF3E', 'Quem era baixinho, e, querendo ver Jesus subiu numa árvore?', 'Lucas 19:4'),
     ('9D3CD378-C285-4F43-98C3-8F4FB47598B3', 'D68FCE92-A03F-4EE4-B7E7-EFD509354889', 'A quem Jesus disse: "Apressa-te e desce, pois hoje tenho de ficar na tua casa"?', 'Lucas 19:5'),
@@ -1242,8 +1242,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Zedequias
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', 'Zedequias');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', 'Zedequias', 'SDK');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', '9719FC74-F484-4E2F-A526-6D6C2A890F7A', 'Quem foi o último rei da linhagem de Davi em Jerusalém?', '2 Reis 24:17'),
     ('3A9160A0-D698-4B72-91B2-4FF30FDCF1BE', '5E67CE3E-7C30-40EE-8AC9-8B78017EC470', 'Que rei dos judeus teve seus olhos cegados?', '2 Reis 25:7'),
@@ -1255,8 +1255,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Zípora
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', 'Zípora');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', 'Zípora', 'SPR');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '8D4C5E25-F084-4778-B1CD-41ECE07B98B5', 'Quem era a esposa de Moisés?', 'Êxodo 2:21'),
     ('FEFF212B-3666-4D34-A02D-0E970EA07FDF', '54E19B03-7369-4300-8305-386D1C4567BE', 'Como chamava-se a filha de Reuel, sacerdote de Midiã, que se casou com um levita?', 'Êxodo 2:18-21'),
@@ -1268,8 +1268,8 @@ INSERT INTO questions (card, question, text, evidence) VALUES
 --------------------------------------------------------------------------------
 -- Zorobabel
 --------------------------------------------------------------------------------
-INSERT INTO cards (card, name) VALUES 
-    ('533B7770-9511-4706-BF0E-1E1A48288F69', 'Zorobabel');
+INSERT INTO cards (card, name, phoneme) VALUES 
+    ('533B7770-9511-4706-BF0E-1E1A48288F69', 'Zorobabel', 'SRB');
 INSERT INTO questions (card, question, text, evidence) VALUES
     ('533B7770-9511-4706-BF0E-1E1A48288F69', 'CBB75F4C-EB6D-427F-BF76-0C3532F9B7D3', 'Quem era também chamados de Sesbazar e foi feito governador de Judá pelo rei Ciro?', 'Esdras 5:14'),
     ('533B7770-9511-4706-BF0E-1E1A48288F69', 'F7B031BA-7708-4778-9620-322A9C3B5819', 'Quem foi líder dos primeiros judeus que retornaram do cativeiro em Babilônia?', 'Esdras 2:2'),
