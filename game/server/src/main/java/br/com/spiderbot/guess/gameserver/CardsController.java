@@ -3,7 +3,10 @@ package br.com.spiderbot.guess.gameserver;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.spiderbot.guess.gameserver.model.Card;
@@ -43,7 +46,11 @@ public class CardsController {
      * @return Lista de {@link Card}.
      */
     @GetMapping(value="/cards")
-    public List<Card> getAll() {
-        return cards.findAll();
+    public List<EntityModel<Card>> getCards(
+            @RequestParam(required = false) String name) {
+        List<EntityModel<Card>> result = cards.findAll().stream()
+            .map(item -> EntityModel.of(item))
+            .toList();
+        return result;
     }
 }

@@ -1,5 +1,6 @@
 package br.com.spiderbot.guess.gameserver.model;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,4 +15,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 */
 public interface CardsRepository extends JpaRepository<Card, UUID> {
     
+    List<Card> findByName(String name);
 }
