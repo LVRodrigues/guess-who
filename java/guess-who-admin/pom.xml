@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>br.com.spiderbot.guess</groupId>
+		<groupId>io.github.lvrodrigues.guess</groupId>
 		<artifactId>guess-who</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>br.com.spiderbot.guess</groupId>
+	<groupId>io.github.lvrodrigues.guess</groupId>
 	<artifactId>guess-who-admin</artifactId>
 	<name>guess-who-admin</name>
 	<packaging>jar</packaging>
