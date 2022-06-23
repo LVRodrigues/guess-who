@@ -1,4 +1,4 @@
-package br.com.spiderbot.guess.gameserver;
+package io.github.lvrodrigues.guess.admin;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 /**
  * Teste integrados do SpringBoot.
  *
- * @since 16/05/2022
+ * @since 23/06/2022
  * @author $Author$
  * @author $Committer$
  * @branch $Branch$
