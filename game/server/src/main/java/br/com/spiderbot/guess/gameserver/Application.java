@@ -1,6 +1,5 @@
 package br.com.spiderbot.guess.gameserver;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,7 +27,7 @@ public class Application {
 		return new ModelAndView("index.html");
 	}
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+	// public static void main(String[] args) {
+	// 	SpringApplication.run(Application.class, args);
+	// }
 }

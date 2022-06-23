@@ -15,5 +15,43 @@
 	<description>Servidor de administrado para o aplicativo Guess Who.</description>
 
 	<dependencies>
+		<dependency>
+			<groupId>io.github.lvrodrigues.guess</groupId>
+			<artifactId>guess-who-model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.github.lvrodrigues</groupId>
+			<artifactId>jfonemabr</artifactId>
+		</dependency>		
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>		
+		
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>		
 	</dependencies>
 </project>

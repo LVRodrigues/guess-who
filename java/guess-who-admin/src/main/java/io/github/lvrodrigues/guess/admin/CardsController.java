@@ -1,4 +1,4 @@
-package br.com.spiderbot.guess.gameserver;
+package io.github.lvrodrigues.guess.admin;
 
 import java.util.List;
 
@@ -7,15 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.spiderbot.guess.gameserver.model.Card;
-import br.com.spiderbot.guess.gameserver.model.CardsRepository;
-
-
+import io.github.lvrodrigues.guess.model.Card;
+import io.github.lvrodrigues.guess.model.CardsRepository;
 
 /**
  * Gereciamento dos cartões de personagens.
  *
- * @since 16/05/2022
+ * @since 23/06/2022
  * @author $Author$
  * @author $Committer$
  * @branch $Branch$
@@ -40,9 +38,11 @@ public class CardsController {
     /**
      * Recupera a lista de personagens.
      *
+     * @param name Nome do cartão para localizar.
+     * 
      * @return Lista de {@link Card}.
      */
-    @GetMapping(value="/cards")
+    @GetMapping(value = "/cards")
     public List<EntityModel<Card>> getCards(
             @RequestParam(required = false) String name) {
         List<EntityModel<Card>> result = cards.findAll().stream()
