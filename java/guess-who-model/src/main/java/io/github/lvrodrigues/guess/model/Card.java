@@ -128,7 +128,11 @@ public class Card implements Serializable, Cloneable {
      * @return {@link #image}
      */
     public byte[] getImage() {
-        return Arrays.copyOf(image, image.length);
+        if (image == null) {
+            return null;
+        } else {
+            return Arrays.copyOf(image, image.length);
+        }
     }
 
     /**
@@ -137,7 +141,11 @@ public class Card implements Serializable, Cloneable {
      * @param image {@link #image}
      */
     public void setImage(byte[] image) {
-        this.image = Arrays.copyOf(image, image.length);
+        if (image == null) {
+            this.image = null;
+        } else {
+            this.image = Arrays.copyOf(image, image.length);
+        }
     }
 
     /**
@@ -146,7 +154,11 @@ public class Card implements Serializable, Cloneable {
      * @return {@link #questions}
      */
     public List<Question> getQuestions() {
-        return questions.stream().toList();
+        if (questions == null) {
+            return null;
+        } else {
+            return questions.stream().toList();
+        }
     }
 
     /**
@@ -155,7 +167,11 @@ public class Card implements Serializable, Cloneable {
      * @param questions {@link #questions}
      */
     public void setQuestions(List<Question> questions) {
-        this.questions = questions.stream().toList();
+        if (questions == null) {
+            this.questions = null;
+        } else {
+            this.questions = questions.stream().toList();
+        }
     }
 
     //CHECKSTYLE:OFF
