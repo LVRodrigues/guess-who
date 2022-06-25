@@ -1,5 +1,5 @@
 server:
-  port: 5000
+  port: 5001
 
 logging:
   level:
@@ -11,7 +11,7 @@ logging:
 
 spring:
   jackson:
-    default-property-inclusion: NON_NULL
+    default-property-inclusion: NON_EMPTY
   jpa:
     generate-ddl: false
   datasource:
