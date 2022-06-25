@@ -1,8 +1,9 @@
 package io.github.lvrodrigues.guess.model;
 
-import java.util.List;
 import java.util.UUID;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -19,7 +20,16 @@ public interface CardsRepository extends JpaRepository<Card, UUID> {
      * Localiza um personagem bíblio por seu nome exato.
      *
      * @param name Nome do personagem.
+     * @param pageable Página. 
      * @return {@link Card}.
      */
-    List<Card> findByName(String name);
+    Page<Card> findByName(String name, Pageable pageable);
+
+    /**
+     * Localiza uma página.
+     *
+     * @param pageable Página.
+     * @return Página.
+     */
+    Page<Card> findAll(Pageable pageable);
 }

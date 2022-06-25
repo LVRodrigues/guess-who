@@ -1,8 +1,10 @@
 package io.github.lvrodrigues.guess.admin;
 
-import java.util.List;
-
-import org.springframework.hateoas.EntityModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,15 +26,13 @@ public class CardsController {
     /**
      * Persistência de cartões de personagens.
      */
-    private final CardsRepository cards;
+    @Autowired
+    private CardsRepository cards;
 
     /**
      * Construtor padrão.
-     *
-     * @param cards Módulo de persistência dos cartões de personagens.
      */
-    public CardsController(CardsRepository cards) {
-        this.cards = cards;
+    public CardsController() {
     }
 
     /**
@@ -43,11 +43,19 @@ public class CardsController {
      * @return Lista de {@link Card}.
      */
     @GetMapping(value = "/cards")
-    public List<EntityModel<Card>> getCards(
+    public Page<Card> getCards(
+            @RequestParam(required = false, defaultValue = "${default.request.page}") Integer page,
+            @RequestParam(required = false, defaultValue = "${default.request.size}") Integer size,
+            @RequestParam(required = false) String fields,
+            @RequestParam(required = false, defaultValue = "name") String sort,
             @RequestParam(required = false) String name) {
-        List<EntityModel<Card>> result = cards.findAll().stream()
-            .map(item -> EntityModel.of(item))
-            .toList();
+        String[] sortArray = sort.split(",");
+        Sort sorts = Sort.unsorted();
+        for (String sortVaue : sortArray) {
+            sorts = sorts.and(Sort.by(sortVaue));
+        }
+        Pageable paging = PageRequest.of(page, size, Sort.by(sort));
+        Page<Card> result = cards.findAll(paging);
         return result;
     }
 }

@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  */
 @Entity
 @Table(name = "questions")
-public class Question implements Serializable {
+public class Question implements Serializable, Cloneable {
     
     /**
      * Identificador único para a pergunta sobre o personagem bíblico.
@@ -152,7 +152,6 @@ public class Question implements Serializable {
     /* (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
      */
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -182,5 +181,10 @@ public class Question implements Serializable {
             text,
             evidence,
             card);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
