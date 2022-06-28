@@ -8,7 +8,7 @@ info:
     name: Webmaster
     url: 'https://www.linkedin.com/in/luciano-rodrigues/'
 servers:
-  - url: 'http://localhost:5000/api'
+  - url: 'http://localhost:5000/@api.version@'
     variables: {}
     description: Desenvolvimento.
 tags:
@@ -192,6 +192,11 @@ components:
         image:
           type: string
           description: Endereço da imagem sobre o personagem bíblico.
+        questions:
+          description: Pergundas sobre o personagem bíblico
+          type: array
+          items:
+            $ref: '#/components/schemas/Question'
     Question:
       description: Pergunta de conhecimento sobre personagem bíblico.
       type: object
@@ -221,26 +226,79 @@ components:
           type: array
           items:
             type: string
-    Paging:
-      description: Controle de Paginação para as consultas dos recursos.
+    Sort:
+      description: Informações sobre a ordenação das dados.
       type: object
       properties:
-        index:
-          description: Índice da página corrente.
+        sorted:
+          description: Se os dados estão ordenados.
+          type: boolean
+        unsorted:
+          description: Se os dados não estão ordenados.
+          type: boolean
+        empty:
+          description: Se o conjunto de dados está vazio.
+          type: boolean
+    Pageable:
+      description: Informações sobre a navegação paginada.
+      type: object
+      properties:
+        sort:
+          $ref: '#/components/schemas/Sort'
+        pageNumber:
+          description: Número ordinal da página recuperada.
           type: integer
-        size:
-          description: Tamanho da página, em quantidade de registros.
+        pageSize:
+          description: Tamanho da página em quantidade de registros.
           type: integer
-        total:
-          description: Quantidade total de páginas para a consulta executada.
+        offset:
+          description: Deslocamento dos dados.
           type: integer
-        items:
+        paged:
+          description: Informação se os dados estão paginados.
+          type: boolean
+        unpaged:
+          description: Informação se os dados não estão paginados.
+          type: boolean
+    Page:
+      description: Informações paginadas.
+      type: object
+      properties:
+        content:
           description: Registros da página corrente.
           type: array
           items:
             oneOf:
               - $ref: '#/components/schemas/Card'
               - $ref: '#/components/schemas/Question'
+        pageable:
+          $ref: '#/components/schemas/Pageable'
+        totalPages:
+          description: Total de páginas para navegação.
+          type: integer
+        totalElements:
+          description: Quantidade total de registros encontrados.
+          type: integer
+        last:
+          description: Informa se é a última página.
+          type: boolean
+        first:
+          description: Informa se é a primeira página.
+          type: boolean
+        sort:
+          $ref: '#/components/schemas/Sort'
+        number:
+          description: Número de ordem da página.
+          type: integer
+        numberOfElements:
+          description: Quantidade de registros da página corrente.
+          type: integer
+        size:
+          description: Tamanho da página quantidade de registros.
+          type: integer
+        empty:
+          description: Informa se a página corrente está vazia.
+          type: boolean
   examples:
     InvalidFields:
       value:

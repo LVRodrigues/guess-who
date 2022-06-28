@@ -6,6 +6,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,6 +22,7 @@ import io.github.lvrodrigues.guess.model.CardsRepository;
  * @branch $Branch$
  */
 @RestController
+@RequestMapping("/${default.api}/cards")
 public class CardsController {
 
     /**
@@ -42,7 +44,7 @@ public class CardsController {
      * 
      * @return Lista de {@link Card}.
      */
-    @GetMapping(value = "/cards")
+    @GetMapping(value = "")
     public Page<Card> getCards(
             @RequestParam(required = false, defaultValue = "${default.request.page}") Integer page,
             @RequestParam(required = false, defaultValue = "${default.request.size}") Integer size,

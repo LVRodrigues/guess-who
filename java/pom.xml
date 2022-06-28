@@ -17,7 +17,11 @@
 	<url>https://lvrodrigues.github.io/repository/${project.artifactId}-${project.version}/${project.artifactId}</url>
 
 	<properties>
+		<!-- Versão da API -->
+		<api.version>v1</api.version>
+		<!-- Repositório -->
 		<scm.url>scm:git:https://github.com/LVRodrigues/guess-who.git</scm.url>
+		<!-- Dependências -->
 		<spring-boot.version>2.7.1</spring-boot.version>
 		<jfonemabr.version>1.0.0</jfonemabr.version>
 		<!-- Limiares JaCoCo. Aumente gradualmente à medida que você adiciona testes. -->
