@@ -17,6 +17,10 @@
 	<dependencies>
 		<dependency>
 			<groupId>io.github.lvrodrigues.guess</groupId>
+			<artifactId>guess-who-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.github.lvrodrigues.guess</groupId>
 			<artifactId>guess-who-model</artifactId>
 		</dependency>
 		<dependency>
