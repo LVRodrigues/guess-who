@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.github.lvrodrigues.guess.exceptions.SortException;
 import io.github.lvrodrigues.guess.model.Card;
 import io.github.lvrodrigues.guess.model.CardsRepository;
 
@@ -68,6 +69,7 @@ public class CardsController {
         // Filtrando a lista de campos para resposta. 
         // Campos nulos não são apresentados.
 
-        return result;
+        throw new SortException(result.toString());
+        // return result;
     }
 }
