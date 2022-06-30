@@ -2,11 +2,11 @@ package io.github.lvrodrigues.guess.admin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import io.github.lvrodrigues.guess.model.EnableGuessModel;
 
 /**
  * Inicialização do servidor REST.
@@ -19,9 +19,8 @@ import org.springframework.web.servlet.ModelAndView;
  * @branch $Branch$
  */
 @SpringBootApplication
+@EnableGuessModel
 @Controller
-@EnableJpaRepositories("io.github.lvrodrigues.guess.model")
-@EntityScan("io.github.lvrodrigues.guess.model")
 public class Application {
 
 	/**

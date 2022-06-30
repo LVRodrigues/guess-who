@@ -1,6 +1,5 @@
 package io.github.lvrodrigues.guess.exceptions;
 
-import java.net.http.HttpClient;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +33,17 @@ public class Error {
      */
     public Error() {
         causes = new ArrayList<>();
+    }
+
+    /**
+     * Construtor com informações iniciais.
+     *
+     * @param status {@link #status}.
+     * @param description {@link #description}.
+     */
+    public Error(String status, String description) {
+        this.status = status;
+        this.description = description;
     }
 
     /**
@@ -78,15 +88,23 @@ public class Error {
      * @return Lista de causas.
      */
     public List<String> getCauses() {
-        return causes;
+        if (causes == null) {
+            return null;
+        } else {
+            return causes.stream().toList();
+        }
     }
 
     /**
      * Atribui a lista de {@link #causes}.
-     * 
+     *
      * @param causes Lista de causas.
      */
     public void setCauses(List<String> causes) {
-        this.causes = causes;
+        if (causes == null) {
+            this.causes = null;
+        } else {
+            this.causes = causes.stream().toList();
+        }
     }
 }

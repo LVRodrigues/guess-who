@@ -13,4 +13,11 @@
 	<name>guess-who-common</name>
 	<packaging>jar</packaging>
 	<description>Ferramentas utilitárias e objetos compartilhados para o projeto Guess Who?.</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	</dependencies>	
 </project>
