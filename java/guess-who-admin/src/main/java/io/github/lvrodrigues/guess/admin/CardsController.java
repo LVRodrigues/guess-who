@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.github.lvrodrigues.guess.exceptions.SortException;
 import io.github.lvrodrigues.guess.model.Card;
 import io.github.lvrodrigues.guess.model.CardsRepository;
 
@@ -64,12 +63,11 @@ public class CardsController {
             sorts = sorts.and(Sort.by(sortVaue));
         }
         // Preparando a página de resposta:
-        Pageable paging = PageRequest.of(page, size, Sort.by(sort));
+        Pageable paging = PageRequest.of(page, size, sorts);
         Page<Card> result = cards.findAll(paging);
         // Filtrando a lista de campos para resposta. 
         // Campos nulos não são apresentados.
 
-        throw new SortException(result.toString());
-        // return result;
+        return result;
     }
 }

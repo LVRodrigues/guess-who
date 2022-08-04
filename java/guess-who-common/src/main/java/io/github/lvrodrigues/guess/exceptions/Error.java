@@ -14,14 +14,19 @@ import java.util.List;
 public class Error {
 
     /**
+     * Código de resposta HTTP.
+     */
+    private Integer code;
+
+    /**
      * Estado de resposta da requisição HTTP.
      */
     private String status;
 
     /**
-     * Descrição do erro ocorrido.
+     * Mensagem informativa do erro ocorrido.
      */
-    private String description;
+    private String message;
 
     /**
      * Lista de causas para o erro ocorrido.
@@ -36,14 +41,21 @@ public class Error {
     }
 
     /**
-     * Construtor com informações iniciais.
+     * Recupera o valor de {@link #code}.
      *
-     * @param status {@link #status}.
-     * @param description {@link #description}.
+     * @return Código HTTP de resposta.
      */
-    public Error(String status, String description) {
-        this.status = status;
-        this.description = description;
+    public Integer getCode() {
+        return code;
+    }
+
+    /**
+     * Atribui o valo de {@link #code}.
+     *
+     * @param code Código HTTP de resposta.
+     */
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
     /**
@@ -65,21 +77,21 @@ public class Error {
     }
 
     /**
-     * Recupera o campo {@link #description}.
+     * Recupera o campo {@link #message}.
      *
-     * @return Descrição do erro.
+     * @return Mensagem do erro.
      */
-    public String getDescription() {
-        return description;
+    public String getMessage() {
+        return message;
     }
 
     /**
-     * Atribui o campo {@link #description}.
+     * Atribui o campo {@link #message}.
      *
-     * @param description Descrição do erro.
+     * @param message Mensagem do erro.
      */
-    public void setDescription(String description) {
-        this.description = description;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     /**
@@ -88,11 +100,7 @@ public class Error {
      * @return Lista de causas.
      */
     public List<String> getCauses() {
-        if (causes == null) {
-            return null;
-        } else {
-            return causes.stream().toList();
-        }
+        return causes.stream().toList();
     }
 
     /**
@@ -102,9 +110,69 @@ public class Error {
      */
     public void setCauses(List<String> causes) {
         if (causes == null) {
-            this.causes = null;
+            this.causes = new ArrayList<>();
         } else {
             this.causes = causes.stream().toList();
         }
+    }
+
+    //CHECKSTYLE:OFF
+    /* (non-Javadoc)
+     * @see java.lang.Object#hashCode()
+     */
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((causes == null) ? 0 : causes.hashCode());
+        result = prime * result + ((code == null) ? 0 : code.hashCode());
+        result = prime * result + ((message == null) ? 0 : message.hashCode());
+        result = prime * result + ((status == null) ? 0 : status.hashCode());
+        return result;
+    }
+
+    /* (non-Javadoc)
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Error other = (Error) obj;
+        if (causes == null) {
+            if (other.causes != null)
+                return false;
+        } else if (!causes.equals(other.causes))
+            return false;
+        if (code == null) {
+            if (other.code != null)
+                return false;
+        } else if (!code.equals(other.code))
+            return false;
+        if (message == null) {
+            if (other.message != null)
+                return false;
+        } else if (!message.equals(other.message))
+            return false;
+        if (status == null) {
+            if (other.status != null)
+                return false;
+        } else if (!status.equals(other.status))
+            return false;
+        return true;
+    }
+    //CHECKSTYLE:ON
+
+    @Override
+    public String toString() {
+        return String.format("Error[code=%d, status=%s, message=%s, causes=(%s)", 
+            code,
+            status,
+            message,
+            causes.toString());
     }
 }

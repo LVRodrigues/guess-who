@@ -25,6 +25,10 @@ public class ErrorHandler {
     @ExceptionHandler(value = SortException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public Error sortExceptionHandle(SortException ex) {
-        return new Error(HttpStatus.BAD_REQUEST.name(), ex.getLocalizedMessage());
+        Error error = new Error();
+        error.setCode(HttpStatus.BAD_REQUEST.value());
+        error.setStatus(HttpStatus.BAD_REQUEST.name());
+        error.setMessage(ex.getLocalizedMessage());
+        return error;
     }
 }

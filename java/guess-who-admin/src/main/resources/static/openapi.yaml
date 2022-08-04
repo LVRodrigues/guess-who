@@ -215,6 +215,9 @@ components:
       description: Informações sobre erros ocorridos.
       type: object
       properties:
+        code:
+          description: Código da resposta HTTP.
+          type: integer
         status:
           description: Descrição do código de estado HTTP.
           type: string
