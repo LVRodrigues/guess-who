@@ -17,6 +17,36 @@ tags:
   - name: Configurações
     description: Configurações do Sistema.
 paths:
+  /cards:
+    summary: Lista de personagens.
+    description: Aprenenta uma lista de personagens bíblicos.
+    get:
+      summary: Listar os cartões de personagens.
+      description: Apresenta uma lista paginada de personagens bíblicos.
+      operationId: getCards
+      tags:
+        - Configurações
+      parameters:
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/size'
+        - $ref: '#/components/parameters/sort'
+        - $ref: '#/components/parameters/fields'
+      responses:
+        '200':
+          description: Sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Page'
+              examples:
+                Sucesso:
+                  $ref: '#/components/examples/Page'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          description: Não autorizado.
+        '403':
+          description: Acesso proibido.         
   # /models:
   #   summary: Modelos de Cardápios Online.
   #   description: Modelos de Cardápios Online para ajudar na configuração dos Estabelecimentos.
@@ -322,7 +352,69 @@ components:
         status: BAD_REQUEST
         message: Índice de página inválido.
         causes:
-          - Página incial não pode ser menor que 1 (um).    
+          - Página incial não pode ser menor que 1 (um).
+    Card:
+      value:
+        id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
+        name: Abel
+        phoneme: B
+        questions:
+          - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+            text: Quem foi o primeiro pastor?
+            evidence: Gênesis 4:2  
+    Question:
+      value:
+        id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+        text: Quem foi o primeiro pastor?
+        evidence: Gênesis 4:2        
+    Sort:
+      value:
+        sorted: true
+        unsorted: false
+        empty: false
+    Pageable:
+      value:
+        sort:
+          sorted: true
+          unsorted: false
+          empty: false
+        pageNumber: 0,
+        pageSize: 5,
+        offset: 0,
+        paged: true,
+        unpaged: false
+    Page:
+      value:
+        content: 
+          id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
+          name: Abel
+          phoneme: B
+          questions:
+            - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+              text: Quem foi o primeiro pastor?
+              evidence: Gênesis 4:2
+          pageable: 
+            sort: 
+              sorted: true
+              unsorted: false
+              empty: false
+            pageNumber: 0
+            pageSize: 5
+            offset: 0
+            paged: true
+            unpaged: false
+          totalPages: 20
+          totalElements: 97
+          last: false
+          first: true
+          sort:
+            sorted: true
+            unsorted: false
+            empty: false
+          size: 5
+          number: 0
+          numberOfElements: 5
+          empty: false            
   parameters:
     page:
       name: page
@@ -341,7 +433,7 @@ components:
     sort:
       name: sort
       in: query
-      description: Lista de campos para ordenação da resposta, separados por vírgula.
+      description: Lista de campos para ordenação da resposta, separados por vírgula. Pode ser adicionado o sinal de subtração (-) antes do nome de cada campo para simbolizar a ordem descendente. Se não for informada uma ordem explícita, será utilizada a ordem ascendente.
       required: false
       schema:
         type: string

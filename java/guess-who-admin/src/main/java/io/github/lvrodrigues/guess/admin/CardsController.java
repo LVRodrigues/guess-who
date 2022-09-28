@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -59,8 +60,13 @@ public class CardsController {
         // Verificando a ordenação:
         String[] sortArray = sort.split(",");
         Sort sorts = Sort.unsorted();
-        for (String sortVaue : sortArray) {
-            sorts = sorts.and(Sort.by(sortVaue));
+        for (String sortValue : sortArray) {
+            Direction direction = Direction.ASC;
+            if (sortValue.startsWith("-")) {
+                direction = Direction.DESC;
+                sortValue = sortValue.substring(1);
+            }
+            sorts = sorts.and(Sort.by(direction, sortValue));
         }
         // Preparando a página de resposta:
         Pageable paging = PageRequest.of(page, size, sorts);
