@@ -48,6 +48,14 @@ ALTER TABLE cards ADD
 
 COMMENT ON INDEX pk_cards IS 'Chave primária dos cartões de personagens.';
 
+CREATE INDEX ix_cards_name ON cards(name);
+
+COMMENT ON INDEX ix_cards_name IS 'Índice dos nomes dos personagens.';
+
+CREATE INDEX ix_cards_phoneme ON cards(phoneme);
+
+COMMENT ON INDEX ix_cards_phoneme IS 'Índice fonético dos nomes dos personagens.';
+
 CREATE TABLE questions (
     question    id,
     card        id,
