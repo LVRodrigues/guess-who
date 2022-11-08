@@ -14,8 +14,8 @@ import io.github.lvrodrigues.guess.exceptions.SortException;
  * Utilitário para manipular o parâmetro nas consultas.
  *
  * @since 08/11/2022
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorName$
+ * @author $CommitterName$
  * @branch $Branch$
  */
 public final class FieldUtil {

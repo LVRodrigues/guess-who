@@ -10,8 +10,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * Acesso aos métodos de persistência para {@link Card}. 
  *
  * @since 21/06/2022
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorName$
+ * @author $CommitterName$
  * @branch $Branch$
  */
 public interface CardsRepository extends JpaRepository<Card, UUID> {
