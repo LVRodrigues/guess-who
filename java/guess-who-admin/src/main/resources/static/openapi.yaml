@@ -1,0 +1,497 @@
+openapi: 3.0.3
+info:
+  title: Guess Who?
+  version: '@project.version@'
+  description: Documentação dos serviços REST do sistema de teste sobre conhecimento de personagens bíblicos.
+  contact:
+    email: lvrodriguesline-guess-who@yahoo.com
+    name: Webmaster
+    url: 'https://www.linkedin.com/in/luciano-rodrigues/'
+servers:
+  - url: 'http://localhost:5000/@api.version@'
+    variables: {}
+    description: Desenvolvimento.
+tags:
+  - name: Informações
+    description: Informações para consulta.
+  - name: Configurações
+    description: Configurações do Sistema.
+paths:
+  /cards:
+    summary: Lista de personagens.
+    description: Aprenenta uma lista de personagens bíblicos.
+    get:
+      summary: Listar os cartões de personagens.
+      description: Apresenta uma lista paginada de personagens bíblicos.
+      operationId: getCards
+      tags:
+        - Configurações
+      parameters:
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/size'
+        - $ref: '#/components/parameters/sort'
+        - $ref: '#/components/parameters/fields'
+      responses:
+        '200':
+          description: Sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Page'
+              examples:
+                Sucesso:
+                  $ref: '#/components/examples/Page'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          description: Não autorizado.
+        '403':
+          description: Acesso proibido.         
+  # /models:
+  #   summary: Modelos de Cardápios Online.
+  #   description: Modelos de Cardápios Online para ajudar na configuração dos Estabelecimentos.
+  #   get:
+  #     summary: Listar os Modelos de Cardápios.
+  #     description: Listar todos os Modelos de Cardápios Online.
+  #     operationId: getModels
+  #     tags:
+  #       - Configurações
+  #     parameters: 
+  #       - $ref: '#/components/parameters/page'
+  #       - $ref: '#/components/parameters/size'
+  #       - $ref: '#/components/parameters/sort'
+  #       - $ref: '#/components/parameters/fields'
+  #     responses:
+  #       '200':
+  #         description: Sucesso.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: array
+  #               items:
+  #                 $ref: '#/components/schemas/Paging'
+  #             example: 
+  #               index: 1
+  #               size: 20
+  #               total: 3
+  #               items: 
+  #                 - id: 1
+  #                   name: Modelo 01
+  #                   record: null
+  #                   active: true
+  #                 - id: 2
+  #                   name: Modelo 02
+  #                   record: null
+  #                   active: true
+  #       '400':
+  #         $ref: '#/components/responses/badRequest'
+  #       '401':
+  #         description: Não autorizado.
+  #       '403':
+  #         description: Acesso proibido.      
+  #   post:
+  #     summary: Adicionar um Modelo.
+  #     description: Adiciona um novo Modelo de Cardápio Online.
+  #     operationId: createModel
+  #     tags:
+  #       - Configurações
+  #     requestBody:
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/Model'
+  #           example: 
+  #             name: Novo Modelo
+  #             active: true
+  #     responses:
+  #       '201':
+  #         description: Novo modelo criado.
+  #         headers:
+  #           Location:
+  #             description: Link do novo registro criado.
+  #             schema:
+  #               type: string
+  #               format: url
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Model'
+  #             example: 
+  #               id: '62e61565-315e-4754-8410-432d6437ddd8'
+  #               name: 'Novo Modelo'
+  #               record: '2021-04-05T22:28:56.782Z'
+  #               active: true
+  #       '401':
+  #         description: Não autorizado.
+  #       '403':
+  #         description: Acesso proibido.
+  # /models/{uuid}:
+  #   get:
+  #     summary: Recuperar um Modelo.
+  #     description: Recuperar as informações de um modelo de Cardápio específico.
+  #     operationId: getModel
+  #     tags: 
+  #       - Configurações
+  #     parameters:
+  #       - $ref: '#/components/parameters/uuid'
+  #     responses:
+  #       '200':
+  #         description: Sucesso.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Model'
+  #             example: 
+  #               id: '62e61565-315e-4754-8410-432d6437ddd8'
+  #               name: 'Novo Modelo'
+  #               record: '2021-04-05T22:28:56.782Z'
+  #               active: true
+  #       '401':
+  #         description: Não autorizado.
+  #       '403':
+  #         description: Acesso proibido.
+  #       '404':
+  #         description: Parâmetro não localizado.      
+  #   put:
+  #     summary: Alterar um Modelo.
+  #     description: Alterar as informações de um Modelo de Cardápio Online.
+  #     operationId: updateModel
+  #     tags: 
+  #       - Configurações
+  #     parameters: 
+  #       - $ref: '#/components/parameters/uuid'
+  #     requestBody:
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/Model'
+  #           example:
+  #             name: Modelo alterado
+  #             active: false
+  #     responses:
+  #       '200':
+  #         description: Sucesso.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Model'
+  #             example: 
+  #               id: '62e61565-315e-4754-8410-432d6437ddd8'
+  #               name: 'Novo Modelo'
+  #               record: '2021-04-05T22:28:56.782Z'
+  #               active: true             
+  #       '401':
+  #         description: Não autorizado.
+  #       '403':
+  #         description: Sem permissão.
+  #       '404': 
+  #         description: Parâmetro não localizado.       
+  #   delete:
+  #     summary: Remover um Modelo.
+  #     description: Remover as informações de um Modelo de Cardápio Online.
+  #     operationId: removeModel
+  #     tags: 
+  #       - Configurações
+  #     parameters: 
+  #       - $ref: '#/components/parameters/uuid'
+  #     responses:
+  #       '204':
+  #         description: Sucesso.
+  #       '401':
+  #         description: Não autorizado.
+  #       '403':
+  #         description: Sem permissão.
+  #       '404':     
+  #         description: Modelo não localizado.
+components:
+  schemas:
+    Card:
+      description: Cartão sobre um personagem bíblico.
+      type: object
+      properties:
+        id: 
+          type: string
+          format: uuid
+          description: Identificador único do cartão de personagem bíblico.
+        name:
+          type: string
+          description: Nome do personagem.
+        phoneme:
+          type: string
+          description: Expressão fonética para identificar o nome do personagem.
+        image:
+          type: string
+          description: Endereço da imagem sobre o personagem bíblico.
+        questions:
+          description: Pergundas sobre o personagem bíblico
+          type: array
+          items:
+            $ref: '#/components/schemas/Question'
+    Question:
+      description: Pergunta de conhecimento sobre personagem bíblico.
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: Identificador único da pergunta sobre um personagem bíblico.
+        text:
+          type: string
+          description: Texto da pergunta sobre um personagem bíblico.
+        evidence:
+          type: string
+          description: Evidência da resposta sobre o personagem bíblico correspondente.
+    Error:
+      description: Informações sobre erros ocorridos.
+      type: object
+      properties:
+        code:
+          description: Código da resposta HTTP.
+          type: integer
+        status:
+          description: Descrição do código de estado HTTP.
+          type: string
+        message:
+          description: Mensagem principal de descrição do erro.
+          type: string
+        causes:
+          description: Lista de detalhamento das causas do erro.
+          type: array
+          items:
+            type: string
+    Sort:
+      description: Informações sobre a ordenação das dados.
+      type: object
+      properties:
+        sorted:
+          description: Se os dados estão ordenados.
+          type: boolean
+        unsorted:
+          description: Se os dados não estão ordenados.
+          type: boolean
+        empty:
+          description: Se o conjunto de dados está vazio.
+          type: boolean
+    Pageable:
+      description: Informações sobre a navegação paginada.
+      type: object
+      properties:
+        sort:
+          $ref: '#/components/schemas/Sort'
+        pageNumber:
+          description: Número ordinal da página recuperada.
+          type: integer
+        pageSize:
+          description: Tamanho da página em quantidade de registros.
+          type: integer
+        offset:
+          description: Deslocamento dos dados.
+          type: integer
+        paged:
+          description: Informação se os dados estão paginados.
+          type: boolean
+        unpaged:
+          description: Informação se os dados não estão paginados.
+          type: boolean
+    Page:
+      description: Informações paginadas.
+      type: object
+      properties:
+        content:
+          description: Registros da página corrente.
+          type: array
+          items:
+            oneOf:
+              - $ref: '#/components/schemas/Card'
+              - $ref: '#/components/schemas/Question'
+        pageable:
+          $ref: '#/components/schemas/Pageable'
+        totalPages:
+          description: Total de páginas para navegação.
+          type: integer
+        totalElements:
+          description: Quantidade total de registros encontrados.
+          type: integer
+        last:
+          description: Informa se é a última página.
+          type: boolean
+        first:
+          description: Informa se é a primeira página.
+          type: boolean
+        sort:
+          $ref: '#/components/schemas/Sort'
+        number:
+          description: Número de ordem da página.
+          type: integer
+        numberOfElements:
+          description: Quantidade de registros da página corrente.
+          type: integer
+        size:
+          description: Tamanho da página quantidade de registros.
+          type: integer
+        empty:
+          description: Informa se a página corrente está vazia.
+          type: boolean
+  examples:
+    InvalidFields:
+      value:
+        status: BAD_REQUEST
+        message: Erro de seleção de campos para resposta.
+        causes: 
+          - Campo de resposta nome não encontrado.
+          - Campo de resposta descricao não encontrado.
+    InvalidSort:
+      value:
+        status: BAD_REQUEST
+        message: Erro de ordenação.
+        causes: 
+          - Campo de ordenação nome não encontrado.
+          - Campo de ordenação descricao não encontrado.                
+    InvalidPage:
+      value:
+        status: BAD_REQUEST
+        message: Índice de página inválido.
+        causes:
+          - Página incial não pode ser menor que 1 (um).
+    Card:
+      value:
+        id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
+        name: Abel
+        phoneme: B
+        questions:
+          - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+            text: Quem foi o primeiro pastor?
+            evidence: Gênesis 4:2  
+    Question:
+      value:
+        id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+        text: Quem foi o primeiro pastor?
+        evidence: Gênesis 4:2        
+    Sort:
+      value:
+        sorted: true
+        unsorted: false
+        empty: false
+    Pageable:
+      value:
+        sort:
+          sorted: true
+          unsorted: false
+          empty: false
+        pageNumber: 0,
+        pageSize: 5,
+        offset: 0,
+        paged: true,
+        unpaged: false
+    Page:
+      value:
+        content: 
+          id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
+          name: Abel
+          phoneme: B
+          questions:
+            - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+              text: Quem foi o primeiro pastor?
+              evidence: Gênesis 4:2
+          pageable: 
+            sort: 
+              sorted: true
+              unsorted: false
+              empty: false
+            pageNumber: 0
+            pageSize: 5
+            offset: 0
+            paged: true
+            unpaged: false
+          totalPages: 20
+          totalElements: 97
+          last: false
+          first: true
+          sort:
+            sorted: true
+            unsorted: false
+            empty: false
+          size: 5
+          number: 0
+          numberOfElements: 5
+          empty: false            
+  parameters:
+    page:
+      name: page
+      in: query
+      description: Índice da página de consulta da requisição.
+      required: false
+      schema:
+        type: integer
+    size:
+      name: size
+      in: query
+      description: Tamanho da página de resposta, em quantidade de registros.
+      required: false
+      schema:
+        type: integer    
+    sort:
+      name: sort
+      in: query
+      description: Lista de campos para ordenação da resposta, separados por vírgula. Pode ser adicionado o sinal de subtração (-) antes do nome de cada campo para simbolizar a ordem descendente. Se não for informada uma ordem explícita, será utilizada a ordem ascendente.
+      required: false
+      schema:
+        type: string
+    fields:
+      name: fields
+      in: query
+      description: Lista de campos selecionados para a resposta, separados por vírgula.
+      required: false
+      schema:
+        type: string
+    id:
+      name: id
+      in: path
+      required: true
+      description: Identificador único do registro.
+      schema:
+        type: integer
+    uuid:
+      name: uuid
+      in: path
+      required: true
+      description: Identificador único do registro.
+      schema:
+        type: string
+        format: uuid
+  responses:
+    parentNotFound:
+      description: Erro de informação de algum campo proprietário do conjunto de dados.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example: 
+            status: BAD_REQUEST
+            message: Erro ao localizar um registro de relacionamento.
+            causes:
+              - Campo não encontrado.
+    badRequest:
+      description: Erro na passagem de parâmetros para paginação, ordenação, seleção de campos ou filtros de pesquisa.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          examples:
+            Invalid Fields:
+              $ref: '#/components/examples/InvalidFields'
+            Invalid Sort:
+              $ref: '#/components/examples/InvalidSort'
+            Invalid Page:
+              $ref: '#/components/examples/InvalidPage'
+  securitySchemes:
+    auth:
+      type: oauth2
+      description: Autenticação e Autorização de acesso.
+      flows:
+        password:
+          tokenUrl: 'http://localhost:10000/auth/realms/guess-who/protocol/openid-connect/token'
+          scopes: {}              
+security: 
+  - auth: []
+  
