@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-08T13:49:11.048Z",
+    "modified": "2022-11-08T16:21:55.933Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -88,16 +88,16 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: fields id,name",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?fields=id,name",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?fields=name,id",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-08T13:50:33.503Z",
-    "modified": "2022-11-08T14:23:27.771Z",
+    "modified": "2022-11-08T16:16:44.145Z",
     "headers": [],
     "params": [
       {
         "name": "fields",
-        "value": "id,name",
+        "value": "name,id",
         "isPath": false
       }
     ],

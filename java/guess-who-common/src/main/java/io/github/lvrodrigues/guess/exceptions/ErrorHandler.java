@@ -22,9 +22,9 @@ public class ErrorHandler {
      * @param ex Erro notificado.
      * @return Mensagem de retorno.
      */
-    @ExceptionHandler(value = SortException.class)
+    @ExceptionHandler({SortException.class, FieldsException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Error sortExceptionHandle(SortException ex) {
+    public Error badRequestExceptionHandle(Exception ex) {
         Error error = new Error();
         error.setCode(HttpStatus.BAD_REQUEST.value());
         error.setStatus(HttpStatus.BAD_REQUEST.name());

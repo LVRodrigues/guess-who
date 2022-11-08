@@ -17,7 +17,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface CardsRepository extends JpaRepository<Card, UUID> {
     
     /**
-     * Localiza um personagem bíblio por seu nome exato.
+     * Localiza um personagem bíblico por seu nome exato.
      *
      * @param name Nome do personagem.
      * @param pageable Página. 

@@ -1,14 +1,10 @@
 package io.github.lvrodrigues.guess.admin;
 
-import java.lang.reflect.Field;
-import java.util.Arrays;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.domain.Sort.Direction;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.github.lvrodrigues.guess.model.Card;
 import io.github.lvrodrigues.guess.model.CardsRepository;
+import io.github.lvrodrigues.guess.utils.FieldUtil;
 
 /**
  * Gereciamento dos cartões de personagens.
@@ -59,44 +56,18 @@ public class CardsController {
             @RequestParam(required = false, defaultValue = "") String fields,
             @RequestParam(required = false, defaultValue = "name") String sort,
             @RequestParam(required = false) String name) {  
-        // throw new SortException("Ainda em desenvolvimento...");
         // Verificando a ordenação:
-        String[] sortArray = sort.split(",");
-        Sort sorts = Sort.unsorted();
-        for (String sortValue : sortArray) {
-            Direction direction = Direction.ASC;
-            if (sortValue.startsWith("-")) {
-                direction = Direction.DESC;
-                sortValue = sortValue.substring(1);
-            }
-            sorts = sorts.and(Sort.by(direction, sortValue));
-        }
+        Sort sorts = FieldUtil.sort(Card.class, sort);
         // Preparando a página de resposta:
-        Pageable paging = PageRequest.of(page, size, sorts);
-        Page<Card> result = cards.findAll(paging);
-        // Filtrando a lista de campos para resposta. 
-        // Campos nulos não são apresentados.
-        String[] fieldsArray = fields.split(",");
-        if (fieldsArray.length > 0) {
-            Arrays.sort(fieldsArray);
-            Field[] _fields = Card.class.getDeclaredFields();
-            for (Card card : result.getContent()) {
-                for (Field field : _fields) {
-                    if (Arrays.binarySearch(fieldsArray, field.getName()) >= 0) {
-                        continue;
-                    }
-                    field.setAccessible(true);
-                    try {
-                        field.set(card, null);
-                    } catch (IllegalArgumentException e) {
-                        e.printStackTrace();
-                    } catch (IllegalAccessException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
+        Pageable paging     = PageRequest.of(page, size, sorts);
+        Page<Card> result   = null;
+        if (name != null) {
+            result = cards.findByName(name, paging);
+        } else {
+            result = cards.findAll(paging);
         }
-        
+        // Filtrando a lista de campos para resposta. 
+        FieldUtil.filter(Card.class, result, fields);
         return result;
     }
 }
