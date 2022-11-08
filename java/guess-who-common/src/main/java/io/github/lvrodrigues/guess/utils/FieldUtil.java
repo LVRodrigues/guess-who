@@ -37,22 +37,43 @@ public final class FieldUtil {
     }
 
     /**
+     * Verifica se os nomes dos campos passados por parâmetros são válidos.
+     *
+     * @param clazz Classe para validar os nomes dos campos.
+     * @param sort Lista de campos para ordenação.
+     * @param fieldnames Lista de campos para filtrar a resposta.
+     */
+    public static void validateParams(Class<?> clazz, String sort, String fieldnames) {
+        String[] names;
+        names = sort.split(FIELD_SEPERATOR);
+        for (String name : names) {
+            try {
+                clazz.getDeclaredField(name);
+            } catch (NoSuchFieldException | SecurityException e) {
+                throw new SortException(String.format("Sort name \"%s\" is invalid.", name));
+            }
+        }
+        names = fieldnames.split(FIELD_SEPERATOR);
+        for (String name : names) {
+            try {
+                clazz.getDeclaredField(name);
+            } catch (NoSuchFieldException | SecurityException e) {
+                throw new FieldsException(String.format("Field name \"%s\" is invalid.", name));
+            }
+        }
+    }
+
+    /**
      * Prepara a ordenação para consulta dos registros.
      *
-     * @param clazz Classe do tipo de objeto para validar os nomes de campos.
-     * @param fieldnames Lista de campos para ordenação. Campos que iniciem com um hífem (-) serão
-     * ordenados de modo descendente. 
+     * @param fieldnames Lista de campos para ordenação. Campos que iniciem com um
+     *                   hífem (-) serão ordenados de modo descendente.
      * @return Lista de ordenação para as consultas.
      */
-    public static <T> Sort sort(Class<T> clazz, String fieldnames) {
+    public static Sort sort(String fieldnames) {
         String[] fields = fieldnames.split(FIELD_SEPERATOR);
         Sort result = Sort.unsorted();
         for (String field : fields) {
-            try {
-                clazz.getDeclaredField(field);
-            } catch (NoSuchFieldException | SecurityException e) {
-                throw new SortException(String.format("Sort name \"%s\" is invalid.", field));
-            }
             Direction direction = Direction.ASC;
             if (field.startsWith(SORT_DESCEND_SIGNAL)) {
                 direction   = Direction.DESC;
@@ -65,27 +86,19 @@ public final class FieldUtil {
 
     /**
      * Manipula os campos de resposta para conter apenas os campos selecionados.
-     * 
+     *
      * Campos removidos são atribuídos com valores nulos.
      *
-     * @param clazz Classe do tipo de objeto para validar os nomes de campos.
      * @param page Página de resposta.
      * @param fieldnames Lista de campos para conter na resposta. Se for vazio, conterá todos os campos.
      */
-    public static <T> void filter(Class<T> clazz, Page<T> page, String fieldnames) {
-        if (fieldnames.isBlank()) {
+    public static void filter(Page<?> page, String fieldnames) {
+        if (fieldnames.isBlank() || page.getContent().isEmpty()) {
             return;
         }
-        Field[] fields = clazz.getDeclaredFields();
+        Field[] fields = page.getContent().get(0).getClass().getDeclaredFields();
         String[] names = fieldnames.split(FIELD_SEPERATOR);
         Arrays.sort(names);
-        for (String name : names) {
-            try {
-                clazz.getDeclaredField(name);
-            } catch (NoSuchFieldException | SecurityException e) {
-                throw new FieldsException(String.format("Field name \"%s\" is invalid.", name));
-            }
-        }
         for (Object item : page.getContent()) {
             for (Field field : fields) {
                 if (Arrays.binarySearch(names, field.getName()) >= 0) {

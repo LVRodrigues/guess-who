@@ -57,7 +57,7 @@ public class CardsController {
             @RequestParam(required = false, defaultValue = "name") String sort,
             @RequestParam(required = false) String name) {  
         // Verificando a ordenação:
-        Sort sorts = FieldUtil.sort(Card.class, sort);
+        Sort sorts = FieldUtil.sort(sort);
         // Preparando a página de resposta:
         Pageable paging     = PageRequest.of(page, size, sorts);
         Page<Card> result   = null;
@@ -67,7 +67,7 @@ public class CardsController {
             result = cards.findAll(paging);
         }
         // Filtrando a lista de campos para resposta. 
-        FieldUtil.filter(Card.class, result, fields);
+        FieldUtil.filter(result, fields);
         return result;
     }
 }
