@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-08T16:21:55.933Z",
+    "modified": "2022-11-08T20:11:00.201Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -84,6 +84,67 @@
     ]
   },
   {
+    "_id": "d6ab3f2d-e906-4a26-baf5-674e20c20f05",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: page,sort,fields",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?page=5&sort=name&fields=name,id",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-08T20:18:25.516Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "page",
+        "value": "5",
+        "isPath": false
+      },
+      {
+        "name": "sort",
+        "value": "name",
+        "isPath": false
+      },
+      {
+        "name": "fields",
+        "value": "name,id",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json.content",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.content[0].name",
+        "action": "equal",
+        "value": "Ester"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.first",
+        "action": "equal",
+        "value": "false"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.number",
+        "action": "equal",
+        "value": "5"
+      }
+    ]
+  },
+  {
     "_id": "bf854e93-7287-4aea-8025-48f3aa1493a1",
     "colId": "history",
     "containerId": "",
@@ -92,7 +153,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-08T13:50:33.503Z",
-    "modified": "2022-11-08T16:16:44.145Z",
+    "modified": "2022-11-08T20:18:18.912Z",
     "headers": [],
     "params": [
       {
@@ -101,6 +162,31 @@
         "isPath": false
       }
     ],
-    "tests": []
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json.content",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.content[0].name",
+        "action": "equal",
+        "value": "Abel"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.first",
+        "action": "equal",
+        "value": "true"
+      }
+    ]
   }
 ]
