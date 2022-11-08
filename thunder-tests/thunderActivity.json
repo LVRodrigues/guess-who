@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-09-28T14:33:37.267Z",
+    "modified": "2022-11-08T13:49:11.048Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -47,7 +47,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-09-28T14:26:00.928Z",
+    "modified": "2022-11-06T23:09:45.447Z",
     "headers": [],
     "params": [
       {
@@ -82,5 +82,25 @@
         "value": "true"
       }
     ]
+  },
+  {
+    "_id": "bf854e93-7287-4aea-8025-48f3aa1493a1",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: fields id,name",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?fields=id,name",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-08T13:50:33.503Z",
+    "modified": "2022-11-08T14:23:27.771Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "fields",
+        "value": "id,name",
+        "isPath": false
+      }
+    ],
+    "tests": []
   }
 ]

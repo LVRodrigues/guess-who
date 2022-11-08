@@ -1,5 +1,8 @@
 package io.github.lvrodrigues.guess.admin;
 
+import java.lang.reflect.Field;
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -53,7 +56,7 @@ public class CardsController {
     public Page<Card> getCards(
             @RequestParam(required = false, defaultValue = "${default.request.page}") Integer page,
             @RequestParam(required = false, defaultValue = "${default.request.size}") Integer size,
-            @RequestParam(required = false) String fields,
+            @RequestParam(required = false, defaultValue = "") String fields,
             @RequestParam(required = false, defaultValue = "name") String sort,
             @RequestParam(required = false) String name) {  
         // throw new SortException("Ainda em desenvolvimento...");
@@ -73,7 +76,27 @@ public class CardsController {
         Page<Card> result = cards.findAll(paging);
         // Filtrando a lista de campos para resposta. 
         // Campos nulos não são apresentados.
-
+        String[] fieldsArray = fields.split(",");
+        if (fieldsArray.length > 0) {
+            Arrays.sort(fieldsArray);
+            Field[] _fields = Card.class.getDeclaredFields();
+            for (Card card : result.getContent()) {
+                for (Field field : _fields) {
+                    if (Arrays.binarySearch(fieldsArray, field.getName()) >= 0) {
+                        continue;
+                    }
+                    field.setAccessible(true);
+                    try {
+                        field.set(card, null);
+                    } catch (IllegalArgumentException e) {
+                        e.printStackTrace();
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        
         return result;
     }
 }
