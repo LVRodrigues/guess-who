@@ -14,8 +14,8 @@ import io.github.lvrodrigues.guess.exceptions.SortException;
  * Utilitário para manipular o parâmetro nas consultas.
  *
  * @since 08/11/2022
- * @author $AuthorName$
- * @author $CommitterName$
+ * @author $Author$
+ * @author $Committer$
  * @branch $Branch$
  */
 public final class FieldUtil {
@@ -75,11 +75,12 @@ public final class FieldUtil {
         Sort result = Sort.unsorted();
         for (String field : fields) {
             Direction direction = Direction.ASC;
+            String name         = field;
             if (field.startsWith(SORT_DESCEND_SIGNAL)) {
                 direction   = Direction.DESC;
-                field       = field.substring(SORT_DESCEND_SIGNAL.length());
+                name        = field.substring(SORT_DESCEND_SIGNAL.length());
             }
-            result = result.and(Sort.by(direction, field));
+            result = result.and(Sort.by(direction, name));
         }
         return result;
     }
@@ -87,7 +88,7 @@ public final class FieldUtil {
     /**
      * Manipula os campos de resposta para conter apenas os campos selecionados.
      *
-     * Campos removidos são atribuídos com valores nulos.
+     * <p>Campos removidos são atribuídos com valores nulos.
      *
      * @param page Página de resposta.
      * @param fieldnames Lista de campos para conter na resposta. Se for vazio, conterá todos os campos.

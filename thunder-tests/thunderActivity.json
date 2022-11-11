@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-08T20:11:00.201Z",
+    "modified": "2022-11-11T16:57:32.056Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -47,7 +47,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-06T23:09:45.447Z",
+    "modified": "2022-11-11T16:57:18.187Z",
     "headers": [],
     "params": [
       {
@@ -92,7 +92,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-08T20:18:25.516Z",
+    "modified": "2022-11-11T16:57:42.153Z",
     "headers": [],
     "params": [
       {
@@ -145,6 +145,60 @@
     ]
   },
   {
+    "_id": "3258d05c-2763-42e6-b2dd-e208dae20f98",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: sort invalid",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?sort=error",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-11T17:06:03.479Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "sort",
+        "value": "error",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "02fa7097-49b3-48e2-9829-61ddbf85c6a3",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: fields invalid",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?fields=error",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-11T17:07:06.026Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "fields",
+        "value": "error",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
     "_id": "bf854e93-7287-4aea-8025-48f3aa1493a1",
     "colId": "history",
     "containerId": "",
@@ -153,7 +207,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-08T13:50:33.503Z",
-    "modified": "2022-11-08T20:18:18.912Z",
+    "modified": "2022-11-11T16:57:06.414Z",
     "headers": [],
     "params": [
       {

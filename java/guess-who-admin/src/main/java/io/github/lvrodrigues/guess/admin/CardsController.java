@@ -56,6 +56,8 @@ public class CardsController {
             @RequestParam(required = false, defaultValue = "") String fields,
             @RequestParam(required = false, defaultValue = "name") String sort,
             @RequestParam(required = false) String name) {  
+        // Verificando a integridade dos parâmetros:
+        FieldUtil.validateParams(Card.class, sort, fields);
         // Verificando a ordenação:
         Sort sorts = FieldUtil.sort(sort);
         // Preparando a página de resposta:
