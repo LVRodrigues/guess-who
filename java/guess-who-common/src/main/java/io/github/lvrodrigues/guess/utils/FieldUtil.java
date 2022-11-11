@@ -44,21 +44,44 @@ public final class FieldUtil {
      * @param fieldnames Lista de campos para filtrar a resposta.
      */
     public static void validateParams(Class<?> clazz, String sort, String fieldnames) {
-        String[] names;
-        names = sort.split(FIELD_SEPERATOR);
-        for (String name : names) {
-            try {
-                clazz.getDeclaredField(name);
-            } catch (NoSuchFieldException | SecurityException e) {
-                throw new SortException(String.format("Sort name \"%s\" is invalid.", name));
+        FieldUtil.validateParamsSort(clazz, sort);
+        FieldUtil.validateParamsFieldnames(clazz, fieldnames);
+    }
+
+    /**
+     * Verifica se os nomes dos campos passados por parâmetros são válidos.
+     *
+     * @param clazz Classe para validar os nomes dos campos.
+     * @param fieldnames Lista de campos para filtrar a resposta.
+     */    
+    private static void validateParamsFieldnames(Class<?> clazz, String fieldnames) {
+        if (fieldnames != null && !fieldnames.isBlank()) {
+            String[] names = fieldnames.split(FIELD_SEPERATOR);
+            for (String name : names) {
+                try {
+                    clazz.getDeclaredField(name);
+                } catch (NoSuchFieldException | SecurityException e) {
+                    throw new FieldsException(String.format("Field name \"%s\" is invalid.", name));
+                }
             }
         }
-        names = fieldnames.split(FIELD_SEPERATOR);
-        for (String name : names) {
-            try {
-                clazz.getDeclaredField(name);
-            } catch (NoSuchFieldException | SecurityException e) {
-                throw new FieldsException(String.format("Field name \"%s\" is invalid.", name));
+    }
+
+        /**
+     * Verifica se os nomes dos campos passados por parâmetros são válidos.
+     *
+     * @param clazz Classe para validar os nomes dos campos.
+     * @param sort Lista de campos para ordenação.
+     */
+    private static void validateParamsSort(Class<?> clazz, String sort) {
+        if (sort != null && !sort.isBlank()) {
+            String[] names = sort.split(FIELD_SEPERATOR);
+            for (String name : names) {
+                try {
+                    clazz.getDeclaredField(name);
+                } catch (NoSuchFieldException | SecurityException e) {
+                    throw new SortException(String.format("Sort name \"%s\" is invalid.", name));
+                }
             }
         }
     }

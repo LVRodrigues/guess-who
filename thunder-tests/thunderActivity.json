@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-11T16:57:32.056Z",
+    "modified": "2022-11-11T17:16:48.500Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -195,6 +195,45 @@
         "custom": "",
         "action": "equal",
         "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "438286f9-12b6-4820-986a-c413f038bd87",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: page invalid",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?page=100",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-11T17:21:20.188Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "page",
+        "value": "100",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.empty",
+        "action": "equal",
+        "value": "true"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.last",
+        "action": "equal",
+        "value": "true"
       }
     ]
   },
