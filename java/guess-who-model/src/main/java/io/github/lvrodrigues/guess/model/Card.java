@@ -14,6 +14,9 @@ import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.springframework.hateoas.RepresentationModel;
+import org.springframework.hateoas.server.core.Relation;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
@@ -26,7 +29,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  */
 @Entity
 @Table(name = "cards")
-public class Card implements Serializable, Cloneable {
+@Relation(collectionRelation = "cards", itemRelation = "card")
+public class Card extends RepresentationModel<Card> implements Serializable, Cloneable {
     
     /**
      * Identificador único do cartão de personagem bíblico.

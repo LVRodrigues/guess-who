@@ -26,11 +26,6 @@ public final class FieldUtil {
     private static final String FIELD_SEPERATOR = ",";
 
     /**
-     * Sinalizador de ordenação desdencente.
-     */
-    private static final String SORT_DESCEND_SIGNAL = "-";
-    
-    /**
      * Construtor oculto para transformar a classe em utilitária.
      */
     private FieldUtil() {
@@ -67,7 +62,7 @@ public final class FieldUtil {
         }
     }
 
-        /**
+    /**
      * Verifica se os nomes dos campos passados por parâmetros são válidos.
      *
      * @param clazz Classe para validar os nomes dos campos.
@@ -77,6 +72,10 @@ public final class FieldUtil {
         if (sort != null && !sort.isBlank()) {
             String[] names = sort.split(FIELD_SEPERATOR);
             for (String name : names) {
+                if (name.toUpperCase().equals(Direction.ASC.name()) || 
+                        name.toUpperCase().equals(Direction.DESC.name())) {
+                    continue;
+                }
                 try {
                     clazz.getDeclaredField(name);
                 } catch (NoSuchFieldException | SecurityException e) {
@@ -94,16 +93,22 @@ public final class FieldUtil {
      * @return Lista de ordenação para as consultas.
      */
     public static Sort sort(String fieldnames) {
-        String[] fields = fieldnames.split(FIELD_SEPERATOR);
         Sort result = Sort.unsorted();
-        for (String field : fields) {
-            Direction direction = Direction.ASC;
-            String name         = field;
-            if (field.startsWith(SORT_DESCEND_SIGNAL)) {
-                direction   = Direction.DESC;
-                name        = field.substring(SORT_DESCEND_SIGNAL.length());
+        if (fieldnames != null && !fieldnames.isBlank()) {
+            String[] fields = fieldnames.split(FIELD_SEPERATOR);
+            for (int i = 0; i < fields.length; i++) {
+                if (fields[i].toUpperCase().equals(Direction.ASC.name()) || 
+                        fields[i].toUpperCase().equals(Direction.DESC.name())) {
+                    continue;
+                }
+                Direction direction;
+                try {
+                    direction = Direction.valueOf(fields[i+1]);
+                } catch (Exception e) {
+                    direction = Direction.ASC;
+                }
+                result = result.and(Sort.by(direction, fields[i]));
             }
-            result = result.and(Sort.by(direction, name));
         }
         return result;
     }

@@ -23,7 +23,7 @@ public interface CardsRepository extends JpaRepository<Card, UUID> {
      * @param pageable Página. 
      * @return {@link Card}.
      */
-    Page<Card> findByName(String name, Pageable pageable);
+    Page<Card> findByNameLike(String name, Pageable pageable);
 
     /**
      * Localiza uma página.
