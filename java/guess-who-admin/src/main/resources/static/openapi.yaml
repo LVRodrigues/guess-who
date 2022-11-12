@@ -259,79 +259,29 @@ components:
           type: array
           items:
             type: string
-    Sort:
-      description: Informações sobre a ordenação das dados.
-      type: object
-      properties:
-        sorted:
-          description: Se os dados estão ordenados.
-          type: boolean
-        unsorted:
-          description: Se os dados não estão ordenados.
-          type: boolean
-        empty:
-          description: Se o conjunto de dados está vazio.
-          type: boolean
-    Pageable:
-      description: Informações sobre a navegação paginada.
-      type: object
-      properties:
-        sort:
-          $ref: '#/components/schemas/Sort'
-        pageNumber:
-          description: Número ordinal da página recuperada.
-          type: integer
-        pageSize:
-          description: Tamanho da página em quantidade de registros.
-          type: integer
-        offset:
-          description: Deslocamento dos dados.
-          type: integer
-        paged:
-          description: Informação se os dados estão paginados.
-          type: boolean
-        unpaged:
-          description: Informação se os dados não estão paginados.
-          type: boolean
     Page:
       description: Informações paginadas.
       type: object
       properties:
-        content:
-          description: Registros da página corrente.
-          type: array
-          items:
-            oneOf:
-              - $ref: '#/components/schemas/Card'
-              - $ref: '#/components/schemas/Question'
-        pageable:
-          $ref: '#/components/schemas/Pageable'
         totalPages:
           description: Total de páginas para navegação.
           type: integer
         totalElements:
           description: Quantidade total de registros encontrados.
           type: integer
-        last:
-          description: Informa se é a última página.
-          type: boolean
-        first:
-          description: Informa se é a primeira página.
-          type: boolean
-        sort:
-          $ref: '#/components/schemas/Sort'
         number:
           description: Número de ordem da página.
-          type: integer
-        numberOfElements:
-          description: Quantidade de registros da página corrente.
           type: integer
         size:
           description: Tamanho da página quantidade de registros.
           type: integer
-        empty:
-          description: Informa se a página corrente está vazia.
-          type: boolean
+    _embedded:
+      description: Registros da página corrente.
+      type: array
+      items:
+        oneOf:
+          - $ref: '#/components/schemas/Card'
+          - $ref: '#/components/schemas/Question'
   examples:
     InvalidFields:
       value:
@@ -367,54 +317,19 @@ components:
         id: fe6f6474-fe96-43b7-a7a5-a511846e033c
         text: Quem foi o primeiro pastor?
         evidence: Gênesis 4:2        
-    Sort:
-      value:
-        sorted: true
-        unsorted: false
-        empty: false
-    Pageable:
-      value:
-        sort:
-          sorted: true
-          unsorted: false
-          empty: false
-        pageNumber: 0,
-        pageSize: 5,
-        offset: 0,
-        paged: true,
-        unpaged: false
     Page:
       value:
-        content: 
-          id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
-          name: Abel
-          phoneme: B
-          questions:
-            - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
-              text: Quem foi o primeiro pastor?
-              evidence: Gênesis 4:2
-          pageable: 
-            sort: 
-              sorted: true
-              unsorted: false
-              empty: false
-            pageNumber: 0
-            pageSize: 5
-            offset: 0
-            paged: true
-            unpaged: false
-          totalPages: 20
-          totalElements: 97
-          last: false
-          first: true
-          sort:
-            sorted: true
-            unsorted: false
-            empty: false
-          size: 5
-          number: 0
-          numberOfElements: 5
-          empty: false            
+        totalPages: 20
+        totalElements: 97
+        size: 5
+        number: 0
+    _links:
+      value:
+        self:
+          href: http://localhost:5001/v1/cards
+    _embedded:
+      value:
+        /cards:
   parameters:
     page:
       name: page

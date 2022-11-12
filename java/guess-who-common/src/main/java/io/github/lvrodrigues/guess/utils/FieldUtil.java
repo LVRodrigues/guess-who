@@ -103,7 +103,7 @@ public final class FieldUtil {
                 }
                 Direction direction;
                 try {
-                    direction = Direction.valueOf(fields[i+1]);
+                    direction = Direction.valueOf(fields[i + 1]);
                 } catch (Exception e) {
                     direction = Direction.ASC;
                 }

@@ -79,7 +79,7 @@ public class CardsController {
         }
         // Filtrando a lista de campos para resposta. 
         FieldUtil.filter(result, fields);
-
+        // Adicionando hiper mídia na resposta.
         return pagesAssembler.toModel(result, new CardAssembler());
     }
 
