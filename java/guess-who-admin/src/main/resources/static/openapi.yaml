@@ -8,7 +8,7 @@ info:
     name: Webmaster
     url: 'https://www.linkedin.com/in/luciano-rodrigues/'
 servers:
-  - url: 'http://localhost:5000/@api.version@'
+  - url: 'http://localhost:5001/@api.version@'
     variables: {}
     description: Desenvolvimento.
 tags:
@@ -37,10 +37,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Page'
+                $ref: '#/components/schemas/PageModel'
               examples:
                 Sucesso:
-                  $ref: '#/components/examples/Page'
+                  $ref: '#/components/examples/PageModel'
         '400':
           $ref: '#/components/responses/badRequest'
         '401':
@@ -277,11 +277,42 @@ components:
           type: integer
     _embedded:
       description: Registros da página corrente.
-      type: array
-      items:
-        oneOf:
-          - $ref: '#/components/schemas/Card'
-          - $ref: '#/components/schemas/Question'
+      type: object
+      properties:
+        collection:
+          description: Nome da coleção de objetos.
+          type: array
+          items:
+            oneOf:
+              - $ref: '#/components/schemas/Card'
+              - $ref: '#/components/schemas/Question'
+    _link:
+      description: Endereço de uma ação.
+      type: object
+      properties:
+        href:
+          description: URL
+          type: string
+          format: url
+    _links:
+      description: Conjunto de ações relacionadas a um objetos.
+      type: object
+      properties:
+        collection:
+          description: Conjunto de ações.
+          type: array
+          items:
+            $ref: '#/components/schemas/_link'
+    PageModel:
+      description: Conjunto de informações de navegação em uma consulta que retorna uma lista de objetos.
+      type: object
+      properties:
+        _embedded:
+          $ref: '#/components/schemas/_embedded'
+        _links:
+          $ref: '#/components/schemas/_links'
+        Page:
+          $ref: '#/components/schemas/Page'
   examples:
     InvalidFields:
       value:
@@ -325,11 +356,49 @@ components:
         number: 0
     _links:
       value:
-        self:
-          href: http://localhost:5001/v1/cards
+        - first:
+            href: "http://localhost:5001/v1/cards?page=0&size=5&sort=name,asc"
+        - self:
+            href: "http://localhost:5001/v1/cards?page=0&size=5&sort=name,asc"
+        - next:
+            href: "http://localhost:5001/v1/cards?page=1&size=5&sort=name,asc"
+        - last:
+            href: "http://localhost:5001/v1/cards?page=19&size=5&sort=name,asc"        
     _embedded:
       value:
-        /cards:
+        cards: 
+          id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
+          name: Abel
+          phoneme: B
+          questions:
+            - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+              text: Quem foi o primeiro pastor?
+              evidence: Gênesis 4:2  
+    PageModel:
+      value:
+        _embedded:
+          cards:
+            - id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
+              name: Abel
+              phoneme: B
+              questions:
+                - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+                  text: Quem foi o primeiro pastor?
+                  evidence: Gênesis 4:2  
+        _links:
+          - first:
+              href: "http://localhost:5001/v1/cards?page=0&size=5&sort=name,asc"
+          - self:
+              href: "http://localhost:5001/v1/cards?page=0&size=5&sort=name,asc"
+          - next:
+              href: "http://localhost:5001/v1/cards?page=1&size=5&sort=name,asc"
+          - last:
+              href: "http://localhost:5001/v1/cards?page=19&size=5&sort=name,asc"
+        Page:
+          totalPages: 20
+          totalElements: 97
+          size: 5
+          number: 0
   parameters:
     page:
       name: page
@@ -348,7 +417,7 @@ components:
     sort:
       name: sort
       in: query
-      description: Lista de campos para ordenação da resposta, separados por vírgula. Pode ser adicionado o sinal de subtração (-) antes do nome de cada campo para simbolizar a ordem descendente. Se não for informada uma ordem explícita, será utilizada a ordem ascendente.
+      description: Lista de campos para ordenação da resposta, separados por vírgula. Cada campo pode ser sucedido das palavras chaves ASC (para ordenação ascendente) ou DESC (para ordenação descendente).
       required: false
       schema:
         type: string
