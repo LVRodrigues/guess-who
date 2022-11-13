@@ -23,8 +23,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  * Cartão de informações sobre um personagem bíblico. 
  *
  * @since 21/06/2022
- * @author $AuthorName$
- * @author $CommitterName$
+ * @author $Author$
+ * @author $Committer$
  * @branch $Branch$
  */
 @Entity
