@@ -14,19 +14,23 @@ import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.springframework.hateoas.RepresentationModel;
+import org.springframework.hateoas.server.core.Relation;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * Cartão de informações sobre um personagem bíblico. 
  *
  * @since 21/06/2022
- * @author $AuthorName$
- * @author $CommitterName$
+ * @author $Author$
+ * @author $Committer$
  * @branch $Branch$
  */
 @Entity
 @Table(name = "cards")
-public class Card implements Serializable, Cloneable {
+@Relation(collectionRelation = "cards", itemRelation = "card")
+public class Card extends RepresentationModel<Card> implements Serializable, Cloneable {
     
     /**
      * Identificador único do cartão de personagem bíblico.

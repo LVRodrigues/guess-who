@@ -8,7 +8,7 @@ info:
     name: Webmaster
     url: 'https://www.linkedin.com/in/luciano-rodrigues/'
 servers:
-  - url: 'http://localhost:5000/@api.version@'
+  - url: 'http://localhost:5001/@api.version@'
     variables: {}
     description: Desenvolvimento.
 tags:
@@ -31,16 +31,22 @@ paths:
         - $ref: '#/components/parameters/size'
         - $ref: '#/components/parameters/sort'
         - $ref: '#/components/parameters/fields'
+        - in: query
+          name: name
+          description: Padrão de nome para localizar os personagens.
+          required: false
+          schema:
+            type: string
       responses:
         '200':
           description: Sucesso.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Page'
+                $ref: '#/components/schemas/PageModel'
               examples:
                 Sucesso:
-                  $ref: '#/components/examples/Page'
+                  $ref: '#/components/examples/PageModel'
         '400':
           $ref: '#/components/responses/badRequest'
         '401':
@@ -259,100 +265,81 @@ components:
           type: array
           items:
             type: string
-    Sort:
-      description: Informações sobre a ordenação das dados.
-      type: object
-      properties:
-        sorted:
-          description: Se os dados estão ordenados.
-          type: boolean
-        unsorted:
-          description: Se os dados não estão ordenados.
-          type: boolean
-        empty:
-          description: Se o conjunto de dados está vazio.
-          type: boolean
-    Pageable:
-      description: Informações sobre a navegação paginada.
-      type: object
-      properties:
-        sort:
-          $ref: '#/components/schemas/Sort'
-        pageNumber:
-          description: Número ordinal da página recuperada.
-          type: integer
-        pageSize:
-          description: Tamanho da página em quantidade de registros.
-          type: integer
-        offset:
-          description: Deslocamento dos dados.
-          type: integer
-        paged:
-          description: Informação se os dados estão paginados.
-          type: boolean
-        unpaged:
-          description: Informação se os dados não estão paginados.
-          type: boolean
     Page:
       description: Informações paginadas.
       type: object
       properties:
-        content:
-          description: Registros da página corrente.
-          type: array
-          items:
-            oneOf:
-              - $ref: '#/components/schemas/Card'
-              - $ref: '#/components/schemas/Question'
-        pageable:
-          $ref: '#/components/schemas/Pageable'
         totalPages:
           description: Total de páginas para navegação.
           type: integer
         totalElements:
           description: Quantidade total de registros encontrados.
           type: integer
-        last:
-          description: Informa se é a última página.
-          type: boolean
-        first:
-          description: Informa se é a primeira página.
-          type: boolean
-        sort:
-          $ref: '#/components/schemas/Sort'
         number:
           description: Número de ordem da página.
-          type: integer
-        numberOfElements:
-          description: Quantidade de registros da página corrente.
           type: integer
         size:
           description: Tamanho da página quantidade de registros.
           type: integer
-        empty:
-          description: Informa se a página corrente está vazia.
-          type: boolean
+    _embedded:
+      description: Registros da página corrente.
+      type: object
+      properties:
+        collection:
+          description: Nome da coleção de objetos.
+          type: array
+          items:
+            oneOf:
+              - $ref: '#/components/schemas/Card'
+              - $ref: '#/components/schemas/Question'
+    _link:
+      description: Endereço de uma ação.
+      type: object
+      properties:
+        href:
+          description: URL
+          type: string
+          format: url
+    _links:
+      description: Conjunto de ações relacionadas a um objetos.
+      type: object
+      properties:
+        collection:
+          description: Conjunto de ações.
+          type: array
+          items:
+            $ref: '#/components/schemas/_link'
+    PageModel:
+      description: Conjunto de informações de navegação em uma consulta que retorna uma lista de objetos.
+      type: object
+      properties:
+        _embedded:
+          $ref: '#/components/schemas/_embedded'
+        _links:
+          $ref: '#/components/schemas/_links'
+        Page:
+          $ref: '#/components/schemas/Page'
   examples:
     InvalidFields:
       value:
         status: BAD_REQUEST
         message: Erro de seleção de campos para resposta.
         causes: 
-          - Campo de resposta nome não encontrado.
-          - Campo de resposta descricao não encontrado.
+          - Campo de resposta "name" não encontrado.
+          - Campo de resposta "description" não encontrado.
     InvalidSort:
       value:
         status: BAD_REQUEST
         message: Erro de ordenação.
         causes: 
-          - Campo de ordenação nome não encontrado.
-          - Campo de ordenação descricao não encontrado.                
+          - Campo de ordenação "name" não encontrado.
+          - Campo de ordenação "description" não encontrado.                
     InvalidPage:
       value:
         status: BAD_REQUEST
         message: Índice de página inválido.
         causes:
-          - Página incial não pode ser menor que 1 (um).
+          - Página incial não pode ser menor que 0 (zero).
     Card:
       value:
         id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
@@ -367,54 +354,57 @@ components:
         id: fe6f6474-fe96-43b7-a7a5-a511846e033c
         text: Quem foi o primeiro pastor?
         evidence: Gênesis 4:2        
-    Sort:
-      value:
-        sorted: true
-        unsorted: false
-        empty: false
-    Pageable:
-      value:
-        sort:
-          sorted: true
-          unsorted: false
-          empty: false
-        pageNumber: 0,
-        pageSize: 5,
-        offset: 0,
-        paged: true,
-        unpaged: false
     Page:
       value:
-        content: 
+        totalPages: 20
+        totalElements: 97
+        size: 5
+        number: 0
+    _links:
+      value:
+        - first:
+            href: "http://localhost:5001/v1/cards?page=0&size=5&sort=name,asc"
+        - self:
+            href: "http://localhost:5001/v1/cards?page=0&size=5&sort=name,asc"
+        - next:
+            href: "http://localhost:5001/v1/cards?page=1&size=5&sort=name,asc"
+        - last:
+            href: "http://localhost:5001/v1/cards?page=19&size=5&sort=name,asc"        
+    _embedded:
+      value:
+        cards: 
           id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
           name: Abel
           phoneme: B
           questions:
             - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
               text: Quem foi o primeiro pastor?
-              evidence: Gênesis 4:2
-          pageable: 
-            sort: 
-              sorted: true
-              unsorted: false
-              empty: false
-            pageNumber: 0
-            pageSize: 5
-            offset: 0
-            paged: true
-            unpaged: false
+              evidence: Gênesis 4:2  
+    PageModel:
+      value:
+        _embedded:
+          cards:
+            - id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
+              name: Abel
+              phoneme: B
+              questions:
+                - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+                  text: Quem foi o primeiro pastor?
+                  evidence: Gênesis 4:2  
+        _links:
+          - first:
+              href: "http://localhost:5001/v1/cards?page=0&size=5&sort=name,asc"
+          - self:
+              href: "http://localhost:5001/v1/cards?page=0&size=5&sort=name,asc"
+          - next:
+              href: "http://localhost:5001/v1/cards?page=1&size=5&sort=name,asc"
+          - last:
+              href: "http://localhost:5001/v1/cards?page=19&size=5&sort=name,asc"
+        Page:
           totalPages: 20
           totalElements: 97
-          last: false
-          first: true
-          sort:
-            sorted: true
-            unsorted: false
-            empty: false
           size: 5
           number: 0
-          numberOfElements: 5
-          empty: false            
   parameters:
     page:
       name: page
@@ -433,7 +423,7 @@ components:
     sort:
       name: sort
       in: query
-      description: Lista de campos para ordenação da resposta, separados por vírgula. Pode ser adicionado o sinal de subtração (-) antes do nome de cada campo para simbolizar a ordem descendente. Se não for informada uma ordem explícita, será utilizada a ordem ascendente.
+      description: Lista de campos para ordenação da resposta, separados por vírgula. Cada campo pode ser sucedido das palavras chaves ASC (para ordenação ascendente) ou DESC (para ordenação descendente).
       required: false
       schema:
         type: string

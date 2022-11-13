@@ -1,1 +1,367 @@
-[]
+[
+  {
+    "_id": "e2c8b814-a9b6-4906-9580-859e458de8b0",
+    "colId": "71163f50-3e18-4990-9def-0bfbcfc33f7b",
+    "containerId": "",
+    "name": "Cards: fields id,name",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?fields=name,id",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-11-12T21:25:00.446Z",
+    "modified": "2022-11-12T21:25:00.446Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "fields",
+        "value": "name,id",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards[0].name",
+        "action": "equal",
+        "value": "Abel"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "questions"
+      }
+    ]
+  },
+  {
+    "_id": "7007d1a3-a00e-4216-bbc6-183f5731fde4",
+    "colId": "71163f50-3e18-4990-9def-0bfbcfc33f7b",
+    "containerId": "",
+    "name": "Cards: page invalid",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?page=100",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-11-12T21:25:08.230Z",
+    "modified": "2022-11-13T23:21:39.044Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "page",
+        "value": "100",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "192a9004-b0be-492b-b3ed-b0ecdd064412",
+    "colId": "71163f50-3e18-4990-9def-0bfbcfc33f7b",
+    "containerId": "",
+    "name": "Cards: fields invalid",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?fields=error",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-11-12T21:25:13.494Z",
+    "modified": "2022-11-12T21:25:13.494Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "fields",
+        "value": "error",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "3b7ce744-6a84-46f7-92b5-0ba302357916",
+    "colId": "71163f50-3e18-4990-9def-0bfbcfc33f7b",
+    "containerId": "",
+    "name": "Cards: sort invalid",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?sort=error",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2022-11-12T21:25:19.322Z",
+    "modified": "2022-11-12T21:25:19.322Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "sort",
+        "value": "error",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "6ebbddc9-68a2-4be7-b394-182f86340b91",
+    "colId": "71163f50-3e18-4990-9def-0bfbcfc33f7b",
+    "containerId": "",
+    "name": "Cards: page,sort,fields",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?page=5&sort=name&fields=name,id",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2022-11-12T21:25:25.312Z",
+    "modified": "2022-11-12T21:25:25.312Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "page",
+        "value": "5",
+        "isPath": false
+      },
+      {
+        "name": "sort",
+        "value": "name",
+        "isPath": false
+      },
+      {
+        "name": "fields",
+        "value": "name,id",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards[0].name",
+        "action": "equal",
+        "value": "Ester"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "5"
+      }
+    ]
+  },
+  {
+    "_id": "23c7f84a-5944-4ae7-98bd-762246562dac",
+    "colId": "71163f50-3e18-4990-9def-0bfbcfc33f7b",
+    "containerId": "",
+    "name": "Cards: page,sort,fields",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?page=5&sort=name&fields=name,id",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2022-11-12T21:25:33.016Z",
+    "modified": "2022-11-12T21:25:33.016Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "page",
+        "value": "5",
+        "isPath": false
+      },
+      {
+        "name": "sort",
+        "value": "name",
+        "isPath": false
+      },
+      {
+        "name": "fields",
+        "value": "name,id",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards[0].name",
+        "action": "equal",
+        "value": "Ester"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "5"
+      }
+    ]
+  },
+  {
+    "_id": "d1821d30-4f91-47a1-8cea-f232c7dca7d1",
+    "colId": "71163f50-3e18-4990-9def-0bfbcfc33f7b",
+    "containerId": "",
+    "name": "Cards: sort -phoneme,+name",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?sort=phoneme,DESC,name,ASC",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2022-11-12T21:25:37.378Z",
+    "modified": "2022-11-12T21:25:37.378Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "sort",
+        "value": "phoneme,DESC,name,ASC",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards[0].name",
+        "action": "equal",
+        "value": "Eva"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      }
+    ]
+  },
+  {
+    "_id": "f4b740f6-d6e5-4470-b0d3-b90296610a41",
+    "colId": "71163f50-3e18-4990-9def-0bfbcfc33f7b",
+    "containerId": "",
+    "name": "Cards: natural GET",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards",
+    "method": "GET",
+    "sortNum": 80000,
+    "created": "2022-11-12T21:25:42.584Z",
+    "modified": "2022-11-12T21:25:42.584Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards[0].name",
+        "action": "equal",
+        "value": "Abel"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      }
+    ]
+  },
+  {
+    "_id": "57256118-30e9-4ffd-9a9b-a3c23acfc78d",
+    "colId": "71163f50-3e18-4990-9def-0bfbcfc33f7b",
+    "containerId": "",
+    "name": "Cards: Marias",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?name=Maria",
+    "method": "GET",
+    "sortNum": 90000,
+    "created": "2022-11-13T23:20:14.259Z",
+    "modified": "2022-11-13T23:22:06.349Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "Maria",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "3"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "1"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      }
+    ]
+  }
+]

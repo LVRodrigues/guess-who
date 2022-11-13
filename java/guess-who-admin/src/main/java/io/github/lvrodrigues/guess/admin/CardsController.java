@@ -1,15 +1,22 @@
 package io.github.lvrodrigues.guess.admin;
 
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PagedResourcesAssembler;
+import org.springframework.hateoas.PagedModel;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.github.lvrodrigues.guess.admin.assemblers.CardAssembler;
+import io.github.lvrodrigues.guess.exceptions.NotFoundException;
 import io.github.lvrodrigues.guess.model.Card;
 import io.github.lvrodrigues.guess.model.CardsRepository;
 import io.github.lvrodrigues.guess.utils.FieldUtil;
@@ -32,6 +39,9 @@ public class CardsController {
     @Autowired
     private CardsRepository cards;
 
+    @Autowired
+    private PagedResourcesAssembler<Card> pagesAssembler;
+
     /**
      * Construtor padrão.
      */
@@ -50,24 +60,35 @@ public class CardsController {
      * @return Lista de {@link Card}.
      */
     @GetMapping(value = "")
-    public Page<Card> getCards(
+    public PagedModel<Card> getCards(
             @RequestParam(required = false, defaultValue = "${default.request.page}") Integer page,
             @RequestParam(required = false, defaultValue = "${default.request.size}") Integer size,
             @RequestParam(required = false, defaultValue = "") String fields,
             @RequestParam(required = false, defaultValue = "name") String sort,
             @RequestParam(required = false) String name) {  
+        // Verificando a integridade dos parâmetros:
+        FieldUtil.validateParams(Card.class, sort, fields, page);
         // Verificando a ordenação:
         Sort sorts = FieldUtil.sort(sort);
         // Preparando a página de resposta:
         Pageable paging     = PageRequest.of(page, size, sorts);
         Page<Card> result   = null;
         if (name != null) {
-            result = cards.findByName(name, paging);
+            result = cards.findByNameContainsIgnoreCase(name, paging);
         } else {
             result = cards.findAll(paging);
         }
+        if (result.isEmpty()) {
+            throw new NotFoundException();
+        }
         // Filtrando a lista de campos para resposta. 
         FieldUtil.filter(result, fields);
-        return result;
+        // Adicionando hiper mídia na resposta.
+        return pagesAssembler.toModel(result, new CardAssembler());
+    }
+
+    @RequestMapping(value = "/{id}")
+    public Card getCard(@PathVariable(required = true) UUID id) {
+        return cards.findById(id).get();
     }
 }

@@ -8,12 +8,18 @@ package io.github.lvrodrigues.guess.exceptions;
  * @author $Committer$
  * @branch $Branch$
  */
-public class FieldsException extends RuntimeException {
+public class FieldsException extends GuessRuntimeException {
+
+    /**
+     * Mensagem de informação sobre a falha.
+     */
+    private static final String MESSAGE = "Erro de seleção de campos para resposta.";
     
     /**
      * Construtor padrão.
      */
     public FieldsException() {
+        super(MESSAGE);
     }
 
     /**
@@ -23,36 +29,5 @@ public class FieldsException extends RuntimeException {
      */
     public FieldsException(String message) {
         super(message);
-    }
-
-    /**
-     * Construtor com informação da causa.
-     *
-     * @param cause Causa do erro.
-     */
-    public FieldsException(Throwable cause) {
-        super(cause);
-    }
-
-    /**
-     * Construtor com mensagem e causa.
-     *
-     * @param message Mensagem com informação sobre o erro.
-     * @param cause Causa do erro.
-     */
-    public FieldsException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    /**
-     * Construtor com configurações diversas.
-     *
-     * @param message Mensagem com informação sobre o erro.
-     * @param cause Causa do erro.
-     * @param enableSuppression Se é para suprimir o erro.
-     * @param writableStackTrace Se é para imprimir a pilha de processos.
-     */
-    protected FieldsException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
     }
 }
