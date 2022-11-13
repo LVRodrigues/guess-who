@@ -319,21 +319,21 @@ components:
         status: BAD_REQUEST
         message: Erro de seleção de campos para resposta.
         causes: 
-          - Campo de resposta nome não encontrado.
-          - Campo de resposta descricao não encontrado.
+          - Campo de resposta "name" não encontrado.
+          - Campo de resposta "description" não encontrado.
     InvalidSort:
       value:
         status: BAD_REQUEST
         message: Erro de ordenação.
         causes: 
-          - Campo de ordenação nome não encontrado.
-          - Campo de ordenação descricao não encontrado.                
+          - Campo de ordenação "name" não encontrado.
+          - Campo de ordenação "description" não encontrado.                
     InvalidPage:
       value:
         status: BAD_REQUEST
         message: Índice de página inválido.
         causes:
-          - Página incial não pode ser menor que 1 (um).
+          - Página incial não pode ser menor que 0 (zero).
     Card:
       value:
         id: b7e0c17c-a6e4-4c19-ade1-7072dc783444

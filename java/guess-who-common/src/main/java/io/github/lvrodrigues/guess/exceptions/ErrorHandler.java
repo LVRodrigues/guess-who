@@ -1,5 +1,7 @@
 package io.github.lvrodrigues.guess.exceptions;
 
+import java.util.Arrays;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -22,13 +24,14 @@ public class ErrorHandler {
      * @param ex Erro notificado.
      * @return Mensagem de retorno.
      */
-    @ExceptionHandler({SortException.class, FieldsException.class})
+    @ExceptionHandler({GuessRuntimeException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Error badRequestExceptionHandle(Exception ex) {
+    public Error badRequestExceptionHandle(GuessRuntimeException ex) {
         Error error = new Error();
         error.setCode(HttpStatus.BAD_REQUEST.value());
         error.setStatus(HttpStatus.BAD_REQUEST.name());
         error.setMessage(ex.getLocalizedMessage());
+        error.setCauses(Arrays.asList(ex.getDetails()));
         return error;
     }
 }

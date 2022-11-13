@@ -8,6 +8,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 
 import io.github.lvrodrigues.guess.exceptions.FieldsException;
+import io.github.lvrodrigues.guess.exceptions.PageException;
 import io.github.lvrodrigues.guess.exceptions.SortException;
 
 /**
@@ -38,9 +39,23 @@ public final class FieldUtil {
      * @param sort Lista de campos para ordenação.
      * @param fieldnames Lista de campos para filtrar a resposta.
      */
-    public static void validateParams(Class<?> clazz, String sort, String fieldnames) {
+    public static void validateParams(Class<?> clazz, String sort, String fieldnames, int page) {
         FieldUtil.validateParamsSort(clazz, sort);
         FieldUtil.validateParamsFieldnames(clazz, fieldnames);
+        FieldUtil.validatePage(page);
+    }
+
+    /**
+     * Verifica se o índice da página para consulta é válido.
+     *
+     * @param page Índice da página consultada.
+     */
+    private static void validatePage(int page) {
+        if (page < 0) {
+            PageException ex = new PageException();
+            ex.addDetail("Índice da página não pode ser menor que 0 (zero).");
+            throw ex;
+        }
     }
 
     /**
@@ -51,13 +66,20 @@ public final class FieldUtil {
      */    
     private static void validateParamsFieldnames(Class<?> clazz, String fieldnames) {
         if (fieldnames != null && !fieldnames.isBlank()) {
+            FieldsException ex = null;
             String[] names = fieldnames.split(FIELD_SEPERATOR);
             for (String name : names) {
                 try {
                     clazz.getDeclaredField(name);
                 } catch (NoSuchFieldException | SecurityException e) {
-                    throw new FieldsException(String.format("Field name \"%s\" is invalid.", name));
+                    if (ex == null) {
+                        ex = new FieldsException();
+                    }
+                    ex.addDetail(String.format("Campo \"%s\" é inválido.", name));
                 }
+            }
+            if (ex != null) {
+                throw ex;
             }
         }
     }
@@ -70,6 +92,7 @@ public final class FieldUtil {
      */
     private static void validateParamsSort(Class<?> clazz, String sort) {
         if (sort != null && !sort.isBlank()) {
+            SortException ex = null;
             String[] names = sort.split(FIELD_SEPERATOR);
             for (String name : names) {
                 if (name.toUpperCase().equals(Direction.ASC.name()) || 
@@ -79,8 +102,14 @@ public final class FieldUtil {
                 try {
                     clazz.getDeclaredField(name);
                 } catch (NoSuchFieldException | SecurityException e) {
-                    throw new SortException(String.format("Sort name \"%s\" is invalid.", name));
+                    if (ex == null) {
+                        ex = new SortException();
+                    }
+                    ex.addDetail(String.format("Campo \"%s\" é inválido para ordenação.", name));
                 }
+            }
+            if (ex != null) {
+                throw ex;
             }
         }
     }
