@@ -238,6 +238,45 @@
     ]
   },
   {
+    "_id": "c7ffe29f-816a-418a-b278-d6f8526329d3",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: Marias",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?name=Maria",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-13T23:20:57.838Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "Maria",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "3"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "1"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      }
+    ]
+  },
+  {
     "_id": "bf854e93-7287-4aea-8025-48f3aa1493a1",
     "colId": "history",
     "containerId": "",

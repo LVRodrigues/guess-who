@@ -59,7 +59,7 @@
     "method": "GET",
     "sortNum": 20000,
     "created": "2022-11-12T21:25:08.230Z",
-    "modified": "2022-11-12T21:25:08.230Z",
+    "modified": "2022-11-13T23:21:39.044Z",
     "headers": [],
     "params": [
       {
@@ -73,25 +73,7 @@
         "type": "res-code",
         "custom": "",
         "action": "equal",
-        "value": "200"
-      },
-      {
-        "type": "json-query",
-        "custom": "json.page.totalPages",
-        "action": "equal",
-        "value": "20"
-      },
-      {
-        "type": "json-query",
-        "custom": "json.page.number",
-        "action": "equal",
-        "value": "100"
-      },
-      {
-        "type": "res-body",
-        "custom": "",
-        "action": "notcontains",
-        "value": "_embedded"
+        "value": "400"
       }
     ]
   },
@@ -334,6 +316,45 @@
         "custom": "json.page.totalPages",
         "action": "equal",
         "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      }
+    ]
+  },
+  {
+    "_id": "57256118-30e9-4ffd-9a9b-a3c23acfc78d",
+    "colId": "71163f50-3e18-4990-9def-0bfbcfc33f7b",
+    "containerId": "",
+    "name": "Cards: Marias",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?name=Maria",
+    "method": "GET",
+    "sortNum": 90000,
+    "created": "2022-11-13T23:20:14.259Z",
+    "modified": "2022-11-13T23:22:06.349Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "Maria",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "3"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "1"
       },
       {
         "type": "json-query",

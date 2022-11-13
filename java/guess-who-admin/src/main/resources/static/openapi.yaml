@@ -31,6 +31,12 @@ paths:
         - $ref: '#/components/parameters/size'
         - $ref: '#/components/parameters/sort'
         - $ref: '#/components/parameters/fields'
+        - in: query
+          name: name
+          description: Padrão de nome para localizar os personagens.
+          required: false
+          schema:
+            type: string
       responses:
         '200':
           description: Sucesso.

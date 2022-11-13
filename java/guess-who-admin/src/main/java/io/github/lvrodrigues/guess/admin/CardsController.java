@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.github.lvrodrigues.guess.admin.assemblers.CardAssembler;
+import io.github.lvrodrigues.guess.exceptions.NotFoundException;
 import io.github.lvrodrigues.guess.model.Card;
 import io.github.lvrodrigues.guess.model.CardsRepository;
 import io.github.lvrodrigues.guess.utils.FieldUtil;
@@ -73,9 +74,12 @@ public class CardsController {
         Pageable paging     = PageRequest.of(page, size, sorts);
         Page<Card> result   = null;
         if (name != null) {
-            result = cards.findByNameLike(name, paging);
+            result = cards.findByNameContainsIgnoreCase(name, paging);
         } else {
             result = cards.findAll(paging);
+        }
+        if (result.isEmpty()) {
+            throw new NotFoundException();
         }
         // Filtrando a lista de campos para resposta. 
         FieldUtil.filter(result, fields);
