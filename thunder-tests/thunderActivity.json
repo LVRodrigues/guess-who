@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-14T00:55:19.506Z",
+    "modified": "2022-11-13T22:45:35.397Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -47,7 +47,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-14T00:55:13.764Z",
+    "modified": "2022-11-13T22:45:31.339Z",
     "headers": [],
     "params": [
       {
@@ -92,7 +92,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-14T00:55:10.051Z",
+    "modified": "2022-11-13T22:45:25.694Z",
     "headers": [],
     "params": [
       {
@@ -147,7 +147,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-14T00:55:02.346Z",
+    "modified": "2022-11-13T22:46:41.740Z",
     "headers": [],
     "params": [
       {
@@ -174,7 +174,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-14T00:54:57.357Z",
+    "modified": "2022-11-13T22:46:19.741Z",
     "headers": [],
     "params": [
       {
@@ -201,7 +201,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-14T00:54:53.032Z",
+    "modified": "2022-11-13T22:45:05.604Z",
     "headers": [],
     "params": [
       {
@@ -215,25 +215,43 @@
         "type": "res-code",
         "custom": "",
         "action": "equal",
-        "value": "400"
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "100"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "_embedded"
       }
     ]
   },
   {
-    "_id": "c7ffe29f-816a-418a-b278-d6f8526329d3",
+    "_id": "5e11837c-fcad-493a-a8fc-bac07cc6ba6d",
     "colId": "history",
     "containerId": "",
-    "name": "Cards: Marias",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?name=Maria",
+    "name": "Cards: Lucianos",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?name=Luciano",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-14T00:56:02.261Z",
+    "modified": "2022-11-13T23:20:57.838Z",
     "headers": [],
     "params": [
       {
         "name": "name",
-        "value": "Maria",
+        "value": "Luciano",
         "isPath": false
       }
     ],
@@ -321,7 +339,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-08T13:50:33.503Z",
-    "modified": "2022-11-14T00:54:16.798Z",
+    "modified": "2022-11-13T22:44:22.661Z",
     "headers": [],
     "params": [
       {

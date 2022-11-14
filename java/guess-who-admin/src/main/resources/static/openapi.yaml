@@ -8,7 +8,7 @@ info:
     name: Webmaster
     url: 'https://www.linkedin.com/in/luciano-rodrigues/'
 servers:
-  - url: 'http://localhost:5001/@api.version@'
+  - url: 'http://localhost:5001/v1'
     variables: {}
     description: Desenvolvimento.
 tags:
@@ -52,7 +52,43 @@ paths:
         '401':
           description: Não autorizado.
         '403':
-          description: Acesso proibido.         
+          description: Acesso proibido.
+    post:
+      summary: Insere um novo cartão de personagem bíblico.
+      description: Adiciona um novo cartão de personagem bíblico, calculando o campo phoneme e os campos ids.
+      operationId: addCard
+      tags:
+        - Configurações
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Card'
+            example: 
+              name: Abel
+              questions:
+                - text: Quem foi o primeiro pastor?
+                  evidence: Gênesis 4:2  
+      responses:
+        '201':
+          description: Novo cartão de personagem criado.
+          headers:
+            Location:
+              description: Link do novo registro criado.
+              schema:
+                type: string
+                format: url
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+              examples: 
+                Novo Registro:
+                  $ref: '#/components/examples/Card'
+        '401':
+          description: Não autorizado.
+        '403':
+          description: Acesso proibido.      
         '404':
           $ref: '#/components/responses/notFound'
   /cards/{uuid}:

@@ -4,6 +4,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
+import org.springframework.stereotype.Component;
 
 import io.github.lvrodrigues.guess.admin.CardsController;
 import io.github.lvrodrigues.guess.model.Card;
@@ -16,6 +17,7 @@ import io.github.lvrodrigues.guess.model.Card;
  * @author $Committer$
  * @branch $Branch$
  */
+@Component
 public class CardAssembler extends RepresentationModelAssemblerSupport<Card, Card> {
 
     /**
