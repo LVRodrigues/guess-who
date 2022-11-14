@@ -53,6 +53,31 @@ paths:
           description: Não autorizado.
         '403':
           description: Acesso proibido.         
+  /cards/{uuid}:
+    get:
+      summary: Localliza um cartão bíblico.
+      description: Localiza um cartão bíblico utilizando sua chave de identificação única.
+      operationId: getCard
+      tags:
+        - Configurações
+      parameters:
+        - $ref: '#/components/parameters/uuid'
+      responses:
+        '200':
+          description: Sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+              example: 
+                $ref: '#/components/examples/Card'
+        '401':
+          description: Não autorizado.
+        '403':
+          description: Sem permissão.
+        '404': 
+          description: Parâmetro não localizado.    
+
   # /models:
   #   summary: Modelos de Cardápios Online.
   #   description: Modelos de Cardápios Online para ajudar na configuração dos Estabelecimentos.
