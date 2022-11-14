@@ -1,6 +1,7 @@
 package io.github.lvrodrigues.guess.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
@@ -14,6 +15,7 @@ import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
 import org.springframework.hateoas.RepresentationModel;
 import org.springframework.hateoas.server.core.Relation;
 
@@ -54,9 +56,10 @@ public class Card extends RepresentationModel<Card> implements Serializable, Clo
     /**
      * Imagem do cartão.
      */
-    @Lob
+    // @Lob
     @Column
     @Basic(fetch = FetchType.LAZY)
+    @Type(type="org.hibernate.type.BinaryType")
     private byte[] image;
 
     /**

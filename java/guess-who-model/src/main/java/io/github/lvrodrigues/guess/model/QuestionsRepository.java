@@ -12,6 +12,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author $Committer$
  * @branch $Branch$
  */
-public interface QuestionRepository extends JpaRepository<Question, UUID> {
+public interface QuestionsRepository extends JpaRepository<Question, UUID> {
     
 }
