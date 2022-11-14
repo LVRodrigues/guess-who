@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:45:35.397Z",
+    "modified": "2022-11-14T00:55:19.506Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -47,7 +47,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:45:31.339Z",
+    "modified": "2022-11-14T00:55:13.764Z",
     "headers": [],
     "params": [
       {
@@ -92,7 +92,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:45:25.694Z",
+    "modified": "2022-11-14T00:55:10.051Z",
     "headers": [],
     "params": [
       {
@@ -147,7 +147,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:46:41.740Z",
+    "modified": "2022-11-14T00:55:02.346Z",
     "headers": [],
     "params": [
       {
@@ -174,7 +174,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:46:19.741Z",
+    "modified": "2022-11-14T00:54:57.357Z",
     "headers": [],
     "params": [
       {
@@ -201,7 +201,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:45:05.604Z",
+    "modified": "2022-11-14T00:54:53.032Z",
     "headers": [],
     "params": [
       {
@@ -215,43 +215,25 @@
         "type": "res-code",
         "custom": "",
         "action": "equal",
-        "value": "200"
-      },
-      {
-        "type": "json-query",
-        "custom": "json.page.totalPages",
-        "action": "equal",
-        "value": "20"
-      },
-      {
-        "type": "json-query",
-        "custom": "json.page.number",
-        "action": "equal",
-        "value": "100"
-      },
-      {
-        "type": "res-body",
-        "custom": "",
-        "action": "notcontains",
-        "value": "_embedded"
+        "value": "400"
       }
     ]
   },
   {
-    "_id": "5e11837c-fcad-493a-a8fc-bac07cc6ba6d",
+    "_id": "c7ffe29f-816a-418a-b278-d6f8526329d3",
     "colId": "history",
     "containerId": "",
-    "name": "Cards: Lucianos",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?name=Luciano",
+    "name": "Cards: Marias",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?name=Maria",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T23:20:57.838Z",
+    "modified": "2022-11-14T17:33:42.271Z",
     "headers": [],
     "params": [
       {
         "name": "name",
-        "value": "Luciano",
+        "value": "Maria",
         "isPath": false
       }
     ],
@@ -331,6 +313,71 @@
     ]
   },
   {
+    "_id": "3e45651b-9229-439a-8a39-d8f0c92e5282",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: add",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-14T20:03:27.096Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"}\n    ]\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "201"
+      }
+    ]
+  },
+  {
+    "_id": "5e11837c-fcad-493a-a8fc-bac07cc6ba6d",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: Lucianos",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?name=Luciano",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-14T20:18:49.807Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "Luciano",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "3"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "1"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      }
+    ]
+  },
+  {
     "_id": "bf854e93-7287-4aea-8025-48f3aa1493a1",
     "colId": "history",
     "containerId": "",
@@ -339,7 +386,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-08T13:50:33.503Z",
-    "modified": "2022-11-13T22:44:22.661Z",
+    "modified": "2022-11-14T00:54:16.798Z",
     "headers": [],
     "params": [
       {
