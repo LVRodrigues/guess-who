@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:45:35.397Z",
+    "modified": "2022-11-14T00:55:19.506Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -47,7 +47,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:45:31.339Z",
+    "modified": "2022-11-14T00:55:13.764Z",
     "headers": [],
     "params": [
       {
@@ -92,7 +92,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:45:25.694Z",
+    "modified": "2022-11-14T00:55:10.051Z",
     "headers": [],
     "params": [
       {
@@ -147,7 +147,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:46:41.740Z",
+    "modified": "2022-11-14T00:55:02.346Z",
     "headers": [],
     "params": [
       {
@@ -174,7 +174,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:46:19.741Z",
+    "modified": "2022-11-14T00:54:57.357Z",
     "headers": [],
     "params": [
       {
@@ -201,7 +201,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T22:45:05.604Z",
+    "modified": "2022-11-14T00:54:53.032Z",
     "headers": [],
     "params": [
       {
@@ -215,25 +215,7 @@
         "type": "res-code",
         "custom": "",
         "action": "equal",
-        "value": "200"
-      },
-      {
-        "type": "json-query",
-        "custom": "json.page.totalPages",
-        "action": "equal",
-        "value": "20"
-      },
-      {
-        "type": "json-query",
-        "custom": "json.page.number",
-        "action": "equal",
-        "value": "100"
-      },
-      {
-        "type": "res-body",
-        "custom": "",
-        "action": "notcontains",
-        "value": "_embedded"
+        "value": "400"
       }
     ]
   },
@@ -246,7 +228,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-13T23:20:57.838Z",
+    "modified": "2022-11-14T00:56:02.261Z",
     "headers": [],
     "params": [
       {
@@ -277,6 +259,60 @@
     ]
   },
   {
+    "_id": "f847e5f7-08e4-4083-bd0c-3c1858de2674",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: uuid NULL",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards/00000000-0000-0000-0000-000000000000",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-14T00:55:49.484Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "404"
+      }
+    ]
+  },
+  {
+    "_id": "6e752932-3ee6-4e14-af35-ed1879659863",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: uuid Noé",
+    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards/efc236ab-20ad-42b0-a2c6-ca28ee7708cd",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-14T00:55:53.170Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.name",
+        "action": "equal",
+        "value": "Noé"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.questions",
+        "action": "count",
+        "value": "6"
+      }
+    ]
+  },
+  {
     "_id": "bf854e93-7287-4aea-8025-48f3aa1493a1",
     "colId": "history",
     "containerId": "",
@@ -285,7 +321,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-08T13:50:33.503Z",
-    "modified": "2022-11-13T22:44:22.661Z",
+    "modified": "2022-11-14T00:54:16.798Z",
     "headers": [],
     "params": [
       {

@@ -1,5 +1,6 @@
 package io.github.lvrodrigues.guess.admin;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedModel;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -87,8 +91,24 @@ public class CardsController {
         return pagesAssembler.toModel(result, new CardAssembler());
     }
 
-    @RequestMapping(value = "/{id}")
-    public Card getCard(@PathVariable(required = true) UUID id) {
-        return cards.findById(id).get();
+    /**
+     * Localiza um cartão específico por sua chave única.
+     *
+     * @param uuid Identificador único de um cartão bíblico.
+     * @return Cartão de Personagem Bíblico.
+     */
+    @RequestMapping(value = "/{uuid}")
+    public HttpEntity<Card> getCard(@PathVariable(required = true) UUID uuid) {
+        Optional<Card> optional = cards.findById(uuid);
+        if (optional.isPresent()) {
+            Card card = optional.get();
+            CardAssembler assembler = new CardAssembler();
+            card = assembler.toModel(card);
+            return new ResponseEntity<Card>(card, HttpStatus.OK);
+        } else {
+            NotFoundException ex = new NotFoundException();
+            ex.addDetail(String.format("Cartão com identificador \"%s\" não foi localizado.", uuid));
+            throw ex;
+        }
     }
 }

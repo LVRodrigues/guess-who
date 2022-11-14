@@ -53,6 +53,34 @@ paths:
           description: Não autorizado.
         '403':
           description: Acesso proibido.         
+        '404':
+          $ref: '#/components/responses/notFound'
+  /cards/{uuid}:
+    get:
+      summary: Localliza um cartão bíblico.
+      description: Localiza um cartão bíblico utilizando sua chave de identificação única.
+      operationId: getCard
+      tags:
+        - Configurações
+      parameters:
+        - $ref: '#/components/parameters/uuid'
+      responses:
+        '200':
+          description: Sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+              examples:
+                Sucesso:
+                  $ref: '#/components/examples/Card'
+        '401':
+          description: Não autorizado.
+        '403':
+          description: Sem permissão.
+        '404':
+          $ref: '#/components/responses/notFound'          
+
   # /models:
   #   summary: Modelos de Cardápios Online.
   #   description: Modelos de Cardápios Online para ajudar na configuração dos Estabelecimentos.
@@ -340,6 +368,10 @@ components:
         message: Índice de página inválido.
         causes:
           - Página incial não pode ser menor que 0 (zero).
+    NotFound:
+      value:
+        status: NOT_FOUND
+        messge: Nenhum registro localizado.
     Card:
       value:
         id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
@@ -474,6 +506,15 @@ components:
               $ref: '#/components/examples/InvalidSort'
             Invalid Page:
               $ref: '#/components/examples/InvalidPage'
+    notFound:
+      description: Nenhum registro localizado.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          examples:
+            Not Found:
+              $ref: '#/components/examples/NotFound'
   securitySchemes:
     auth:
       type: oauth2
