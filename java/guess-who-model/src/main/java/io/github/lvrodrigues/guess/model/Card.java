@@ -1,7 +1,6 @@
 package io.github.lvrodrigues.guess.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
@@ -56,7 +55,7 @@ public class Card extends RepresentationModel<Card> implements Serializable, Clo
     /**
      * Imagem do cartão.
      */
-    // @Lob
+    @Lob
     @Column
     @Basic(fetch = FetchType.LAZY)
     @Type(type="org.hibernate.type.BinaryType")

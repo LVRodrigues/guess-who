@@ -105,6 +105,8 @@ public class CardsController {
         if (result.isEmpty()) {
             throw new NotFoundException();
         }
+        // Na listagem, não devolver o campo de imagem:
+        result.getContent().stream().forEach(c -> c.setImage(null));
         // Filtrando a lista de campos para resposta. 
         FieldUtil.filter(result, fields);
         // Adicionando hiper mídia na resposta.
@@ -146,6 +148,7 @@ public class CardsController {
         card.setId(UUID.randomUUID());
         card.setName(body.getName());
         card.setPhoneme(Fonema.process(body.getName()));
+        card.setImage(body.getImage());
         card = cards.save(card);
         // URL urlImage = null;
         // BufferedImage image = null;
