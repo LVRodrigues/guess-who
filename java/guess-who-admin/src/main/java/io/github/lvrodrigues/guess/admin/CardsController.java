@@ -144,31 +144,14 @@ public class CardsController {
      */
     @PostMapping(value = "")
     public HttpEntity<Card> addCard(@RequestBody Card body) {
+        // Salvar o cartão de personagem.
         Card card = new Card();
         card.setId(UUID.randomUUID());
         card.setName(body.getName());
         card.setPhoneme(Fonema.process(body.getName()));
         card.setImage(body.getImage());
         card = cards.save(card);
-        // URL urlImage = null;
-        // BufferedImage image = null;
-        // try {
-        //     urlImage = new URL("https://media-exp1.licdn.com/dms/image/C5603AQG3RyRUxDHtGg/profile-displayphoto-shrink_800_800/0/1517690868820?e=1674086400&v=beta&t=kKa4EBGBcc3z4UZtWwk1P6MS-ROUc_97BzJkyUNfRYQ");
-        // } catch (MalformedURLException e) {
-        //     e.printStackTrace();
-        // }
-        // try {
-        //     image = ImageIO.read(urlImage);
-        // } catch (IOException e) {
-        //     e.printStackTrace();
-        // }
-        // ByteArrayOutputStream array = new ByteArrayOutputStream();
-        // try {
-        //     ImageIO.write(image, "png", array);
-        // } catch (IOException e) {
-        //     e.printStackTrace();
-        // }
-        // card.setImage(array.toByteArray());
+        // Perguntas sobre o cartão.
         List<Question> items = new ArrayList<>();
         for (Question item : body.getQuestions()) {
             Question question = new Question();
