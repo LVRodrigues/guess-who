@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: natural GET",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T00:05:12.823Z",
+    "modified": "2022-11-15T20:19:45.193Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -49,11 +49,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: sort -phoneme,+name",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?sort=phoneme,DESC,name,ASC",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?sort=phoneme,DESC,name,ASC",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T00:05:50.105Z",
+    "modified": "2022-11-15T20:19:33.332Z",
     "headers": [],
     "params": [
       {
@@ -100,11 +100,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: page,sort,fields",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?page=5&sort=name&fields=name,id",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?page=5&sort=name&fields=name,id",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T00:06:05.335Z",
+    "modified": "2022-11-15T20:19:28.440Z",
     "headers": [],
     "params": [
       {
@@ -161,11 +161,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: sort invalid",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?sort=error",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?sort=error",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T00:06:09.443Z",
+    "modified": "2022-11-15T20:19:20.920Z",
     "headers": [],
     "params": [
       {
@@ -188,11 +188,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: fields invalid",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?fields=error,truck,treco",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?fields=error,truck,treco",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T00:06:16.835Z",
+    "modified": "2022-11-15T20:19:15.848Z",
     "headers": [],
     "params": [
       {
@@ -215,11 +215,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: page invalid",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?page=-1",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?page=-1",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T00:06:20.632Z",
+    "modified": "2022-11-15T20:19:11.270Z",
     "headers": [],
     "params": [
       {
@@ -242,11 +242,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: Marias",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?name=Maria",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?name=Maria",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-14T17:33:42.271Z",
+    "modified": "2022-11-15T20:20:06.751Z",
     "headers": [],
     "params": [
       {
@@ -281,11 +281,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: uuid NULL",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards/00000000-0000-0000-0000-000000000000",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/00000000-0000-0000-0000-000000000000",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T00:05:26.838Z",
+    "modified": "2022-11-15T20:19:39.974Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -302,11 +302,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: uuid Noé",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards/efc236ab-20ad-42b0-a2c6-ca28ee7708cd",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/efc236ab-20ad-42b0-a2c6-ca28ee7708cd",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T00:04:35.845Z",
+    "modified": "2022-11-15T20:19:52.688Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -335,11 +335,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: add",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards",
     "method": "POST",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T00:11:05.613Z",
+    "modified": "2022-11-15T20:18:15.843Z",
     "headers": [],
     "params": [],
     "body": {
@@ -353,6 +353,12 @@
         "custom": "",
         "action": "equal",
         "value": "201"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.id",
+        "action": "setto",
+        "value": "{{lastID}}"
       }
     ]
   },
@@ -361,11 +367,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: Lucianos",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?name=Luciano",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?name=Luciano",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-14T20:18:49.807Z",
+    "modified": "2022-11-15T20:19:59.143Z",
     "headers": [],
     "params": [
       {
@@ -396,15 +402,36 @@
     ]
   },
   {
+    "_id": "e1e840d4-daa0-4bf5-8094-66e250e787e1",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: delete last add",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/{{lastID}}",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-15T20:20:22.129Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "204"
+      }
+    ]
+  },
+  {
     "_id": "bf854e93-7287-4aea-8025-48f3aa1493a1",
     "colId": "history",
     "containerId": "",
     "name": "Cards: fields id,name",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?fields=name,id",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?fields=name,id",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-08T13:50:33.503Z",
-    "modified": "2022-11-15T00:06:46.034Z",
+    "modified": "2022-11-15T20:19:06.241Z",
     "headers": [],
     "params": [
       {

@@ -1,13 +1,28 @@
 [
   {
-    "_id": "f5549aee-8f01-4387-8273-5bab135b19e0",
-    "name": "(Local Env)",
-    "default": false,
-    "global": true,
-    "local": true,
-    "sortNum": -2,
-    "created": "2022-06-30T18:11:25.957Z",
-    "modified": "2022-06-30T18:11:25.957Z",
-    "data": []
+    "_id": "0ab99c3c-dc07-41f3-b0f5-1436e657f6ed",
+    "name": "admin",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2022-11-15T20:14:35.630Z",
+    "modified": "2022-11-15T20:18:15.841Z",
+    "data": [
+      {
+        "name": "lastID",
+        "value": "cbd85710-2f23-44a8-a4c8-de68253a70e2"
+      },
+      {
+        "name": "server",
+        "value": "localhost"
+      },
+      {
+        "name": "port",
+        "value": "5001"
+      },
+      {
+        "name": "api",
+        "value": "v1"
+      }
+    ]
   }
 ]

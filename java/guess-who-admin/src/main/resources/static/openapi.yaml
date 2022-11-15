@@ -116,112 +116,24 @@ paths:
           description: Sem permissão.
         '404':
           $ref: '#/components/responses/notFound'          
-
-  # /models:
-  #   summary: Modelos de Cardápios Online.
-  #   description: Modelos de Cardápios Online para ajudar na configuração dos Estabelecimentos.
-  #   get:
-  #     summary: Listar os Modelos de Cardápios.
-  #     description: Listar todos os Modelos de Cardápios Online.
-  #     operationId: getModels
-  #     tags:
-  #       - Configurações
-  #     parameters: 
-  #       - $ref: '#/components/parameters/page'
-  #       - $ref: '#/components/parameters/size'
-  #       - $ref: '#/components/parameters/sort'
-  #       - $ref: '#/components/parameters/fields'
-  #     responses:
-  #       '200':
-  #         description: Sucesso.
-  #         content:
-  #           application/json:
-  #             schema:
-  #               type: array
-  #               items:
-  #                 $ref: '#/components/schemas/Paging'
-  #             example: 
-  #               index: 1
-  #               size: 20
-  #               total: 3
-  #               items: 
-  #                 - id: 1
-  #                   name: Modelo 01
-  #                   record: null
-  #                   active: true
-  #                 - id: 2
-  #                   name: Modelo 02
-  #                   record: null
-  #                   active: true
-  #       '400':
-  #         $ref: '#/components/responses/badRequest'
-  #       '401':
-  #         description: Não autorizado.
-  #       '403':
-  #         description: Acesso proibido.      
-  #   post:
-  #     summary: Adicionar um Modelo.
-  #     description: Adiciona um novo Modelo de Cardápio Online.
-  #     operationId: createModel
-  #     tags:
-  #       - Configurações
-  #     requestBody:
-  #       content:
-  #         application/json:
-  #           schema:
-  #             $ref: '#/components/schemas/Model'
-  #           example: 
-  #             name: Novo Modelo
-  #             active: true
-  #     responses:
-  #       '201':
-  #         description: Novo modelo criado.
-  #         headers:
-  #           Location:
-  #             description: Link do novo registro criado.
-  #             schema:
-  #               type: string
-  #               format: url
-  #         content:
-  #           application/json:
-  #             schema:
-  #               $ref: '#/components/schemas/Model'
-  #             example: 
-  #               id: '62e61565-315e-4754-8410-432d6437ddd8'
-  #               name: 'Novo Modelo'
-  #               record: '2021-04-05T22:28:56.782Z'
-  #               active: true
-  #       '401':
-  #         description: Não autorizado.
-  #       '403':
-  #         description: Acesso proibido.
+    delete:
+      summary: Remover um Cartão de Personagem Bíblioc.
+      description: Remover as informações de um Cartão de Personagem Bíblico e suas referências.
+      operationId: removeCard
+      tags: 
+        - Configurações
+      parameters: 
+        - $ref: '#/components/parameters/uuid'
+      responses:
+        '204':
+          description: Sucesso.
+        '401':
+          description: Não autorizado.
+        '403':
+          description: Sem permissão.
+        '404':     
+          description: Modelo não localizado.
   # /models/{uuid}:
-  #   get:
-  #     summary: Recuperar um Modelo.
-  #     description: Recuperar as informações de um modelo de Cardápio específico.
-  #     operationId: getModel
-  #     tags: 
-  #       - Configurações
-  #     parameters:
-  #       - $ref: '#/components/parameters/uuid'
-  #     responses:
-  #       '200':
-  #         description: Sucesso.
-  #         content:
-  #           application/json:
-  #             schema:
-  #               $ref: '#/components/schemas/Model'
-  #             example: 
-  #               id: '62e61565-315e-4754-8410-432d6437ddd8'
-  #               name: 'Novo Modelo'
-  #               record: '2021-04-05T22:28:56.782Z'
-  #               active: true
-  #       '401':
-  #         description: Não autorizado.
-  #       '403':
-  #         description: Acesso proibido.
-  #       '404':
-  #         description: Parâmetro não localizado.      
   #   put:
   #     summary: Alterar um Modelo.
   #     description: Alterar as informações de um Modelo de Cardápio Online.
@@ -256,23 +168,6 @@ paths:
   #         description: Sem permissão.
   #       '404': 
   #         description: Parâmetro não localizado.       
-  #   delete:
-  #     summary: Remover um Modelo.
-  #     description: Remover as informações de um Modelo de Cardápio Online.
-  #     operationId: removeModel
-  #     tags: 
-  #       - Configurações
-  #     parameters: 
-  #       - $ref: '#/components/parameters/uuid'
-  #     responses:
-  #       '204':
-  #         description: Sucesso.
-  #       '401':
-  #         description: Não autorizado.
-  #       '403':
-  #         description: Sem permissão.
-  #       '404':     
-  #         description: Modelo não localizado.
 components:
   schemas:
     Card:
