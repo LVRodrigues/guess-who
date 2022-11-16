@@ -339,7 +339,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:18:15.843Z",
+    "modified": "2022-11-16T22:51:39.695Z",
     "headers": [],
     "params": [],
     "body": {
@@ -359,6 +359,12 @@
         "custom": "json.id",
         "action": "setto",
         "value": "{{lastID}}"
+      },
+      {
+        "type": "custom-header",
+        "custom": "Location",
+        "action": "contains",
+        "value": "card"
       }
     ]
   },
@@ -410,7 +416,7 @@
     "method": "DELETE",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:20:22.129Z",
+    "modified": "2022-11-16T22:49:37.680Z",
     "headers": [],
     "params": [],
     "tests": [
@@ -419,6 +425,70 @@
         "custom": "",
         "action": "equal",
         "value": "204"
+      }
+    ]
+  },
+  {
+    "_id": "2f4539af-e748-49a1-aff5-ac2802985350",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: update",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/{{lastID}}",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-16T22:51:41.736Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues Alterado\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"},\n      {\"text\": \"Tereira Pergunda?\", \"evidence\": \"Sei não\"}\n    ]\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.name",
+        "action": "equal",
+        "value": "Luciano Vieira Rodrigues Alterado"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.questions",
+        "action": "count",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "_id": "59f15d8f-aaec-442f-93d2-74f8b64a29bc",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: update NULL",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/00000000-0000-0000-0000-000000000000",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-16T22:52:49.975Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues Alterado\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"},\n      {\"text\": \"Tereira Pergunda?\", \"evidence\": \"Sei não\"}\n    ]\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "404"
       }
     ]
   },

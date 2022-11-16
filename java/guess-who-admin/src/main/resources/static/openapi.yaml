@@ -132,42 +132,57 @@ paths:
         '403':
           description: Sem permissão.
         '404':     
-          description: Modelo não localizado.
-  # /models/{uuid}:
-  #   put:
-  #     summary: Alterar um Modelo.
-  #     description: Alterar as informações de um Modelo de Cardápio Online.
-  #     operationId: updateModel
-  #     tags: 
-  #       - Configurações
-  #     parameters: 
-  #       - $ref: '#/components/parameters/uuid'
-  #     requestBody:
-  #       content:
-  #         application/json:
-  #           schema:
-  #             $ref: '#/components/schemas/Model'
-  #           example:
-  #             name: Modelo alterado
-  #             active: false
-  #     responses:
-  #       '200':
-  #         description: Sucesso.
-  #         content:
-  #           application/json:
-  #             schema:
-  #               $ref: '#/components/schemas/Model'
-  #             example: 
-  #               id: '62e61565-315e-4754-8410-432d6437ddd8'
-  #               name: 'Novo Modelo'
-  #               record: '2021-04-05T22:28:56.782Z'
-  #               active: true             
-  #       '401':
-  #         description: Não autorizado.
-  #       '403':
-  #         description: Sem permissão.
-  #       '404': 
-  #         description: Parâmetro não localizado.       
+          description: Cartão de Personagem não localizado.
+    put:
+      summary: Alterar um Cartão de Personagem..
+      description: Alterar as informações de um Cartão de Personagem Bíblico. <br>
+              O campo phoneme será recalculado com base no nome. 
+              Novas perguntas (Question) não precisam do campo ID atribuídos.
+      operationId: updateCard
+      tags: 
+        - Configurações
+      parameters: 
+        - $ref: '#/components/parameters/uuid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Card'
+            example:
+              id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
+              name: Nome Alterado
+              phoneme: B
+              questions:
+                - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+                  text: Quem foi o primeiro pastor?
+                  evidence: Gênesis 4:2  
+                - id: ef6742c7-f3ed-4789-aea6-086a57f8cd05
+                  text: Pergunta adicionada.
+                  evidence: Nova Evidência.
+      responses:
+        '200':
+          description: Sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+              example: 
+                id: b7e0c17c-a6e4-4c19-ade1-7072dc783444
+                name: Nome Alterado
+                phoneme: B
+                questions:
+                  - id: fe6f6474-fe96-43b7-a7a5-a511846e033c
+                    text: Quem foi o primeiro pastor?
+                    evidence: Gênesis 4:2  
+                  - id: ef6742c7-f3ed-4789-aea6-086a57f8cd05
+                    text: Pergunta adicionada.
+                    evidence: Nova Evidência.       
+        '401':
+          description: Não autorizado.
+        '403':
+          description: Sem permissão.
+        '404': 
+          description: Cartão de Personagem não localizado.      
 components:
   schemas:
     Card:
@@ -386,7 +401,8 @@ components:
     sort:
       name: sort
       in: query
-      description: Lista de campos para ordenação da resposta, separados por vírgula. Cada campo pode ser sucedido das palavras chaves ASC (para ordenação ascendente) ou DESC (para ordenação descendente).
+      description: Lista de campos para ordenação da resposta, separados por vírgula. <br>
+        Cada campo pode ser sucedido das palavras chaves ASC (para ordenação ascendente) ou DESC (para ordenação descendente).
       required: false
       schema:
         type: string

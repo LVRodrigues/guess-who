@@ -20,13 +20,11 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.function.EntityResponse;
-
-import com.jayway.jsonpath.Option;
 
 import io.github.lvrodrigues.fonema.Fonema;
 import io.github.lvrodrigues.guess.admin.assemblers.CardAssembler;
@@ -182,7 +180,7 @@ public class CardsController {
      * @return Estado da requisição HTTP.
      */
     @DeleteMapping(value = "/{uuid}")
-    public ResponseEntity<?> removeCard(@PathVariable(required = true) UUID uuid) {
+    public HttpEntity<?> removeCard(@PathVariable(required = true) UUID uuid) {
         Optional<Card> optional = cards.findById(uuid);
         if (optional.isEmpty()) {
             NotFoundException ex = new NotFoundException();
@@ -193,5 +191,50 @@ public class CardsController {
         card.getQuestions().stream().forEach(q -> questions.delete(q));
         cards.delete(card);
         return ResponseEntity.noContent().build();
+    }
+
+    /**
+     * Atualiza as informações de um Cartão de Personagem Bíblico.
+     *
+     * @param uuid Identificador único do Cartão de Personagem.
+     * @param body Informações para atualizar o Cartão de Personagem.
+     * @return Cartão Bíblico atualizado.
+     */
+    @PutMapping(value = "/{uuid}")
+    public HttpEntity<Card> updateCard(@PathVariable(required = true) UUID uuid, @RequestBody Card body) {
+        Optional<Card> optional = cards.findById(uuid);
+        if (optional.isEmpty()) {
+            NotFoundException ex = new NotFoundException();
+            ex.addDetail(String.format("Cartão com identificador \"%s\" não foi localizado.", uuid));
+            throw ex;
+        }
+        Card card = optional.get();
+        // Remover as perguntas antigas:
+        card.getQuestions().stream().forEach(original -> {
+            boolean founded = false;
+            for (Question question : body.getQuestions()) {
+                if (original.equals(question)) {
+                    founded = true;
+                    break;
+                }
+            }
+            if (!founded) {
+                questions.delete(original);
+            }
+        });
+        // Atualizando ou adiconando as novas pergundas:
+        for (Question question : body.getQuestions()) {
+            if (question.getId() == null) {
+                question.setId(UUID.randomUUID());
+            }
+            question.setCard(card);
+            questions.save(question);
+        }
+        // Atualizando o cartão:
+        body.setId(card.getId());
+        body.setPhoneme(Fonema.process(body.getName()));
+        card = cards.save(body);
+        card = cardAssembler.toModel(card);
+        return ResponseEntity.ok().body(card);
     }
 }
