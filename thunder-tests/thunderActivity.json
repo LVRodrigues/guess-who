@@ -8,9 +8,13 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:19:45.193Z",
+    "modified": "2022-11-18T20:04:00.629Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "json-query",
@@ -53,7 +57,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:19:33.332Z",
+    "modified": "2022-11-18T20:04:15.752Z",
     "headers": [],
     "params": [
       {
@@ -62,6 +66,10 @@
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "json-query",
@@ -104,7 +112,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:19:28.440Z",
+    "modified": "2022-11-18T20:04:21.404Z",
     "headers": [],
     "params": [
       {
@@ -123,6 +131,10 @@
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "json-query",
@@ -165,7 +177,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:19:20.920Z",
+    "modified": "2022-11-18T20:04:27.998Z",
     "headers": [],
     "params": [
       {
@@ -174,6 +186,10 @@
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "res-code",
@@ -192,7 +208,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:19:15.848Z",
+    "modified": "2022-11-18T20:04:33.784Z",
     "headers": [],
     "params": [
       {
@@ -201,6 +217,10 @@
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "res-code",
@@ -219,7 +239,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:19:11.270Z",
+    "modified": "2022-11-18T20:04:39.391Z",
     "headers": [],
     "params": [
       {
@@ -228,6 +248,10 @@
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "res-code",
@@ -246,7 +270,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:20:06.751Z",
+    "modified": "2022-11-18T20:00:22.649Z",
     "headers": [],
     "params": [
       {
@@ -255,6 +279,10 @@
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "json-query",
@@ -285,9 +313,13 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:19:39.974Z",
+    "modified": "2022-11-18T20:04:09.565Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "res-code",
@@ -306,9 +338,13 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:19:52.688Z",
+    "modified": "2022-11-18T20:03:53.140Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "res-code",
@@ -339,13 +375,17 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-16T22:51:39.695Z",
+    "modified": "2022-11-18T20:03:25.466Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
       "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"}\n    ]\n}",
       "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
     },
     "tests": [
       {
@@ -377,7 +417,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-15T20:19:59.143Z",
+    "modified": "2022-11-18T20:02:43.938Z",
     "headers": [],
     "params": [
       {
@@ -386,6 +426,10 @@
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "json-query",
@@ -416,9 +460,13 @@
     "method": "DELETE",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-16T22:49:37.680Z",
+    "modified": "2022-11-18T20:03:34.592Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "res-code",
@@ -437,13 +485,17 @@
     "method": "PUT",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-16T22:51:41.736Z",
+    "modified": "2022-11-18T20:03:17.286Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
       "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues Alterado\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"},\n      {\"text\": \"Tereira Pergunda?\", \"evidence\": \"Sei não\"}\n    ]\n}",
       "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
     },
     "tests": [
       {
@@ -475,13 +527,17 @@
     "method": "PUT",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-16T22:52:49.975Z",
+    "modified": "2022-11-18T20:03:09.246Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
       "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues Alterado\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"},\n      {\"text\": \"Tereira Pergunda?\", \"evidence\": \"Sei não\"}\n    ]\n}",
       "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
     },
     "tests": [
       {
@@ -501,7 +557,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-08T13:50:33.503Z",
-    "modified": "2022-11-15T20:19:06.241Z",
+    "modified": "2022-11-18T20:04:44.453Z",
     "headers": [],
     "params": [
       {
@@ -510,6 +566,10 @@
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "json-query",
@@ -546,6 +606,77 @@
         "custom": "",
         "action": "notcontains",
         "value": "image"
+      }
+    ]
+  },
+  {
+    "_id": "69c9a466-ea4d-4a02-94a3-e88b0249fce3",
+    "colId": "history",
+    "containerId": "",
+    "name": "Admin: Token",
+    "url": "http://localhost:10000/auth/realms/guess-who/protocol/openid-connect/token",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-11-18T19:37:59.355Z",
+    "modified": "2022-11-18T20:02:16.232Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "grant_type",
+          "value": "password"
+        },
+        {
+          "name": "username",
+          "value": "system"
+        },
+        {
+          "name": "password",
+          "value": "guess-pass"
+        },
+        {
+          "name": "client_id",
+          "value": "guess-who-game"
+        },
+        {
+          "name": "client_secret",
+          "value": "7fcaf3a7-b1ab-4558-9a4a-004ad800d41a"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.token_type",
+        "action": "setto",
+        "value": "{{token-type}}"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.access_token",
+        "action": "setto",
+        "value": "{{token}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "access_token"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "refresh_token"
       }
     ]
   }

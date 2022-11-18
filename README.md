@@ -36,3 +36,15 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 | **auth**      | Módulode autorização do aplicativo para desenvolvimento.                  |
 | **java**      | Aplicativo modular com Java e SpringBoot para gerenciamento dos serviços. |
 
+## Token de Acesso
+
+```bash
+curl -X POST \
+  'http://localhost:10000/auth/realms/guess-who/protocol/openid-connect/token' \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data-urlencode 'grant_type=password' \
+  --data-urlencode 'username=******' \
+  --data-urlencode 'password=******' \
+  --data-urlencode 'client_id=guess-who-game' \
+  --data-urlencode 'client_secret=7fcaf3a7-b1ab-4558-9a4a-004ad800d41a'
+```
