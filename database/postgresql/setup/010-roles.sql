@@ -9,6 +9,6 @@ GRANT "guess-access" TO "guess-user";
 --==============================================================================
 -- Tabelas
 --==============================================================================
-GRANT SELECT, INSERT    ON versions     TO "guess-access";
-GRANT SELECT            ON cards        TO "guess-access";
-GRANT SELECT            ON questions    TO "guess-access";
+GRANT SELECT, INSERT                    ON versions     TO "guess-access";
+GRANT SELECT, INSERT, UPDATE, DELETE    ON cards        TO "guess-access";
+GRANT SELECT, INSERT, UPDATE, DELETE    ON questions    TO "guess-access";
