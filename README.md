@@ -23,7 +23,7 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 | -------------- | ----------- |
 | Java           | 17          |
 | Maven          | 3.8.3       |
-| Keycloak       | 15.0.2      |
+| Keycloak       | 20          |
 | PostgreSQL     | 14          |
 | Docker         | 20.10.7     |
 
