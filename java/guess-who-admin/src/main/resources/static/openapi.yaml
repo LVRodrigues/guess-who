@@ -117,7 +117,7 @@ paths:
         '404':
           $ref: '#/components/responses/notFound'          
     delete:
-      summary: Remover um Cartão de Personagem Bíblioc.
+      summary: Remover um Cartão de Personagem Bíblico.
       description: Remover as informações de um Cartão de Personagem Bíblico e suas referências.
       operationId: removeCard
       tags: 
