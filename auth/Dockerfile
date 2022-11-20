@@ -1,10 +1,16 @@
-FROM jboss/keycloak
+FROM quay.io/keycloak/keycloak
 
-USER root:root
-COPY guess-who-realm.json /tmp/
+ENV KEYCLOAK_ADMIN=admin
+ENV KEYCLOAK_ADMIN_PASSWORD=guess-pass
 
-USER jboss:jboss
-ENV KEYCLOAK_USER=admin
-ENV KEYCLOAK_PASSWORD=guess-pass
-ENV KEYCLOAK_IMPORT=/tmp/guess-who-realm.json
+COPY \
+    guess-who-realm.json \
+    /opt/keycloak/data/import/
 
+EXPOSE 8080
+EXPOSE 8443
+
+ENTRYPOINT [ \
+    "/opt/keycloak/bin/kc.sh", \
+    "start-dev", \
+    "--import-realm"]

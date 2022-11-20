@@ -4,37 +4,47 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: natural GET",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-08T20:11:00.201Z",
+    "modified": "2022-11-18T20:04:00.629Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "json-query",
-        "custom": "json.content",
+        "custom": "json._embedded.cards",
         "action": "count",
         "value": "5"
       },
       {
         "type": "json-query",
-        "custom": "json.content[0].name",
+        "custom": "json._embedded.cards[0].name",
         "action": "equal",
         "value": "Abel"
       },
       {
         "type": "json-query",
-        "custom": "json.totalPages",
+        "custom": "json.page.totalPages",
         "action": "equal",
         "value": "20"
       },
       {
         "type": "json-query",
-        "custom": "json.first",
+        "custom": "json.page.number",
         "action": "equal",
-        "value": "true"
+        "value": "0"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "image"
       }
     ]
   },
@@ -43,43 +53,53 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: sort -phoneme,+name",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?sort=-phoneme,name",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?sort=phoneme,DESC,name,ASC",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-06T23:09:45.447Z",
+    "modified": "2022-11-18T20:04:15.752Z",
     "headers": [],
     "params": [
       {
         "name": "sort",
-        "value": "-phoneme,name",
+        "value": "phoneme,DESC,name,ASC",
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "json-query",
-        "custom": "json.content",
+        "custom": "json._embedded.cards",
         "action": "count",
         "value": "5"
       },
       {
         "type": "json-query",
-        "custom": "json.content[0].name",
+        "custom": "json._embedded.cards[0].name",
         "action": "equal",
         "value": "Eva"
       },
       {
         "type": "json-query",
-        "custom": "json.totalPages",
+        "custom": "json.page.totalPages",
         "action": "equal",
         "value": "20"
       },
       {
         "type": "json-query",
-        "custom": "json.first",
+        "custom": "json.page.number",
         "action": "equal",
-        "value": "true"
+        "value": "0"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "image"
       }
     ]
   },
@@ -88,11 +108,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: page,sort,fields",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?page=5&sort=name&fields=name,id",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?page=5&sort=name&fields=name,id",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-08T20:18:25.516Z",
+    "modified": "2022-11-18T20:04:21.404Z",
     "headers": [],
     "params": [
       {
@@ -111,36 +131,420 @@
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "json-query",
-        "custom": "json.content",
+        "custom": "json._embedded.cards",
         "action": "count",
         "value": "5"
       },
       {
         "type": "json-query",
-        "custom": "json.content[0].name",
+        "custom": "json._embedded.cards[0].name",
         "action": "equal",
         "value": "Ester"
       },
       {
         "type": "json-query",
-        "custom": "json.totalPages",
+        "custom": "json.page.totalPages",
         "action": "equal",
         "value": "20"
       },
       {
         "type": "json-query",
-        "custom": "json.first",
+        "custom": "json.page.number",
         "action": "equal",
-        "value": "false"
+        "value": "5"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "image"
+      }
+    ]
+  },
+  {
+    "_id": "3258d05c-2763-42e6-b2dd-e208dae20f98",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: sort invalid",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?sort=error",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:04:27.998Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "sort",
+        "value": "error",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "02fa7097-49b3-48e2-9829-61ddbf85c6a3",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: fields invalid",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?fields=error,truck,treco",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:04:33.784Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "fields",
+        "value": "error,truck,treco",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "438286f9-12b6-4820-986a-c413f038bd87",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: page invalid",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?page=-1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:04:39.391Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "page",
+        "value": "-1",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "c7ffe29f-816a-418a-b278-d6f8526329d3",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: Marias",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?name=Maria",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:00:22.649Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "Maria",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "3"
       },
       {
         "type": "json-query",
-        "custom": "json.number",
+        "custom": "json.page.totalPages",
         "action": "equal",
-        "value": "5"
+        "value": "1"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      }
+    ]
+  },
+  {
+    "_id": "f847e5f7-08e4-4083-bd0c-3c1858de2674",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: uuid NULL",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/00000000-0000-0000-0000-000000000000",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:04:09.565Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "404"
+      }
+    ]
+  },
+  {
+    "_id": "6e752932-3ee6-4e14-af35-ed1879659863",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: uuid Noé",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/efc236ab-20ad-42b0-a2c6-ca28ee7708cd",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:03:53.140Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.name",
+        "action": "equal",
+        "value": "Noé"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.questions",
+        "action": "count",
+        "value": "6"
+      }
+    ]
+  },
+  {
+    "_id": "3e45651b-9229-439a-8a39-d8f0c92e5282",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: add",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:03:25.466Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"}\n    ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "201"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.id",
+        "action": "setto",
+        "value": "{{lastID}}"
+      },
+      {
+        "type": "custom-header",
+        "custom": "Location",
+        "action": "contains",
+        "value": "card"
+      }
+    ]
+  },
+  {
+    "_id": "5e11837c-fcad-493a-a8fc-bac07cc6ba6d",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: Lucianos",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?name=Luciano",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:02:43.938Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "Luciano",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "3"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "1"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      }
+    ]
+  },
+  {
+    "_id": "e1e840d4-daa0-4bf5-8094-66e250e787e1",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: delete last add",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/{{lastID}}",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:03:34.592Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "204"
+      }
+    ]
+  },
+  {
+    "_id": "2f4539af-e748-49a1-aff5-ac2802985350",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: update",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/{{lastID}}",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:03:17.286Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues Alterado\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"},\n      {\"text\": \"Tereira Pergunda?\", \"evidence\": \"Sei não\"}\n    ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.name",
+        "action": "equal",
+        "value": "Luciano Vieira Rodrigues Alterado"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.questions",
+        "action": "count",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "_id": "59f15d8f-aaec-442f-93d2-74f8b64a29bc",
+    "colId": "history",
+    "containerId": "",
+    "name": "Cards: update NULL",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/00000000-0000-0000-0000-000000000000",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-06-30T18:12:47.167Z",
+    "modified": "2022-11-18T20:03:09.246Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues Alterado\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"},\n      {\"text\": \"Tereira Pergunda?\", \"evidence\": \"Sei não\"}\n    ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "404"
       }
     ]
   },
@@ -149,11 +553,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Cards: fields id,name",
-    "url": "http://{{server}}:{{admin-port}}/{{api}}/cards?fields=name,id",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?fields=name,id",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-08T13:50:33.503Z",
-    "modified": "2022-11-08T20:18:18.912Z",
+    "modified": "2022-11-18T20:04:44.453Z",
     "headers": [],
     "params": [
       {
@@ -162,31 +566,136 @@
         "isPath": false
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
     "tests": [
       {
         "type": "json-query",
-        "custom": "json.content",
+        "custom": "json._embedded.cards",
         "action": "count",
         "value": "5"
       },
       {
         "type": "json-query",
-        "custom": "json.content[0].name",
+        "custom": "json._embedded.cards[0].name",
         "action": "equal",
         "value": "Abel"
       },
       {
         "type": "json-query",
-        "custom": "json.totalPages",
+        "custom": "json.page.totalPages",
         "action": "equal",
         "value": "20"
       },
       {
         "type": "json-query",
-        "custom": "json.first",
+        "custom": "json.page.number",
         "action": "equal",
-        "value": "true"
+        "value": "0"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "questions"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "image"
       }
     ]
+  },
+  {
+    "_id": "69c9a466-ea4d-4a02-94a3-e88b0249fce3",
+    "colId": "history",
+    "containerId": "",
+    "name": "Admin: Token",
+    "url": "http://localhost:10000/realms/guess-who/protocol/openid-connect/token",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-11-18T19:37:59.355Z",
+    "modified": "2022-11-20T12:28:33.665Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "grant_type",
+          "value": "password"
+        },
+        {
+          "name": "username",
+          "value": "administrator"
+        },
+        {
+          "name": "password",
+          "value": "guess-pass"
+        },
+        {
+          "name": "client_id",
+          "value": "guess-who-game"
+        },
+        {
+          "name": "client_secret",
+          "value": "7fcaf3a7-b1ab-4558-9a4a-004ad800d41a"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.token_type",
+        "action": "setto",
+        "value": "{{token-type}}"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.access_token",
+        "action": "setto",
+        "value": "{{token}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "access_token"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "refresh_token"
+      }
+    ]
+  },
+  {
+    "_id": "4fb60c5f-eb9b-4100-a882-9c4cd88dd238",
+    "colId": "history",
+    "containerId": "",
+    "name": "Who I Am",
+    "url": "http://{{server}}:{{port}}/whoiam",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-20T00:17:40.884Z",
+    "modified": "2022-11-20T00:17:40.884Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": []
   }
 ]

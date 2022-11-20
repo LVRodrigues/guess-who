@@ -1,13 +1,36 @@
 [
   {
-    "_id": "f5549aee-8f01-4387-8273-5bab135b19e0",
-    "name": "(Local Env)",
-    "default": false,
-    "global": true,
-    "local": true,
-    "sortNum": -2,
-    "created": "2022-06-30T18:11:25.957Z",
-    "modified": "2022-06-30T18:11:25.957Z",
-    "data": []
+    "_id": "0ab99c3c-dc07-41f3-b0f5-1436e657f6ed",
+    "name": "admin",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2022-11-15T20:14:35.630Z",
+    "modified": "2022-11-20T12:28:33.657Z",
+    "data": [
+      {
+        "name": "lastID",
+        "value": "1c03d2d4-3a22-4350-b337-a911a2086be0"
+      },
+      {
+        "name": "server",
+        "value": "localhost"
+      },
+      {
+        "name": "port",
+        "value": "5001"
+      },
+      {
+        "name": "api",
+        "value": "v1"
+      },
+      {
+        "name": "token",
+        "value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJQUFNKT3B3Qi1pOTB5OXk4RmVTUEVRdTNLbXZucmJvMThxYXh1UlB4c3A0In0.eyJleHAiOjE2Njg5NDc2MTMsImlhdCI6MTY2ODk0NzMxMywianRpIjoiZmUzNGExNDUtNTRhNi00ZjMwLWIyOTktNTMxMjk0MTRjNGZiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDoxMDAwMC9yZWFsbXMvZ3Vlc3Mtd2hvIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImNiMDdiYzg0LWQ0ZDAtNDFjZC1hYjM2LWVjNDViODgzN2YyMSIsInR5cCI6IkJlYXJlciIsImF6cCI6Imd1ZXNzLXdoby1nYW1lIiwic2Vzc2lvbl9zdGF0ZSI6IjNjMDQ2M2UyLTcxNWItNGM2OC05MmI0LTIyOWRjOTE3YzFjYiIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjUwMDAiLCJodHRwOi8vbG9jYWxob3N0OjUwMDEiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZ3Vlc3Mtd2hvIiwiQWRtaW5pc3RyYXRvciIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiIzYzA0NjNlMi03MTViLTRjNjgtOTJiNC0yMjlkYzkxN2MxY2IiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IkFkbWluaXN0cmF0b3IgR3Vlc3MgV2hvPyIsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluaXN0cmF0b3IiLCJnaXZlbl9uYW1lIjoiQWRtaW5pc3RyYXRvciIsImZhbWlseV9uYW1lIjoiR3Vlc3MgV2hvPyJ9.Q48MjBfgQK12j2AV9IhqU1IX-gRtzNNXX-OogRUX38WnRzhLYFyVxfZEBwHqFXnlRre6PEltvDqzhkPnBUtJbVbt_VrlZgYC8d83D8Ywi6eAJKmYZN4nJlInVtsdwYWRQkwA7Bs8_bslrb-EECevK70skTHlq4JfXE6HEzrLOb0Xt0U-Xj47kEDT9ZzRr6YyKL5tpZXS5TpYFSfMSvmJIcj4iu58ZYuwJMGhqBgkCDasrInVo03-qE8rZ-SgJWk1uquM6av9bkoDifE4mFT9xMDB2OtSA0v02udPAq6_oUpuZbC4ncTejkh0KgWo008mXwNa0SHa4c99t4trtqyMFQ"
+      },
+      {
+        "name": "token-type",
+        "value": "Bearer"
+      }
+    ]
   }
 ]

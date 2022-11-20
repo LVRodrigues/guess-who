@@ -10,7 +10,7 @@
 
 	<groupId>io.github.lvrodrigues.guess</groupId>
 	<artifactId>guess-who</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.5.0</version>
 	<name>guess-who</name>
 	<packaging>pom</packaging>
 	<description>Aplicativo de teste de conhecimento sobre personagens bíblicos.</description>
@@ -23,6 +23,7 @@
 		<scm.url>scm:git:https://github.com/LVRodrigues/guess-who.git</scm.url>
 		<!-- Dependências -->
 		<spring-boot.version>2.7.5</spring-boot.version>
+		<!-- <keycloak.version>20.0.1</keycloak.version> -->
 		<jfonemabr.version>1.0.0</jfonemabr.version>
 		<!-- Limiares JaCoCo. Aumente gradualmente à medida que você adiciona testes. -->
 		<jacoco.unit-tests.limit.instruction-ratio>0%</jacoco.unit-tests.limit.instruction-ratio>
@@ -103,6 +104,12 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<!-- <dependency>
+				<groupId>org.keycloak</groupId>
+				<artifactId>keycloak-spring-boot-starter</artifactId>
+				<version>${keycloak.version}</version>
+			</dependency> -->
+
 
 			<dependency>
 				<groupId>io.github.lvrodrigues.guess</groupId>
