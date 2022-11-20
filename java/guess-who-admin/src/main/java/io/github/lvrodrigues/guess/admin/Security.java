@@ -1,12 +1,16 @@
 package io.github.lvrodrigues.guess.admin;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.convert.converter.Converter;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer;
+import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.web.SecurityFilterChain;
 
 /**
@@ -21,6 +25,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true)
 public class Security {
 
+    private Converter<Jwt, ? extends AbstractAuthenticationToken> jwtAuthenticationConverter() {
+        JwtAuthenticationConverter jwtConverter = new JwtAuthenticationConverter();
+        jwtConverter.setJwtGrantedAuthoritiesConverter(new RealmRoleConverter());
+        return jwtConverter;
+    }
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
@@ -29,7 +39,9 @@ public class Security {
                 .authorizeHttpRequests(authorize -> authorize
                     .antMatchers(HttpMethod.GET, "/").permitAll()
                     .anyRequest().authenticated())
-                .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
+                .oauth2ResourceServer()
+                    .jwt(jwt -> jwt.jwtAuthenticationConverter( jwtAuthenticationConverter()))
+                .and()
                 .build();
     }
 

@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import javax.annotation.security.RolesAllowed;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -16,6 +18,7 @@ import org.springframework.hateoas.PagedModel;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -86,6 +89,7 @@ public class CardsController {
      * @return Lista de {@link Card}.
      */
     @GetMapping(value = "")
+    @RolesAllowed("ROLE_Administrator")
     public PagedModel<Card> getCards(
             @RequestParam(required = false, defaultValue = "${default.request.page}") Integer page,
             @RequestParam(required = false, defaultValue = "${default.request.size}") Integer size,
@@ -122,6 +126,7 @@ public class CardsController {
      * @return Cartão de Personagem Bíblico.
      */
     @RequestMapping(value = "/{uuid}")
+    @RolesAllowed("ROLE_Administrator")
     public HttpEntity<Card> getCard(@PathVariable(required = true) UUID uuid) {
         Optional<Card> optional = cards.findById(uuid);
         if (optional.isPresent()) {
@@ -145,6 +150,7 @@ public class CardsController {
      * @return Cartão Bíblico criado.
      */
     @PostMapping(value = "")
+    @RolesAllowed("ROLE_Administrator")
     public HttpEntity<Card> addCard(@RequestBody Card body) {
         // Salvar o cartão de personagem.
         Card card = new Card();
@@ -180,6 +186,7 @@ public class CardsController {
      * @return Estado da requisição HTTP.
      */
     @DeleteMapping(value = "/{uuid}")
+    @RolesAllowed("ROLE_Administrator")
     public HttpEntity<?> removeCard(@PathVariable(required = true) UUID uuid) {
         Optional<Card> optional = cards.findById(uuid);
         if (optional.isEmpty()) {
@@ -201,6 +208,7 @@ public class CardsController {
      * @return Cartão Bíblico atualizado.
      */
     @PutMapping(value = "/{uuid}")
+    @RolesAllowed("ROLE_Administrator")
     public HttpEntity<Card> updateCard(@PathVariable(required = true) UUID uuid, @RequestBody Card body) {
         Optional<Card> optional = cards.findById(uuid);
         if (optional.isEmpty()) {

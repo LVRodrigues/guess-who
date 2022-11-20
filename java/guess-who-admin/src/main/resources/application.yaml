@@ -27,12 +27,12 @@ spring:
     oauth2: 
       resourceserver: 
         jwt:
-          issuer-uri: http://localhost:10000/auth/realms/guess-who
-          jwk-set-uri: http://localhost:10000/auth/realms/guess-who/protocol/openid-connect/certs
+          issuer-uri: http://localhost:10000/realms/guess-who
+          jwk-set-uri: http://localhost:10000/realms/guess-who/protocol/openid-connect/certs
       client:
         provider:
           guess-who:
-            issuer-uri: http://localhost:10000/auth/realms/guess-who
+            issuer-uri: http://localhost:10000/realms/guess-who
         registration:
           guess-who:
             client-id: guess-who-game

@@ -614,11 +614,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Admin: Token",
-    "url": "http://localhost:10000/auth/realms/guess-who/protocol/openid-connect/token",
+    "url": "http://localhost:10000/realms/guess-who/protocol/openid-connect/token",
     "method": "POST",
     "sortNum": 0,
     "created": "2022-11-18T19:37:59.355Z",
-    "modified": "2022-11-18T20:02:16.232Z",
+    "modified": "2022-11-20T12:28:33.665Z",
     "headers": [],
     "params": [],
     "body": {
@@ -631,7 +631,7 @@
         },
         {
           "name": "username",
-          "value": "system"
+          "value": "administrator"
         },
         {
           "name": "password",
@@ -679,5 +679,23 @@
         "value": "refresh_token"
       }
     ]
+  },
+  {
+    "_id": "4fb60c5f-eb9b-4100-a882-9c4cd88dd238",
+    "colId": "history",
+    "containerId": "",
+    "name": "Who I Am",
+    "url": "http://{{server}}:{{port}}/whoiam",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-20T00:17:40.884Z",
+    "modified": "2022-11-20T00:17:40.884Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": []
   }
 ]
