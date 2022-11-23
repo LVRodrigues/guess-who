@@ -15,10 +15,49 @@ logging:
         oauth2: INFO
 
 spring:
+  profiles:
+    default: desenv
+  jpa:
+    generate-ddl: false    
   jackson:
     default-property-inclusion: NON_EMPTY
-  jpa:
-    generate-ddl: false
+  security:
+    oauth2: 
+      client:
+        provider:
+          guess-who:
+            issuer-uri: http://localhost:10000/realms/guess-who
+        registration:
+          guess-who:
+            client-id: guess-who-game
+            client-secret: 7fcaf3a7-b1ab-4558-9a4a-004ad800d41a
+            client-name: Guess Who?
+
+---
+
+spring:
+  profiles: 
+    - prod
+  datasource:
+    url: jdbc:postgresql://guess-database:5432/guess-who
+    username: guess-user
+    password: guess-pass
+  security:
+    oauth2: 
+      resourceserver: 
+        jwt:
+          issuer-uri: http://guess-auth:8080/realms/guess-who
+          jwk-set-uri: http://guess-auth:8080/realms/guess-who/protocol/openid-connect/certs
+      client:
+        provider:
+          guess-who:
+            issuer-uri: http://guess-auth:8080/realms/guess-who
+
+---
+
+spring:
+  profiles:
+    - desenv
   datasource:
     url: jdbc:postgresql://localhost:5432/guess-who
     username: guess-user
@@ -32,10 +71,4 @@ spring:
       client:
         provider:
           guess-who:
-            issuer-uri: http://localhost:10000/realms/guess-who
-        registration:
-          guess-who:
-            client-id: guess-who-game
-            client-secret: 7fcaf3a7-b1ab-4558-9a4a-004ad800d41a
-            client-name: Guess Who?
- 
+            issuer-uri: http://localhost:10000/realms/guess-who          

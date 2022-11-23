@@ -17,16 +17,17 @@ services:
       guess-network:
         aliases:
           - guess-auth
-  game-server:
-    build: ./game/server
+  admin:
+    build: ./java/guess-who-admin
     ports:
-      - 5000:5000
+      - 5001:5001
     depends_on:
       - database
       - auth
     networks:
       guess-network:
         aliases:
-          - guess-game-server
+          - guess-admin
 networks:
   guess-network:
+    driver: bridge
