@@ -14,12 +14,15 @@ import org.springframework.security.oauth2.jwt.Jwt;
  * Converte as Roles do Java Web Token em permissões para o usuário.
  *
  * @since 20/11/2022
- * @author $AuthorName$
- * @author $CommitterName$
+ * @author $Author$
+ * @author $Committer$
  * @branch $Branch$
  */
 public class RealmRoleConverter implements Converter<Jwt, Collection<GrantedAuthority>> {
 
+    /* (non-Javadoc)
+     * @see org.springframework.core.convert.converter.Converter#convert(java.lang.Object)
+     */
     @Override
     public Collection<GrantedAuthority> convert(Jwt jwt) {
         final Map<String, List<String>> realmAccess = (Map<String, List<String>>) jwt.getClaims().get("realm_access");

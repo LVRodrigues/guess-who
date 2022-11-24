@@ -40,7 +40,7 @@ public class Application {
 
 	/**
 	 * Recupera o nome do usuário autenticado.
-	 * 
+	 *
 	 * @param authentication Token de autenticação.
 	 * @return Nome do usuário.
 	 */

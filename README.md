@@ -27,6 +27,14 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 | PostgreSQL     | 14          |
 | Docker         | 20.10.7     |
 
+> Para executar os módulos em containers Docker, crie uma entrada no arquivo de hosts para os nomes e endereços:
+>
+> ```bash
+> 127.0.0.1 guess-database
+> 127.0.0.1 guess-auth
+> 127.0.0.1 guess-admin
+> ```
+
 ## Organização
 
 | **Diretório** | **Descrição**                                                             |
@@ -40,7 +48,7 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 
 ```bash
 curl -X POST \
-  'http://localhost:10000/auth/realms/guess-who/protocol/openid-connect/token' \
+  'http://guess-auth:8080/auth/realms/guess-who/protocol/openid-connect/token' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --data-urlencode 'grant_type=password' \
   --data-urlencode 'username=******' \

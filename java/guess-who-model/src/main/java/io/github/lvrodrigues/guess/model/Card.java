@@ -17,8 +17,11 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Type;
 import org.springframework.hateoas.RepresentationModel;
 import org.springframework.hateoas.server.core.Relation;
+import org.springframework.lang.Nullable;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /**
  * Cartão de informações sobre um personagem bíblico. 
@@ -58,7 +61,7 @@ public class Card extends RepresentationModel<Card> implements Serializable, Clo
     @Lob
     @Column
     @Basic(fetch = FetchType.LAZY)
-    @Type(type="org.hibernate.type.BinaryType")
+    @Type(type = "org.hibernate.type.BinaryType")
     private byte[] image;
 
     /**
@@ -196,7 +199,8 @@ public class Card extends RepresentationModel<Card> implements Serializable, Clo
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals(Object obj) {
+    @SuppressFBWarnings("NP_METHOD_PARAMETER_TIGHTENS_ANNOTATION")
+    public boolean equals(@Nullable Object obj) {
         if (this == obj)
             return true;
         if (obj == null)
