@@ -38,6 +38,7 @@ public final class FieldUtil {
      * @param clazz Classe para validar os nomes dos campos.
      * @param sort Lista de campos para ordenação.
      * @param fieldnames Lista de campos para filtrar a resposta.
+     * @param page Número da página para filtrar os dados.
      */
     public static void validateParams(Class<?> clazz, String sort, String fieldnames, int page) {
         FieldUtil.validateParamsSort(clazz, sort);
@@ -133,7 +134,7 @@ public final class FieldUtil {
                 Direction direction;
                 try {
                     direction = Direction.valueOf(fields[i + 1]);
-                } catch (Exception e) {
+                } catch (IllegalArgumentException e) {
                     direction = Direction.ASC;
                 }
                 result = result.and(Sort.by(direction, fields[i]));

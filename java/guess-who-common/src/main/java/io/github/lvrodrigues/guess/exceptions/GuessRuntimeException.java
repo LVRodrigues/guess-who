@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Tratamento de erro padrão para o aplicativo Guess Who?
+ * Tratamento de erro padrão para o aplicativo Guess Who?.
  *
  * @since 13/11/2022
  * @author $Author$
@@ -16,7 +16,7 @@ public class GuessRuntimeException extends RuntimeException {
     /**
      * Informações detalhadas sobre a exceção.
      */
-    private List<String> details;
+    private final List<String> details;
 
     /**
      * Construtor padrão.

@@ -30,23 +30,35 @@ public class Security {
         return jwtConverter;
     }
 
+    /**
+     * Configurar a segurança do aplicativo.
+     *
+     * @param http Módulo de segurança HTTP.
+     * @return Filtro de Securança
+     * @throws Exception Falha ao configurar o aplicativo.
+     */
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
-                .cors().disable()
+                .cors().and()
                 .csrf().disable()
                 .authorizeHttpRequests(authorize -> authorize
                     .antMatchers(HttpMethod.GET, "/").permitAll()
                     .anyRequest().authenticated())
                 .oauth2ResourceServer()
-                    .jwt(jwt -> jwt.jwtAuthenticationConverter( jwtAuthenticationConverter()))
+                    .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter()))
                 .and()
                 .build();
     }
 
+    /**
+     * Manipulação da segurança WEB, permitindo acesso público a documentação.
+     *
+     * @return Módulo de Segurança.
+     */
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
-        return (web) -> web.debug(true)
+        return web -> web.debug(false)
                 .ignoring()
                 .antMatchers("/*.css", "/*.js", "/*.yaml", "/favicon.ico");
     }

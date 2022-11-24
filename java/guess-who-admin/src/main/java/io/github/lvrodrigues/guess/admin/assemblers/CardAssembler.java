@@ -1,9 +1,7 @@
 package io.github.lvrodrigues.guess.admin.assemblers;
 
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
-
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
 
 import io.github.lvrodrigues.guess.admin.CardsController;
@@ -30,6 +28,7 @@ public class CardAssembler extends RepresentationModelAssemblerSupport<Card, Car
     @Override
     public Card toModel(Card entity) {
         return entity.add(
-            linkTo(methodOn(CardsController.class).getCard(entity.getId())).withSelfRel());
+            WebMvcLinkBuilder.linkTo(
+                WebMvcLinkBuilder.methodOn(CardsController.class).getCard(entity.getId())).withSelfRel());
     }
 }

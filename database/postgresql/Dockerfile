@@ -18,3 +18,5 @@ COPY \
     setup/011-populate.sql \
     setup/999-desenv.sql \
     /docker-entrypoint-initdb.d/
+
+EXPOSE 5432

@@ -11,22 +11,23 @@ services:
   auth:
     build: ./auth
     ports: 
-      - 10000:8080
-      - 10443:8443
+      - 8080:8080
+      - 8443:8443
     networks:
       guess-network:
         aliases:
           - guess-auth
-  game-server:
-    build: ./game/server
+  admin:
+    build: ./java/guess-who-admin
     ports:
-      - 5000:5000
+      - 5001:5001
     depends_on:
       - database
       - auth
     networks:
       guess-network:
         aliases:
-          - guess-game-server
+          - guess-admin
 networks:
   guess-network:
+    driver: bridge

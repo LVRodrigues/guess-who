@@ -614,11 +614,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Admin: Token",
-    "url": "http://localhost:10000/realms/guess-who/protocol/openid-connect/token",
+    "url": "http://guess-auth:8080/realms/guess-who/protocol/openid-connect/token",
     "method": "POST",
     "sortNum": 0,
     "created": "2022-11-18T19:37:59.355Z",
-    "modified": "2022-11-20T12:28:33.665Z",
+    "modified": "2022-11-24T13:20:06.594Z",
     "headers": [],
     "params": [],
     "body": {
