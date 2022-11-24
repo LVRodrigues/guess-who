@@ -20,6 +20,9 @@ import org.springframework.security.oauth2.jwt.Jwt;
  */
 public class RealmRoleConverter implements Converter<Jwt, Collection<GrantedAuthority>> {
 
+    /* (non-Javadoc)
+     * @see org.springframework.core.convert.converter.Converter#convert(java.lang.Object)
+     */
     @Override
     public Collection<GrantedAuthority> convert(Jwt jwt) {
         final Map<String, List<String>> realmAccess = (Map<String, List<String>>) jwt.getClaims().get("realm_access");

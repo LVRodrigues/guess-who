@@ -25,6 +25,7 @@
 		<spring-boot.version>2.7.5</spring-boot.version>
 		<!-- <keycloak.version>20.0.1</keycloak.version> -->
 		<jfonemabr.version>1.0.0</jfonemabr.version>
+		<spotbus-annotations.version>4.7.3</spotbus-annotations.version>
 		<!-- Limiares JaCoCo. Aumente gradualmente à medida que você adiciona testes. -->
 		<jacoco.unit-tests.limit.instruction-ratio>0%</jacoco.unit-tests.limit.instruction-ratio>
 		<jacoco.unit-tests.limit.branch-ratio>0%</jacoco.unit-tests.limit.branch-ratio>
@@ -39,62 +40,6 @@
 		<module>guess-who-game</module>
 	</modules>
 
-	<!--
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-devtools</artifactId>
-				<scope>runtime</scope>
-				<optional>true</optional>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-data-jpa</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-security</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-web</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-hateoas</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>io.github.lvrodrigues</groupId>
-				<artifactId>jfonemabr</artifactId>
-				<version>${jfonemabr.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-test</artifactId>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.security</groupId>
-				<artifactId>spring-security-test</artifactId>
-				<scope>test</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.postgresql</groupId>
-				<artifactId>postgresql</artifactId>
-				<scope>runtime</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-	-->
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -104,12 +49,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<!-- <dependency>
-				<groupId>org.keycloak</groupId>
-				<artifactId>keycloak-spring-boot-starter</artifactId>
-				<version>${keycloak.version}</version>
-			</dependency> -->
-
 
 			<dependency>
 				<groupId>io.github.lvrodrigues.guess</groupId>
@@ -136,7 +75,13 @@
 				<groupId>io.github.lvrodrigues</groupId>
 				<artifactId>jfonemabr</artifactId>
 				<version>${jfonemabr.version}</version>
-			</dependency>			
+			</dependency>
+			<dependency>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-annotations</artifactId>
+				<version>${spotbus-annotations.version}</version>
+				<scope>provided</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

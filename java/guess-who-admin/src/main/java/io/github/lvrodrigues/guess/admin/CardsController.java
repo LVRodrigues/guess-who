@@ -55,6 +55,9 @@ public class CardsController {
     @Autowired
     private CardsRepository cards;
 
+    /**
+     * Persistência das perguntas sobre os personagens.
+     */
     @Autowired
     private QuestionsRepository questions;
 
@@ -74,6 +77,18 @@ public class CardsController {
      * Construtor padrão.
      */
     public CardsController() {
+    }
+
+    /**
+     * Notifica que um cartão de personagem não foi encontrado.
+     *
+     * @param uuid Identificador único do catão de personagem.
+     * @throws NotFoundException Cartão não encontrado.
+     */
+    private void notifyNotFoundCard(UUID uuid) {
+        NotFoundException ex = new NotFoundException();
+        ex.addDetail(String.format("Cartão com identificador \"%s\" não foi localizado.", uuid));
+        throw ex;
     }
 
     /**
@@ -128,16 +143,15 @@ public class CardsController {
     @RolesAllowed("ROLE_Administrator")
     public HttpEntity<Card> getCard(@PathVariable(required = true) UUID uuid) {
         Optional<Card> optional = cards.findById(uuid);
+        Card card               = null;
         if (optional.isPresent()) {
-            Card card = optional.get();
+            card = optional.get();
             CardAssembler assembler = new CardAssembler();
             card = assembler.toModel(card);
-            return new ResponseEntity<Card>(card, HttpStatus.OK);
         } else {
-            NotFoundException ex = new NotFoundException();
-            ex.addDetail(String.format("Cartão com identificador \"%s\" não foi localizado.", uuid));
-            throw ex;
+            notifyNotFoundCard(uuid);
         }
+        return new ResponseEntity<Card>(card, HttpStatus.OK);
     }
 
     /**
@@ -189,9 +203,7 @@ public class CardsController {
     public HttpEntity<?> removeCard(@PathVariable(required = true) UUID uuid) {
         Optional<Card> optional = cards.findById(uuid);
         if (optional.isEmpty()) {
-            NotFoundException ex = new NotFoundException();
-            ex.addDetail(String.format("Cartão com identificador \"%s\" não foi localizado.", uuid));
-            throw ex;
+            notifyNotFoundCard(uuid);
         }
         Card card = optional.get();
         card.getQuestions().stream().forEach(q -> questions.delete(q));
@@ -211,9 +223,7 @@ public class CardsController {
     public HttpEntity<Card> updateCard(@PathVariable(required = true) UUID uuid, @RequestBody Card body) {
         Optional<Card> optional = cards.findById(uuid);
         if (optional.isEmpty()) {
-            NotFoundException ex = new NotFoundException();
-            ex.addDetail(String.format("Cartão com identificador \"%s\" não foi localizado.", uuid));
-            throw ex;
+            notifyNotFoundCard(uuid);
         }
         Card card = optional.get();
         // Remover as perguntas antigas:
