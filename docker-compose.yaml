@@ -11,8 +11,8 @@ services:
   auth:
     build: ./auth
     ports: 
-      - 10000:8080
-      - 10443:8443
+      - 8080:8080
+      - 8443:8443
     networks:
       guess-network:
         aliases:

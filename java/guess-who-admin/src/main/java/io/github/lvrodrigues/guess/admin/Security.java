@@ -33,7 +33,7 @@ public class Security {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
-                .cors().disable()
+                .cors().and()
                 .csrf().disable()
                 .authorizeHttpRequests(authorize -> authorize
                     .antMatchers(HttpMethod.GET, "/").permitAll()
