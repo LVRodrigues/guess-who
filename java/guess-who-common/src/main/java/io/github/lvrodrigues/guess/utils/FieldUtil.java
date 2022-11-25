@@ -134,7 +134,7 @@ public final class FieldUtil {
                 Direction direction;
                 try {
                     direction = Direction.valueOf(fields[i + 1]);
-                } catch (IllegalArgumentException e) {
+                } catch (IllegalArgumentException | ArrayIndexOutOfBoundsException e) {
                     direction = Direction.ASC;
                 }
                 result = result.and(Sort.by(direction, fields[i]));
