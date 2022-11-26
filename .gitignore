@@ -27,9 +27,32 @@ docs/~$ralho_Biblico.doc
 .settings
 .classpath
 .project
+.idea/
+.c9/
+*.launch
+*.sublime-workspace
 
-# Diretório de trabalho do Maven
+# Diretório de trabalho
 target
+# Compiled output
+dist
+tmp
+out-tsc
+bazel-out
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
 
 # Configurações do Visual Studio Code
 .vscode
+
+# Miscellaneous
+.angular
+.sass-cache
+connect.lock
+coverage
+libpeerconnection.log
+testem.log
+typings
