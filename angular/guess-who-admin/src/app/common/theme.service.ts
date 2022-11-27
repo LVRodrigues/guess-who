@@ -21,14 +21,12 @@ export class ThemeService {
   }
 
   public toggle() {
+    document.documentElement.classList.remove(this.mode);
     if (this.mode == Mode.LIGHT) {
       this.mode = Mode.DARK;
-      document.documentElement.classList.remove(Mode.LIGHT);
-      document.documentElement.classList.add(Mode.DARK);
     } else {
       this.mode = Mode.LIGHT;
-      document.documentElement.classList.remove(Mode.DARK);
-      document.documentElement.classList.add(Mode.LIGHT);
     }
+    document.documentElement.classList.add(this.mode);
   }
 }
