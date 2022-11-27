@@ -1,6 +1,9 @@
 <mat-toolbar color="primary">
-    <span>Cabeçalho</span>
-    <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon" (click)="toggle()">
-        Theme
-    </button>
+    <mat-toolbar-row>
+        <h1>{{ title }}</h1>
+        <span class="example-spacer"></span>
+        <button (click)="toggle()" mat-icon-button class="example-icon" aria-label="Trocar o modo do tema entre escuro ou claro.">
+          <mat-icon>{{ icon() }}</mat-icon>
+        </button>
+    </mat-toolbar-row>
 </mat-toolbar>

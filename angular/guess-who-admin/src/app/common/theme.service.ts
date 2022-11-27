@@ -39,4 +39,12 @@ export class ThemeService {
     document.documentElement.classList.add(this.mode);
     localStorage.setItem("mode", this.mode);
   }
+
+  public icon() {
+    if (this.mode == Mode.LIGHT) {
+      return 'nightlight';
+    } else {
+      return 'light_mode';
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ThemeService } from '../theme.service';
 
 @Component({
@@ -8,9 +8,15 @@ import { ThemeService } from '../theme.service';
 })
 export class HeaderComponent {
 
+  title = 'Guess Who?'
+
   constructor(private themeService : ThemeService) {}
 
-  public toggle() {
+  toggle() {
     this.themeService.toggle();
+  }
+
+  icon() {
+    return this.themeService.icon();
   }
 }
