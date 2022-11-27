@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 enum Mode {
   LIGHT = "light-mode",
@@ -11,9 +11,18 @@ enum Mode {
 export class ThemeService {
 
   private mode = Mode.LIGHT;
+  private storage = Storage;
 
   constructor() {
-    document.body.classList.add(this.mode);
+    let aux = localStorage.getItem('mode');
+    if (aux == null) {
+      this.mode = Mode.LIGHT;
+    } else if (aux === Mode.LIGHT) {
+      this.mode = Mode.LIGHT;
+    } else {
+      this.mode = Mode.DARK;
+    }
+    document.documentElement.classList.add(this.mode);
   }
 
   public Mode() {
@@ -28,5 +37,6 @@ export class ThemeService {
       this.mode = Mode.LIGHT;
     }
     document.documentElement.classList.add(this.mode);
+    localStorage.setItem("mode", this.mode);
   }
 }
