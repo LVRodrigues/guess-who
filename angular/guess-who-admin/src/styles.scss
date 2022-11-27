@@ -1,4 +1,7 @@
 @use '@angular/material' as mat;
+@use './app/common/header/header.component.scss' as header;
+@use './app/common/footer/footer.component.scss' as footer;
+
 @include mat.core();
 
 $guess-who-admin-primary: mat.define-palette(mat.$brown-palette, 900);
@@ -15,6 +18,8 @@ $guess-who-admin-theme: mat.define-light-theme((
 .light-mode {
   @include mat.core-color($guess-who-admin-theme);
   @include mat.all-component-themes($guess-who-admin-theme);
+  @include header.theme($guess-who-admin-theme);
+  @include footer.theme($guess-who-admin-theme);
 }
 
 $guess-who-admin-theme-dark: mat.define-dark-theme((
@@ -28,6 +33,8 @@ $guess-who-admin-theme-dark: mat.define-dark-theme((
 .dark-mode {
   @include mat.core-color($guess-who-admin-theme-dark);
   @include mat.all-component-themes($guess-who-admin-theme-dark);
+  @include header.theme($guess-who-admin-theme-dark);
+  @include footer.theme($guess-who-admin-theme-dark);
 
   html, body {
     background-color: mat.get-color-from-palette($guess-who-admin-primary, 400);
