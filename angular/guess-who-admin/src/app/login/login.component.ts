@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  hide : boolean = true;
+
+  loginForm = new FormGroup({
+    name: new FormControl(''),
+    password: new FormControl('')
+  });
+  
+  onSubmit() {
+    console.log(this.loginForm.value);
+  }
 }

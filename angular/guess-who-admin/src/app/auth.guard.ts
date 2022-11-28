@@ -25,7 +25,9 @@ export class AuthGuard implements CanActivate {
     if (this.tokenService.getRefreshToken()) {
       return true;
     }
+    console.log("Redirecionando para login...");
     this.authService.redirectUrl = url;
     this.router.navigate(['/login']).then(_ => false);
+    return false;
   }
 }
