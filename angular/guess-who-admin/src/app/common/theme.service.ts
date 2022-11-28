@@ -10,11 +10,10 @@ enum Mode {
 })
 export class ThemeService {
 
-  private mode = Mode.LIGHT;
-  private storage = Storage;
+  private mode: Mode = Mode.LIGHT;
 
   constructor() {
-    let aux = localStorage.getItem('mode');
+    let aux: string | null = localStorage.getItem('mode');
     if (aux == null) {
       this.mode = Mode.LIGHT;
     } else if (aux === Mode.LIGHT) {
@@ -25,11 +24,11 @@ export class ThemeService {
     document.documentElement.classList.add(this.mode);
   }
 
-  public Mode() {
+  Mode(): Mode {
     return this.mode;
   }
 
-  public toggle() {
+  toggle() {
     document.documentElement.classList.remove(this.mode);
     if (this.mode == Mode.LIGHT) {
       this.mode = Mode.DARK;
@@ -40,7 +39,7 @@ export class ThemeService {
     localStorage.setItem("mode", this.mode);
   }
 
-  public icon() {
+  icon(): string {
     if (this.mode == Mode.LIGHT) {
       return 'nightlight';
     } else {
