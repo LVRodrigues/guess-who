@@ -48,7 +48,7 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 
 ```bash
 curl -X POST \
-  'http://guess-auth:8080/auth/realms/guess-who/protocol/openid-connect/token' \
+  'http://guess-auth:8080/realms/guess-who/protocol/openid-connect/token' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --data-urlencode 'grant_type=password' \
   --data-urlencode 'username=******' \

@@ -51,5 +51,27 @@ body {
 }
 
 main {
-  min-height: 80%;
+  min-height: 70%;
+  margin: 15px 10px 15px 10px;
+}
+
+.container {
+  padding: 10px;
+}
+
+.center {
+  margin: auto;
+}
+
+.right {
+  float: right;
+  margin: 10px;
+}
+
+.mat-mdc-card-content {
+  margin-top: 20px;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
 }
