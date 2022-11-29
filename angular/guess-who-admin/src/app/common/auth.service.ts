@@ -50,7 +50,7 @@ export class AuthService {
       .set('username', loginData.username)
       .set('password', loginData.password);
 
-    return this.http.post<any>(API_URL + '/protocol/openid-connect/token/token', body, HTTP_OPTIONS)
+    return this.http.post<any>(API_URL + '/protocol/openid-connect/token', body, HTTP_OPTIONS)
       .pipe(
         tap(res => {
           this.tokenService.saveToken(res.access_token);
