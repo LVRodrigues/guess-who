@@ -19,8 +19,16 @@
     .mat-toolbar-header {
         box-shadow: 0px 5px 5px mat.get-color-from-palette($accent-palette, 500);
     }
+    .mat-divider-vertical {
+        border-color: mat.get-color-from-palette($accent-palette, 500);
+    }
 }
 
 .example-spacer {
     flex: 1 1 auto;
+}
+
+.mat-divider-vertical {
+    height: 80%;
+    margin: 10px;
 }

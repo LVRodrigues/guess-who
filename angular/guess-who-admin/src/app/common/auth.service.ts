@@ -1,5 +1,6 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { catchError, Observable, tap, throwError } from 'rxjs';
 
 import { TokenService } from './token.service';
@@ -37,12 +38,12 @@ export class AuthService {
 
   constructor(
     private http: HttpClient, 
-    private tokenService: TokenService) { 
+    private tokenService: TokenService,
+    private router: Router) { 
   }
 
   login(loginData: any): Observable<any> {
-    this.tokenService.removeToken();
-    this.tokenService.removeRefreshToken();
+    this.logout();
     const body = new HttpParams()
       .set('grant_type', 'password')
       .set('client_id', OAUTH_CLIENT)
@@ -61,8 +62,7 @@ export class AuthService {
   }
 
   refreshToken(refreshData: any): Observable<any> {
-    this.tokenService.removeToken();
-    this.tokenService.removeRefreshToken();
+    this.logout();
     const body = new HttpParams()
       .set('refresh_token', refreshData.refresh_token)
       .set('grant_type', 'refresh_token');
@@ -79,6 +79,11 @@ export class AuthService {
   logout(): void {
     this.tokenService.removeToken();
     this.tokenService.removeRefreshToken();
+    this.router.navigate(['/login']);
+  }
+
+  isLogged(): boolean {
+    return (this.tokenService.getToken() !== null);
   }
 
   register(data: any): Observable<any> {

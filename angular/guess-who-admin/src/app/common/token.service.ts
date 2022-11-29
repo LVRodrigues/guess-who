@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 const ACCESS_TOKEN = 'access_token';
 const REFRESH_TOKEN = 'refresh_token';
+const SUBJECT = "subject";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TokenService {
+
+  helper = new JwtHelperService();
 
   constructor() { }
 
@@ -33,4 +37,12 @@ export class TokenService {
   removeRefreshToken(): void {
     localStorage.removeItem(REFRESH_TOKEN);
   }  
+
+  getName(): string {
+    let token: any = this.getToken();
+    console.log('Token: ' +token);
+    let decoded = this.helper.decodeToken(token);
+    console.log('Decoded: ' + decoded);
+    return decoded.name;
+  }
 }

@@ -1,9 +1,20 @@
 <mat-toolbar color="primary" class="mat-toolbar-header">
-    <mat-toolbar-row>
-        <h1>{{ title }}</h1>
-        <span class="example-spacer"></span>
-        <button (click)="toggle()" mat-icon-button class="example-icon" aria-label="Trocar o modo do tema entre escuro ou claro.">
-          <mat-icon>{{ icon() }}</mat-icon>
-        </button>
-    </mat-toolbar-row>
+  <mat-toolbar-row>
+    <h1>{{ title }}</h1>
+    <span class="example-spacer"></span>
+
+    <span *ngIf="isLogged()">
+      <span style="margin: 10px;">Bem vindo: {{ name() }}</span>
+      <button (click)="logout()" mat-icon-button class="example-icon"
+        aria-label="Encerrar a sessão do usário.">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </span>
+
+    <mat-divider vertical></mat-divider>
+    <button (click)="toggle()" mat-icon-button class="example-icon"
+      aria-label="Trocar o modo do tema entre escuro ou claro.">
+      <mat-icon>{{ icon() }}</mat-icon>
+    </button>
+  </mat-toolbar-row>
 </mat-toolbar>
