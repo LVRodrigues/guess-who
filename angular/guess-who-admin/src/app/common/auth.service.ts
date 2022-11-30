@@ -32,10 +32,6 @@ export class AuthService {
     return throwError(() => error);
   }
 
-  private static log(message: string): any {
-    console.log(message);
-  }
-
   constructor(
     private http: HttpClient, 
     private tokenService: TokenService,
@@ -85,17 +81,4 @@ export class AuthService {
   isLogged(): boolean {
     return (this.tokenService.getToken() !== null);
   }
-
-  register(data: any): Observable<any> {
-    return this.http.post<any>(API_URL + 'oauth/signup', data)
-      .pipe(
-        tap(_ => AuthService.log('register')),
-        catchError(AuthService.handleError)
-      );
-  }
-
-  secured(): Observable<any> {
-    return this.http.get<any>(API_URL + 'secret')
-      .pipe(catchError(AuthService.handleError));
-  }  
 }

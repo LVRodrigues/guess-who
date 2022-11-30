@@ -28,8 +28,8 @@ docker stop guess-who-auth
 
 ## Acessar o console de administração
 
-* http://localhost:10000/
-* https://localhost:10443/
+* http://localhost:8080/
+* https://localhost:8443/
 
 São criados os usuários:
 

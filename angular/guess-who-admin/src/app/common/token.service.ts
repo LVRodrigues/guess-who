@@ -40,9 +40,7 @@ export class TokenService {
 
   getName(): string {
     let token: any = this.getToken();
-    console.log('Token: ' +token);
     let decoded = this.helper.decodeToken(token);
-    console.log('Decoded: ' + decoded);
     return decoded.name;
   }
 }

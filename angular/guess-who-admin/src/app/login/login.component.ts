@@ -27,13 +27,14 @@ export class LoginComponent {
     console.log(this.loginForm.value);
     this.authService.login(this.loginForm.value)
       .subscribe({
-        next: (v) => console.log(v),
+        next: (v) => {},
         error: (e) => {
+          console.error(e);
           window.alert('Não foi possível autenticar o usuário.');
         },
         complete: () => {
           this.router.navigate(['/home'])
-            .then(_ => console.log('Usuário autenticado.'));
+            .then(_ => console.info('Usuário autenticado.'));
         }
     });
   }
