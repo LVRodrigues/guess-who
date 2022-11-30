@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CardsService } from '../common/cards.service';
 import { Card } from '../common/model/card';
+import { Page } from '../common/model/page';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ import { Card } from '../common/model/card';
 export class HomeComponent {
 
   cards!: Card[];
+  page!: Page;
 
   constructor(private cardsService: CardsService) {}
 
@@ -20,13 +22,17 @@ export class HomeComponent {
   list(): void {
      this.cardsService.list().subscribe({
         next: (data) => {
-          console.log(data);
+          this.cards = data._embedded.cards;
+          this.page = data.page;
         },
         error: (e) => {
           this.cards = [];
+          console.error(e);
         },
         complete: () => {
-          console.log("Lista recuperada.");
+          console.log(this.cards);
+          console.log(this.page);
+          console.info("Total de cartões recuperados: " + this.cards.length);
         }
     });
   }
