@@ -34,7 +34,12 @@ export class AuthInterceptor implements HttpInterceptor {
     if (!request.headers.has('Content-Type')) {
       request = request.clone({
         setHeaders: {
-          'content-type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,OPTIONS',
+          'Access-Control-Max-Age': '3600',
+          'Access-Control-Allow-Headers': 'Content-Type'
         }
       });
     }
