@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Page } from './model/page';
 
 const API_URL = 'http://guess-admin:5001/v1/cards';
 
