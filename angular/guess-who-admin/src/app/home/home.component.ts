@@ -24,14 +24,10 @@ export class HomeComponent {
         next: (data) => {
           this.cards = data._embedded.cards;
           this.page = data.page;
-        },
-        error: (e) => {
-          this.cards = [];
-          console.error(e);
+          console.log(this.cards);
+          console.log(this.page);          
         },
         complete: () => {
-          console.log(this.cards);
-          console.log(this.page);
           console.info("Total de cartões recuperados: " + this.cards.length);
         }
     });

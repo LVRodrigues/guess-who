@@ -8,6 +8,7 @@
 $guess-who-admin-primary: mat.define-palette(mat.$brown-palette, 900);
 $guess-who-admin-accent: mat.define-palette(mat.$orange-palette, A200, A400, A700);
 $guess-who-admin-warn: mat.define-palette(mat.$red-palette);
+
 $guess-who-admin-theme: mat.define-light-theme((
   color: (
     primary: $guess-who-admin-primary,
@@ -15,7 +16,6 @@ $guess-who-admin-theme: mat.define-light-theme((
     warn: $guess-who-admin-warn,
   )
 ));
-
 .light-mode {
   @include mat.core-color($guess-who-admin-theme);
   @include mat.all-component-themes($guess-who-admin-theme);
@@ -31,17 +31,12 @@ $guess-who-admin-theme-dark: mat.define-dark-theme((
     warn: $guess-who-admin-warn,
   )
 ));
-
 .dark-mode {
   @include mat.core-color($guess-who-admin-theme-dark);
   @include mat.all-component-themes($guess-who-admin-theme-dark);
   @include header.theme($guess-who-admin-theme-dark);
   @include footer.theme($guess-who-admin-theme-dark);
   @include home.theme($guess-who-admin-theme-dark);
-
-  html, body {
-    background-color: mat.get-color-from-palette($guess-who-admin-primary, 400);
-  }
 }
 
 html, body {
@@ -77,4 +72,9 @@ main {
 
 .mat-mdc-form-field {
   width: 100%;
+}
+
+.mat-divider-vertical {
+  height: 80%;
+  margin: 10px !important;
 }

@@ -22,16 +22,6 @@ export class AuthService {
 
   redirectUrl: string = '';
 
-  private static handleError(error: HttpErrorResponse): any {
-    if (error.error instanceof ErrorEvent) {
-      console.error('Ocorreu um erro: ', error.error.message);
-    } else {
-      console.error(
-        `Erro retornado do servidor: ${error.status} - ` + `${error.error}`);
-    }
-    return throwError(() => error);
-  }
-
   constructor(
     private http: HttpClient, 
     private tokenService: TokenService,
@@ -52,13 +42,11 @@ export class AuthService {
         tap(res => {
           this.tokenService.saveToken(res.access_token);
           this.tokenService.saveRefreshToken(res.refresh_token);
-        }),
-        catchError(AuthService.handleError)
+        })
       );
   }
 
   refreshToken(refreshData: any): Observable<any> {
-    this.logout();
     const body = new HttpParams()
       .set('refresh_token', refreshData.refresh_token)
       .set('grant_type', 'refresh_token');
@@ -67,8 +55,7 @@ export class AuthService {
         tap(res => {
           this.tokenService.saveToken(res.access_token);
           this.tokenService.saveRefreshToken(res.refresh_token);
-        }),
-        catchError(AuthService.handleError)
+        })
       );
   }
 

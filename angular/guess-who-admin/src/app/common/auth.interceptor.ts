@@ -35,18 +35,26 @@ export class AuthInterceptor implements HttpInterceptor {
       request = request.clone({
         setHeaders: {
           'Content-Type': 'application/json',
-          'Accept-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET,OPTIONS',
-          'Access-Control-Max-Age': '3600',
-          'Access-Control-Allow-Headers': 'Content-Type'
         }
       });
     }
 
-    request = request.clone({
-      headers: request.headers.set('Accept', 'application/json')
-    });
+    if (!request.headers.has('Accept')) {
+      request = request.clone({
+        setHeaders: {
+          'Accept': 'application/json'
+        }
+      });
+    }    
+
+    // request = request.clone({
+    //   setHeaders: {
+    //     'Access-Control-Allow-Origin': '*',
+    //     'Access-Control-Allow-Methods': 'GET,OPTIONS',
+    //     'Access-Control-Max-Age': '3600',
+    //     'Access-Control-Allow-Headers': 'Content-Type'
+    //   }
+    // });
 
     return next.handle(request).pipe(
       map((event: HttpEvent<unknown>) => {

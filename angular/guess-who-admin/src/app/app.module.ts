@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatDividerModule} from '@angular/material/divider'; 
 import {MatTooltipModule} from '@angular/material/tooltip'; 
+import {MatDialogModule} from '@angular/material/dialog'; 
 
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
@@ -25,6 +26,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
+import { ErrorDialogComponent } from './common/error/error-dialog/error-dialog.component';
+import { GlobalErrorHandler } from './common/error/global-error-handler';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     HomeComponent,
     NotFoundComponent,
-    RegisterComponent
+    RegisterComponent,
+    ErrorDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -51,13 +55,18 @@ import { RegisterComponent } from './register/register.component';
     MatInputModule,
     MatSelectModule,
     MatDividerModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
+    },
+    {
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandler,
     }
   ],
   bootstrap: [AppComponent]
