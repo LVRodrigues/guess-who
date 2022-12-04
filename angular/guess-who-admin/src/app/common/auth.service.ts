@@ -46,11 +46,13 @@ export class AuthService {
       );
   }
 
-  refreshToken(refreshData: any): Observable<any> {
+  refreshToken(refreshToken: string): Observable<any> {
     const body = new HttpParams()
-      .set('refresh_token', refreshData.refresh_token)
+      .set('client_id', OAUTH_CLIENT)
+      .set('client_secret', OAUTH_SECRET)
+      .set('refresh_token', refreshToken)
       .set('grant_type', 'refresh_token');
-    return this.http.post<any>(API_URL + '/protocol/openid-connect/token/token', body, HTTP_OPTIONS)
+    return this.http.post<any>(API_URL + '/protocol/openid-connect/token', body, HTTP_OPTIONS)
       .pipe(
         tap(res => {
           this.tokenService.saveToken(res.access_token);

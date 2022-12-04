@@ -618,7 +618,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-11-18T19:37:59.355Z",
-    "modified": "2022-11-24T13:20:06.594Z",
+    "modified": "2022-12-04T11:44:46.812Z",
     "headers": [],
     "params": [],
     "body": {
@@ -677,6 +677,85 @@
         "custom": "",
         "action": "contains",
         "value": "refresh_token"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.refresh_token",
+        "action": "setto",
+        "value": "{{refresh_token}}"
+      }
+    ]
+  },
+  {
+    "_id": "b36ffc89-05dc-4c28-9cdf-ca0cf00c1694",
+    "colId": "history",
+    "containerId": "",
+    "name": "Admin: Refresh Token",
+    "url": "http://guess-auth:8080/realms/guess-who/protocol/openid-connect/token",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-11-18T19:37:59.355Z",
+    "modified": "2022-12-04T11:46:32.751Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "grant_type",
+          "value": "refresh_token"
+        },
+        {
+          "name": "client_id",
+          "value": "guess-who-game"
+        },
+        {
+          "name": "client_secret",
+          "value": "7fcaf3a7-b1ab-4558-9a4a-004ad800d41a"
+        },
+        {
+          "name": "refresh_token",
+          "value": "{{refresh_token}}"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.token_type",
+        "action": "setto",
+        "value": "{{token-type}}"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.access_token",
+        "action": "setto",
+        "value": "{{token}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "access_token"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "refresh_token"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.refresh_token",
+        "action": "setto",
+        "value": "{{refresh_token}}"
       }
     ]
   },

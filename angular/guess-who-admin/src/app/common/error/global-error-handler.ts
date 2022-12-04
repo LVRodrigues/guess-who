@@ -13,7 +13,6 @@ export class GlobalErrorHandler extends ErrorHandler {
     }
 
     override handleError(error: any): void {
-    // Check if it's an error from an HTTP response
     if (!(error instanceof HttpErrorResponse)) {
         error = error.rejection; // get the error object
       }

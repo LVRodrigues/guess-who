@@ -4,6 +4,7 @@ import {
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { catchError, map, Observable, throwError } from 'rxjs';
 
 import { AuthService } from './auth.service';
@@ -21,7 +22,7 @@ export class AuthInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
     const token = this.tokenService.getToken();
-    const refreshToken = this.tokenService.getRefreshToken();
+    const refreshToken = this.tokenService.getRefreshToken()!;
 
     if (token) {
       request = request.clone({
@@ -47,15 +48,6 @@ export class AuthInterceptor implements HttpInterceptor {
       });
     }    
 
-    // request = request.clone({
-    //   setHeaders: {
-    //     'Access-Control-Allow-Origin': '*',
-    //     'Access-Control-Allow-Methods': 'GET,OPTIONS',
-    //     'Access-Control-Max-Age': '3600',
-    //     'Access-Control-Allow-Headers': 'Content-Type'
-    //   }
-    // });
-
     return next.handle(request).pipe(
       map((event: HttpEvent<unknown>) => {
         if (event instanceof HttpResponse) {
@@ -64,16 +56,18 @@ export class AuthInterceptor implements HttpInterceptor {
         return event;
       }),
       catchError((error: HttpErrorResponse) => {
-        console.error(error);
         if (error.status === 401) {
-          if (error.error.error === 'invalid_token') {
-            this.authService.refreshToken({refresh_token: refreshToken})
-              .subscribe(() => {
-                location.reload();
-              });
-          } else {
-            this.router.navigate(['login']).then(_ => console.log('redirect to login'));
-          }
+          console.error("Atualizar o token.");
+          this.authService.refreshToken(refreshToken).subscribe({
+            next: (n) => {},
+            error: (error) => {
+              console.error("Token inválido.");
+              this.authService.logout();
+            },
+            complete: () => {
+              location.reload();
+            }
+          })
         }
         return throwError(() => error);
       }));
