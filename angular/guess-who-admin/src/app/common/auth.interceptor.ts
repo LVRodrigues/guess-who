@@ -48,28 +48,6 @@ export class AuthInterceptor implements HttpInterceptor {
       });
     }    
 
-    return next.handle(request).pipe(
-      map((event: HttpEvent<unknown>) => {
-        if (event instanceof HttpResponse) {
-          console.log('event--->>>', event);
-        }
-        return event;
-      }),
-      catchError((error: HttpErrorResponse) => {
-        if (error.status === 401) {
-          console.error("Atualizar o token.");
-          this.authService.refreshToken(refreshToken).subscribe({
-            next: (n) => {},
-            error: (error) => {
-              console.error("Token inválido.");
-              this.authService.logout();
-            },
-            complete: () => {
-              location.reload();
-            }
-          })
-        }
-        return throwError(() => error);
-      }));
+    return next.handle(request);
   }  
 }

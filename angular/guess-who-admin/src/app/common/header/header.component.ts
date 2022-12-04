@@ -37,10 +37,4 @@ export class HeaderComponent {
   logout(): void {
     this.authService.logout();
   }
-
-  refresh(): void {
-    this.tokenService.removeToken();
-    this.authService.refreshToken(this.tokenService.getRefreshToken()!)
-      .subscribe(() => {});
-  }
 }
