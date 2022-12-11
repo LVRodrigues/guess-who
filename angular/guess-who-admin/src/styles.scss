@@ -61,6 +61,10 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  justify-items: center;
 }
 
 .center {
