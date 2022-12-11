@@ -1,5 +1,19 @@
+<!-- <section class="container">
+    <mat-card class="filter">
+        <form class="filter-form">
+            <mat-form-field class="filter-form-field">
+                <mat-label>Filtar pelo nome:</mat-label>
+                <input matInput type="text" [(ngModel)]="name">
+                <button *ngIf="name" matSuffix mat-icon-button aria-label="Clear" (click)="name=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </form>
+    </mat-card>
+</section> -->
+
 <section class="container">
-        <mat-card *ngFor="let card of cards">
+        <mat-card *ngFor="let card of cards" class="person">
             <mat-card-header>
                 <mat-toolbar color="primary">
                     <h3>{{ card.name }}</h3>

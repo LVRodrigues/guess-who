@@ -10,17 +10,19 @@ import { Page } from '../common/model/page';
 })
 export class HomeComponent {
 
+  private name: string;
+
   cards!: Card[];
   page!: Page;
+  
 
-  constructor(private cardsService: CardsService) {}
-
-  ngOnInit() {
+  constructor(private cardsService: CardsService) {
+    this.name = '';
     this.list();
   }
 
   list(): void {
-     this.cardsService.list().subscribe({
+     this.cardsService.list(this.name).subscribe({
         next: (data) => {
           this.cards = data._embedded.cards;
           this.page = data.page;
