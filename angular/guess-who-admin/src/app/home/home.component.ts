@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { CardsService } from '../common/cards.service';
 import { Card } from '../common/model/card';
@@ -37,6 +38,18 @@ export class HomeComponent {
           this.page = data.page;
           console.log(this.cards);
           console.log(this.page);          
+        },
+        error: (error) => {
+          if (!(error instanceof HttpErrorResponse)) {
+            error = error.rejection; 
+          }
+          if (error.status === 404) {
+            console.debug('Nenhum registro encontrado...');
+            this.cards = [];
+            this.page  = new Page();
+          } else {
+            throw error;
+          }
         },
         complete: () => {
           console.info("Total de cartões recuperados: " + this.cards.length);

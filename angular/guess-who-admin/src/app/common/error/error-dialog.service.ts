@@ -9,7 +9,6 @@ export class ErrorDialogService {
 
   private opened : boolean = false;
 
-
   constructor(
     private dialog: MatDialog
   ) { }
