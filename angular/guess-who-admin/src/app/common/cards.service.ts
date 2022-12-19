@@ -15,7 +15,7 @@ export class CardsService {
   list(name: string): Observable<any> {
     const query = new HttpParams()
       .set('name', name)
-      .set('size', 8);
+      .set('size', 10);
     return this.http.get<any>(API_URL, {params: query});
   }
 }
