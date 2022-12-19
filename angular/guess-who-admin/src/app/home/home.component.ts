@@ -13,6 +13,8 @@ export class HomeComponent {
 
   @Input() name: string = '';
 
+  loading: boolean = false;
+
   cards!: Card[];
   page!: Page;
 
@@ -32,6 +34,7 @@ export class HomeComponent {
   }
 
   list(): void {
+    this.loading = true;
      this.cardsService.list(this.name).subscribe({
         next: (data) => {
           this.cards = data._embedded.cards;
@@ -40,6 +43,7 @@ export class HomeComponent {
           console.log(this.page);          
         },
         error: (error) => {
+          this.loading = false;
           if (!(error instanceof HttpErrorResponse)) {
             error = error.rejection; 
           }
@@ -52,6 +56,7 @@ export class HomeComponent {
           }
         },
         complete: () => {
+          this.loading = false;
           console.info("Total de cartões recuperados: " + this.cards.length);
         }
     });
