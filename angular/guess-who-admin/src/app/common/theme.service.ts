@@ -46,4 +46,13 @@ export class ThemeService {
       return 'light_mode';
     }
   }
+
+  iconTooltip(): string {
+    
+    if (this.mode == Mode.LIGHT) {
+      return 'Selecionar tema escuro';
+    } else {
+      return 'Selecionar tema claro';
+    }
+  }
 }

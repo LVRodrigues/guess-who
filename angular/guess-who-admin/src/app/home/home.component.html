@@ -1,50 +1,72 @@
-<!-- <section class="container">
+<section class="container">
     <mat-card class="filter">
-        <form class="filter-form">
-            <mat-form-field class="filter-form-field">
-                <mat-label>Filtar pelo nome:</mat-label>
-                <input matInput type="text" [(ngModel)]="name">
-                <button *ngIf="name" matSuffix mat-icon-button aria-label="Clear" (click)="name=''">
+        <mat-card-content>
+            <mat-form-field appearance="fill">
+                <mat-label>Localizar:</mat-label>
+                <input matInput #input type="text" [(ngModel)]="name" (keyup)="onFilter($event)">
+                <button *ngIf="name" matSuffix mat-icon-button matTooltip="Limpar"
+                    aria-label="Limpar filtro de pesquisa" (click)="clearFilter()">
                     <mat-icon>close</mat-icon>
                 </button>
             </mat-form-field>
-        </form>
+        </mat-card-content>
     </mat-card>
-</section> -->
 
-<section class="container">
-        <mat-card *ngFor="let card of cards" class="person">
-            <mat-card-header>
-                <mat-toolbar color="primary">
-                    <h3>{{ card.name }}</h3>
-                    <span class="example-spacer"></span>
-                    <mat-divider vertical></mat-divider>
-                    <button mat-icon-button class="example-icon"
-                        matTooltip="Visualizar"
-                        aria-label="Visualizar as informações do personagem.">
-                        <mat-icon>preview</mat-icon>
-                    </button>
-                    <button mat-icon-button class="example-icon"
-                        matTooltip="Editar"
-                        aria-label="Editar as informações do personagem.">
-                        <mat-icon>edit</mat-icon>
-                    </button>
-                    <button mat-icon-button class="example-icon"
-                        matTooltip="Excluir"
-                        aria-label="Remover as informações do personagem.">
-                        <mat-icon>delete</mat-icon>
-                    </button>               
-                </mat-toolbar>
-            </mat-card-header>
-            <mat-card-content>
-                <table>
-                    <tr>
-                        <td>Fonema:</td><td>{{ card.phoneme }}</td>
-                    </tr>
-                    <tr>
-                        <td>Questões: </td><td> {{ card.questions?.length }}</td>
-                    </tr>
-                </table>
-            </mat-card-content>
-        </mat-card>
+    <article class="paginator">
+        <p>Paginator</p>
+    </article>
 </section>
+
+<ng-container *ngIf="loading; else showCards">
+    <section class="container">
+        <mat-spinner class="loading" color="accent"></mat-spinner>
+    </section>
+</ng-container>
+
+<ng-template #showCards>
+    <section class="container">
+        <ng-container *ngIf="cards.length; else noCards">
+            <mat-card *ngFor="let card of cards" class="person">
+                <mat-card-header>
+                    <mat-toolbar color="primary">
+                        <h3>{{ card.name }}</h3>
+                        <span class="example-spacer"></span>
+                        <mat-divider vertical></mat-divider>
+                        <button mat-icon-button class="example-icon" matTooltip="Visualizar"
+                            aria-label="Visualizar as informações do personagem.">
+                            <mat-icon>preview</mat-icon>
+                        </button>
+                        <button mat-icon-button class="example-icon" matTooltip="Editar"
+                            aria-label="Editar as informações do personagem.">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button class="example-icon" matTooltip="Excluir"
+                            aria-label="Remover as informações do personagem.">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-toolbar>
+                </mat-card-header>
+                <mat-card-content>
+                    <table>
+                        <tr>
+                            <td>Fonema:</td>
+                            <td>{{ card.phoneme }}</td>
+                        </tr>
+                        <tr>
+                            <td>Questões: </td>
+                            <td> {{ card.questions?.length }}</td>
+                        </tr>
+                    </table>
+                </mat-card-content>
+            </mat-card>
+        </ng-container>
+
+        <ng-template #noCards>
+            <mat-card class="person">
+                <mat-card-content>
+                    Nenhum cartão encontrado...
+                </mat-card-content>
+            </mat-card>
+        </ng-template>
+    </section>
+</ng-template>
