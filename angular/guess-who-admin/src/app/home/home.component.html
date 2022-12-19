@@ -4,7 +4,8 @@
             <mat-form-field appearance="fill">
                 <mat-label>Localizar:</mat-label>
                 <input matInput #input type="text" [(ngModel)]="name" (keyup)="onFilter($event)">
-                <button *ngIf="name" matSuffix mat-icon-button aria-label="Limpar" (click)="clearFilter()">
+                <button *ngIf="name" matSuffix mat-icon-button matTooltip="Limpar" 
+                    aria-label="Limpar filtro de pesquisa" (click)="clearFilter()">
                     <mat-icon>close</mat-icon>
                 </button>
             </mat-form-field>
