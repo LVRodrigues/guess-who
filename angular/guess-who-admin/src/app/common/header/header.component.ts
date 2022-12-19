@@ -26,6 +26,10 @@ export class HeaderComponent {
     return this.themeService.icon();
   }
 
+  iconTooltip(): string {
+    return this.themeService.iconTooltip();
+  }
+
   name(): string | null {
     return this.tokenService.getName();
   }
