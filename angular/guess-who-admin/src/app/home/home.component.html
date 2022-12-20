@@ -21,14 +21,22 @@
                 <mat-card-title>Página</mat-card-title>
             </mat-card-header>
             <mat-card-content>
+                <button mat-icon-button matTooltip="Primeira página" arial-label="Navegar para a primeira página"
+                    disabled="{{ page.number == 0 }}" (click)="navigateFirst()">
+                    <mat-icon>first_page</mat-icon>
+                </button>
                 <button mat-icon-button matTooltip="Página Anterior" arial-label="Navegar para a página anterior"
                     disabled="{{ page.number == 0 }}" (click)="navigatePrevious()">
-                    <mat-icon>arrow_back_ios</mat-icon>
+                    <mat-icon>navigate_before</mat-icon>
                 </button>
                 <span>{{ page.number + 1 }} de {{ page.totalPages }}</span>
                 <button mat-icon-button matTooltip="Próxima página" arial-label="Navegar para a próxima página"
                     disabled="{{ page.number + 1 === page.totalPages }}" (click)="navigateNext()">
-                    <mat-icon>arrow_forward_ios</mat-icon>
+                    <mat-icon>navigate_next</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Última página" arial-label="Navegar para a última página"
+                    disabled="{{ page.number + 1 === page.totalPages }}" (click)="navigateLast()">
+                    <mat-icon>last_page</mat-icon>
                 </button>
             </mat-card-content>
         </mat-card>

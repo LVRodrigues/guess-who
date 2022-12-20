@@ -27,12 +27,14 @@ export class HomeComponent {
 
   onFilter(event: any) {
     console.debug('Pesquisar por ', this.name);
+    this.page.number = 0;
     this.list();
   }
 
   clearFilter() {
     console.debug('Limpando o filtro de pesquisa.');
     this.name = '';
+    this.page.number = 0;
     this.list();
   }
 
@@ -63,6 +65,11 @@ export class HomeComponent {
     });
   }
 
+  navigateFirst() {
+    this.page.number = 0;
+    this.list();
+  }
+
   navigatePrevious() {
     this.page.number--;
     this.list();
@@ -70,6 +77,11 @@ export class HomeComponent {
 
   navigateNext() {
     this.page.number++;
+    this.list();
+  }
+
+  navigateLast() {
+    this.page.number = this.page.totalPages - 1;
     this.list();
   }
 }
