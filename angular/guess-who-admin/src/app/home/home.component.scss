@@ -29,6 +29,11 @@
     margin: 10px;
 }
 
+.mat-mdc-card-title {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 .mat-mdc-card-header {
     padding: 0px;
 }
@@ -43,7 +48,11 @@
 }
 
 .filter {
-    flex: 1 0 auto;
+    flex: 2 0 auto;
+}
+
+.paginator {
+    flex: 0 0 auto;
 }
 
 .loading {

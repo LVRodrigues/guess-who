@@ -9,11 +9,11 @@
                 </mat-card-header>
                 <mat-card-content>
                     <mat-form-field appearance="fill">
-                        <mat-label>Nome: </mat-label>
+                        <mat-label>Nome</mat-label>
                         <input matInput type="text" formControlName="username">
                     </mat-form-field>
                     <mat-form-field appearance="fill">
-                        <mat-label>Senha:</mat-label>
+                        <mat-label>Senha</mat-label>
                         <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
                         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Ocultar a senha'"
                             [attr.aria-pressed]="hide">

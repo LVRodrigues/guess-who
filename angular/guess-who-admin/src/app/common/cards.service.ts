@@ -12,10 +12,11 @@ export class CardsService {
 
   constructor(private http: HttpClient) { }
 
-  list(name: string): Observable<any> {
+  list(name: string, page: number): Observable<any> {
     const query = new HttpParams()
       .set('name', name)
-      .set('size', 10);
+      .set('size', 6)
+      .set('page', page);
     return this.http.get<any>(API_URL, {params: query});
   }
 }

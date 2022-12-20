@@ -17,8 +17,11 @@ export class HomeComponent {
 
   cards!: Card[];
   page!: Page;
+  linkNext!: string;
+  linkPrevious!: string;
 
   constructor(private cardsService: CardsService) {
+    this.page = new Page();
     this.list();
   }
 
@@ -35,12 +38,10 @@ export class HomeComponent {
 
   list(): void {
     this.loading = true;
-     this.cardsService.list(this.name).subscribe({
+     this.cardsService.list(this.name, this.page.number).subscribe({
         next: (data) => {
           this.cards = data._embedded.cards;
           this.page = data.page;
-          console.log(this.cards);
-          console.log(this.page);          
         },
         error: (error) => {
           this.loading = false;
@@ -60,5 +61,15 @@ export class HomeComponent {
           console.info("Total de cartões recuperados: " + this.cards.length);
         }
     });
+  }
+
+  navigatePrevious() {
+    this.page.number--;
+    this.list();
+  }
+
+  navigateNext() {
+    this.page.number++;
+    this.list();
   }
 }
