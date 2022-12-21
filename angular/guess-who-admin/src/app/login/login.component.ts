@@ -24,7 +24,6 @@ export class LoginComponent {
 
   onSubmit() {
     this.authService.logout();
-    console.log(this.loginForm.value);
     this.authService.login(this.loginForm.value)
       .subscribe({
         next: (v) => {},
