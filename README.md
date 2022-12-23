@@ -58,3 +58,5 @@ curl -X POST \
   --data-urlencode 'client_id=guess-who-game' \
   --data-urlencode 'client_secret=7fcaf3a7-b1ab-4558-9a4a-004ad800d41a'
 ```
+# Interface Administrativa
+![Guess Who Admin](./snapshots/guess-who-admin-home.png "Interface de administração dos dados de personagens bíblios.")
