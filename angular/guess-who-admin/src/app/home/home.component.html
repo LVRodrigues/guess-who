@@ -1,4 +1,20 @@
 <section class="container">
+    <mat-card class="actions">
+        <mat-card-header>
+            <mat-card-title>Ações</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <button mat-fab color="accent" aria-label="Adicionar um novo cartão de personagem bíblico."
+                matTooltip="Adicionar" class="action-button" (click)="add()">
+                <mat-icon>add</mat-icon>
+            </button>
+            <button mat-fab color="accent" aria-label="Imprime um relatório sobre os cartões de personagens bíblicos."
+                matTooltip="Imprimir" class="action-button" (click)="report()">
+                <mat-icon>print</mat-icon>
+            </button>
+        </mat-card-content>
+    </mat-card>
+
     <mat-card class="filter">
         <mat-card-header>
             <mat-card-title>Filtrar</mat-card-title>
@@ -59,15 +75,18 @@
                         <span class="example-spacer"></span>
                         <mat-divider vertical></mat-divider>
                         <button mat-icon-button class="example-icon" matTooltip="Visualizar"
-                            aria-label="Visualizar as informações do personagem.">
+                            aria-label="Visualizar as informações do personagem."
+                            (click)="view(card)">
                             <mat-icon>preview</mat-icon>
                         </button>
                         <button mat-icon-button class="example-icon" matTooltip="Editar"
-                            aria-label="Editar as informações do personagem.">
+                            aria-label="Editar as informações do personagem."
+                            (click)="edit(card)">
                             <mat-icon>edit</mat-icon>
                         </button>
                         <button mat-icon-button class="example-icon" matTooltip="Excluir"
-                            aria-label="Remover as informações do personagem.">
+                            aria-label="Remover as informações do personagem."
+                            (click)="remove(card)">
                             <mat-icon>delete</mat-icon>
                         </button>
                     </mat-toolbar>
@@ -96,3 +115,4 @@
         </ng-template>
     </section>
 </ng-template>
+

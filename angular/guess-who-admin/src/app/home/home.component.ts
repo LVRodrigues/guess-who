@@ -65,23 +65,43 @@ export class HomeComponent {
     });
   }
 
-  navigateFirst() {
+  navigateFirst(): void {
     this.page.number = 0;
     this.list();
   }
 
-  navigatePrevious() {
+  navigatePrevious(): void {
     this.page.number--;
     this.list();
   }
 
-  navigateNext() {
+  navigateNext(): void {
     this.page.number++;
     this.list();
   }
 
-  navigateLast() {
+  navigateLast(): void {
     this.page.number = this.page.totalPages - 1;
     this.list();
+  }
+
+  report(): void {
+    console.log("Reportar...");
+  }
+
+  add(): void {
+    console.log("Adicionar...");
+  }
+
+  view(card: Card): void {
+    console.log("Visualizar: ", card);
+  }
+
+  edit(card: Card): void {
+    console.log("Alterar: ", card);
+  }
+
+  remove(card: Card): void {
+    console.log("Remover: ", card);
   }
 }
