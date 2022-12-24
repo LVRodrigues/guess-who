@@ -19,4 +19,9 @@ export class CardsService {
       .set('page', page);
     return this.http.get<any>(API_URL, {params: query});
   }
+
+  getByID(id: string): Observable<Card> {
+    return this.http.get<Card>(API_URL + '/' + id);
+  }
 }
+

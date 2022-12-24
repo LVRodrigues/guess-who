@@ -29,6 +29,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorDialogComponent } from './common/error/error-dialog/error-dialog.component';
 import { GlobalErrorHandler } from './common/error/global-error-handler';
+import { CardAddComponent } from './card-add/card-add.component';
+import { CardViewComponent } from './card-view/card-view.component';
+import { CardRemoveComponent } from './card-remove/card-remove.component';
+import { CardEditComponent } from './card-edit/card-edit.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { GlobalErrorHandler } from './common/error/global-error-handler';
     HomeComponent,
     NotFoundComponent,
     RegisterComponent,
-    ErrorDialogComponent
+    ErrorDialogComponent,
+    CardAddComponent,
+    CardViewComponent,
+    CardRemoveComponent,
+    CardEditComponent
   ],
   imports: [
     BrowserModule,
