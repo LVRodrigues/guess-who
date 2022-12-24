@@ -33,6 +33,7 @@ import { CardAddComponent } from './card-add/card-add.component';
 import { CardViewComponent } from './card-view/card-view.component';
 import { CardRemoveComponent } from './card-remove/card-remove.component';
 import { CardEditComponent } from './card-edit/card-edit.component';
+import { CardFormComponent } from './common/card-form/card-form.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { CardEditComponent } from './card-edit/card-edit.component';
     CardAddComponent,
     CardViewComponent,
     CardRemoveComponent,
-    CardEditComponent
+    CardEditComponent,
+    CardFormComponent
   ],
   imports: [
     BrowserModule,
