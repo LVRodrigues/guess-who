@@ -10,7 +10,7 @@ enum Mode {
 })
 export class ThemeService {
 
-  private mode: Mode = Mode.LIGHT;
+  private mode: Mode;
 
   constructor() {
     let aux: string | null = localStorage.getItem('mode');

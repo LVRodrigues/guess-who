@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { CardsService } from '../cards.service';
 import { Card } from '../model/card';
 
@@ -9,27 +9,9 @@ import { Card } from '../model/card';
 })
 export class CardFormComponent {
 
-  loading: boolean;
-  card!: Card;
+  @Input() card!: Card;
 
-  constructor(private cardsService: CardsService) {
+  constructor() {
     this.card = new Card();
-    this.loading = false;
-  }
-
-  loadCard(id: string): void {
-    this.loading = true;
-    this.cardsService.getByID(id).subscribe({
-      next: (next) => {
-        this.card = next;
-      },
-      error: (error) => {
-          this.card = new Card();
-          this.loading = false;
-      },
-      complete: () => {
-        this.loading = false;
-      }
-    })
   }
 }

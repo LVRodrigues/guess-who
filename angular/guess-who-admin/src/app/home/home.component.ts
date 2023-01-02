@@ -12,7 +12,7 @@ import { Page } from '../common/model/page';
 })
 export class HomeComponent {
 
-  @Input() name: string = '';
+  @Input() name: string;
 
   loading: boolean;
 
@@ -22,6 +22,7 @@ export class HomeComponent {
   constructor(
       private cardsService: CardsService,
       private router: Router) {
+    this.name = '';
     this.loading = false;
     this.page = new Page();
     this.list();

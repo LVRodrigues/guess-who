@@ -18,9 +18,9 @@ export class GlobalErrorHandler extends ErrorHandler {
 
   override handleError(error: any): void {
     if (!(error instanceof HttpErrorResponse)) {
-      error = error.rejection; // get the error object
+      error = error?.rejection; // get the error object
     }
-    if (error.status === 401) {
+    if (error?.status === 401) {
       console.info("Atualizar o token de acesso.");
       this.authService.refreshToken(this.tokenService.getRefreshToken()!).subscribe({
         next: (n) => { },

@@ -1,7 +1,5 @@
-import { formatCurrency } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CardFormComponent } from '../common/card-form/card-form.component';
 import { CardsService } from '../common/cards.service';
 import { Card } from '../common/model/card';
 
@@ -12,13 +10,15 @@ import { Card } from '../common/model/card';
 })
 export class CardViewComponent {
 
+  selected: Card;
+
   constructor(
       private activatedRoute: ActivatedRoute,
-      private cardsService: CardsService,
-      private cardForm: CardFormComponent) {
+      private cardsService: CardsService) {
+    this.selected = new Card();
     this.activatedRoute.paramMap.subscribe((params) => {
       let id: string = params.get('id')!;
-      
+      cardsService.getByID(id).subscribe((v) => this.selected = v);
     });
   }
 }

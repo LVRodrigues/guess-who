@@ -20,12 +20,13 @@ const HTTP_OPTIONS = {
 })
 export class AuthService {
 
-  redirectUrl: string = '';
+  redirectUrl: string;
 
   constructor(
     private http: HttpClient, 
     private tokenService: TokenService,
     private router: Router) { 
+      this.redirectUrl = '';
   }
 
   login(loginData: any): Observable<any> {

@@ -7,11 +7,13 @@ import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
 })
 export class ErrorDialogService {
 
-  private opened : boolean = false;
+  private opened : boolean;
 
   constructor(
     private dialog: MatDialog
-  ) { }
+  ) { 
+    this.opened =false;
+  }
 
   openDialog(message: string, status?: number): void {
     if (!this.opened) {
