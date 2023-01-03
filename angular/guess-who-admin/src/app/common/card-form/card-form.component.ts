@@ -1,4 +1,5 @@
 import { Component, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Card } from '../model/card';
 import { Question } from '../model/question';
 
@@ -16,12 +17,12 @@ enum FormStatus {
 })
 export class CardFormComponent {
 
-  @Input() title: string;
   @Input() status: FormStatus;
   @Input() card: Card;
 
-  constructor() {
-    this.title = 'Cartão de Personagem'
+  constructor(
+    private router: Router
+  ) {
     this.status = FormStatus.VIEWING;
     this.card = new Card();
   }
@@ -43,5 +44,9 @@ export class CardFormComponent {
         break;
     }
     return result;
+  }
+
+  back(): void {
+    this.router.navigate(['home']);
   }
 }

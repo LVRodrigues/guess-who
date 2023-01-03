@@ -2,6 +2,7 @@
 @use './app/common/header/header.component.scss' as header;
 @use './app/common/footer/footer.component.scss' as footer;
 @use './app/home/home.component.scss' as home;
+@use './app/common/card-form/card-form.component.scss' as card;
 
 @include mat.core();
 
@@ -22,6 +23,7 @@ $guess-who-admin-theme: mat.define-light-theme((
   @include header.theme($guess-who-admin-theme);
   @include footer.theme($guess-who-admin-theme);
   @include home.theme($guess-who-admin-theme);
+  @include card.theme($guess-who-admin-theme);
 }
 
 $guess-who-admin-primary-dark: mat.define-palette(mat.$brown-palette, 900);
@@ -40,6 +42,7 @@ $guess-who-admin-theme-dark: mat.define-dark-theme((
   @include header.theme($guess-who-admin-theme-dark);
   @include footer.theme($guess-who-admin-theme-dark);
   @include home.theme($guess-who-admin-theme-dark);
+  @include card.theme($guess-who-admin-theme-dark);
 }
 
 html, body {
@@ -53,7 +56,7 @@ body {
 
 main {
   min-height: calc(100vh - 78px - 78px);
-  margin: 15px 10px 15px 10px;
+  margin: 30px 15px 15px 15px
 }
 
 .container {
