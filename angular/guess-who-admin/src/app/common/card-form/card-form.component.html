@@ -30,12 +30,12 @@
                 <mat-cell *matCellDef="let row">{{ row.id }}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="text">
-                <mat-header-cell *matHeaderCellDef><b>Pergunta</b></mat-header-cell>
-                <mat-cell *matCellDef="let row">{{ row.text }}</mat-cell>
+                <mat-header-cell *matHeaderCellDef [ngClass]="'question-cell'"><b>Pergunta</b></mat-header-cell>
+                <mat-cell *matCellDef="let row" [ngClass]="'question-cell'">{{ row.text }}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="evidence">
-                <mat-header-cell *matHeaderCellDef><b>Evidência</b></mat-header-cell>
-                <mat-cell *matCellDef="let row">{{ row.evidence }}</mat-cell>
+                <mat-header-cell *matHeaderCellDef [ngClass]="'evidence-cell'"><b>Evidência</b></mat-header-cell>
+                <mat-cell *matCellDef="let row" [ngClass]="'evidence-cell'">{{ row.evidence }}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="actions">
                 <mat-header-cell *matHeaderCellDef [ngClass]="'action-cell'">
