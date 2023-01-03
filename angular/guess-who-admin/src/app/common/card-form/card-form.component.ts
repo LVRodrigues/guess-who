@@ -1,6 +1,13 @@
 import { Component, Input, Output } from '@angular/core';
-import { CardsService } from '../cards.service';
 import { Card } from '../model/card';
+import { Question } from '../model/question';
+
+enum FormStatus {
+  VIEWING,
+  INSERTING,
+  REMOVING,
+  UPDATING
+}
 
 @Component({
   selector: 'app-card-form',
@@ -9,9 +16,32 @@ import { Card } from '../model/card';
 })
 export class CardFormComponent {
 
-  @Input() card!: Card;
+  @Input() title: string;
+  @Input() status: FormStatus;
+  @Input() card: Card;
 
   constructor() {
+    this.title = 'Cartão de Personagem'
+    this.status = FormStatus.VIEWING;
     this.card = new Card();
+  }
+
+  getStatus(): string {
+    let result = 'NONE';
+    switch (this.status) {
+      case FormStatus.VIEWING:
+        result = 'Visualizando';
+        break;
+      case FormStatus.INSERTING:
+        result = 'Inserindo';
+        break;
+      case FormStatus.REMOVING:
+        result = 'Removendo';
+        break;
+      case FormStatus.UPDATING:
+        result = 'Alterando';
+        break;
+    }
+    return result;
   }
 }

@@ -19,6 +19,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDividerModule} from '@angular/material/divider'; 
 import {MatTooltipModule} from '@angular/material/tooltip'; 
 import {MatDialogModule} from '@angular/material/dialog'; 
+import {MatListModule} from '@angular/material/list'; 
+import {MatTableModule} from '@angular/material/table';
 
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
@@ -68,7 +70,9 @@ import { CardFormComponent } from './common/card-form/card-form.component';
     MatSelectModule,
     MatDividerModule,
     MatTooltipModule,
-    MatDialogModule
+    MatDialogModule,
+    MatListModule,
+    MatTableModule
   ],
   providers: [
     {
