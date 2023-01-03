@@ -47,22 +47,6 @@
                     <mat-header-row *matHeaderRowDef="['text', 'evidence']"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: ['text', 'evidence']"></mat-row>
                 </mat-table>
-                <!-- <ng-container *ngIf="card?.questions?.length; else noQuestions">
-                    <mat-list *ngFor="let question of card.questions" class="question">
-                        <mat-list-item>
-                            <mat-card>
-                                <mat-form-field appearance="fill" matListItemLine>
-                                    <mat-label>Pergunta</mat-label>
-                                    <input matInput type="text" [(ngModel)]="question.text">
-                                </mat-form-field>
-                                <mat-form-field appearance="fill" matListItemLine>
-                                    <mat-label>Evidência</mat-label>
-                                    <input matInput type="text" [(ngModel)]="question.evidence">
-                                </mat-form-field>
-                            </mat-card>
-                        </mat-list-item>
-                    </mat-list>
-                </ng-container>-->
 
                 <ng-template #noQuestions>
                     <mat-card class="question">
