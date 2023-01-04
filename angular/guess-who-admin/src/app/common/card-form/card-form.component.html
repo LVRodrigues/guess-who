@@ -38,14 +38,15 @@
             </ng-container>
             <ng-container matColumnDef="actions">
                 <mat-header-cell *matHeaderCellDef [ngClass]="'action-cell'">
-                    <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="back()" class="action-button"
+                    <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="questionAdd()" class="action-button"
                         aria-label="Adicionar uma nova pergunta para o personagem corrente.">
                         <mat-icon>add</mat-icon>
                     </button>
                 </mat-header-cell>
                 <mat-cell *matCellDef="let row" [ngClass]="'action-cell'">
                     <button mat-icon-button class="example-icon" matTooltip="Editar"
-                        aria-label="Editar as informações do personagem.">
+                        aria-label="Editar as informações do personagem."
+                        (click)="questionEdit(row)">
                         <mat-icon>edit</mat-icon>
                     </button>
                     <button mat-icon-button class="example-icon" matTooltip="Excluir"
@@ -65,7 +66,7 @@
                 <article class="container">
                     <span>Nenhuma pergunta encontrada...</span>
                     <span class="example-spacer"></span>
-                    <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="back()" class="action-button"
+                    <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="questionAdd()" class="action-button"
                         aria-label="Adicionar uma nova pergunta para o personagem corrente.">
                         <mat-icon>add</mat-icon>
                     </button>

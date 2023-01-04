@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Editar a Perguntta</h1>
+<div mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Pergunta</mat-label>
+        <input matInput type="text" id="text" [(ngModel)]="data.text" placeholder="Pergunta sobre o personagem.">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Evidência</mat-label>
+        <input matInput type="text" id="evidence" [(ngModel)]="data.evidence"
+            placeholder="Pergunta sobre o personagem.">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <hr width="100%">
+    <span class="example-spacer"></span>
+    <button mat-raised-button [mat-dialog-close]="data" color="accent">
+        Confirmar
+        <mat-icon>check</mat-icon>
+    </button>
+    <button mat-raised-button mat-dialog-close color="accent">
+        Cancelar
+        <mat-icon>cancel</mat-icon>
+    </button>
+</div>
