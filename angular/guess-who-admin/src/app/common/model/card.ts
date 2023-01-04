@@ -5,5 +5,5 @@ export class Card {
     name!: string;
     phoneme!: string;
     image: string | undefined;
-    questions: Question[] | undefined;
+    questions!: Question[];
 }

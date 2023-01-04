@@ -10,9 +10,11 @@ const SUBJECT = "subject";
 })
 export class TokenService {
 
-  private helper = new JwtHelperService();
+  private helper: JwtHelperService;
 
-  constructor() { }
+  constructor() {
+    this.helper = new JwtHelperService();
+  }
 
   getToken(): string | null {
     return localStorage.getItem(ACCESS_TOKEN);

@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { CardsService } from '../common/cards.service';
 import { Card } from '../common/model/card';
 import { Page } from '../common/model/page';
@@ -11,16 +12,18 @@ import { Page } from '../common/model/page';
 })
 export class HomeComponent {
 
-  @Input() name: string = '';
+  @Input() name: string;
 
-  loading: boolean = false;
+  loading: boolean;
 
   cards!: Card[];
   page!: Page;
-  linkNext!: string;
-  linkPrevious!: string;
 
-  constructor(private cardsService: CardsService) {
+  constructor(
+      private cardsService: CardsService,
+      private router: Router) {
+    this.name = '';
+    this.loading = false;
     this.page = new Page();
     this.list();
   }
@@ -65,23 +68,43 @@ export class HomeComponent {
     });
   }
 
-  navigateFirst() {
+  navigateFirst(): void {
     this.page.number = 0;
     this.list();
   }
 
-  navigatePrevious() {
+  navigatePrevious(): void {
     this.page.number--;
     this.list();
   }
 
-  navigateNext() {
+  navigateNext(): void {
     this.page.number++;
     this.list();
   }
 
-  navigateLast() {
+  navigateLast(): void {
     this.page.number = this.page.totalPages - 1;
     this.list();
+  }
+
+  report(): void {
+    console.log("Reportar...");
+  }
+
+  add(): void {
+    this.router.navigate(['add']);
+  }
+
+  view(card: Card): void {
+    this.router.navigate(['view', card]);
+  }
+
+  edit(card: Card): void {
+    this.router.navigate(['edit', card]);
+  }
+
+  remove(card: Card): void {
+    this.router.navigate(['remove', card]);
   }
 }

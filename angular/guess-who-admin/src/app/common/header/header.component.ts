@@ -10,12 +10,13 @@ import { TokenService } from '../token.service';
 })
 export class HeaderComponent {
 
-  title = 'Guess Who?'
+  title: string;
 
   constructor(
     private themeService : ThemeService,
     private authService : AuthService,
     private tokenService: TokenService) {
+      this.title = 'Guess Who?'
   }
 
   toggle(): void {
