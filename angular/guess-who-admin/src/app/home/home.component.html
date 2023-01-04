@@ -22,7 +22,7 @@
         <mat-card-content>
             <mat-form-field appearance="fill">
                 <mat-label>Nome</mat-label>
-                <input matInput type="text" [(ngModel)]="name" (keyup)="onFilter($event)">
+                <input matInput type="text" [(ngModel)]="name" (keyup)="onFilter($event)" placeholder="Nome para perquisar">
                 <button *ngIf="name" matSuffix mat-icon-button matTooltip="Limpar"
                     aria-label="Limpar filtro de pesquisa" (click)="clearFilter()">
                     <mat-icon>close</mat-icon>
