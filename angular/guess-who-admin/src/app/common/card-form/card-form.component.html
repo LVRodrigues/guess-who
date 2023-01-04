@@ -6,9 +6,9 @@
             <mat-divider vertical></mat-divider>
             <span>{{ getStatus() }}</span>
             <mat-divider vertical></mat-divider>
-            <button mat-mini-fab color="accent" matTooltip="Salvar" class="action-button"
-                aria-label="Confirma as alterações.">
-                <mat-icon>save</mat-icon>
+            <button mat-mini-fab color="accent" matTooltip="Confirmar" class="action-button"
+                aria-label="Confirmar as alterações.">
+                <mat-icon>check</mat-icon>
             </button>
             <button mat-mini-fab color="accent" matTooltip="Cancelar" (click)="back()" class="action-button"
                 aria-label="Desfaz as alterações e retorna a página de pesquisa.">
@@ -23,8 +23,7 @@
             <input matInput type="text" id="name" [(ngModel)]="card.name">
         </mat-form-field>
 
-        <mat-table *ngIf="card?.questions?.length; else noQuestions"
-            [dataSource]="card.questions" fixedLayout="false">
+        <mat-table *ngIf="card?.questions?.length; else noQuestions" [dataSource]="card.questions" fixedLayout="false">
             <ng-container matColumnDef="id">
                 <mat-header-cell *matHeaderCellDef><b>ID</b></mat-header-cell>
                 <mat-cell *matCellDef="let row">{{ row.id }}</mat-cell>
@@ -42,29 +41,35 @@
                     <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="back()" class="action-button"
                         aria-label="Adicionar uma nova pergunta para o personagem corrente.">
                         <mat-icon>add</mat-icon>
-                    </button>                    
+                    </button>
                 </mat-header-cell>
                 <mat-cell *matCellDef="let row" [ngClass]="'action-cell'">
                     <button mat-icon-button class="example-icon" matTooltip="Editar"
-                    aria-label="Editar as informações do personagem.">
-                    <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button class="example-icon" matTooltip="Excluir"
-                    aria-label="Remover as informações do personagem.">
-                    <mat-icon>delete</mat-icon>
-                </button>
+                        aria-label="Editar as informações do personagem.">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button class="example-icon" matTooltip="Excluir"
+                        aria-label="Remover as informações do personagem."
+                        (click)="questionRemove(row)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
                 </mat-cell>
-            </ng-container>            
+            </ng-container>
             <!-- Header and Row Declarations -->
             <mat-header-row *matHeaderRowDef="['text', 'evidence', 'actions']"></mat-header-row>
             <mat-row *matRowDef="let row; columns: ['text', 'evidence', 'actions']"></mat-row>
         </mat-table>
 
         <ng-template #noQuestions>
-            <mat-card class="question">
-                <mat-card-content>
-                    Nenhuma pergunta encontrada...
-                </mat-card-content>
+            <mat-card appearance="outlined">
+                <article class="container">
+                    <span>Nenhuma pergunta encontrada...</span>
+                    <span class="example-spacer"></span>
+                    <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="back()" class="action-button"
+                        aria-label="Adicionar uma nova pergunta para o personagem corrente.">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </article>
             </mat-card>
         </ng-template>
     </mat-card-content>

@@ -49,4 +49,8 @@ export class CardFormComponent {
   back(): void {
     this.router.navigate(['home']);
   }
+
+  questionRemove(question: Question): void {
+    this.card.questions = this.card.questions.filter(item => item.id != question.id);
+  }
 }
