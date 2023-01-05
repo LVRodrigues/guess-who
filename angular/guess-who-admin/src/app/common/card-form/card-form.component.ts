@@ -24,7 +24,8 @@ export class CardFormComponent {
   @Input() status: FormStatus;
   @Input() card: Card;
 
-  opened: boolean;
+  private opened: boolean;
+  private edited: boolean;
 
   constructor(
     private router: Router,
@@ -33,6 +34,7 @@ export class CardFormComponent {
     this.status = FormStatus.VIEWING;
     this.card = new Card();
     this.opened = false;
+    this.edited = false;
   }
 
   getStatus(): string {
@@ -52,6 +54,15 @@ export class CardFormComponent {
         break;
     }
     return result;
+  }
+
+  isEditing(): boolean {
+    return this.status == FormStatus.INSERTING ||
+           this.status == FormStatus.UPDATING;
+  }
+
+  canConfirm(): boolean {
+    return this.status == FormStatus.REMOVING || this.edited;
   }
 
   back(): void {
@@ -75,6 +86,9 @@ export class CardFormComponent {
       });
       dialogRef.afterClosed().subscribe((data) => {
         this.opened = false;
+        if (data) {
+          this.edited = true;
+        }
       });
     }
   }
@@ -96,8 +110,13 @@ export class CardFormComponent {
         this.opened = false;
         if (data) {
           this.card.questions = [data, ...this.card.questions];
+          this.edited = true;
         }
       });
     }
+  }
+
+  onEdit(event: any) {
+    this.edited = true;
   }
 }
