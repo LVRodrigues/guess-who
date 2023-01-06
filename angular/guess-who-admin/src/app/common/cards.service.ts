@@ -24,5 +24,9 @@ export class CardsService {
   getByID(id: string): Observable<Card> {
     return this.http.get<Card>(API_URL + '/' + id);
   }
+
+  add(card: Card): Observable<Card> {
+    return this.http.post<Card>(API_URL, card);
+  }
 }
 
