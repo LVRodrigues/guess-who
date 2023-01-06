@@ -69,6 +69,20 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "localhost": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environments.ts",
+                  "with": "src/environments/environments-localhost.ts"
+                }
+              ],
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -81,6 +95,10 @@
             },
             "development": {
               "browserTarget": "guess-who-admin:build:development"
+            }
+            ,
+            "localhost": {
+              "browserTarget": "guess-who-admin:build:localhost"
             }
           },
           "defaultConfiguration": "development"
