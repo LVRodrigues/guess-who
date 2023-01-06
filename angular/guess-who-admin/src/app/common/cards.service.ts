@@ -1,9 +1,10 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { delay, Observable } from 'rxjs';
+import { environment } from 'src/environments/environments';
 import { Card } from './model/card';
 
-const API_URL = 'http://guess-admin:5001/v1/cards';
+const API_URL = environment.apiCardsURL;
 
 @Injectable({
   providedIn: 'root'

@@ -2,12 +2,13 @@ import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, Observable, tap, throwError } from 'rxjs';
-
+import { environment } from 'src/environments/environments';
+ 
 import { TokenService } from './token.service';
 
 const OAUTH_CLIENT = 'guess-who-game';
 const OAUTH_SECRET = '7fcaf3a7-b1ab-4558-9a4a-004ad800d41a';
-const API_URL = 'http://guess-auth:8080/realms/guess-who';
+const API_URL = environment.apiLoginURL;
 
 const HTTP_OPTIONS = {
   headers: new HttpHeaders({
