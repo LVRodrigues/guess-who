@@ -129,4 +129,12 @@ export class CardFormComponent {
   confirm() {
     this.onConfirm.emit(this.card);
   }
+
+  columns(): string[] {
+    let result = ['text', 'evidence'];
+    if (this.isEditing()) {
+      result.push('actions');
+    }
+    return result;
+  }
 }
