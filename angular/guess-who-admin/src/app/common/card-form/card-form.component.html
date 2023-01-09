@@ -72,7 +72,9 @@
                 <article class="container">
                     <span>Nenhuma pergunta encontrada...</span>
                     <span class="example-spacer"></span>
-                    <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="questionAdd()" class="action-button"
+                    <button mat-mini-fab color="accent" matTooltip="Adicionar" 
+                        (click)="questionAdd()" class="action-button"
+                        disabled="{{ ! isEditing() }}"
                         aria-label="Adicionar uma nova pergunta para o personagem corrente.">
                         <mat-icon>add</mat-icon>
                     </button>
