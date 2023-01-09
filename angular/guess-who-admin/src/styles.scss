@@ -95,3 +95,25 @@ main {
   height: 80%;
   margin: 10px !important;
 }
+
+.notifier-info {
+  align-content: flex-start;
+  margin-top: 80px !important;
+  --mdc-snackbar-container-color: rgb(76, 175, 80) !important;
+
+  .mat-mdc-snack-bar-label {
+      color: white !important;
+      min-width: calc(100vw / 2);
+  }
+}
+
+.notifier-error {
+  align-content: flex-start;
+  margin-top: 80px !important;
+  --mdc-snackbar-container-color: rgb(244, 67, 54) !important;
+
+  .mat-mdc-snack-bar-label {
+      color: white !important;
+      min-width: calc(100vw / 2);
+  }
+}

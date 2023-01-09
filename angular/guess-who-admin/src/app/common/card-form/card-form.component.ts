@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import {v4 as uuidv4} from 'uuid';
@@ -23,6 +23,7 @@ export class CardFormComponent {
 
   @Input() status: FormStatus;
   @Input() card: Card;
+  @Output() onConfirm: EventEmitter<Card>;
 
   private opened: boolean;
   private edited: boolean;
@@ -35,6 +36,7 @@ export class CardFormComponent {
     this.card = new Card();
     this.opened = false;
     this.edited = false;
+    this.onConfirm = new EventEmitter<Card>();
   }
 
   getStatus(): string {
@@ -118,5 +120,9 @@ export class CardFormComponent {
 
   onEdit(event: any) {
     this.edited = true;
+  }
+
+  confirm() {
+    this.onConfirm.emit(this.card);
   }
 }
