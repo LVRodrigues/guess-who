@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { CardsService } from '../common/cards.service';
 import { Card } from '../common/model/card';
 import { Page } from '../common/model/page';
+import { NotifierService } from '../common/notifier/notifier.service';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,8 @@ export class HomeComponent {
 
   constructor(
       private cardsService: CardsService,
-      private router: Router) {
+      private router: Router,
+      private notifier: NotifierService) {
     this.name = '';
     this.loading = false;
     this.page = new Page();
@@ -29,13 +31,11 @@ export class HomeComponent {
   }
 
   onFilter(event: any) {
-    console.debug('Pesquisar por ', this.name);
     this.page.number = 0;
     this.list();
   }
 
   clearFilter() {
-    console.debug('Limpando o filtro de pesquisa.');
     this.name = '';
     this.page.number = 0;
     this.list();
@@ -54,7 +54,6 @@ export class HomeComponent {
             error = error.rejection; 
           }
           if (error.status === 404) {
-            console.debug('Nenhum registro encontrado...');
             this.cards = [];
             this.page  = new Page();
           } else {
@@ -63,7 +62,6 @@ export class HomeComponent {
         },
         complete: () => {
           this.loading = false;
-          console.info("Total de cartões recuperados: " + this.cards.length);
         }
     });
   }
@@ -89,7 +87,7 @@ export class HomeComponent {
   }
 
   report(): void {
-    console.log("Reportar...");
+    this.notifier.error('Relatório não implementado...')    
   }
 
   add(): void {

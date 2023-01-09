@@ -21,6 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 
 import { CardAddComponent } from './card-add/card-add.component';
 import { CardEditComponent } from './card-edit/card-edit.component';
@@ -37,6 +38,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
+import { NotifierComponent } from './common/notifier/notifier.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ import { RegisterComponent } from './register/register.component';
     CardRemoveComponent,
     CardEditComponent,
     CardFormComponent,
-    QuestionDialogComponent
+    QuestionDialogComponent,
+    NotifierComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,8 @@ import { RegisterComponent } from './register/register.component';
     MatTooltipModule,
     MatDialogModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatSnackBarModule
   ],
   providers: [
     {

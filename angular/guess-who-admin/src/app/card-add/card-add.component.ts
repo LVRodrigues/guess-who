@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CardsService } from '../common/cards.service';
 import { Card } from '../common/model/card';
+import { NotifierService } from '../common/notifier/notifier.service';
 
 @Component({
   selector: 'app-card-add',
@@ -14,7 +15,8 @@ export class CardAddComponent {
 
   constructor(
     private cardsService: CardsService,
-    private router: Router
+    private router: Router,
+    private notifier: NotifierService
   ) {
     this.selected = new Card();
   }
@@ -22,6 +24,7 @@ export class CardAddComponent {
   confirm(card: Card): void {
     this.cardsService.add(card).subscribe((result) => {
       this.router.navigate(['home']);
+      this.notifier.info('Cartão do personagem "' + result.name + '" criado com sucesso!');
     });
   }
 }
