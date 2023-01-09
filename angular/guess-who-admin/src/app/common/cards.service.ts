@@ -32,5 +32,9 @@ export class CardsService {
   edit(card: Card): Observable<Card> {
     return this.http.put<Card>(API_URL + '/' + card.id, card);
   }
+
+  remove(card: Card): Observable<any> {
+    return this.http.delete(API_URL + '/' + card.id);
+  }
 }
 
