@@ -60,6 +60,7 @@ export class HomeComponent {
           if (error.status === 404) {
             this.cards = [];
             this.page  = new Page();
+            this.page.number = 0;
           } else {
             throw error;
           }
