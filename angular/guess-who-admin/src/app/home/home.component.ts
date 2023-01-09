@@ -6,6 +6,9 @@ import { Card } from '../common/model/card';
 import { Page } from '../common/model/page';
 import { NotifierService } from '../common/notifier/notifier.service';
 
+const FILTER_PARAM = 'filter-param';
+const PAGE_PARAM = 'page-param';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -24,9 +27,10 @@ export class HomeComponent {
       private cardsService: CardsService,
       private router: Router,
       private notifier: NotifierService) {
-    this.name = '';
+    this.name = localStorage.getItem(FILTER_PARAM)!;
     this.loading = false;
     this.page = new Page();
+    this.page.number = Number(localStorage.getItem(PAGE_PARAM));
     this.list();
   }
 
@@ -43,7 +47,9 @@ export class HomeComponent {
 
   list(): void {
     this.loading = true;
-     this.cardsService.list(this.name, this.page.number).subscribe({
+    localStorage.setItem(PAGE_PARAM, this.page.number.toString());
+    localStorage.setItem(FILTER_PARAM, this.name);
+    this.cardsService.list(this.name, this.page.number).subscribe({
         next: (data) => {
           this.cards = data._embedded.cards;
           this.page = data.page;

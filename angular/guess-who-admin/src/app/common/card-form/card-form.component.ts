@@ -73,6 +73,7 @@ export class CardFormComponent {
 
   questionRemove(question: Question): void {
     this.card.questions = this.card.questions.filter(item => item.id != question.id);
+    this.edited = true;
   }
 
   questionEdit(question: Question): void {
@@ -87,10 +88,10 @@ export class CardFormComponent {
         hasBackdrop: true
       });
       dialogRef.afterClosed().subscribe((data) => {
-        this.opened = false;
         if (data) {
           this.edited = true;
         }
+        this.opened = false;
       });
     }
   }
@@ -109,11 +110,14 @@ export class CardFormComponent {
         hasBackdrop: true
       });
       dialogRef.afterClosed().subscribe((data) => {
-        this.opened = false;
+        if (!this.card.questions) {
+          this.card.questions = [];
+        }
         if (data) {
           this.card.questions = [data, ...this.card.questions];
           this.edited = true;
         }
+        this.opened = false;
       });
     }
   }

@@ -33,6 +33,5 @@ export class CardAddComponent {
         this.router.navigate(['home']);
       }
     });      
-    
   }
 }
