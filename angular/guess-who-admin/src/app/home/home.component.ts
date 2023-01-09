@@ -20,8 +20,8 @@ export class HomeComponent {
 
   loading: boolean;
 
-  cards!: Card[];
-  page!: Page;
+  cards: Card[];
+  page: Page;
 
   constructor(
       private cardsService: CardsService,
@@ -29,6 +29,7 @@ export class HomeComponent {
       private notifier: NotifierService) {
     this.name = localStorage.getItem(FILTER_PARAM)!;
     this.loading = false;
+    this.cards = [];
     this.page = new Page();
     this.page.number = Number(localStorage.getItem(PAGE_PARAM));
     this.list();
