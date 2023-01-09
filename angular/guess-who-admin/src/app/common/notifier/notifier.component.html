@@ -1,0 +1,13 @@
+<div class="container">
+    <span class="notifier-icon">
+        <mat-icon >{{ data.icon }}</mat-icon>
+    </span>
+    <span class="notifier-message">
+        {{ data.message }}
+    </span>
+</div>
+<span class="notifier-close">
+    <button mat-icon-button type="button" (click)="snackRef.dismiss()">
+        <mat-icon>cancel</mat-icon>
+    </button>
+</span>

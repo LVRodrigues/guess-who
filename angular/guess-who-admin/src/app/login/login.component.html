@@ -1,0 +1,34 @@
+<section class="container">
+    <article class="auth-dialog">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-card class="center auth-card-form">
+                <mat-card-header>
+                    <mat-toolbar color="primary">
+                        <h3>Autenticação</h3>
+                    </mat-toolbar>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Nome</mat-label>
+                        <input matInput type="text" formControlName="username" placeholder="Identificação do usuário.">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Senha</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" placeholder="Senha de identificação.">
+                        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Ocultar a senha'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </mat-card-content>
+                <mat-card-footer>
+                    <mat-divider></mat-divider>
+                    <button mat-raised-button color="accent" type="submit" [disabled]="!loginForm.valid" class="right">
+                        <mat-icon>login</mat-icon>
+                        Entrar
+                    </button>
+                </mat-card-footer>
+            </mat-card>
+        </form>
+    </article>
+</section>

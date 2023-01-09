@@ -26,6 +26,7 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 | Keycloak       | 20          |
 | PostgreSQL     | 14          |
 | Docker         | 20.10.7     |
+| Angular        | 15          |
 
 > Para executar os módulos em containers Docker, crie uma entrada no arquivo de hosts para os nomes e endereços:
 >
@@ -37,18 +38,19 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 
 ## Organização
 
-| **Diretório** | **Descrição**                                                             |
-| ------------- | ------------------------------------------------------------------------- |
-| **docs**      | Documentação do projeto.                                                  |
-| **database**  | Scripts para criação e gerenciamento do banco de dados.                   |
-| **auth**      | Módulode autorização do aplicativo para desenvolvimento.                  |
-| **java**      | Aplicativo modular com Java e SpringBoot para gerenciamento dos serviços. |
+| **Diretório** | **Descrição**                                                                |
+| ------------- | -----------------------------------------------------------------------------|
+| **docs**      | Documentação do projeto.                                                     |
+| **database**  | Scripts para criação e gerenciamento do banco de dados.                      |
+| **auth**      | Módulode autorização do aplicativo para desenvolvimento.                     |
+| **java**      | Aplicativos modulares com Java e SpringBoot para gerenciamento dos serviços. |
+| **angular**   | Aplicativos clientes para consumir os serviços criados com Java.             |
 
 ## Token de Acesso
 
 ```bash
 curl -X POST \
-  'http://guess-auth:8080/auth/realms/guess-who/protocol/openid-connect/token' \
+  'http://guess-auth:8080/realms/guess-who/protocol/openid-connect/token' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --data-urlencode 'grant_type=password' \
   --data-urlencode 'username=******' \
@@ -56,3 +58,5 @@ curl -X POST \
   --data-urlencode 'client_id=guess-who-game' \
   --data-urlencode 'client_secret=7fcaf3a7-b1ab-4558-9a4a-004ad800d41a'
 ```
+# Interface Administrativa
+![Guess Who Admin](./snapshots/guess-who-admin-home.png "Interface de administração dos dados de personagens bíblios.")

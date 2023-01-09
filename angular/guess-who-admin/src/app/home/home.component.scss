@@ -1,0 +1,66 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin theme($theme) {
+    $color-config: mat.get-color-config($theme);
+    @if $color-config !=null {
+        @include color($theme);
+    }
+
+    $typography-config: mat.get-typography-config($theme);
+    @if $typography-config !=null {
+        @include typography($theme);
+    }
+}
+
+@mixin color($theme) {
+    $color-config: mat.get-color-config($theme);
+    $primary-palette: map.get($color-config, 'primary');
+    $accent-palette: map.get($color-config, 'accent');
+    .mat-mdc-card-actions {
+        background-color: mat.get-color-from-palette($primary-palette);
+    }
+    .mat-divider-vertical {
+        border-color: mat.get-color-from-palette($accent-palette);
+    }
+}
+
+.mat-mdc-card {
+    margin: 10px;
+}
+
+.mat-mdc-card-title {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.mat-mdc-card-header {
+    padding: 0px;
+}
+
+.mat-divider-vertical {
+    height: 80%;
+}
+
+.person {
+    flex: 1 1 auto;
+    width: 400px;
+}
+
+.filter {
+    flex: 2 0 auto;
+}
+
+.paginator {
+    flex: 0 0 auto;
+}
+
+.actions {
+    flex: 0 0 auto;
+}
+
+.action-button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+

@@ -1,0 +1,119 @@
+@use '@angular/material' as mat;
+@use './app/common/header/header.component.scss' as header;
+@use './app/common/footer/footer.component.scss' as footer;
+@use './app/home/home.component.scss' as home;
+@use './app/common/card-form/card-form.component.scss' as card;
+
+@include mat.core();
+
+$guess-who-admin-primary: mat.define-palette(mat.$brown-palette, 500);
+$guess-who-admin-accent: mat.define-palette(mat.$orange-palette, A200, A400, A700);
+$guess-who-admin-warn: mat.define-palette(mat.$red-palette);
+
+$guess-who-admin-theme: mat.define-light-theme((
+  color: (
+    primary: $guess-who-admin-primary,
+    accent: $guess-who-admin-accent,
+    warn: $guess-who-admin-warn,
+  )
+));
+.light-mode {
+  @include mat.core-color($guess-who-admin-theme);
+  @include mat.all-component-themes($guess-who-admin-theme);
+  @include header.theme($guess-who-admin-theme);
+  @include footer.theme($guess-who-admin-theme);
+  @include home.theme($guess-who-admin-theme);
+  @include card.theme($guess-who-admin-theme);
+}
+
+$guess-who-admin-primary-dark: mat.define-palette(mat.$brown-palette, 900);
+$guess-who-admin-accent-dark: mat.define-palette(mat.$orange-palette, A200, A400, A700);
+$guess-who-admin-warn-dark: mat.define-palette(mat.$red-palette);
+$guess-who-admin-theme-dark: mat.define-dark-theme((
+  color: (
+    primary: $guess-who-admin-primary-dark,
+    accent: $guess-who-admin-accent-dark,
+    warn: $guess-who-admin-warn-dark,
+  )
+));
+.dark-mode {
+  @include mat.core-color($guess-who-admin-theme-dark);
+  @include mat.all-component-themes($guess-who-admin-theme-dark);
+  @include header.theme($guess-who-admin-theme-dark);
+  @include footer.theme($guess-who-admin-theme-dark);
+  @include home.theme($guess-who-admin-theme-dark);
+  @include card.theme($guess-who-admin-theme-dark);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+main {
+  min-height: calc(100vh - 78px - 78px);
+  margin: 30px 15px 15px 15px
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.center {
+  margin: auto;
+}
+
+.right {
+  float: right;
+  margin: 10px;
+}
+
+.mat-mdc-card-content {
+  margin-top: 20px;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mat-divider-vertical {
+  height: 80%;
+  margin: 10px !important;
+}
+
+.notifier-info {
+  align-content: flex-start;
+  margin-top: 80px !important;
+  --mdc-snackbar-container-color: rgb(76, 175, 80) !important;
+
+  .mat-mdc-snack-bar-label {
+      color: white !important;
+      min-width: calc(100vw / 2);
+  }
+}
+
+.notifier-error {
+  align-content: flex-start;
+  margin-top: 80px !important;
+  --mdc-snackbar-container-color: rgb(244, 67, 54) !important;
+
+  .mat-mdc-snack-bar-label {
+      color: white !important;
+      min-width: calc(100vw / 2);
+  }
+}
