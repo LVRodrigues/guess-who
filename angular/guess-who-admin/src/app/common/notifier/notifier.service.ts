@@ -14,7 +14,7 @@ export class NotifierService {
       panelClass: 'notifier-info',
       horizontalPosition: 'end', 
       verticalPosition: 'top',
-      data: { 'message': message, 'icon': 'check'},
+      data: { 'message': message, 'icon': 'check_circle'},
       duration: 5000
     });
   }
@@ -24,7 +24,7 @@ export class NotifierService {
       panelClass: 'notifier-error',
       horizontalPosition: 'end', 
       verticalPosition: 'top',
-      data: { 'message': message, 'icon': 'check'}
+      data: { 'message': message, 'icon': 'error'}
     });
   }
 }
