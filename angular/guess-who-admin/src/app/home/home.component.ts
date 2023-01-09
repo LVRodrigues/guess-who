@@ -57,9 +57,6 @@ export class HomeComponent {
         },
         error: (error) => {
           this.loading = false;
-          if (!(error instanceof HttpErrorResponse)) {
-            error = error.rejection; 
-          }
           if (error.status === 404) {
             this.cards = [];
             this.page  = new Page();

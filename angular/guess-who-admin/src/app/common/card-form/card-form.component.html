@@ -39,7 +39,7 @@
                 <mat-header-cell *matHeaderCellDef [ngClass]="'evidence-cell'"><b>Evidência</b></mat-header-cell>
                 <mat-cell *matCellDef="let row" [ngClass]="'evidence-cell'">{{ row.evidence }}</mat-cell>
             </ng-container>
-            <ng-container matColumnDef="actions">
+            <ng-container matColumnDef="actions" *ngIf="isEditing()">
                 <mat-header-cell *matHeaderCellDef [ngClass]="'action-cell'">
                     <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="questionAdd()" class="action-button"
                         aria-label="Adicionar uma nova pergunta para o personagem corrente."
@@ -63,8 +63,8 @@
                 </mat-cell>
             </ng-container>
             <!-- Header and Row Declarations -->
-            <mat-header-row *matHeaderRowDef="['text', 'evidence', 'actions']"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: ['text', 'evidence', 'actions']"></mat-row>
+            <mat-header-row *matHeaderRowDef="columns()"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: columns()"></mat-row>
         </mat-table>
 
         <ng-template #noQuestions>
