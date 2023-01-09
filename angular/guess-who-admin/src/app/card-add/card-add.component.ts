@@ -22,10 +22,6 @@ export class CardAddComponent {
   }
 
   confirm(card: Card): void {
-    // this.cardsService.add(card).subscribe((result) => {
-    //   this.router.navigate(['home']);
-    //   this.notifier.info('Cartão do personagem "' + result.name + '" criado com sucesso!');
-    // });
     this.cardsService.add(card).subscribe({
       next: (result) => {
         this.notifier.info('Cartão do personagem "' + result.name + '" criado com sucesso!');
