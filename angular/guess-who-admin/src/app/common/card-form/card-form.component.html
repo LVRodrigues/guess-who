@@ -20,7 +20,7 @@
     <mat-card-content>
         <section class="container">
             <article class="card-image">
-                <img title="Imagem do personagem." src="{{ card.image }}" width="200px" height="200px" />
+                <app-card-form-image></app-card-form-image>
             </article>
 
             <article class="card-data">
@@ -67,7 +67,7 @@
                             </button>
                         </mat-cell>
                     </ng-container>
-                    <!-- Header and Row Declarations -->
+
                     <mat-header-row *matHeaderRowDef="columns()"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: columns()"></mat-row>
                 </mat-table>
