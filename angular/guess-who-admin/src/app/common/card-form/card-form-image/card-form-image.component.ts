@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-form-image',
@@ -7,10 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class CardFormImageComponent {
 
-  @Input() image: string;
+  @Input() image: string | undefined;
+  @Output() onChange: EventEmitter<string>;
 
   constructor() {
     this.image = '';
+    this.onChange = new EventEmitter<string>();
   }
 
   load(): void {
@@ -23,6 +25,7 @@ export class CardFormImageComponent {
       let reader = new FileReader();
       reader.onload = (e: any) => {
         this.image = e.target.result;
+        this.onChange.emit(this.image);
       }
       reader.readAsDataURL(file);
     }
@@ -30,5 +33,6 @@ export class CardFormImageComponent {
 
   reset(): void {
     this.image = '';
+    this.onChange.emit(this.image);
   }
 }
