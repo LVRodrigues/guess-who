@@ -48,7 +48,7 @@ import io.github.lvrodrigues.guess.utils.FieldUtil;
  */
 @RestController
 @RequestMapping("/v1/cards")
-@CrossOrigin(origins = {"http://localhost:4200", "http://localhost"})
+@CrossOrigin(origins = {"http://localhost:8081", "http://localhost:4200", "http://localhost"})
 public class CardsController {
 
     /**

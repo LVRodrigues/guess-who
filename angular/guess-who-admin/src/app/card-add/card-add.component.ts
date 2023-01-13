@@ -27,7 +27,7 @@ export class CardAddComponent {
         this.notifier.info('Cartão do personagem "' + result.name + '" criado com sucesso!');
       },
       error: (error) => {
-        this.notifier.error("Cartão do personagem não pode ser adicionado.\n" + error);
+        this.notifier.error('Cartão do personagem não pode ser adicionado.\n' + error.message);
       },
       complete: () => {
         this.router.navigate(['home']);

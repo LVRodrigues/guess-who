@@ -32,7 +32,7 @@ export class CardEditComponent {
         this.notifier.info('Cartão do personagem "' + result.name + '" alterado com sucesso!');
       },
       error: (error) => {
-        this.notifier.error("Cartão do personagem não pode ser alterado.\n" + error);
+        this.notifier.error('Cartão do personagem não pode ser alterado.\n' + error.message);
       },
       complete: () => {
         this.router.navigate(['home']);
