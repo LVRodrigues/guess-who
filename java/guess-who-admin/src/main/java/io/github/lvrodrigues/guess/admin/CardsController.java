@@ -119,7 +119,7 @@ public class CardsController {
         // Preparando a página de resposta:
         Pageable paging     = PageRequest.of(page, size, sorts);
         Page<Card> result   = null;
-        if (name != null) {
+        if (name != null && !name.isBlank()) {
             result = cards.findByNameContainsIgnoreCase(name, paging);
         } else {
             result = cards.findAll(paging);

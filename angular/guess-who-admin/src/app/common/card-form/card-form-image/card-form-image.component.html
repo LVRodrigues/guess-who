@@ -16,7 +16,9 @@
         </mat-card-actions>
         <mat-card-content>
             <img class="center" width="200px" height="200px"
-                src="{{image}}" title="Sample" #selectedImage/>
+                src="{{image}}" title="Imagem do personagem" *ngIf="image"/>
+            <img class="center" width="200px" height="200px"
+                src="../../../../assets/guess-who.png" title="Imagem do personagem" *ngIf="!image"/>
         </mat-card-content>
     </mat-card>
 </article>

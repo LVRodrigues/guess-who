@@ -140,5 +140,6 @@ export class CardFormComponent {
 
   imageChange(value: string | undefined): void {
     this.card.image = value;
+    this.edited = true;
   }
 }
