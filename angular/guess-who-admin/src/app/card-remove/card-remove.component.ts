@@ -32,7 +32,7 @@ export class CardRemoveComponent {
         this.notifier.info('Cartão do personagem "' + card.name + '" removido com sucesso!');
       },
       error: (error) => {
-        this.notifier.error("Cartão do personagem não pode ser removido.\n" + error);
+        this.notifier.error('Cartão do personagem não pode ser removido.\n' + error.message);
       },
       complete: () => {
         this.router.navigate(['home']);
