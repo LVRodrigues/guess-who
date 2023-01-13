@@ -1,0 +1,52 @@
+<mat-table *ngIf="questions?.length; else noQuestions" [dataSource]="questions" fixedLayout="false">
+    <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef><b>ID</b></mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.id }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="text">
+        <mat-header-cell *matHeaderCellDef [ngClass]="'question-cell'"><b>Pergunta</b></mat-header-cell>
+        <mat-cell *matCellDef="let row" [ngClass]="'question-cell'">{{ row.text }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="evidence">
+        <mat-header-cell *matHeaderCellDef [ngClass]="'evidence-cell'"><b>Evidência</b></mat-header-cell>
+        <mat-cell *matCellDef="let row" [ngClass]="'evidence-cell'">{{ row.evidence }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="actions" *ngIf="!readonly">
+        <mat-header-cell *matHeaderCellDef [ngClass]="'action-cell'">
+            <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="questionAdd()" class="action-button"
+                aria-label="Adicionar uma nova pergunta para o personagem corrente." disabled="{{ readonly }}">
+                <mat-icon>add</mat-icon>
+            </button>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let row" [ngClass]="'action-cell'">
+            <button mat-icon-button class="example-icon" matTooltip="Editar"
+                aria-label="Editar as informações do personagem." (click)="questionEdit(row)"
+                disabled="{{ readonly }}">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" matTooltip="Excluir"
+                aria-label="Remover as informações do personagem." (click)="questionRemove(row)"
+                disabled="{{ readonly }}">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="columns()"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columns()"></mat-row>
+</mat-table>
+
+<ng-template #noQuestions>
+    <mat-card appearance="outlined">
+        <article class="container">
+            <span class="no-questions-items">Nenhuma pergunta encontrada...</span>
+            <span class="example-spacer"></span>
+            <div class="no-questions-items">
+                <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="questionAdd()" class="action-button"
+                    disabled="{{ readonly }}" aria-label="Adicionar uma nova pergunta para o personagem corrente.">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        </article>
+    </mat-card>
+</ng-template>

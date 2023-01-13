@@ -1,0 +1,21 @@
+.card-image {
+    border-width: 3px;
+    border-style: groove;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    min-width: 202px;
+    min-height: 254px;
+    max-width: 202px;
+    max-height: 254px;
+    padding: 0px;
+}
+
+.mat-mdc-card,
+.mat-mdc-card-actions,
+.mat-mdc-card-content,
+.mat-mdc-card-header,
+.mat-mdc-card-footer {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}

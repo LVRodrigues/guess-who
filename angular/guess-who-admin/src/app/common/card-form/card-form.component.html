@@ -7,8 +7,7 @@
             <span>{{ getStatus() }}</span>
             <mat-divider vertical></mat-divider>
             <button mat-mini-fab color="accent" matTooltip="Confirmar" class="action-button"
-                aria-label="Confirmar as alterações."
-                disabled="{{ ! canConfirm() }}" (click)="confirm()">
+                aria-label="Confirmar as alterações." disabled="{{ !canConfirm() }}" (click)="confirm()">
                 <mat-icon>check</mat-icon>
             </button>
             <button mat-mini-fab color="accent" matTooltip="Cancelar" (click)="back()" class="action-button"
@@ -19,67 +18,28 @@
     </mat-card-header>
 
     <mat-card-content>
-        <mat-form-field appearance="fill">
-            <mat-label>Nome</mat-label>
-            <input matInput type="text" id="name" [(ngModel)]="card.name" (keyup)="onEdit($event)"
-                placeholder="Nome do personagem"
-                disabled="{{ ! isEditing() }}">
-        </mat-form-field>
+        <section class="container">
+            <article class="card-image">
+                <app-card-form-image
+                    [image]="card.image"
+                    [readonly]="!isEditing()"
+                    (onChange)="imageChange($event)">
+                </app-card-form-image>
+            </article>
 
-        <mat-table *ngIf="card?.questions?.length; else noQuestions" [dataSource]="card.questions" fixedLayout="false">
-            <ng-container matColumnDef="id">
-                <mat-header-cell *matHeaderCellDef><b>ID</b></mat-header-cell>
-                <mat-cell *matCellDef="let row">{{ row.id }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="text">
-                <mat-header-cell *matHeaderCellDef [ngClass]="'question-cell'"><b>Pergunta</b></mat-header-cell>
-                <mat-cell *matCellDef="let row" [ngClass]="'question-cell'">{{ row.text }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="evidence">
-                <mat-header-cell *matHeaderCellDef [ngClass]="'evidence-cell'"><b>Evidência</b></mat-header-cell>
-                <mat-cell *matCellDef="let row" [ngClass]="'evidence-cell'">{{ row.evidence }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="actions" *ngIf="isEditing()">
-                <mat-header-cell *matHeaderCellDef [ngClass]="'action-cell'">
-                    <button mat-mini-fab color="accent" matTooltip="Adicionar" (click)="questionAdd()" class="action-button"
-                        aria-label="Adicionar uma nova pergunta para o personagem corrente."
-                        disabled="{{ ! isEditing() }}">
-                        <mat-icon>add</mat-icon>
-                    </button>
-                </mat-header-cell>
-                <mat-cell *matCellDef="let row" [ngClass]="'action-cell'">
-                    <button mat-icon-button class="example-icon" matTooltip="Editar"
-                        aria-label="Editar as informações do personagem."
-                        (click)="questionEdit(row)"
-                        disabled="{{ ! isEditing() }}">
-                        <mat-icon>edit</mat-icon>
-                    </button>
-                    <button mat-icon-button class="example-icon" matTooltip="Excluir"
-                        aria-label="Remover as informações do personagem."
-                        (click)="questionRemove(row)"
-                        disabled="{{ ! isEditing() }}">
-                        <mat-icon>delete</mat-icon>
-                    </button>
-                </mat-cell>
-            </ng-container>
-            <!-- Header and Row Declarations -->
-            <mat-header-row *matHeaderRowDef="columns()"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: columns()"></mat-row>
-        </mat-table>
+            <article class="card-data">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nome</mat-label>
+                    <input matInput type="text" id="name" [(ngModel)]="card.name" (keyup)="onEdit($event)"
+                        placeholder="Nome do personagem" disabled="{{ !isEditing() }}">
+                </mat-form-field>
 
-        <ng-template #noQuestions>
-            <mat-card appearance="outlined">
-                <article class="container">
-                    <span>Nenhuma pergunta encontrada...</span>
-                    <span class="example-spacer"></span>
-                    <button mat-mini-fab color="accent" matTooltip="Adicionar" 
-                        (click)="questionAdd()" class="action-button"
-                        disabled="{{ ! isEditing() }}"
-                        aria-label="Adicionar uma nova pergunta para o personagem corrente.">
-                        <mat-icon>add</mat-icon>
-                    </button>
-                </article>
-            </mat-card>
-        </ng-template>
+                <app-questions-list
+                    [questions]="card.questions"
+                    [readonly]="!isEditing()"
+                    (onChange)="questionsChange($event)">
+                </app-questions-list>
+            </article>
+        </section>
     </mat-card-content>
 </mat-card>

@@ -1,0 +1,24 @@
+<article class="card-image">
+    <mat-card appearance="outlined">
+        <mat-card-actions [align]="'end'">
+            <button mat-mini-fab color="accent" matTooltip="Excluir Imagem" class="action-button"
+                aria-label="Elimina a imagem corrento do cartão de personagem."
+                (click)="reset()" disabled="{{ readonly }}">
+                <mat-icon>clear</mat-icon>
+            </button>            
+            <button mat-mini-fab color="accent" matTooltip="Carregar Imagem" class="action-button"
+                aria-label="Carrega uma nova imagem para o cartão do personagem. Use dimensões de 200x200 pixels."
+                (click)="load()" disabled="{{ readonly }}">
+                <mat-icon>file_upload</mat-icon>
+                <input type="file" style="display: none" title="Carregar arquivo" 
+                    accept="image/*" (change)="selectFile($event)">
+            </button>
+        </mat-card-actions>
+        <mat-card-content>
+            <img class="center" width="200px" height="200px"
+                src="{{image}}" title="Imagem do personagem" *ngIf="image"/>
+            <img class="center" width="200px" height="200px"
+                src="../../../../assets/guess-who.png" title="Imagem do personagem" *ngIf="!image"/>
+        </mat-card-content>
+    </mat-card>
+</article>

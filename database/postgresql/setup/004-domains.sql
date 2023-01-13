@@ -11,5 +11,5 @@ COMMENT ON DOMAIN description IS 'Descrições sobre os registros.';
 CREATE DOMAIN datetime AS time with time zone;
 COMMENT ON DOMAIN datetime IS 'Data e Hora com fuso horário.';
 
-CREATE DOMAIN image AS bytea;
+CREATE DOMAIN image AS text;
 COMMENT ON DOMAIN image IS 'Campo para armazenar imagens.';
