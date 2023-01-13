@@ -17,7 +17,7 @@ services:
       guess-network:
         aliases:
           - guess-auth
-  admin:
+  admin-server:
     build: ./java/guess-who-admin
     ports:
       - 5001:5001
@@ -27,7 +27,17 @@ services:
     networks:
       guess-network:
         aliases:
-          - guess-admin
+          - guess-admin-server
+  admin-client:
+    build: ./angular/guess-who-admin
+    ports:
+      - 8081:80
+    depends_on:
+      - admin-server
+    networks:
+      guess-network:
+        aliases:
+          - guess-admin-client
 networks:
   guess-network:
     driver: bridge

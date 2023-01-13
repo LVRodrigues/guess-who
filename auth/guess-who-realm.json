@@ -637,7 +637,7 @@
     "clientAuthenticatorType" : "client-secret",
     "secret" : "7fcaf3a7-b1ab-4558-9a4a-004ad800d41a",
     "redirectUris" : [ "http://localhost:5001/*", "http://localhost:5000/*" ],
-    "webOrigins" : [ "http://localhost:5000", "http://localhost:5001", "http://guess-admin:5001", "http://localhost:4200" ],
+    "webOrigins" : [ "http://localhost:5000", "http://localhost:5001", "http://guess-admin-server:5001", "http://localhost:4200", "http://localhost:8081" ],
     "notBefore" : 0,
     "bearerOnly" : false,
     "consentRequired" : false,
