@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Card } from '../model/card';
 import { Question } from '../model/question';
@@ -136,5 +136,10 @@ export class CardFormComponent {
       result.push('actions');
     }
     return result;
+  }
+
+  imageChange(value: string | undefined): void {
+    this.card.image = value;
+    this.edited = true;
   }
 }

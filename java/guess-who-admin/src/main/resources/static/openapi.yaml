@@ -201,7 +201,7 @@ components:
           description: Expressão fonética para identificar o nome do personagem.
         image:
           type: string
-          description: Endereço da imagem sobre o personagem bíblico.
+          description: Imagem armazenada no formato de dados em BASE64.
         questions:
           description: Pergundas sobre o personagem bíblico
           type: array

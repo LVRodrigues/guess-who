@@ -39,6 +39,7 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { NotifierComponent } from './common/notifier/notifier.component';
+import { CardFormImageComponent } from './common/card-form/card-form-image/card-form-image.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { NotifierComponent } from './common/notifier/notifier.component';
     CardEditComponent,
     CardFormComponent,
     QuestionDialogComponent,
-    NotifierComponent
+    NotifierComponent,
+    CardFormImageComponent
   ],
   imports: [
     BrowserModule,

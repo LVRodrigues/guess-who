@@ -1,7 +1,6 @@
 package io.github.lvrodrigues.guess.model;
 
 import java.io.Serializable;
-import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -10,11 +9,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Type;
 import org.springframework.hateoas.RepresentationModel;
 import org.springframework.hateoas.server.core.Relation;
 import org.springframework.lang.Nullable;
@@ -58,11 +55,9 @@ public class Card extends RepresentationModel<Card> implements Serializable, Clo
     /**
      * Imagem do cartão.
      */
-    @Lob
     @Column
     @Basic(fetch = FetchType.LAZY)
-    @Type(type = "org.hibernate.type.BinaryType")
-    private byte[] image;
+    private String image;
 
     /**
      * Perguntas sobre o personagem bíblico.
@@ -136,12 +131,8 @@ public class Card extends RepresentationModel<Card> implements Serializable, Clo
      *
      * @return {@link #image}
      */
-    public byte[] getImage() {
-        if (image == null) {
-            return null;
-        } else {
-            return Arrays.copyOf(image, image.length);
-        }
+    public String getImage() {
+        return image;
     }
 
     /**
@@ -149,12 +140,8 @@ public class Card extends RepresentationModel<Card> implements Serializable, Clo
      *
      * @param image {@link #image}
      */
-    public void setImage(byte[] image) {
-        if (image == null) {
-            this.image = null;
-        } else {
-            this.image = Arrays.copyOf(image, image.length);
-        }
+    public void setImage(String image) {
+        this.image = image;
     }
 
     /**
