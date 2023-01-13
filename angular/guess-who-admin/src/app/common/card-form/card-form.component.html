@@ -22,6 +22,7 @@
             <article class="card-image">
                 <app-card-form-image
                     [image]="card.image"
+                    [readonly]="!isEditing()"
                     (onChange)="imageChange($event)">
                 </app-card-form-image>
             </article>

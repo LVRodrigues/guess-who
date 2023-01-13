@@ -8,10 +8,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CardFormImageComponent {
 
   @Input() image: string | undefined;
+  @Input() readonly: boolean;
   @Output() onChange: EventEmitter<string>;
 
   constructor() {
     this.image = '';
+    this.readonly = false;
     this.onChange = new EventEmitter<string>();
   }
 
