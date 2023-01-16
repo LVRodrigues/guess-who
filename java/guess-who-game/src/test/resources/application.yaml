@@ -1,0 +1,36 @@
+server:
+  port: 5000
+
+logging:
+  level:
+    root: DEBUG
+    org:
+      spring:
+        security: DEBUG
+        oauth2: DEBUG
+
+spring:
+  jpa:
+    generate-ddl: true    
+  datasource:
+    url: jdbc:h2:mem:guess-who
+    username: sa
+    password:     
+  jackson:
+    default-property-inclusion: NON_EMPTY
+  security:
+    oauth2: 
+      client:
+        registration:
+          guess-who:
+            client-id: guess-who-game
+            client-secret: 7fcaf3a7-b1ab-4558-9a4a-004ad800d41a
+            client-name: Guess Who?
+        provider:
+          guess-who:
+            issuer-uri: http://guess-auth:8080/realms/guess-who
+      resourceserver: 
+        jwt:
+          issuer-uri: http://guess-auth:8080/realms/guess-who
+          jwk-set-uri: http://guess-auth:8080/realms/guess-who/protocol/openid-connect/certs
+         

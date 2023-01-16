@@ -468,7 +468,7 @@ components:
       description: Autenticação e Autorização de acesso.
       flows:
         password:
-          tokenUrl: 'http://localhost:10000/realms/guess-who/protocol/openid-connect/token'
+          tokenUrl: 'http://localhost:8080/realms/guess-who/protocol/openid-connect/token'
           scopes: {}              
 security: 
   - auth: []
