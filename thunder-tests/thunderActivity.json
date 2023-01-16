@@ -409,49 +409,6 @@
     ]
   },
   {
-    "_id": "5e11837c-fcad-493a-a8fc-bac07cc6ba6d",
-    "colId": "history",
-    "containerId": "",
-    "name": "Cards: Lucianos",
-    "url": "http://{{server}}:{{port}}/{{api}}/cards?name=Luciano",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2022-06-30T18:12:47.167Z",
-    "modified": "2022-11-18T20:02:43.938Z",
-    "headers": [],
-    "params": [
-      {
-        "name": "name",
-        "value": "Luciano",
-        "isPath": false
-      }
-    ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "{{token}}"
-    },
-    "tests": [
-      {
-        "type": "json-query",
-        "custom": "json._embedded.cards",
-        "action": "count",
-        "value": "3"
-      },
-      {
-        "type": "json-query",
-        "custom": "json.page.totalPages",
-        "action": "equal",
-        "value": "1"
-      },
-      {
-        "type": "json-query",
-        "custom": "json.page.number",
-        "action": "equal",
-        "value": "0"
-      }
-    ]
-  },
-  {
     "_id": "e1e840d4-daa0-4bf5-8094-66e250e787e1",
     "colId": "history",
     "containerId": "",

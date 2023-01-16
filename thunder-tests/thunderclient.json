@@ -1,1 +1,719 @@
-[]
+[
+  {
+    "_id": "88b8b203-64d2-41ff-9ada-3dc6691d8991",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Admin: Token",
+    "url": "http://guess-auth:8080/realms/guess-who/protocol/openid-connect/token",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-01-16T11:58:19.701Z",
+    "modified": "2023-01-16T11:58:19.701Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "grant_type",
+          "value": "password"
+        },
+        {
+          "name": "username",
+          "value": "administrator"
+        },
+        {
+          "name": "password",
+          "value": "guess-pass"
+        },
+        {
+          "name": "client_id",
+          "value": "guess-who-game"
+        },
+        {
+          "name": "client_secret",
+          "value": "7fcaf3a7-b1ab-4558-9a4a-004ad800d41a"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.token_type",
+        "action": "setto",
+        "value": "{{token-type}}"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.access_token",
+        "action": "setto",
+        "value": "{{token}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "access_token"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "refresh_token"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.refresh_token",
+        "action": "setto",
+        "value": "{{refresh_token}}"
+      }
+    ]
+  },
+  {
+    "_id": "31556c82-f4b2-4091-bd53-a4548f1ca229",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Admin: Refresh Token",
+    "url": "http://guess-auth:8080/realms/guess-who/protocol/openid-connect/token",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-01-16T11:58:35.589Z",
+    "modified": "2023-01-16T11:58:35.589Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "grant_type",
+          "value": "refresh_token"
+        },
+        {
+          "name": "client_id",
+          "value": "guess-who-game"
+        },
+        {
+          "name": "client_secret",
+          "value": "7fcaf3a7-b1ab-4558-9a4a-004ad800d41a"
+        },
+        {
+          "name": "refresh_token",
+          "value": "{{refresh_token}}"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.token_type",
+        "action": "setto",
+        "value": "{{token-type}}"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.access_token",
+        "action": "setto",
+        "value": "{{token}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "access_token"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "refresh_token"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.refresh_token",
+        "action": "setto",
+        "value": "{{refresh_token}}"
+      }
+    ]
+  },
+  {
+    "_id": "18f14972-3d4a-4074-a16b-83827257f446",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: natural GET",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-01-16T11:59:49.562Z",
+    "modified": "2023-01-16T11:59:49.562Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards[0].name",
+        "action": "equal",
+        "value": "Abel"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "image"
+      }
+    ]
+  },
+  {
+    "_id": "ea8c1aa4-11be-4990-9658-0e8dbb0e14f8",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: fields id,name",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?fields=name,id",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-01-16T12:00:07.002Z",
+    "modified": "2023-01-16T12:00:07.002Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "fields",
+        "value": "name,id",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards[0].name",
+        "action": "equal",
+        "value": "Abel"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "questions"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "image"
+      }
+    ]
+  },
+  {
+    "_id": "14d83fee-b835-47dc-83ad-4677f2b01bec",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: page invalid",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?page=-1",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2023-01-16T12:00:29.434Z",
+    "modified": "2023-01-16T12:00:29.434Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "page",
+        "value": "-1",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "ab44f54d-6ec7-4fa8-97ef-c8e8fc78c350",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: fields invalid",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?fields=error,truck,treco",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2023-01-16T12:00:38.730Z",
+    "modified": "2023-01-16T12:00:38.730Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "fields",
+        "value": "error,truck,treco",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "9a317f75-4a84-4529-96f8-bf7658e9d1de",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: sort invalid",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?sort=error",
+    "method": "GET",
+    "sortNum": 80000,
+    "created": "2023-01-16T12:00:51.355Z",
+    "modified": "2023-01-16T12:00:51.355Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "sort",
+        "value": "error",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "400"
+      }
+    ]
+  },
+  {
+    "_id": "d703a279-d35b-414d-b7c6-d7f44f8b5707",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: page,sort,fields",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?page=5&sort=name&fields=name,id",
+    "method": "GET",
+    "sortNum": 90000,
+    "created": "2023-01-16T12:01:01.743Z",
+    "modified": "2023-01-16T12:01:01.743Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "page",
+        "value": "5",
+        "isPath": false
+      },
+      {
+        "name": "sort",
+        "value": "name",
+        "isPath": false
+      },
+      {
+        "name": "fields",
+        "value": "name,id",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards[0].name",
+        "action": "equal",
+        "value": "Ester"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "5"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "image"
+      }
+    ]
+  },
+  {
+    "_id": "4ae64e44-385a-4a97-a096-bf64e2b2bb45",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: sort -phoneme,+name",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?sort=phoneme,DESC,name,ASC",
+    "method": "GET",
+    "sortNum": 100000,
+    "created": "2023-01-16T12:01:10.899Z",
+    "modified": "2023-01-16T12:01:10.899Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "sort",
+        "value": "phoneme,DESC,name,ASC",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "5"
+      },
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards[0].name",
+        "action": "equal",
+        "value": "Eva"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "20"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "notcontains",
+        "value": "image"
+      }
+    ]
+  },
+  {
+    "_id": "f2af49a6-d81b-46b0-b2ab-83c0badb0f52",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: uuid NULL",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/00000000-0000-0000-0000-000000000000",
+    "method": "GET",
+    "sortNum": 110000,
+    "created": "2023-01-16T12:01:38.411Z",
+    "modified": "2023-01-16T12:01:38.411Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "404"
+      }
+    ]
+  },
+  {
+    "_id": "41f8c8d7-d32c-409a-9054-bc2360ca3a14",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: uuid Noé",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/efc236ab-20ad-42b0-a2c6-ca28ee7708cd",
+    "method": "GET",
+    "sortNum": 120000,
+    "created": "2023-01-16T12:01:48.095Z",
+    "modified": "2023-01-16T12:01:48.095Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.name",
+        "action": "equal",
+        "value": "Noé"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.questions",
+        "action": "count",
+        "value": "6"
+      }
+    ]
+  },
+  {
+    "_id": "6d9bcbdf-8c06-4967-b2ed-5c630c648854",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: add",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards",
+    "method": "POST",
+    "sortNum": 130000,
+    "created": "2023-01-16T12:02:14.876Z",
+    "modified": "2023-01-16T12:02:14.876Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"}\n    ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "201"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.id",
+        "action": "setto",
+        "value": "{{lastID}}"
+      },
+      {
+        "type": "custom-header",
+        "custom": "Location",
+        "action": "contains",
+        "value": "card"
+      }
+    ]
+  },
+  {
+    "_id": "697b519e-bcd5-411d-87f1-d6281f21aff2",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: update",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/{{lastID}}",
+    "method": "PUT",
+    "sortNum": 140000,
+    "created": "2023-01-16T12:02:28.580Z",
+    "modified": "2023-01-16T12:02:28.580Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues Alterado\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"},\n      {\"text\": \"Tereira Pergunda?\", \"evidence\": \"Sei não\"}\n    ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.name",
+        "action": "equal",
+        "value": "Luciano Vieira Rodrigues Alterado"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.questions",
+        "action": "count",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "_id": "5a5cbde1-2433-40a2-875b-331ab7586dbc",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: delete last add",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/{{lastID}}",
+    "method": "DELETE",
+    "sortNum": 150000,
+    "created": "2023-01-16T12:02:59.772Z",
+    "modified": "2023-01-16T12:02:59.772Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "204"
+      }
+    ]
+  },
+  {
+    "_id": "0edb9206-ec04-4164-8e9f-5148cd21b2b8",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: update NULL",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards/00000000-0000-0000-0000-000000000000",
+    "method": "PUT",
+    "sortNum": 160000,
+    "created": "2023-01-16T12:03:29.133Z",
+    "modified": "2023-01-16T12:03:29.133Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Luciano Vieira Rodrigues Alterado\",\n  \"image\": \"PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3LjUwMDEgMTEuOTk5OEMyMC41Mzc3IDExLjk5OTggMjMuMDAwMSAxNC40NjIyIDIzLjAwMDEgMTcuNDk5OEMyMy4wMDAxIDIwLjUzNzMgMjAuNTM3NyAyMi45OTk4IDE3LjUwMDEgMjIuOTk5OEMxNC40NjI2IDIyLjk5OTggMTIuMDAwMSAyMC41MzczIDEyLjAwMDEgMTcuNDk5OEMxMi4wMDAxIDE0LjQ2MjIgMTQuNDYyNiAxMS45OTk4IDE3LjUwMDEgMTEuOTk5OFpNMTcuNTAwMSAxOS43NTA3QzE3LjE1NTIgMTkuNzUwNyAxNi44NzU2IDIwLjAzMDMgMTYuODc1NiAyMC4zNzUzQzE2Ljg3NTYgMjAuNzIwMiAxNy4xNTUyIDIwLjk5OTggMTcuNTAwMSAyMC45OTk4QzE3Ljg0NSAyMC45OTk4IDE4LjEyNDYgMjAuNzIwMiAxOC4xMjQ2IDIwLjM3NTNDMTguMTI0NiAyMC4wMzAzIDE3Ljg0NSAxOS43NTA3IDE3LjUwMDEgMTkuNzUwN1pNMTcuNTAwMiAxMy44NzM4QzE2LjQ1MjIgMTMuODczOCAxNS42MzU5IDE0LjY5MTIgMTUuNjQ2OCAxNS44MjgxQzE1LjY0OTQgMTYuMTA0MyAxNS44NzU0IDE2LjMyNiAxNi4xNTE2IDE2LjMyMzNDMTYuNDI3NyAxNi4zMjA3IDE2LjY0OTQgMTYuMDk0NyAxNi42NDY3IDE1LjgxODVDMTYuNjQxMiAxNS4yMzk1IDE3LjAwNjQgMTQuODczOCAxNy41MDAyIDE0Ljg3MzhDMTcuOTcyNSAxNC44NzM4IDE4LjM1MzYgMTUuMjY1NyAxOC4zNTM2IDE1LjgyMzNDMTguMzUzNiAxNi4wMTU2IDE4LjI5ODMgMTYuMTY1NiAxOC4xMjk2IDE2LjM4NDhMMTguMDM1NiAxNi41MDA3TDE3LjkzNjYgMTYuNjE0TDE3LjY3MTIgMTYuOTA0MUwxNy41MzQ4IDE3LjA2MTJDMTcuMTUxNSAxNy41MTggMTcuMDAwMiAxNy44NTM3IDE3LjAwMDIgMTguMzcxM0MxNy4wMDAyIDE4LjY0NzUgMTcuMjI0IDE4Ljg3MTMgMTcuNTAwMiAxOC44NzEzQzE3Ljc3NjMgMTguODcxMyAxOC4wMDAyIDE4LjY0NzUgMTguMDAwMiAxOC4zNzEzQzE4LjAwMDIgMTguMTY4MSAxOC4wNTg3IDE4LjAxMjQgMTguMjM5IDE3Ljc4MTFMMTguMzIzOSAxNy42NzdMMTguNDI0OSAxNy41NjE1TDE4LjY5MDYgMTcuMjcxTDE4LjgyNTIgMTcuMTE2QzE5LjIwMzUgMTYuNjY1MSAxOS4zNTM2IDE2LjMzMjcgMTkuMzUzNiAxNS44MjMzQzE5LjM1MzYgMTQuNzE5NiAxOC41MzEyIDEzLjg3MzggMTcuNTAwMiAxMy44NzM4Wk0xMi4wMjI0IDEzLjk5OTFDMTEuNzI1NyAxNC40NjI0IDExLjQ4NjIgMTQuOTY1OCAxMS4zMTM3IDE1LjQ5OTRMNC4yNTI1NCAxNS40OTk3QzMuODM4OTUgMTUuNDk5NyAzLjUwMzY2IDE1LjgzNSAzLjUwMzY2IDE2LjI0ODZWMTYuODI2MkMzLjUwMzY2IDE3LjM2MTkgMy42OTQ3NyAxNy44OCA0LjA0MjYzIDE4LjI4NzRDNS4yOTU5NCAxOS43NTUgNy4yNjE4MiAyMC41MDA4IDEwLjAwMDEgMjAuNTAwOEMxMC41OTY2IDIwLjUwMDggMTEuMTU2NCAyMC40NjU1IDExLjY4MDQgMjAuMzk0OUMxMS45MjU1IDIwLjg4OTggMTIuMjMzMSAyMS4zNDg0IDEyLjU5MTkgMjEuNzYxM0MxMS43OTY0IDIxLjkyMTUgMTAuOTMxNSAyMi4wMDA4IDEwLjAwMDEgMjIuMDAwOEM2Ljg1NDI2IDIyLjAwMDggNC40NjgyNSAyMS4wOTU3IDIuOTAxOTQgMTkuMjYxNEMyLjMyMjE4IDE4LjU4MjUgMi4wMDM2NiAxNy43MTkgMi4wMDM2NiAxNi44MjYyVjE2LjI0ODZDMi4wMDM2NiAxNS4wMDY1IDMuMDEwNTIgMTMuOTk5NyA0LjI1MjU0IDEzLjk5OTdMMTIuMDIyNCAxMy45OTkxWk0xMC4wMDAxIDIuMDA0MzlDMTIuNzYxNSAyLjAwNDM5IDE1LjAwMDEgNC4yNDI5NyAxNS4wMDAxIDcuMDA0MzlDMTUuMDAwMSA5Ljc2NTgyIDEyLjc2MTUgMTIuMDA0NCAxMC4wMDAxIDEyLjAwNDRDNy4yMzg3IDEyLjAwNDQgNS4wMDAxMiA5Ljc2NTgyIDUuMDAwMTIgNy4wMDQzOUM1LjAwMDEyIDQuMjQyOTcgNy4yMzg3IDIuMDA0MzkgMTAuMDAwMSAyLjAwNDM5Wk0xMC4wMDAxIDMuNTA0MzlDOC4wNjcxMiAzLjUwNDM5IDYuNTAwMTIgNS4wNzE0IDYuNTAwMTIgNy4wMDQzOUM2LjUwMDEyIDguOTM3MzkgOC4wNjcxMiAxMC41MDQ0IDEwLjAwMDEgMTAuNTA0NEMxMS45MzMxIDEwLjUwNDQgMTMuNTAwMSA4LjkzNzM5IDEzLjUwMDEgNy4wMDQzOUMxMy41MDAxIDUuMDcxNCAxMS45MzMxIDMuNTA0MzkgMTAuMDAwMSAzLjUwNDM5WiIgZmlsbD0iIzIxMjEyMSIvPjwvc3ZnPg==\",\n  \"questions\": [\n      {\"text\": \"Primeira Pergunta?\", \"evidence\": \"Nenhuma\"},\n      {\"text\": \"Segunda Pergunda?\", \"evidence\": \"Talvez\"},\n      {\"text\": \"Tereira Pergunda?\", \"evidence\": \"Sei não\"}\n    ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "404"
+      }
+    ]
+  },
+  {
+    "_id": "9f907216-b95a-46ee-bab6-43d4eeda9f90",
+    "colId": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "containerId": "",
+    "name": "Cards: Marias",
+    "url": "http://{{server}}:{{port}}/{{api}}/cards?name=Maria",
+    "method": "GET",
+    "sortNum": 170000,
+    "created": "2023-01-16T12:03:36.469Z",
+    "modified": "2023-01-16T12:03:36.469Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "Maria",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "json-query",
+        "custom": "json._embedded.cards",
+        "action": "count",
+        "value": "3"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.totalPages",
+        "action": "equal",
+        "value": "1"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.page.number",
+        "action": "equal",
+        "value": "0"
+      }
+    ]
+  }
+]

@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "_id": "27738c64-77da-4fb5-9501-c2a500c3fd5c",
+    "colName": "guess-who-server",
+    "created": "2023-01-16T11:57:09.963Z",
+    "sortNum": 10000,
+    "folders": [],
+    "settings": {
+      "headers": [],
+      "tests": [],
+      "envId": "0ab99c3c-dc07-41f3-b0f5-1436e657f6ed"
+    }
+  }
+]
