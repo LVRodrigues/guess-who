@@ -1,4 +1,4 @@
-package io.github.lvrodrigues.guess.admin;
+package io.github.lvrodrigues.guess.security;
 
 import java.util.Collection;
 import java.util.List;

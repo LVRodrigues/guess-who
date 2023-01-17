@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import io.github.lvrodrigues.guess.exceptions.EnableGuessErrorHandler;
 import io.github.lvrodrigues.guess.model.EnableGuessModel;
+import io.github.lvrodrigues.guess.security.EnableSecurityHandler;
 
 /**
  * Inicialização do servidor REST.
@@ -25,6 +26,7 @@ import io.github.lvrodrigues.guess.model.EnableGuessModel;
 @SpringBootApplication
 @EnableGuessModel
 @EnableGuessErrorHandler
+@EnableSecurityHandler
 @Controller
 public class Application {
 
