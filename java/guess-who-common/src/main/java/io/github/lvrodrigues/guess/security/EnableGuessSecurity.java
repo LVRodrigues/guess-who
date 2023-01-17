@@ -22,6 +22,6 @@ import org.springframework.context.annotation.Import;
 @Documented
 @Import(Configurator.class)
 @Configuration
-public @interface EnableSecurityHandler {
+public @interface EnableGuessSecurity {
     
 }

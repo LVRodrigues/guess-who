@@ -1,4 +1,4 @@
-package io.github.lvrodrigues.guess.admin;
+package io.github.lvrodrigues.guess.game;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,7 +18,7 @@ import io.github.lvrodrigues.guess.security.EnableGuessSecurity;
  *
  * <p>Apresenta também a página de documentação no endereço inicial.
  *
- * @since 23/06/2022
+ * @since 17/01/2023
  * @author $Author$
  * @author $Committer$
  * @branch $Branch$
