@@ -1,0 +1,28 @@
+openapi: 3.0.3
+info:
+  title: Guess Who?
+  version: '@project.version@'
+  description: Documentação dos serviços REST do sistema de teste sobre conhecimento de personagens bíblicos.
+  contact:
+    email: lvrodriguesline-guess-who@yahoo.com
+    name: Webmaster
+    url: 'https://www.linkedin.com/in/luciano-rodrigues/'
+servers:
+  - url: 'http://localhost:5000/v1'
+    variables: {}
+    description: Desenvolvimento.
+tags:
+  - name: Game
+    description: Execução do teste de conhecimento.
+components:
+  securitySchemes:
+    auth:
+      type: oauth2
+      description: Autenticação e Autorização de acesso.
+      flows:
+        password:
+          tokenUrl: 'http://localhost:8080/realms/guess-who/protocol/openid-connect/token'
+          scopes: {}              
+security: 
+  - auth: []
+  

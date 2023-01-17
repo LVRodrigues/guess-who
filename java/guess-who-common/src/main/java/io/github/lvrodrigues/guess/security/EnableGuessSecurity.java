@@ -1,4 +1,4 @@
-package io.github.lvrodrigues.guess.exceptions;
+package io.github.lvrodrigues.guess.security;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * Habilita o módulo de tratamento de erros para o projeto Guess Who?.
+ * Habilita o módulo de segurança para os servidores REST.
  *
- * @since 30/06/2022
+ * @since 16/01/2023
  * @author $Author$
  * @author $Committer$
  * @branch $Branch$
@@ -22,6 +22,6 @@ import org.springframework.context.annotation.Import;
 @Documented
 @Import(Configurator.class)
 @Configuration
-public @interface EnableGuessErrorHandler {
+public @interface EnableGuessSecurity {
     
 }
