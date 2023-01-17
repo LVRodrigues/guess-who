@@ -31,9 +31,10 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 > Para executar os módulos em containers Docker, crie uma entrada no arquivo de hosts para os nomes e endereços:
 >
 > ```bash
-> 127.0.0.1 guess-database
-> 127.0.0.1 guess-auth
-> 127.0.0.1 guess-admin
+> 127.0.0.1	guess-auth 
+> 127.0.0.1	guess-database 
+> 127.0.0.1	guess-admin-server 
+> 127.0.0.1	guess-admin-client
 > ```
 
 ## Organização
@@ -45,6 +46,23 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 | **auth**      | Módulode autorização do aplicativo para desenvolvimento.                     |
 | **java**      | Aplicativos modulares com Java e SpringBoot para gerenciamento dos serviços. |
 | **angular**   | Aplicativos clientes para consumir os serviços criados com Java.             |
+
+## Construção
+
+Na raíz do projeto, execute os comandos:
+
+```bash
+mvn -f java/pom.xml clean install
+docker-compose up -d --build
+```
+
+Endereços de uso:
+
+| **Serviço**  | **Endereço**                     |
+|--------------|----------------------------------|
+| Keycloak     | http://localhost:8080/           |
+| Admin Server | http://localhost:5001/           |
+| Admin Client | http://localhost:8081/           |
 
 ## Token de Acesso
 
