@@ -19,8 +19,8 @@ import io.github.lvrodrigues.guess.security.EnableGuessSecurity;
  * <p>Apresenta também a página de documentação no endereço inicial.
  *
  * @since 17/01/2023
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorName$
+ * @author $CommitterName$
  * @branch $Branch$
  */
 @SpringBootApplication

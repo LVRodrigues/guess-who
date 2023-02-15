@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
  * Configuração do módulo de segurança dos serviços REST.
  *
  * @since 16/01/2023
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorName$
+ * @author $CommitterName$
  * @branch $Branch$
  */
 @Configuration

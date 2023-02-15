@@ -16,8 +16,8 @@ import org.springframework.security.web.SecurityFilterChain;
  * Configurações de segurança do aplicativo.
  *
  * @since 23/06/2022
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorName$
+ * @author $CommitterName$
  * @branch $Branch$
  */
 @EnableWebSecurity

@@ -3,6 +3,8 @@
 Banco de dados PostgreSQL para o aplicativo **Guess Who?** Aqui é descrito a criação de
 um banco de dados para desenvolvimento e como acessá-lo.
 
+> Foi colocado em um novo repositório para que possa ser compartilhado em outros projetos.
+
 ## Docker
 
 O arquivo **Dockerfile** configura um banco de dados para uso no sistema **Guess Who?**.

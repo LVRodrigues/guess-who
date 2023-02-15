@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Import;
  * Habilita o módulo de segurança para os servidores REST.
  *
  * @since 16/01/2023
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorName$
+ * @author $CommitterName$
  * @branch $Branch$
  */
 @Retention(RetentionPolicy.RUNTIME)

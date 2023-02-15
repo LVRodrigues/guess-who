@@ -15,6 +15,15 @@ O objetivo desse exercício é utilizar as boas práticas de desenvolvimento. Pa
 
 Também foi escolhido o **Spring Boot** como motor para os serviços considerando um sistema modular e com reaprovietamento de pacotes entre os módulos.
 
+## Banco de Dados
+
+O projeto utiliza um banco de dados configurado em outro repositório [guess-who-database](https://github.com/LVRodrigues/guess-who-database.git). Para manter o módulo de banco de dados sincronizado após clonar o projeto, execute os comandos:
+
+```bash
+> git remote add -f database https://github.com/LVRodrigues/guess-who-database.git
+> git pull -s subtree database main
+```
+
 ## Ambiente de Desenvolvimento
 
 As ferramentas para desenvolvimento utilizadas nesse projeto são:
@@ -31,9 +40,10 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 > Para executar os módulos em containers Docker, crie uma entrada no arquivo de hosts para os nomes e endereços:
 >
 > ```bash
-> 127.0.0.1 guess-database
-> 127.0.0.1 guess-auth
-> 127.0.0.1 guess-admin
+> 127.0.0.1	guess-auth 
+> 127.0.0.1	guess-database 
+> 127.0.0.1	guess-admin-server 
+> 127.0.0.1	guess-admin-client
 > ```
 
 ## Organização
@@ -45,6 +55,23 @@ As ferramentas para desenvolvimento utilizadas nesse projeto são:
 | **auth**      | Módulode autorização do aplicativo para desenvolvimento.                     |
 | **java**      | Aplicativos modulares com Java e SpringBoot para gerenciamento dos serviços. |
 | **angular**   | Aplicativos clientes para consumir os serviços criados com Java.             |
+
+## Construção
+
+Na raíz do projeto, execute os comandos:
+
+```bash
+mvn -f java/pom.xml clean install
+docker-compose up -d --build
+```
+
+Endereços de uso:
+
+| **Serviço**  | **Endereço**                     |
+|--------------|----------------------------------|
+| Keycloak     | http://localhost:8080/           |
+| Admin Server | http://localhost:5001/           |
+| Admin Client | http://localhost:8081/           |
 
 ## Token de Acesso
 

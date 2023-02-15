@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Import;
  * Habilita o módulo de tratamento de erros para o projeto Guess Who?.
  *
  * @since 30/06/2022
- * @author $Author$
- * @author $Committer$
+ * @author $AuthorName$
+ * @author $CommitterName$
  * @branch $Branch$
  */
 @Retention(RetentionPolicy.RUNTIME)
