@@ -15,6 +15,15 @@ O objetivo desse exercício é utilizar as boas práticas de desenvolvimento. Pa
 
 Também foi escolhido o **Spring Boot** como motor para os serviços considerando um sistema modular e com reaprovietamento de pacotes entre os módulos.
 
+## Banco de Dados
+
+O projeto utiliza um banco de dados configurado em outro repositório [guess-who-database](https://github.com/LVRodrigues/guess-who-database.git). Para manter o módulo de banco de dados sincronizado após clonar o projeto, execute os comandos:
+
+```bash
+> git remote add -f database https://github.com/LVRodrigues/guess-who-database.git
+> git pull -s subtree database main
+```
+
 ## Ambiente de Desenvolvimento
 
 As ferramentas para desenvolvimento utilizadas nesse projeto são:
