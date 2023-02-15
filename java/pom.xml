@@ -10,7 +10,7 @@
 
 	<groupId>io.github.lvrodrigues.guess</groupId>
 	<artifactId>guess-who</artifactId>
-	<version>0.8.3</version>
+	<version>0.8.4-SNAPSHOT</version>
 	<name>guess-who</name>
 	<packaging>pom</packaging>
 	<description>Aplicativo de teste de conhecimento sobre personagens bíblicos.</description>
