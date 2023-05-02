@@ -15,7 +15,12 @@ export class ThemeService {
   constructor() {
     let aux: string | null = localStorage.getItem('mode');
     if (aux == null) {
-      this.mode = Mode.LIGHT;
+      let prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (prefersDark) {
+        this.mode = Mode.DARK
+      } else {
+        this.mode = Mode.LIGHT;
+      }
     } else if (aux === Mode.LIGHT) {
       this.mode = Mode.LIGHT;
     } else {
